@@ -1,0 +1,1631 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class Vector3d
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class Vector3d
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.html" title="Paramdigma.Core" class="">Paramdigma.Core</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Convert.html" title="Convert" class="">Convert</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.html" title="Intersect3D" class="">Intersect3D</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.IRLineLine.html" title="Intersect3D.IRLineLine" class="">Intersect3D.IRLineLine</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.ISLineLine.html" title="Intersect3D.ISLineLine" class="">Intersect3D.ISLineLine</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.ISLinePlane.html" title="Intersect3D.ISLinePlane" class="">Intersect3D.ISLinePlane</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html" title="Intersect3D.ISRayFacePerimeter" class="">Intersect3D.ISRayFacePerimeter</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Settings.html" title="Settings" class="">Settings</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Collections.html" title="Paramdigma.Core.Collections" class="">Paramdigma.Core.Collections</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Collections.Interval.html" title="Interval" class="">Interval</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Collections.Matrix-1.html" title="Matrix&lt;T&gt;" class="">Matrix&lt;T&gt;</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Curves.html" title="Paramdigma.Core.Curves" class="">Paramdigma.Core.Curves</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Curves.Geodesics.html" title="Geodesics" class="">Geodesics</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Curves.LevelSets.html" title="LevelSets" class="">LevelSets</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Exceptions.html" title="Paramdigma.Core.Exceptions" class="">Paramdigma.Core.Exceptions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Exceptions.UnsetGeometryException.html" title="UnsetGeometryException" class="">UnsetGeometryException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Extensions.html" title="Paramdigma.Core.Extensions" class="">Paramdigma.Core.Extensions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Extensions.Lists.html" title="Lists" class="">Lists</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Geometry.html" title="Paramdigma.Core.Geometry" class="">Paramdigma.Core.Geometry</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.BaseCurve.html" title="BaseCurve" class="">BaseCurve</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.BasePoint.html" title="BasePoint" class="">BasePoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.BoundingBox2d.html" title="BoundingBox2d" class="">BoundingBox2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Box.html" title="Box" class="">Box</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Cylinder.html" title="Cylinder" class="">Cylinder</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.InvalidCurveException.html" title="InvalidCurveException" class="">InvalidCurveException</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Line.html" title="Line" class="">Line</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Line2d.html" title="Line2d" class="">Line2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.MeshGeometry.html" title="MeshGeometry" class="">MeshGeometry</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.NurbsCalculator.html" title="NurbsCalculator" class="">NurbsCalculator</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.NurbsSurface.html" title="NurbsSurface" class="">NurbsSurface</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Plane.html" title="Plane" class="">Plane</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Point2d.html" title="Point2d" class="">Point2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Point3d.html" title="Point3d" class="">Point3d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Point4d.html" title="Point4d" class="">Point4d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Polyline.html" title="Polyline" class="">Polyline</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Polyline2d.html" title="Polyline2d" class="">Polyline2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Ray.html" title="Ray" class="">Ray</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Ray2d.html" title="Ray2d" class="">Ray2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Sphere.html" title="Sphere" class="">Sphere</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Torus.html" title="Torus" class="">Torus</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Vector2d.html" title="Vector2d" class="">Vector2d</a>
+                          </li>
+                          <li class="active">
+                            <a href="Paramdigma.Core.Geometry.Vector3d.html" title="Vector3d" class="active">Vector3d</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Geometry.Interfaces.html" title="Paramdigma.Core.Geometry.Interfaces" class="">Paramdigma.Core.Geometry.Interfaces</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Interfaces.ICurve.html" title="ICurve" class="">ICurve</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Interfaces.ISurface.html" title="ISurface" class="">ISurface</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Interfaces.IVector.html" title="IVector" class="">IVector</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.HalfEdgeMesh.html" title="Paramdigma.Core.HalfEdgeMesh" class="">Paramdigma.Core.HalfEdgeMesh</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.Mesh.html" title="Mesh" class="">Mesh</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshCorner.html" title="MeshCorner" class="">MeshCorner</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshEdge.html" title="MeshEdge" class="">MeshEdge</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshFace.html" title="MeshFace" class="">MeshFace</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshHalfEdge.html" title="MeshHalfEdge" class="">MeshHalfEdge</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshPoint.html" title="MeshPoint" class="">MeshPoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshTopology.html" title="MeshTopology" class="">MeshTopology</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshVertex.html" title="MeshVertex" class="">MeshVertex</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.IO.html" title="Paramdigma.Core.IO" class="">Paramdigma.Core.IO</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.CSVReader.html" title="CSVReader" class="">CSVReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.CSVWritter.html" title="CSVWritter" class="">CSVWritter</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OBJMeshData.html" title="OBJMeshData" class="">OBJMeshData</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OBJReader.html" title="OBJReader" class="">OBJReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OBJWritter.html" title="OBJWritter" class="">OBJWritter</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFMeshData.html" title="OFFMeshData" class="">OFFMeshData</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFReader.html" title="OFFReader" class="">OFFReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFResult.html" title="OFFResult" class="">OFFResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFWritter.html" title="OFFWritter" class="">OFFWritter</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.LinearAlgebra.html" title="Paramdigma.Core.LinearAlgebra" class="">Paramdigma.Core.LinearAlgebra</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.Complex.html" title="Complex" class="">Complex</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.LeastSquaresLinearFit.html" title="LeastSquaresLinearFit" class="">LeastSquaresLinearFit</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.Triplet.html" title="Triplet" class="">Triplet</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.TripletData.html" title="TripletData" class="">TripletData</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.SpatialSearch.html" title="Paramdigma.Core.SpatialSearch" class="">Paramdigma.Core.SpatialSearch</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.Octree.html" title="Octree" class="">Octree</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.PointCloud.html" title="PointCloud" class="">PointCloud</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.PointCloudMember.html" title="PointCloudMember" class="">PointCloudMember</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.Quadtree.html" title="Quadtree" class="">Quadtree</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Paramdigma.Core.Geometry.Vector3d">
+  
+  
+  <h1 id="Paramdigma_Core_Geometry_Vector3d" data-uid="Paramdigma.Core.Geometry.Vector3d" class="text-break">Class Vector3d
+  </h1>
+  <div class="markdown level0 summary"><p>Represents a 3D Vector entity.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html">BasePoint</a></div>
+    <div class="level2"><span class="xref">Vector3d</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_X">BasePoint.X</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Y">BasePoint.Y</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Z">BasePoint.Z</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_IsUnset">BasePoint.IsUnset</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Add_Paramdigma_Core_Geometry_BasePoint_">BasePoint.Add(BasePoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Substract_Paramdigma_Core_Geometry_BasePoint_">BasePoint.Substract(BasePoint)</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Multiply_System_Double_">BasePoint.Multiply(Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Divide_System_Double_">BasePoint.Divide(Double)</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Negate">BasePoint.Negate()</a>
+    </div>
+    <div>
+      <a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_ToArray">BasePoint.ToArray()</a>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Paramdigma.Core.Geometry.html">Paramdigma.Core.Geometry</a></h6>
+  <h6><strong>Assembly</strong>: Paramdigma.Core.dll</h6>
+  <h5 id="Paramdigma_Core_Geometry_Vector3d_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class Vector3d : BasePoint</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d__ctor.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L13">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d__ctor_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d__ctor" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor">Vector3d()</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a> class.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d()</code></pre>
+  </div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d__ctor_Paramdigma_Core_Geometry_Point3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.%23ctor(Paramdigma.Core.Geometry.Point3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L32">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d__ctor_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d__ctor_Paramdigma_Core_Geometry_Point3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor(Paramdigma.Core.Geometry.Point3d)">Vector3d(Point3d)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a> class from a point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d(Point3d point)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Point3d.html">Point3d</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>Point to copy values from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d__ctor_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.%23ctor(Paramdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L22">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d__ctor_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d__ctor_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor(Paramdigma.Core.Geometry.Vector3d)">Vector3d(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a> class with the same values as the provided vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d(Vector3d vector)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">vector</span></td>
+        <td><p>Vector to copy values from.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d__ctor_System_Double_System_Double_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.%23ctor(System.Double%2CSystem.Double%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L44">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d__ctor_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d__ctor_System_Double_System_Double_System_Double_" data-uid="Paramdigma.Core.Geometry.Vector3d.#ctor(System.Double,System.Double,System.Double)">Vector3d(Double, Double, Double)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a> class given it's 3 coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d(double xCoord, double yCoord, double zCoord)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">xCoord</span></td>
+        <td><p>X coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">yCoord</span></td>
+        <td><p>Y coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">zCoord</span></td>
+        <td><p>Z coordinate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Length.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L59">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Length_" data-uid="Paramdigma.Core.Geometry.Vector3d.Length*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Length" data-uid="Paramdigma.Core.Geometry.Vector3d.Length">Length</h4>
+  <div class="markdown level1 summary"><p>Gets the Euclidean length of this vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Length { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>Length of the vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_LengthSquared.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.LengthSquared%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L53">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_LengthSquared_" data-uid="Paramdigma.Core.Geometry.Vector3d.LengthSquared*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_LengthSquared" data-uid="Paramdigma.Core.Geometry.Vector3d.LengthSquared">LengthSquared</h4>
+  <div class="markdown level1 summary"><p>Gets the Euclidean length squared of this vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double LengthSquared { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>Squared Length of the vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_UnitX.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.UnitX%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L140">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_UnitX_" data-uid="Paramdigma.Core.Geometry.Vector3d.UnitX*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_UnitX" data-uid="Paramdigma.Core.Geometry.Vector3d.UnitX">UnitX</h4>
+  <div class="markdown level1 summary"><p>Gets a vector of unit length in the X direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d UnitX { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>Vector {1,0,0}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_UnitY.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.UnitY%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L146">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_UnitY_" data-uid="Paramdigma.Core.Geometry.Vector3d.UnitY*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_UnitY" data-uid="Paramdigma.Core.Geometry.Vector3d.UnitY">UnitY</h4>
+  <div class="markdown level1 summary"><p>Gets a vector of unit length in the Y direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d UnitY { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>Vector {0,1,0}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_UnitZ.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.UnitZ%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L152">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_UnitZ_" data-uid="Paramdigma.Core.Geometry.Vector3d.UnitZ*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_UnitZ" data-uid="Paramdigma.Core.Geometry.Vector3d.UnitZ">UnitZ</h4>
+  <div class="markdown level1 summary"><p>Gets a vector of unit length in the Z direction.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d UnitZ { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>Vector {0,1,0}.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Angle_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Angle(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L131">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Angle_" data-uid="Paramdigma.Core.Geometry.Vector3d.Angle*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Angle_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.Angle(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">Angle(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Computes the angle in Radians between two given vectors
+Angle = Arcosine of the CrossProduct of UxV divided with their multiplied lengths.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double Angle(Vector3d u, Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">u</span></td>
+        <td><p>First vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>Angle formed between u and v.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Cross_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Cross(Paramdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L97">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Cross_" data-uid="Paramdigma.Core.Geometry.Vector3d.Cross*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Cross_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.Cross(Paramdigma.Core.Geometry.Vector3d)">Cross(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Returns the cross product of this vector and v.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d Cross(Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>Cross product vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_CrossProduct_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.CrossProduct(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L115">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_CrossProduct_" data-uid="Paramdigma.Core.Geometry.Vector3d.CrossProduct*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_CrossProduct_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.CrossProduct(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">CrossProduct(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Computes the vector product (cross product) of two given vectors
+Cross product = { u2 * v3 - u3 * v2; u3 * v1 - u1 * v3; u1 * v2 - u2 * v1 }.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d CrossProduct(Vector3d u, Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">u</span></td>
+        <td><p>First vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>Vector result of the cross product.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Dot_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Dot(Paramdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L90">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Dot_" data-uid="Paramdigma.Core.Geometry.Vector3d.Dot*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Dot_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.Dot(Paramdigma.Core.Geometry.Vector3d)">Dot(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Computes the dot product of this vector and v.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public double Dot(Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>Dot product.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_DotProduct_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.DotProduct(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L106">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_DotProduct_" data-uid="Paramdigma.Core.Geometry.Vector3d.DotProduct*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_DotProduct_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.DotProduct(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">DotProduct(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Gets the scalar product (dot product) of two given vectors
+Dot product = u1<em>v1 + u2</em>v2 + u3*v3.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static double DotProduct(Vector3d u, Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">u</span></td>
+        <td><p>First vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><p>Numerical value of the dot product.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Equals_System_Object_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Equals(System.Object)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L218">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Equals_" data-uid="Paramdigma.Core.Geometry.Vector3d.Equals*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Equals_System_Object_" data-uid="Paramdigma.Core.Geometry.Vector3d.Equals(System.Object)">Equals(Object)</h4>
+  <div class="markdown level1 summary"><p>Performs a deep clone of the point.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">obj</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Returns a copy of this BasePoint instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_Equals_System_Object_">BasePoint.Equals(Object)</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_GetHashCode.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.GetHashCode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L227">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_GetHashCode_" data-uid="Paramdigma.Core.Geometry.Vector3d.GetHashCode*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_GetHashCode" data-uid="Paramdigma.Core.Geometry.Vector3d.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_GetHashCode">BasePoint.GetHashCode()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_ToString.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L224">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_ToString_" data-uid="Paramdigma.Core.Geometry.Vector3d.ToString*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_ToString" data-uid="Paramdigma.Core.Geometry.Vector3d.ToString">ToString()</h4>
+  <div class="markdown level1 summary"><p>Converts a vector into a string.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><p>Returns a string representation of this vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html#Paramdigma_Core_Geometry_BasePoint_ToString">BasePoint.ToString()</a></div>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Unit.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Unit%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L76">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Unit_" data-uid="Paramdigma.Core.Geometry.Vector3d.Unit*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Unit" data-uid="Paramdigma.Core.Geometry.Vector3d.Unit">Unit()</h4>
+  <div class="markdown level1 summary"><p>Returns a normalized copy of this vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Vector3d Unit()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>A copy of this vector unitized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_Unitize.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.Unitize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L64">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_Unitize_" data-uid="Paramdigma.Core.Geometry.Vector3d.Unitize*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_Unitize" data-uid="Paramdigma.Core.Geometry.Vector3d.Unitize">Unitize()</h4>
+  <div class="markdown level1 summary"><p>Divides this vector by it's euclidean length.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Unitize()</code></pre>
+  </div>
+  <h3 id="operators">Operators
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Addition_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Addition(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L160">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Addition_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Addition*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Addition_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Addition(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">Addition(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Adds one vector to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d operator +(Vector3d v, Vector3d v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>First vector to add.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>Second vector to add.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>New vector entity with the result of the addition.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Division_Paramdigma_Core_Geometry_Vector3d_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Division(Paramdigma.Core.Geometry.Vector3d%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L199">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Division_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Division*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Division_Paramdigma_Core_Geometry_Vector3d_System_Double_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Division(Paramdigma.Core.Geometry.Vector3d,System.Double)">Division(Vector3d, Double)</h4>
+  <div class="markdown level1 summary"><p>Divide a vector by a number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d operator /(Vector3d v, double scalar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector to be divided.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Number to be divided by.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>New vector entity with the result of the division.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Equality_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Equality(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L207">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Equality_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Equality*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Equality_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Equality(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">Equality(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Checks if two vectors are equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator ==(Vector3d v, Vector3d w)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>First vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">w</span></td>
+        <td><p>Second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Result of the comparison between v and w.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Inequality_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Inequality(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L215">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Inequality_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Inequality*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Inequality_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Inequality(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">Inequality(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Checks if two vectors are not equal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool operator !=(Vector3d v, Vector3d w)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>First vector.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">w</span></td>
+        <td><p>Second vector.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>Result of the comparison between v and w.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Multiply_Paramdigma_Core_Geometry_Vector3d_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Multiply(Paramdigma.Core.Geometry.Vector3d%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L176">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Multiply_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Multiply*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Multiply_Paramdigma_Core_Geometry_Vector3d_System_Double_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Multiply(Paramdigma.Core.Geometry.Vector3d,System.Double)">Multiply(Vector3d, Double)</h4>
+  <div class="markdown level1 summary"><p>Multiply one vector by a number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d operator *(Vector3d v, double scalar)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector to multiply.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Number to multiply with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>New vector entity with the result of the multiplication.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Multiply_System_Double_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Multiply(System.Double%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L184">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Multiply_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Multiply*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Multiply_System_Double_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Multiply(System.Double,Paramdigma.Core.Geometry.Vector3d)">Multiply(Double, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Multiply one vector by a number.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d operator *(double scalar, Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">scalar</span></td>
+        <td><p>Number to multiply with.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector to multiply.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>New vector entity with the result of the multiplication.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_Subtraction_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_Subtraction(Paramdigma.Core.Geometry.Vector3d%2CParamdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L168">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_Subtraction_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Subtraction*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_Subtraction_Paramdigma_Core_Geometry_Vector3d_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_Subtraction(Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)">Subtraction(Vector3d, Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Substracts one vector from another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d operator -(Vector3d v, Vector3d v2)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector to substract from.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v2</span></td>
+        <td><p>Vector to be substracted.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>New vector entity with the result of the substraction.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d_op_UnaryNegation_Paramdigma_Core_Geometry_Vector3d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d.op_UnaryNegation(Paramdigma.Core.Geometry.Vector3d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L191">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_Geometry_Vector3d_op_UnaryNegation_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_UnaryNegation*"></a>
+  <h4 id="Paramdigma_Core_Geometry_Vector3d_op_UnaryNegation_Paramdigma_Core_Geometry_Vector3d_" data-uid="Paramdigma.Core.Geometry.Vector3d.op_UnaryNegation(Paramdigma.Core.Geometry.Vector3d)">UnaryNegation(Vector3d)</h4>
+  <div class="markdown level1 summary"><p>Negate a vector.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static Vector3d operator -(Vector3d v)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><span class="parametername">v</span></td>
+        <td><p>Vector to negate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Vector3d.html">Vector3d</a></td>
+        <td><p>New vector entity with all the values negated.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_Geometry_Vector3d.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Vector3d%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Paramdigma/Core/blob/master/src/Geometry/3D/Vector3d.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,992 @@
+{
+  "homepages": [],
+  "source_base_path": "/github/workspace/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Collections.Interval.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Collections.Interval.html",
+          "hash": "RogpPWnzdX+DWa6dhxkXwg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Collections.Matrix-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Collections.Matrix-1.html",
+          "hash": "hMZ9hkkdp6BBgVFeUEKnMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Collections.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Collections.html",
+          "hash": "8rgyd10bgVc/4kxcpY3ruA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Convert.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Convert.html",
+          "hash": "fvAhXDOgKHk/OPmZhVsSiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Curves.Geodesics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Curves.Geodesics.html",
+          "hash": "NviCsD8up7L4rSpdmkTuIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Curves.LevelSets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Curves.LevelSets.html",
+          "hash": "LvHB9TYWLt9cJswDraUlJg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Curves.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Curves.html",
+          "hash": "/ajeVTCgJUO3otSyI5gB3A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Exceptions.UnsetGeometryException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Exceptions.UnsetGeometryException.html",
+          "hash": "Nk6uJ6l/Ipj9TCBHt8vUfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Exceptions.html",
+          "hash": "D9jUZQgS+EBGvQg9GFUMEw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Extensions.Lists.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Extensions.Lists.html",
+          "hash": "k1hponHKZWWVHWRMTuUX0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Extensions.html",
+          "hash": "mblfnZnRnGBjQ4kC6QMyFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.BaseCurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.BaseCurve.html",
+          "hash": "dqVx+6JnOp66NK2WudRjeg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.BasePoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.BasePoint.html",
+          "hash": "3PzdVsrgSz3f9YF72lJWkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.BoundingBox2d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.BoundingBox2d.html",
+          "hash": "WYdeZxXryNN4yVXxUSw/Yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Box.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Box.html",
+          "hash": "7q3dV/hCvU9zQzoTlaBdGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Cylinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Cylinder.html",
+          "hash": "SsGiglBkKtZHf6V3pnqB/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Interfaces.ICurve.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Interfaces.ICurve.html",
+          "hash": "8B38CyLi2aUSlU37V4hHkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Interfaces.ISurface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Interfaces.ISurface.html",
+          "hash": "HZH89NEacaGhs0utE8vE1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Interfaces.IVector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Interfaces.IVector.html",
+          "hash": "OVM1X7OPc+ixX2Rt00b4LQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Interfaces.html",
+          "hash": "5NjJwKzdTn9wGiIyK6PNtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.InvalidCurveException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.InvalidCurveException.html",
+          "hash": "q3NAg8/OAsqmHE8mzAA5Pg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Line.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Line.html",
+          "hash": "TVuebEyb7akEOrWKrtbrIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Line2d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Line2d.html",
+          "hash": "/TNM8AOzV7CVSOJCYwNSWA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.MeshGeometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.MeshGeometry.html",
+          "hash": "cqcvcvY5LMStee6slyskZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.NurbsCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.NurbsCalculator.html",
+          "hash": "BWTraM++yIkYy3r6/Gpj5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.NurbsSurface.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.NurbsSurface.html",
+          "hash": "B0v56SrUeB+6MPY0e3gvgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Plane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Plane.html",
+          "hash": "eIqvE5yU6+EGC/JpATrKyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Point2d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Point2d.html",
+          "hash": "puqy9xwxEOzZqz8Okwx0Tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Point3d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Point3d.html",
+          "hash": "SfdU4SPo2jgiIb0wLUPJNQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Point4d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Point4d.html",
+          "hash": "kdrKNJO//25gVEDELibepA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Polyline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Polyline.html",
+          "hash": "9VAx7zFfuWZbN8d5Dy+UJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Polyline2d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Polyline2d.html",
+          "hash": "IaQHf5askAgRF9TCcT6DxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Ray.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Ray.html",
+          "hash": "XIK3Q5HnLUS2AemN3l9wsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Ray2d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Ray2d.html",
+          "hash": "xCsW4BHYj9+itA8mdgjabg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Sphere.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Sphere.html",
+          "hash": "34J2fNKVJgQ3Ehoa2EIQBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Torus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Torus.html",
+          "hash": "XehWG17CokdX7VzLxwnRZw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Vector2d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Vector2d.html",
+          "hash": "ITwTyrbqoh8oJKc6nfNsBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.Vector3d.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.Vector3d.html",
+          "hash": "+BwXDGnyOAHcBPSNxFKqxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Geometry.html",
+          "hash": "dT/db7xONHcfjIdTbW+MlQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.Mesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.Mesh.html",
+          "hash": "ENiE6ScEn9YgazwdUIz5HA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshCorner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshCorner.html",
+          "hash": "SshJHd3gKOFWMq+i/lOEaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshEdge.html",
+          "hash": "xQwhPGA2+ZaOeQyVO3t2aA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshFace.html",
+          "hash": "fyrY6pxQemMLa0cnZZzuqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshHalfEdge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshHalfEdge.html",
+          "hash": "UPwdaYPm9OzNkZQUQzImEQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshPoint.html",
+          "hash": "bME/D4IBmsnyRpZslcaLDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshTopology.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshTopology.html",
+          "hash": "MZt1tSeJa/glT0OOSM7Qow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshVertex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.MeshVertex.html",
+          "hash": "nfSPCvodfEjXMAM3ReaOnA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.HalfEdgeMesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.HalfEdgeMesh.html",
+          "hash": "FdrgaQym2nkKA9FFr9/PKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.CSVReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.CSVReader.html",
+          "hash": "Pvqk104ZXTV4OTmnbmFBeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.CSVWritter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.CSVWritter.html",
+          "hash": "adzbolvmEtdDyarn5jBXNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OBJMeshData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OBJMeshData.html",
+          "hash": "49wqr6fwAsDV2qpMcgXhzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OBJReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OBJReader.html",
+          "hash": "J3Tv6pjd6inbuDT3bEv7yA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OBJWritter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OBJWritter.html",
+          "hash": "G2dL7Rj5uHlOiRWLwyLo7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OFFMeshData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OFFMeshData.html",
+          "hash": "N3zd89hazQWeY8BI3lHGIQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OFFReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OFFReader.html",
+          "hash": "TjLFd1btSz/By1qpJgBvuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OFFResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OFFResult.html",
+          "hash": "ZY8kIpYyWmq67lL2JElcDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.OFFWritter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.OFFWritter.html",
+          "hash": "gaSSkCU12ZmjeBGDAPcjSA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.IO.html",
+          "hash": "EAH/jGPJEjwIHC3DRGpxHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Intersect3D.IRLineLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Intersect3D.IRLineLine.html",
+          "hash": "SYmoBGwlxUS/REwklAY4dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Intersect3D.ISLineLine.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Intersect3D.ISLineLine.html",
+          "hash": "rB5LDcjcKv/jNVqvZRmAzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Intersect3D.ISLinePlane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Intersect3D.ISLinePlane.html",
+          "hash": "5knCZ2W1boaGZ5QLHyfs9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Intersect3D.ISRayFacePerimeter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html",
+          "hash": "oyVYj1K2IMvMgTibfBvmcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Intersect3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Intersect3D.html",
+          "hash": "bYfh9bS275eQ3O7HhNMZEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.LinearAlgebra.Complex.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.LinearAlgebra.Complex.html",
+          "hash": "6jPMRUQZfmoZeFmFODbjrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.LinearAlgebra.LeastSquaresLinearFit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.LinearAlgebra.LeastSquaresLinearFit.html",
+          "hash": "+YG8r7as6gj9Xt0FgfyRMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.LinearAlgebra.Triplet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.LinearAlgebra.Triplet.html",
+          "hash": "3KdT0QS0PZ9Sc+So8J17Aw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.LinearAlgebra.TripletData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.LinearAlgebra.TripletData.html",
+          "hash": "9ldqaNIEBFoCwxwVpU6vRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.LinearAlgebra.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.LinearAlgebra.html",
+          "hash": "GNgVMo68hW7XaWme7gEfLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.Settings.html",
+          "hash": "uK6VqG6OA7bmLH/AYJDg4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.SpatialSearch.Octree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.SpatialSearch.Octree.html",
+          "hash": "6FFfl614caKgE+IQpqGm5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.SpatialSearch.PointCloud.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.SpatialSearch.PointCloud.html",
+          "hash": "SHYWzAIaQCWEB9n7G73rlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.SpatialSearch.PointCloudMember.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.SpatialSearch.PointCloudMember.html",
+          "hash": "eLQT44jh3MXzkBKGc2JN8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.SpatialSearch.Quadtree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.SpatialSearch.Quadtree.html",
+          "hash": "aqsYQ0YuEnGZVbIJ47dmtw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.SpatialSearch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.SpatialSearch.html",
+          "hash": "jHKV3ovNSZWU8nezKLjeAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Paramdigma.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Paramdigma.Core.html",
+          "hash": "YkWcpmMjTmfgu3cFmGynGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "zJEFr0iTBsOLrLzrACBjkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "AWHEqPZIH17oJnpBORw30Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "lLTli68MOdr17UVf1W9Ipw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 75,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

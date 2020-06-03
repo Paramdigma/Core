@@ -1,0 +1,433 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class OBJReader
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class OBJReader
+   ">
+    <meta name="generator" content="docfx 2.45.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                
+                <ul class="nav level1 navbar-nav">
+                      <li>
+                          <a href="../articles/intro.html" title="Articles">Articles</a>
+                      </li>
+                      <li>
+                          <a href="../api/index.html" title="Api Documentation">Api Documentation</a>
+                      </li>
+                </ul>    </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.html" title="Paramdigma.Core" class="">Paramdigma.Core</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Convert.html" title="Convert" class="">Convert</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.html" title="Intersect3D" class="">Intersect3D</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.IRLineLine.html" title="Intersect3D.IRLineLine" class="">Intersect3D.IRLineLine</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.ISLineLine.html" title="Intersect3D.ISLineLine" class="">Intersect3D.ISLineLine</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.ISLinePlane.html" title="Intersect3D.ISLinePlane" class="">Intersect3D.ISLinePlane</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html" title="Intersect3D.ISRayFacePerimeter" class="">Intersect3D.ISRayFacePerimeter</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Settings.html" title="Settings" class="">Settings</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Collections.html" title="Paramdigma.Core.Collections" class="">Paramdigma.Core.Collections</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Collections.Interval.html" title="Interval" class="">Interval</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Collections.Matrix-1.html" title="Matrix&lt;T&gt;" class="">Matrix&lt;T&gt;</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Curves.html" title="Paramdigma.Core.Curves" class="">Paramdigma.Core.Curves</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Curves.Geodesics.html" title="Geodesics" class="">Geodesics</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Curves.LevelSets.html" title="LevelSets" class="">LevelSets</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Exceptions.html" title="Paramdigma.Core.Exceptions" class="">Paramdigma.Core.Exceptions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Exceptions.UnsetGeometryException.html" title="UnsetGeometryException" class="">UnsetGeometryException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Extensions.html" title="Paramdigma.Core.Extensions" class="">Paramdigma.Core.Extensions</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Extensions.Lists.html" title="Lists" class="">Lists</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Geometry.html" title="Paramdigma.Core.Geometry" class="">Paramdigma.Core.Geometry</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.BaseCurve.html" title="BaseCurve" class="">BaseCurve</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.BasePoint.html" title="BasePoint" class="">BasePoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.BoundingBox2d.html" title="BoundingBox2d" class="">BoundingBox2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Box.html" title="Box" class="">Box</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Cylinder.html" title="Cylinder" class="">Cylinder</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.InvalidCurveException.html" title="InvalidCurveException" class="">InvalidCurveException</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Line.html" title="Line" class="">Line</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Line2d.html" title="Line2d" class="">Line2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.MeshGeometry.html" title="MeshGeometry" class="">MeshGeometry</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.NurbsCalculator.html" title="NurbsCalculator" class="">NurbsCalculator</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.NurbsSurface.html" title="NurbsSurface" class="">NurbsSurface</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Plane.html" title="Plane" class="">Plane</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Point2d.html" title="Point2d" class="">Point2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Point3d.html" title="Point3d" class="">Point3d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Point4d.html" title="Point4d" class="">Point4d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Polyline.html" title="Polyline" class="">Polyline</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Polyline2d.html" title="Polyline2d" class="">Polyline2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Ray.html" title="Ray" class="">Ray</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Ray2d.html" title="Ray2d" class="">Ray2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Sphere.html" title="Sphere" class="">Sphere</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Torus.html" title="Torus" class="">Torus</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Vector2d.html" title="Vector2d" class="">Vector2d</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Vector3d.html" title="Vector3d" class="">Vector3d</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.Geometry.Interfaces.html" title="Paramdigma.Core.Geometry.Interfaces" class="">Paramdigma.Core.Geometry.Interfaces</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Interfaces.ICurve.html" title="ICurve" class="">ICurve</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Interfaces.ISurface.html" title="ISurface" class="">ISurface</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.Geometry.Interfaces.IVector.html" title="IVector" class="">IVector</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.HalfEdgeMesh.html" title="Paramdigma.Core.HalfEdgeMesh" class="">Paramdigma.Core.HalfEdgeMesh</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.Mesh.html" title="Mesh" class="">Mesh</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshCorner.html" title="MeshCorner" class="">MeshCorner</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshEdge.html" title="MeshEdge" class="">MeshEdge</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshFace.html" title="MeshFace" class="">MeshFace</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshHalfEdge.html" title="MeshHalfEdge" class="">MeshHalfEdge</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshPoint.html" title="MeshPoint" class="">MeshPoint</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshTopology.html" title="MeshTopology" class="">MeshTopology</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.HalfEdgeMesh.MeshVertex.html" title="MeshVertex" class="">MeshVertex</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.IO.html" title="Paramdigma.Core.IO" class="">Paramdigma.Core.IO</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.CSVReader.html" title="CSVReader" class="">CSVReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.CSVWritter.html" title="CSVWritter" class="">CSVWritter</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OBJMeshData.html" title="OBJMeshData" class="">OBJMeshData</a>
+                          </li>
+                          <li class="active">
+                            <a href="Paramdigma.Core.IO.OBJReader.html" title="OBJReader" class="active">OBJReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OBJWritter.html" title="OBJWritter" class="">OBJWritter</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFMeshData.html" title="OFFMeshData" class="">OFFMeshData</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFReader.html" title="OFFReader" class="">OFFReader</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFResult.html" title="OFFResult" class="">OFFResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.IO.OFFWritter.html" title="OFFWritter" class="">OFFWritter</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.LinearAlgebra.html" title="Paramdigma.Core.LinearAlgebra" class="">Paramdigma.Core.LinearAlgebra</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.Complex.html" title="Complex" class="">Complex</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.LeastSquaresLinearFit.html" title="LeastSquaresLinearFit" class="">LeastSquaresLinearFit</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.Triplet.html" title="Triplet" class="">Triplet</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.LinearAlgebra.TripletData.html" title="TripletData" class="">TripletData</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Paramdigma.Core.SpatialSearch.html" title="Paramdigma.Core.SpatialSearch" class="">Paramdigma.Core.SpatialSearch</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.Octree.html" title="Octree" class="">Octree</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.PointCloud.html" title="PointCloud" class="">PointCloud</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.PointCloudMember.html" title="PointCloudMember" class="">PointCloudMember</a>
+                          </li>
+                          <li class="">
+                            <a href="Paramdigma.Core.SpatialSearch.Quadtree.html" title="Quadtree" class="">Quadtree</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Paramdigma.Core.IO.OBJReader">
+  
+  
+  <h1 id="Paramdigma_Core_IO_OBJReader" data-uid="Paramdigma.Core.IO.OBJReader" class="text-break">Class OBJReader
+  </h1>
+  <div class="markdown level0 summary"><p>OBJ File Reader.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">OBJReader</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Paramdigma.Core.IO.html">Paramdigma.Core.IO</a></h6>
+  <h6><strong>Assembly</strong>: Paramdigma.Core.dll</h6>
+  <h5 id="Paramdigma_Core_IO_OBJReader_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class OBJReader</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/Paramdigma/Core/new/master/apiSpec/new?filename=Paramdigma_Core_IO_OBJReader.md&amp;value=---%0Auid%3A%20Paramdigma.Core.IO.OBJReader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/Paramdigma/Core/blob/master/src/IO/OBJReader.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
