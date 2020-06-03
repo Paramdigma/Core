@@ -32,7 +32,13 @@ But also available as a:
 
 ## Documentation
 
-> I am working on creating a basic SDK website using DocFx. As soon as it is up and running it will be displayed in this section.
+You can find the Docfx built documentation for the latest relase on the 'master' branch at:
+
+[https://paramdigma.com/Core/](https://paramdigma.com/Core/)
+
+> I'm planning on supporting multiple versions on the docs in the future, for now, only the latest release will be documented.
+> 
+> For previous releases, you can always build the docs locally with DocFx.
 
 ## Contributing
 

@@ -8,10 +8,12 @@ on:
 jobs:
   hello_world_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: Docs build & deploy
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
         name: Checkout 🛎
+      - run: "rm .gitignore && ls ."
+        name: Remove .gitignore file
       - uses: nikeee/docfx-action@master
         name: Build Docs 📚
         with:
@@ -19,7 +21,6 @@ jobs:
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@releases/v3
         with:
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages # The branch the action should deploy to.
-          FOLDER: docs # The folder the action should deploy.
+          FOLDER: docs/ # The folder the action should deploy.
  
