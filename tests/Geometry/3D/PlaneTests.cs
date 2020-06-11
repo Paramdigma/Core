@@ -108,5 +108,14 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(xy.YAxis, flipped.XAxis);
             Assert.Equal(xy.ZAxis, -flipped.ZAxis);
         }
+
+        [Fact]
+        public void CanBe_Compared()
+        {
+            var expected = Plane.WorldXY;
+            var actual = new Plane(Point3d.WorldOrigin,Vector3d.UnitX, Vector3d.UnitY);
+            Assert.Equal(expected,actual);
+            Assert.Equal(expected.GetHashCode(),actual.GetHashCode());
+        }
     }
 }

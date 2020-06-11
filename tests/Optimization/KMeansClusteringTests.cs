@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 using Paramdigma.Core.Collections;
 using Paramdigma.Core.Geometry;
 using Paramdigma.Core.Optimization;
@@ -35,18 +36,13 @@ namespace Paramdigma.Core.Tests.Optimization
         }
 
         [Theory]
-        [InlineData(4)]
-        [InlineData(6)]
-        [InlineData(10)]
-        public void KMeans_MainTest(int expectedClusters)
+        [InlineData(4, 20 )]
+        [InlineData(6, 18)]
+        [InlineData(10, 15)]
+        public void KMeans_MainTest(int expectedClusters, int expectedClusterCount)
         {
-            // T
-            const double sep = 5.0;
-            int expectedClusterCount = 20;
-
             //Generate random vectors
             var vectors = new List<VectorNd>();
-            var rnd = new Random();
             var cir = new Circle(Plane.WorldXY, 10);
             var pts = new List<Point3d>();
 
@@ -58,16 +54,23 @@ namespace Paramdigma.Core.Tests.Optimization
             }
             
             Assert.True(vectors.Count == expectedClusters * expectedClusterCount);
-
+            bool eventCheck = false;
             // When
             var kMeans = new KMeansClustering(100, expectedClusters, vectors);
+            kMeans.IterationCompleted += (sender, args) =>
+            {
+                Assert.True(args.iteration >= 0);
+                Assert.True(args.Clusters.Count == expectedClusters);
+                eventCheck = true;
+                
+            };
             kMeans.Run();
-            
+            //Assert the Iteration completed event has been raised
+            Assert.True(eventCheck);
             // Then
             kMeans.Clusters.ForEach(cluster =>
             {
                 Assert.NotEmpty(cluster);
-                var firstVector = cluster[0];
                 var first = new Point3d(cluster[0][0], cluster[0][1], cluster[0][2]);
                 var closest = pts.First(pt => pt.DistanceTo(first) <= 2);
                 foreach (var vector in cluster)

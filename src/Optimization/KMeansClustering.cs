@@ -110,6 +110,7 @@ namespace Paramdigma.Core.Optimization
                 // Update clusters and increase iteration
                 Clusters = newClusters;
                 var iterArgs = new IterationCompletedEventArgs() {iteration = iteration, Clusters = newClusters};
+                OnIterationCompleted(iterArgs);
                 iteration++;
                 currentIterations++;
             } while (hasChanged
