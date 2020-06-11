@@ -161,9 +161,9 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         public void Negate()
         {
-            this.x = -this.x;
-            this.y = -this.y;
-            this.z = -this.z;
+            this.x = this.x != 0 ? -this.x : 0;
+            this.y = this.y != 0 ? -this.y : 0;
+            this.z = this.z != 0 ? -this.z : 0;
         }
 
         /// <summary>
@@ -183,7 +183,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <param name="obj">Object to compare to.</param>
         /// <returns>Returns a copy of this BasePoint instance.</returns>
-
+        
         /// <inheritdoc/>
         public override bool Equals(object obj)
         {

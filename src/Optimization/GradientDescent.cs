@@ -33,7 +33,7 @@ namespace Paramdigma.Core.Optimization
         ///     Run gradient descent algorithm.
         /// </summary>
         /// <param name="function">Delegate function to compute the fitness.</param>
-        /// <param name="inputValues">Input values to compute the fitnessfrom.</param>
+        /// <param name="inputValues">Input values to compute the fitness from.</param>
         public void Minimize(FitnessFunction function, List<double> inputValues)
         {
             Result.Values = inputValues;
@@ -118,32 +118,6 @@ namespace Paramdigma.Core.Optimization
 
             // Compute partial derivative using 2-point method
             partialDerivative = (error1 - error2) / 2 * step;
-
-            return partialDerivative;
-        }
-
-        private double Compute5PointPartialDerivative(
-            int inputIndex,
-            FitnessFunction func,
-            List<double> inputValues,
-            double step)
-        {
-            double partialDerivative, hPos, hNeg, hPos2, hNeg2;
-
-            // Compute 2-point errors
-            inputValues[inputIndex] += step;
-            hPos = func(inputValues);
-            inputValues[inputIndex] += step;
-            hPos2 = func(inputValues);
-            inputValues[inputIndex] -= 3 * step;
-            hNeg = func(inputValues);
-            inputValues[inputIndex] -= step;
-            hNeg2 = func(inputValues);
-
-            inputValues[inputIndex] += 2 * step; // Reset value to original
-
-            // Compute partial derivative using 5-point method
-            partialDerivative = (-hPos2 + (8 * hPos) - (8 * hNeg) + hNeg2) / (12 * step);
 
             return partialDerivative;
         }

@@ -224,5 +224,35 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <returns>Plane clone.</returns>
         public Plane Clone() => new Plane(new Point3d(Origin), new Vector3d(XAxis), new Vector3d(YAxis), new Vector3d(ZAxis));
+        
+        public override bool Equals(object obj)
+        {
+            if (!(obj is Plane))
+            {
+                return false;
+            }
+
+            var plane = (Plane)obj;
+            return plane.Origin == this.Origin
+                && plane.XAxis == this.XAxis
+                && plane.YAxis == this.YAxis;
+        }
+
+        /// <inheritdoc/>
+        public override int GetHashCode()
+        {
+            unchecked
+            {
+                // Choose large primes to avoid hashing collisions
+                const int hashingBase = (int)2166136261;
+                const int hashingMultiplier = 16777619;
+
+                int hash = hashingBase;
+                hash = (hash * hashingMultiplier) ^ this.Origin.GetHashCode();
+                hash = (hash * hashingMultiplier) ^ this.XAxis.GetHashCode();
+                hash = (hash * hashingMultiplier) ^ this.YAxis.GetHashCode();
+                return hash;
+            }
+        }
     }
 }

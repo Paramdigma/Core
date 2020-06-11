@@ -1,4 +1,6 @@
+using System;
 using System.Collections.Generic;
+using System.Linq;
 using Paramdigma.Core.Geometry;
 
 namespace Paramdigma.Core.Optimization
@@ -40,22 +42,22 @@ namespace Paramdigma.Core.Optimization
             for (int i = 0; i < clusterCount; i++)
                 Clusters.Add(new KMeansCluster());
 
-            for (int i = 0; i < data.Count; i++)
-                Clusters[i % clusterCount].Add(data[i]);
+            data.ForEach(vector => this.Clusters[new Random().Next() % this.clusterCount].Add(vector));
         }
 
         /// <summary>
         /// Run the algorithm until it reaches the maximum amount of iterations.
         /// </summary>
-        public void Run() => Run(maxIterations);
+        public void Run() => Run(maxIterations, false);
 
         /// <summary>
         /// Run the k-means clustering algorithm for a specified amount of iterations.
         /// </summary>
         /// <param name="iterations">Iterations to run.</param>
-        public void Run(int iterations)
+        public void Run(int iterations, bool allowEmptyClusters)
         {
-            bool hasChanged = false;
+            var rnd = new Random();
+            bool hasChanged;
             int iteration = 0;
             do
             {
@@ -86,14 +88,34 @@ namespace Paramdigma.Core.Optimization
                     }
                 });
 
+                // Check for empty clusters
+                if (!allowEmptyClusters)
+                {
+                    newClusters.ForEach(cluster =>
+                    {
+                        if (cluster.Count == 0)
+                        {
+                            Console.WriteLine("Cluster has no mass");
+                            var biggest = newClusters.OrderByDescending(x => x.Count)
+                                                     .First();
+
+                            var randomVector = biggest[rnd.Next(biggest.Count)];
+
+                            biggest.Remove(randomVector);
+                            cluster.Add(randomVector);
+                        }
+                    });
+                }
+                
                 // Update clusters and increase iteration
                 Clusters = newClusters;
+                var iterArgs = new IterationCompletedEventArgs() {iteration = iteration, Clusters = newClusters};
+                OnIterationCompleted(iterArgs);
                 iteration++;
                 currentIterations++;
-            }
-            while (hasChanged
-                     && iteration < iterations
-                     && currentIterations < maxIterations);
+            } while (hasChanged
+                  && iteration < iterations
+                  && currentIterations < maxIterations);
         }
 
         /// <summary>
@@ -110,7 +132,7 @@ namespace Paramdigma.Core.Optimization
             for (int i = 0; i < pool.Count; i++)
             {
                 var v = pool[i];
-                var sim = VectorNd.AngularDistance(v, vector);
+                var sim = VectorNd.CosineSimilarity(v, vector);
                 if (sim < min)
                 {
                     min = sim;
@@ -119,6 +141,38 @@ namespace Paramdigma.Core.Optimization
             }
 
             return minIndex;
+        }
+
+        /// <summary>
+        /// Raised when an iteration is completed.
+        /// </summary>
+        public event EventHandler<IterationCompletedEventArgs> IterationCompleted;
+
+        /// <summary>
+        /// Method to call when an iteration is completed.
+        /// </summary>
+        /// <param name="iterArgs">Data for the current iteration.</param>
+        protected virtual void OnIterationCompleted(IterationCompletedEventArgs iterArgs)
+        {
+            IterationCompleted?.Invoke(this, iterArgs);
+        }
+
+        /// <summary>
+        /// Data for the current iteration event.
+        /// </summary>
+        public class IterationCompletedEventArgs : EventArgs
+        {
+            public int iteration
+            {
+                get;
+                set;
+            }
+
+            public List<KMeansCluster> Clusters
+            {
+                get;
+                set;
+            }
         }
     }
 }

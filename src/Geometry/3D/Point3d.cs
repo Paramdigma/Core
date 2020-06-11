@@ -12,9 +12,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <returns><see cref="Point3d"/>.</returns>
         public Point3d()
-            : base()
-        {
-        }
+            : base() { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Point3d"/> class by cartesian coordinates.
@@ -24,9 +22,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="zCoord">Z coordinate.</param>
         /// <returns></returns>
         public Point3d(double xCoord, double yCoord, double zCoord)
-            : base(xCoord, yCoord, zCoord)
-        {
-        }
+            : base(xCoord, yCoord, zCoord) { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Point3d"/> class from a 2-dimensional point.
@@ -34,9 +30,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="point">2d point to convert.</param>
         /// <returns><see cref="Point3d"/>.</returns>
         public Point3d(Point2d point)
-            : base(point.X, point.Y, 0)
-        {
-        }
+            : base(point.X, point.Y, 0) { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Point3d"/> class.
@@ -44,9 +38,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="point">3d point to copy.</param>
         /// <returns><see cref="Point3d"/>.</returns>
         public Point3d(Point3d point)
-        : base(point)
-        {
-        }
+            : base(point) { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Point3d"/> class from a 4-dimensional point by dividing the cartesian coordinates by the weight.
@@ -54,9 +46,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="point">4d point to convert.</param>
         /// <returns><see cref="Point3d"/>.</returns>
         public Point3d(Point4d point)
-            : this(point.X / point.Weight, point.Y / point.Weight, point.Z / point.Weight)
-        {
-        }
+            : this(point.X / point.Weight, point.Y / point.Weight, point.Z / point.Weight) { }
 
         /// <summary>
         /// Gets a new Unset point.
@@ -121,7 +111,11 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <param name="point">Point.</param>
         /// <returns><see cref="Point3d"/>.</returns>
-        public static Point3d operator -(Point3d point) => new Point3d(-point.X, -point.Y, -point.Z);
+        public static Point3d operator -(Point3d point)
+            => new Point3d(
+                point.X != 0 ? -point.X : 0,
+                point.Y != 0 ? -point.Y : 0,
+                point.Z != 0 ? -point.Z : 0);
 
         /// <summary>
         /// Multiplies a point with a number.

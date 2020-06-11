@@ -3,7 +3,7 @@ namespace Paramdigma.Core.Optimization
     /// <summary>
     ///     Contains the different options of a Gradient Descent minimization.
     /// </summary>
-    public class GradientDescentOptions
+    public struct GradientDescentOptions
     {
         /// <summary>
         /// Threshold to stop minimization.
@@ -31,7 +31,7 @@ namespace Paramdigma.Core.Optimization
         public double ErrorThreshold;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GradientDescentOptions"/> class given an existing one.
+        /// Initializes a new instance of the <see cref="GradientDescentOptions"/> struct given an existing one.
         /// </summary>
         /// <param name="options">Options to duplicate.</param>
         public GradientDescentOptions(GradientDescentOptions options)
@@ -46,7 +46,7 @@ namespace Paramdigma.Core.Optimization
         // TODO: Fill in this fields!
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GradientDescentOptions"/> class given all it's values individually.
+        /// Initializes a new instance of the <see cref="GradientDescentOptions"/> struct given all it's values individually.
         /// </summary>
         /// <param name="threshold"></param>
         /// <param name="maxIterations"></param>
