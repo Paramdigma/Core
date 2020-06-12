@@ -113,7 +113,7 @@ namespace Paramdigma.Core.Optimization
         /// <inheritdoc/>
         public override string ToString()
         {
-            return "Optimus.Cluster[" + this.Count + "]";
+            return "Paramdigma.Core.Cluster[" + this.Count + "]";
         }
     }
 }
