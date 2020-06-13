@@ -110,5 +110,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <returns>Line length.</returns>
         protected override double ComputeLength() => this.StartPoint.DistanceTo(this.EndPoint);
+
+        public static explicit operator Vector3d(Line line) => line.EndPoint - line.StartPoint;
     }
 }

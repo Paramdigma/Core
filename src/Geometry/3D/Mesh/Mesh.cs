@@ -91,6 +91,20 @@ namespace Paramdigma.Core.HalfEdgeMesh
         }
 
         /// <summary>
+        /// Initializes a new instance of the <see cref="Mesh"/> class from verticees and faces.
+        /// </summary>
+        /// <param name="vertices">list of mesh vertices.</param>
+        /// <param name="faceIndexes">Nested list with face vertices index.</param>
+        public Mesh(List<MeshVertex> vertices, List<List<int>> faceIndexes)
+            : this()
+        {
+            this.Vertices = vertices;
+
+            // - Iterate through faces, creating face, edge, and halfedge objects (and connecting where possible)
+            this.CreateFaces(faceIndexes);
+        }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="Mesh"/> class from an existing one.
         /// </summary>
         /// <param name="halfEdgeMesh">Existing Half-Edge Mesh.</param>
