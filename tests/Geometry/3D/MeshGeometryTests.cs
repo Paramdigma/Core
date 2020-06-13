@@ -22,7 +22,7 @@ namespace Paramdigma.Core.Tests.Geometry
                 return mesh;
             }
         }
-        
+
         public Mesh FlatTriangle
         {
             get
@@ -43,7 +43,7 @@ namespace Paramdigma.Core.Tests.Geometry
             FlatSquare.Corners.ForEach(corner =>
             {
                 var angle = MeshGeometry.Angle(corner);
-                Assert.True(Math.Abs(angle - 0.5 * Math.PI) < Settings.Tolerance);
+                Assert.True(Math.Abs(angle - (0.5 * Math.PI)) < Settings.Tolerance);
             });
         }
 

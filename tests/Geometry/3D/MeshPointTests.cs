@@ -1,8 +1,7 @@
-using Paramdigma.Core.Geometry;
 using Paramdigma.Core.HalfEdgeMesh;
 using Xunit;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class MeshPointTests
     {

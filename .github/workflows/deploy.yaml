@@ -1,0 +1,51 @@
+name: Deploy docs
+
+on:
+  push:
+    release:
+      types:
+        - published
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🛎 Checkout repo
+        uses: actions/checkout@v2
+      - name: 🚧 Setup .NET Core
+        uses: actions/setup-dotnet@v1
+        with:
+          dotnet-version: 3.1.101
+          source-url: https://nuget.pkg.github.com/Paramdigma/index.json
+        env:
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      - name: ⚙️ Install dependencies
+        run: dotnet restore
+      - name: 🏗 Build
+        run: dotnet build --configuration Release --no-restore
+      - name: 🧪 Test
+        run: dotnet test --no-restore --verbosity normal
+      - name: 📦 Create the package
+        run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
+      - name: 🚀 Publish the package to GPR
+        run: dotnet nuget push src/bin/Release/*.nupkg
+
+  deploy_docs:
+    runs-on: ubuntu-latest
+    name: Docs build & deploy
+    needs: build_and_publish
+    steps:
+      - uses: actions/checkout@v2
+        name: 🛎 Checkout
+      - run: "rm .gitignore && ls ."
+        name: 🗑 Remove .gitignore file
+      - uses: nikeee/docfx-action@master
+        name: 📚 Build Docs
+        with:
+          args: docfx_project/docfx.json
+      - name: 🚀 Deploy
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          BRANCH: gh-pages # The branch the action should deploy to.
+          FOLDER: docs/ # The folder the action should deploy.
+ 

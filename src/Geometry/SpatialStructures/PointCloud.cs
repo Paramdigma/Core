@@ -9,8 +9,10 @@ namespace Paramdigma.Core.SpatialSearch
     /// </summary>
     public class PointCloud : IList<PointCloudMember>
     {
-
-        private List<PointCloudMember> points { get; }
+        private List<PointCloudMember> points
+        {
+            get;
+        }
 
         public IEnumerator<PointCloudMember> GetEnumerator() => this.points.GetEnumerator();
 

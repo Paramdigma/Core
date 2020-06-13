@@ -50,7 +50,7 @@ namespace Paramdigma.Core.Curves
         /// </summary>
         /// <param name="valueKey">Key of the value to be computed per vertex.</param>
         /// <param name="level">Level value to be computed.</param>
-        /// <param name="face">Face to computee the level in.</param>
+        /// <param name="face">Face to compute the level in.</param>
         /// <param name="line">Resulting level line on the face.</param>
         /// <returns>True if successful, false if not.</returns>
         public static bool GetFaceLevel(string valueKey, double level, MeshFace face, out Line line)
@@ -75,27 +75,25 @@ namespace Paramdigma.Core.Curves
                 line = new Line(new Point3d(), new Point3d());
                 return false;
             }
-            else
+
+            // Triangle intersects level
+            List<Point3d> intersectionPoints = new List<Point3d>();
+
+            foreach (int i in above)
             {
-                // Triangle intersects level
-                List<Point3d> intersectionPoints = new List<Point3d>();
-
-                foreach (int i in above)
+                foreach (int j in below)
                 {
-                    foreach (int j in below)
-                    {
-                        double diff = vertexValues[i] - vertexValues[j];
-                        double desiredDiff = level - vertexValues[j];
-                        double unitizedDistance = desiredDiff / diff;
-                        Vector3d edgeV = adj[i] - adj[j];
-                        Point3d levelPoint = adj[j] + (edgeV * unitizedDistance);
-                        intersectionPoints.Add(levelPoint);
-                    }
+                    double diff = vertexValues[i] - vertexValues[j];
+                    double desiredDiff = level - vertexValues[j];
+                    double unitizedDistance = desiredDiff / diff;
+                    Vector3d edgeV = adj[i] - adj[j];
+                    Point3d levelPoint = adj[j] + (edgeV * unitizedDistance);
+                    intersectionPoints.Add(levelPoint);
                 }
-
-                line = new Line(intersectionPoints[0], intersectionPoints[1]);
-                return true;
             }
+
+            line = new Line(intersectionPoints[0], intersectionPoints[1]);
+            return true;
         }
 
         /// <summary>

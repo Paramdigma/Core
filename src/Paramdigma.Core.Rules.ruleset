@@ -3,6 +3,7 @@
     <Rules AnalyzerId="StyleCop.Analyzers" RuleNamespace="StyleCop.CSharp.ReadabilityRules">
         <Rule Id="SA1101" Action="None" />
         <Rule Id="SA1124" Action="Info" />
+        <Rule Id="SA1128" Action="None" />
 
         <!-- Code ordering rules -->
         <Rule Id="SA1200" Action="None" /> <!-- Using must be inside namespace -->
@@ -15,6 +16,7 @@
         <Rule Id="SA1401" Action="None" /> <!-- Fields should be private -->
 
         <!-- Braces rules -->
+        <Rule Id="SA1502" Action="None" />
         <Rule Id="SA1503" Action="None" /> <!-- Braces should not be omitted -->
 
         <!-- Documentation related rules -->

@@ -547,10 +547,10 @@ namespace Paramdigma.Core.Geometry
                 pk[0, i] = controlPoints[r1 + i];
             for (int k = 1; k <= d; k++)
             {
-                var tmp = p - k + 1;
+                var tmp = (p - k) + 1;
                 for (int i = 0; i <= r - k; i++)
                 {
-                    pk[k, i] = tmp * (Point3d)(pk[k - 1, i + 1] - pk[k - 1, i]) / (knotVector[r1 + i + p + 1] - knotVector[r1 + i + k]);
+                    pk[k, i] = (tmp * (Point3d)(pk[k - 1, i + 1] - pk[k - 1, i])) / (knotVector[r1 + i + p + 1] - knotVector[r1 + i + k]);
                 }
             }
 
@@ -744,13 +744,13 @@ namespace Paramdigma.Core.Geometry
         {
             var span = FindSpan(n, p, u, knotVector);
             var N = BasisFuns(span, u, p, knotVector);
-            var Cw = new Point4d();
+            var cw = new Point4d();
             for (int j = 0; j <= p; j++)
             {
-                Cw += N[j] * controlPoints[span - p + j];
+                cw += N[j] * controlPoints[span - p + j];
             }
 
-            return Cw / Cw.Weight;
+            return cw / cw.Weight;
         }
 
         /// <summary>
@@ -778,6 +778,19 @@ namespace Paramdigma.Core.Geometry
             return ders;
         }
 
+        /// <summary>
+        /// Compute a point on a nurbs surface.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="p"></param>
+        /// <param name="knotVectorU"></param>
+        /// <param name="m"></param>
+        /// <param name="q"></param>
+        /// <param name="knotVectorV"></param>
+        /// <param name="controlPoints"></param>
+        /// <param name="u"></param>
+        /// <param name="v"></param>
+        /// <returns></returns>
         public static Point3d SurfacePoint(int n, int p, IList<double> knotVectorU, int m, int q, IList<double> knotVectorV, Matrix<Point4d> controlPoints, double u, double v)
         {
             var uspan = FindSpan(n, p, u, knotVectorU);

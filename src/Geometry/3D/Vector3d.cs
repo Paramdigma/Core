@@ -11,28 +11,22 @@ namespace Paramdigma.Core.Geometry
         /// Initializes a new instance of the <see cref="Vector3d"/> class.
         /// </summary>
         public Vector3d()
-            : base()
-        {
-        }
+            : base() { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Vector3d"/> class with the same values as the provided vector.
         /// </summary>
         /// <param name="vector">Vector to copy values from.</param>
         public Vector3d(Vector3d vector)
-            : base(vector)
-        {
-        }
+            : base(vector) { }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Vector3d"/> class from a point.
+        /// Initializes a new instance of the <see cref="Vector3d"/> class from a v.
         /// </summary>
         /// <param name="point">Point to copy values from.</param>
-        /// <returns>New vector with the same coordinate values as the given point.</returns>
+        /// <returns>New vector with the same coordinate values as the given v.</returns>
         public Vector3d(Point3d point)
-            : base(point)
-        {
-        }
+            : base(point) { }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Vector3d"/> class given it's 3 coordinates.
@@ -42,9 +36,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="zCoord">Z coordinate.</param>
         /// <returns>Vector entity with the specified coordinate values.</returns>
         public Vector3d(double xCoord, double yCoord, double zCoord)
-            : base(xCoord, yCoord, zCoord)
-        {
-        }
+            : base(xCoord, yCoord, zCoord) { }
 
         /// <summary>
         /// Gets the Euclidean length squared of this vector.
@@ -188,7 +180,11 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <param name="v">Vector to negate.</param>
         /// <returns>New vector entity with all the values negated.</returns>
-        public static Vector3d operator -(Vector3d v) => new Vector3d(-v.X, -v.Y, -v.Z);
+        public static Vector3d operator -(Vector3d v)
+            => new Vector3d(
+                v.X != 0 ? -v.X : 0,
+                v.Y != 0 ? -v.Y : 0,
+                v.Z != 0 ? -v.Z : 0);
 
         /// <summary>
         /// Divide a vector by a number.
