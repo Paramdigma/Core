@@ -16,14 +16,14 @@ namespace Paramdigma.Core.Tests.Geometry
             var point1 = new DelaunayPoint(0, maxY);
             var point2 = new DelaunayPoint(maxX, maxY);
             var point3 = new DelaunayPoint(maxX, 0);
-            var point4 = new DelaunayPoint(maxX/2, maxY/2);
+            var point4 = new DelaunayPoint(maxX / 2, maxY / 2);
             var points = new List<DelaunayPoint>() { point0, point1, point2, point3 };
             var triangle1 = new DelaunayTriangle(point0, point1, point2);
             var triangle2 = new DelaunayTriangle(point0, point2, point3);
             var border = new List<DelaunayTriangle> { triangle1, triangle2 };
 
             var delaunay = Delaunay.Compute(
-                new List<DelaunayPoint>{point0,point1,point2,point3,point4},
+                new List<DelaunayPoint> { point0, point1, point2, point3, point4 },
                 border
             );
             Assert.True(delaunay.Count == 4);
@@ -57,7 +57,7 @@ namespace Paramdigma.Core.Tests.Geometry
         public static DelaunayPoint RandomPoint(Random RandGenerator, double MinValue, double MaxValue)
         {
             double range = MaxValue - MinValue;
-            DelaunayPoint randomPoint = new DelaunayPoint(RandGenerator.NextDouble() * range + MinValue, RandGenerator.NextDouble() * range + MinValue);
+            DelaunayPoint randomPoint = new DelaunayPoint((RandGenerator.NextDouble() * range) + MinValue, (RandGenerator.NextDouble() * range) + MinValue);
             return randomPoint;
         }
     }
