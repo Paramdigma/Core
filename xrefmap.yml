@@ -1229,6 +1229,102 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Box.Plane
   nameWithType: Box.Plane
+- uid: Paramdigma.Core.Geometry.Circle
+  name: Circle
+  href: api/Paramdigma.Core.Geometry.Circle.html
+  commentId: T:Paramdigma.Core.Geometry.Circle
+  fullName: Paramdigma.Core.Geometry.Circle
+  nameWithType: Circle
+- uid: Paramdigma.Core.Geometry.Circle.#ctor(Paramdigma.Core.Geometry.Plane,System.Double)
+  name: Circle(Plane, Double)
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle__ctor_Paramdigma_Core_Geometry_Plane_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Circle.#ctor(Paramdigma.Core.Geometry.Plane,System.Double)
+  fullName: Paramdigma.Core.Geometry.Circle.Circle(Paramdigma.Core.Geometry.Plane, System.Double)
+  nameWithType: Circle.Circle(Plane, Double)
+- uid: Paramdigma.Core.Geometry.Circle.#ctor*
+  name: Circle
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.Circle.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Circle.Circle
+  nameWithType: Circle.Circle
+- uid: Paramdigma.Core.Geometry.Circle.BinormalAt(System.Double)
+  name: BinormalAt(Double)
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_BinormalAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Circle.BinormalAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.Circle.BinormalAt(System.Double)
+  nameWithType: Circle.BinormalAt(Double)
+- uid: Paramdigma.Core.Geometry.Circle.BinormalAt*
+  name: BinormalAt
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_BinormalAt_
+  commentId: Overload:Paramdigma.Core.Geometry.Circle.BinormalAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Circle.BinormalAt
+  nameWithType: Circle.BinormalAt
+- uid: Paramdigma.Core.Geometry.Circle.FrameAt(System.Double)
+  name: FrameAt(Double)
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_FrameAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Circle.FrameAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.Circle.FrameAt(System.Double)
+  nameWithType: Circle.FrameAt(Double)
+- uid: Paramdigma.Core.Geometry.Circle.FrameAt*
+  name: FrameAt
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_FrameAt_
+  commentId: Overload:Paramdigma.Core.Geometry.Circle.FrameAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Circle.FrameAt
+  nameWithType: Circle.FrameAt
+- uid: Paramdigma.Core.Geometry.Circle.NormalAt(System.Double)
+  name: NormalAt(Double)
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_NormalAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Circle.NormalAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.Circle.NormalAt(System.Double)
+  nameWithType: Circle.NormalAt(Double)
+- uid: Paramdigma.Core.Geometry.Circle.NormalAt*
+  name: NormalAt
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_NormalAt_
+  commentId: Overload:Paramdigma.Core.Geometry.Circle.NormalAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Circle.NormalAt
+  nameWithType: Circle.NormalAt
+- uid: Paramdigma.Core.Geometry.Circle.Plane
+  name: Plane
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_Plane
+  commentId: F:Paramdigma.Core.Geometry.Circle.Plane
+  fullName: Paramdigma.Core.Geometry.Circle.Plane
+  nameWithType: Circle.Plane
+- uid: Paramdigma.Core.Geometry.Circle.PointAt(System.Double)
+  name: PointAt(Double)
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_PointAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Circle.PointAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.Circle.PointAt(System.Double)
+  nameWithType: Circle.PointAt(Double)
+- uid: Paramdigma.Core.Geometry.Circle.PointAt*
+  name: PointAt
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_PointAt_
+  commentId: Overload:Paramdigma.Core.Geometry.Circle.PointAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Circle.PointAt
+  nameWithType: Circle.PointAt
+- uid: Paramdigma.Core.Geometry.Circle.Radius
+  name: Radius
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_Radius
+  commentId: F:Paramdigma.Core.Geometry.Circle.Radius
+  fullName: Paramdigma.Core.Geometry.Circle.Radius
+  nameWithType: Circle.Radius
+- uid: Paramdigma.Core.Geometry.Circle.TangentAt(System.Double)
+  name: TangentAt(Double)
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_TangentAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Circle.TangentAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.Circle.TangentAt(System.Double)
+  nameWithType: Circle.TangentAt(Double)
+- uid: Paramdigma.Core.Geometry.Circle.TangentAt*
+  name: TangentAt
+  href: api/Paramdigma.Core.Geometry.Circle.html#Paramdigma_Core_Geometry_Circle_TangentAt_
+  commentId: Overload:Paramdigma.Core.Geometry.Circle.TangentAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Circle.TangentAt
+  nameWithType: Circle.TangentAt
 - uid: Paramdigma.Core.Geometry.Cylinder
   name: Cylinder
   href: api/Paramdigma.Core.Geometry.Cylinder.html
@@ -1391,6 +1487,228 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Cylinder.Radius
   nameWithType: Cylinder.Radius
+- uid: Paramdigma.Core.Geometry.Delaunay
+  name: Delaunay
+  href: api/Paramdigma.Core.Geometry.Delaunay.html
+  commentId: T:Paramdigma.Core.Geometry.Delaunay
+  fullName: Paramdigma.Core.Geometry.Delaunay
+  nameWithType: Delaunay
+- uid: Paramdigma.Core.Geometry.Delaunay.Compute(System.Collections.Generic.List{Paramdigma.Core.Geometry.DelaunayPoint},System.Collections.Generic.List{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name: Compute(List<DelaunayPoint>, List<DelaunayTriangle>)
+  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Compute_System_Collections_Generic_List_Paramdigma_Core_Geometry_DelaunayPoint__System_Collections_Generic_List_Paramdigma_Core_Geometry_DelaunayTriangle__
+  commentId: M:Paramdigma.Core.Geometry.Delaunay.Compute(System.Collections.Generic.List{Paramdigma.Core.Geometry.DelaunayPoint},System.Collections.Generic.List{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name.vb: Compute(List(Of DelaunayPoint), List(Of DelaunayTriangle))
+  fullName: Paramdigma.Core.Geometry.Delaunay.Compute(System.Collections.Generic.List<Paramdigma.Core.Geometry.DelaunayPoint>, System.Collections.Generic.List<Paramdigma.Core.Geometry.DelaunayTriangle>)
+  fullName.vb: Paramdigma.Core.Geometry.Delaunay.Compute(System.Collections.Generic.List(Of Paramdigma.Core.Geometry.DelaunayPoint), System.Collections.Generic.List(Of Paramdigma.Core.Geometry.DelaunayTriangle))
+  nameWithType: Delaunay.Compute(List<DelaunayPoint>, List<DelaunayTriangle>)
+  nameWithType.vb: Delaunay.Compute(List(Of DelaunayPoint), List(Of DelaunayTriangle))
+- uid: Paramdigma.Core.Geometry.Delaunay.Compute*
+  name: Compute
+  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Compute_
+  commentId: Overload:Paramdigma.Core.Geometry.Delaunay.Compute
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Delaunay.Compute
+  nameWithType: Delaunay.Compute
+- uid: Paramdigma.Core.Geometry.Delaunay.Voronoi(System.Collections.Generic.List{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name: Voronoi(List<DelaunayTriangle>)
+  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Voronoi_System_Collections_Generic_List_Paramdigma_Core_Geometry_DelaunayTriangle__
+  commentId: M:Paramdigma.Core.Geometry.Delaunay.Voronoi(System.Collections.Generic.List{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name.vb: Voronoi(List(Of DelaunayTriangle))
+  fullName: Paramdigma.Core.Geometry.Delaunay.Voronoi(System.Collections.Generic.List<Paramdigma.Core.Geometry.DelaunayTriangle>)
+  fullName.vb: Paramdigma.Core.Geometry.Delaunay.Voronoi(System.Collections.Generic.List(Of Paramdigma.Core.Geometry.DelaunayTriangle))
+  nameWithType: Delaunay.Voronoi(List<DelaunayTriangle>)
+  nameWithType.vb: Delaunay.Voronoi(List(Of DelaunayTriangle))
+- uid: Paramdigma.Core.Geometry.Delaunay.Voronoi*
+  name: Voronoi
+  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Voronoi_
+  commentId: Overload:Paramdigma.Core.Geometry.Delaunay.Voronoi
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Delaunay.Voronoi
+  nameWithType: Delaunay.Voronoi
+- uid: Paramdigma.Core.Geometry.DelaunayEdge
+  name: DelaunayEdge
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html
+  commentId: T:Paramdigma.Core.Geometry.DelaunayEdge
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge
+  nameWithType: DelaunayEdge
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.#ctor(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
+  name: DelaunayEdge(DelaunayPoint, DelaunayPoint)
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge__ctor_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayEdge.#ctor(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.DelaunayEdge(Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint)
+  nameWithType: DelaunayEdge.DelaunayEdge(DelaunayPoint, DelaunayPoint)
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.#ctor*
+  name: DelaunayEdge
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayEdge.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.DelaunayEdge
+  nameWithType: DelaunayEdge.DelaunayEdge
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.EndPoint
+  name: EndPoint
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge_EndPoint
+  commentId: F:Paramdigma.Core.Geometry.DelaunayEdge.EndPoint
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.EndPoint
+  nameWithType: DelaunayEdge.EndPoint
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge_Equals_System_Object_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayEdge.Equals(System.Object)
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.Equals(System.Object)
+  nameWithType: DelaunayEdge.Equals(Object)
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.Equals*
+  name: Equals
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge_Equals_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayEdge.Equals
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.Equals
+  nameWithType: DelaunayEdge.Equals
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.GetHashCode
+  name: GetHashCode()
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge_GetHashCode
+  commentId: M:Paramdigma.Core.Geometry.DelaunayEdge.GetHashCode
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.GetHashCode()
+  nameWithType: DelaunayEdge.GetHashCode()
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.GetHashCode*
+  name: GetHashCode
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge_GetHashCode_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayEdge.GetHashCode
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.GetHashCode
+  nameWithType: DelaunayEdge.GetHashCode
+- uid: Paramdigma.Core.Geometry.DelaunayEdge.StartPoint
+  name: StartPoint
+  href: api/Paramdigma.Core.Geometry.DelaunayEdge.html#Paramdigma_Core_Geometry_DelaunayEdge_StartPoint
+  commentId: F:Paramdigma.Core.Geometry.DelaunayEdge.StartPoint
+  fullName: Paramdigma.Core.Geometry.DelaunayEdge.StartPoint
+  nameWithType: DelaunayEdge.StartPoint
+- uid: Paramdigma.Core.Geometry.DelaunayPoint
+  name: DelaunayPoint
+  href: api/Paramdigma.Core.Geometry.DelaunayPoint.html
+  commentId: T:Paramdigma.Core.Geometry.DelaunayPoint
+  fullName: Paramdigma.Core.Geometry.DelaunayPoint
+  nameWithType: DelaunayPoint
+- uid: Paramdigma.Core.Geometry.DelaunayPoint.#ctor(System.Double,System.Double)
+  name: DelaunayPoint(Double, Double)
+  href: api/Paramdigma.Core.Geometry.DelaunayPoint.html#Paramdigma_Core_Geometry_DelaunayPoint__ctor_System_Double_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayPoint.#ctor(System.Double,System.Double)
+  fullName: Paramdigma.Core.Geometry.DelaunayPoint.DelaunayPoint(System.Double, System.Double)
+  nameWithType: DelaunayPoint.DelaunayPoint(Double, Double)
+- uid: Paramdigma.Core.Geometry.DelaunayPoint.#ctor*
+  name: DelaunayPoint
+  href: api/Paramdigma.Core.Geometry.DelaunayPoint.html#Paramdigma_Core_Geometry_DelaunayPoint__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayPoint.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayPoint.DelaunayPoint
+  nameWithType: DelaunayPoint.DelaunayPoint
+- uid: Paramdigma.Core.Geometry.DelaunayPoint.AdjacentTriangles
+  name: AdjacentTriangles
+  href: api/Paramdigma.Core.Geometry.DelaunayPoint.html#Paramdigma_Core_Geometry_DelaunayPoint_AdjacentTriangles
+  commentId: F:Paramdigma.Core.Geometry.DelaunayPoint.AdjacentTriangles
+  fullName: Paramdigma.Core.Geometry.DelaunayPoint.AdjacentTriangles
+  nameWithType: DelaunayPoint.AdjacentTriangles
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle
+  name: DelaunayTriangle
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html
+  commentId: T:Paramdigma.Core.Geometry.DelaunayTriangle
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle
+  nameWithType: DelaunayTriangle
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.#ctor(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
+  name: DelaunayTriangle(DelaunayPoint, DelaunayPoint, DelaunayPoint)
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle__ctor_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.#ctor(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.DelaunayTriangle(Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint)
+  nameWithType: DelaunayTriangle.DelaunayTriangle(DelaunayPoint, DelaunayPoint, DelaunayPoint)
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.#ctor*
+  name: DelaunayTriangle
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.DelaunayTriangle
+  nameWithType: DelaunayTriangle.DelaunayTriangle
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.Circumcenter
+  name: Circumcenter
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_Circumcenter
+  commentId: F:Paramdigma.Core.Geometry.DelaunayTriangle.Circumcenter
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.Circumcenter
+  nameWithType: DelaunayTriangle.Circumcenter
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
+  name: IsCounterClockwise(DelaunayPoint, DelaunayPoint, DelaunayPoint)
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsCounterClockwise_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise(Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint)
+  nameWithType: DelaunayTriangle.IsCounterClockwise(DelaunayPoint, DelaunayPoint, DelaunayPoint)
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise*
+  name: IsCounterClockwise
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsCounterClockwise_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise
+  nameWithType: DelaunayTriangle.IsCounterClockwise
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.DelaunayPoint)
+  name: IsPointInsideCircumcircle(DelaunayPoint)
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsPointInsideCircumcircle_Paramdigma_Core_Geometry_DelaunayPoint_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.DelaunayPoint)
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.DelaunayPoint)
+  nameWithType: DelaunayTriangle.IsPointInsideCircumcircle(DelaunayPoint)
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle*
+  name: IsPointInsideCircumcircle
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsPointInsideCircumcircle_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle
+  nameWithType: DelaunayTriangle.IsPointInsideCircumcircle
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.RadiusSquared
+  name: RadiusSquared
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_RadiusSquared
+  commentId: F:Paramdigma.Core.Geometry.DelaunayTriangle.RadiusSquared
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.RadiusSquared
+  nameWithType: DelaunayTriangle.RadiusSquared
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth(Paramdigma.Core.Geometry.DelaunayTriangle)
+  name: SharesEdgeWidth(DelaunayTriangle)
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_SharesEdgeWidth_Paramdigma_Core_Geometry_DelaunayTriangle_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth(Paramdigma.Core.Geometry.DelaunayTriangle)
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth(Paramdigma.Core.Geometry.DelaunayTriangle)
+  nameWithType: DelaunayTriangle.SharesEdgeWidth(DelaunayTriangle)
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth*
+  name: SharesEdgeWidth
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_SharesEdgeWidth_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth
+  nameWithType: DelaunayTriangle.SharesEdgeWidth
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges
+  name: TrianglesWithSharedEdges()
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_TrianglesWithSharedEdges
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges()
+  nameWithType: DelaunayTriangle.TrianglesWithSharedEdges()
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges*
+  name: TrianglesWithSharedEdges
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_TrianglesWithSharedEdges_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges
+  nameWithType: DelaunayTriangle.TrianglesWithSharedEdges
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
+  name: UpdateCircumcircle()
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_UpdateCircumcircle
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle()
+  nameWithType: DelaunayTriangle.UpdateCircumcircle()
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle*
+  name: UpdateCircumcircle
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_UpdateCircumcircle_
+  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
+  nameWithType: DelaunayTriangle.UpdateCircumcircle
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.Vertices
+  name: Vertices
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_Vertices
+  commentId: F:Paramdigma.Core.Geometry.DelaunayTriangle.Vertices
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.Vertices
+  nameWithType: DelaunayTriangle.Vertices
 - uid: Paramdigma.Core.Geometry.Interfaces
   name: Paramdigma.Core.Geometry.Interfaces
   href: api/Paramdigma.Core.Geometry.Interfaces.html
@@ -1705,6 +2023,25 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Line.NormalAt
   nameWithType: Line.NormalAt
+- uid: Paramdigma.Core.Geometry.Line.op_Explicit(Paramdigma.Core.Geometry.Line)~Paramdigma.Core.Geometry.Vector3d
+  name: Explicit(Line to Vector3d)
+  href: api/Paramdigma.Core.Geometry.Line.html#Paramdigma_Core_Geometry_Line_op_Explicit_Paramdigma_Core_Geometry_Line__Paramdigma_Core_Geometry_Vector3d
+  commentId: M:Paramdigma.Core.Geometry.Line.op_Explicit(Paramdigma.Core.Geometry.Line)~Paramdigma.Core.Geometry.Vector3d
+  name.vb: Narrowing(Line to Vector3d)
+  fullName: Paramdigma.Core.Geometry.Line.Explicit(Paramdigma.Core.Geometry.Line to Paramdigma.Core.Geometry.Vector3d)
+  fullName.vb: Paramdigma.Core.Geometry.Line.Narrowing(Paramdigma.Core.Geometry.Line to Paramdigma.Core.Geometry.Vector3d)
+  nameWithType: Line.Explicit(Line to Vector3d)
+  nameWithType.vb: Line.Narrowing(Line to Vector3d)
+- uid: Paramdigma.Core.Geometry.Line.op_Explicit*
+  name: Explicit
+  href: api/Paramdigma.Core.Geometry.Line.html#Paramdigma_Core_Geometry_Line_op_Explicit_
+  commentId: Overload:Paramdigma.Core.Geometry.Line.op_Explicit
+  isSpec: "True"
+  name.vb: Narrowing
+  fullName: Paramdigma.Core.Geometry.Line.Explicit
+  fullName.vb: Paramdigma.Core.Geometry.Line.Narrowing
+  nameWithType: Line.Explicit
+  nameWithType.vb: Line.Narrowing
 - uid: Paramdigma.Core.Geometry.Line.PointAt(System.Double)
   name: PointAt(Double)
   href: api/Paramdigma.Core.Geometry.Line.html#Paramdigma_Core_Geometry_Line_PointAt_System_Double_
@@ -2641,12 +2978,6 @@ references:
   commentId: M:Paramdigma.Core.Geometry.Plane.#ctor(Paramdigma.Core.Geometry.Point3d,Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d,Paramdigma.Core.Geometry.Vector3d)
   fullName: Paramdigma.Core.Geometry.Plane.Plane(Paramdigma.Core.Geometry.Point3d, Paramdigma.Core.Geometry.Vector3d, Paramdigma.Core.Geometry.Vector3d, Paramdigma.Core.Geometry.Vector3d)
   nameWithType: Plane.Plane(Point3d, Vector3d, Vector3d, Vector3d)
-- uid: Paramdigma.Core.Geometry.Plane.#ctor(System.Double,System.Double,System.Double,System.Double)
-  name: Plane(Double, Double, Double, Double)
-  href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane__ctor_System_Double_System_Double_System_Double_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.Plane.#ctor(System.Double,System.Double,System.Double,System.Double)
-  fullName: Paramdigma.Core.Geometry.Plane.Plane(System.Double, System.Double, System.Double, System.Double)
-  nameWithType: Plane.Plane(Double, Double, Double, Double)
 - uid: Paramdigma.Core.Geometry.Plane.#ctor*
   name: Plane
   href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane__ctor_
@@ -2693,6 +3024,19 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Plane.DistanceTo
   nameWithType: Plane.DistanceTo
+- uid: Paramdigma.Core.Geometry.Plane.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane_Equals_System_Object_
+  commentId: M:Paramdigma.Core.Geometry.Plane.Equals(System.Object)
+  fullName: Paramdigma.Core.Geometry.Plane.Equals(System.Object)
+  nameWithType: Plane.Equals(Object)
+- uid: Paramdigma.Core.Geometry.Plane.Equals*
+  name: Equals
+  href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane_Equals_
+  commentId: Overload:Paramdigma.Core.Geometry.Plane.Equals
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Plane.Equals
+  nameWithType: Plane.Equals
 - uid: Paramdigma.Core.Geometry.Plane.Flip
   name: Flip()
   href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane_Flip
@@ -2706,6 +3050,19 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Plane.Flip
   nameWithType: Plane.Flip
+- uid: Paramdigma.Core.Geometry.Plane.GetHashCode
+  name: GetHashCode()
+  href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane_GetHashCode
+  commentId: M:Paramdigma.Core.Geometry.Plane.GetHashCode
+  fullName: Paramdigma.Core.Geometry.Plane.GetHashCode()
+  nameWithType: Plane.GetHashCode()
+- uid: Paramdigma.Core.Geometry.Plane.GetHashCode*
+  name: GetHashCode
+  href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane_GetHashCode_
+  commentId: Overload:Paramdigma.Core.Geometry.Plane.GetHashCode
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Plane.GetHashCode
+  nameWithType: Plane.GetHashCode
 - uid: Paramdigma.Core.Geometry.Plane.GetPlaneEquation
   name: GetPlaneEquation()
   href: api/Paramdigma.Core.Geometry.Plane.html#Paramdigma_Core_Geometry_Plane_GetPlaneEquation
@@ -4098,6 +4455,38 @@ references:
   commentId: T:Paramdigma.Core.Geometry.Sphere
   fullName: Paramdigma.Core.Geometry.Sphere
   nameWithType: Sphere
+- uid: Paramdigma.Core.Geometry.Sphere.#ctor
+  name: Sphere()
+  href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere__ctor
+  commentId: M:Paramdigma.Core.Geometry.Sphere.#ctor
+  fullName: Paramdigma.Core.Geometry.Sphere.Sphere()
+  nameWithType: Sphere.Sphere()
+- uid: Paramdigma.Core.Geometry.Sphere.#ctor(Paramdigma.Core.Geometry.Plane,System.Double)
+  name: Sphere(Plane, Double)
+  href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere__ctor_Paramdigma_Core_Geometry_Plane_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.Sphere.#ctor(Paramdigma.Core.Geometry.Plane,System.Double)
+  fullName: Paramdigma.Core.Geometry.Sphere.Sphere(Paramdigma.Core.Geometry.Plane, System.Double)
+  nameWithType: Sphere.Sphere(Plane, Double)
+- uid: Paramdigma.Core.Geometry.Sphere.#ctor*
+  name: Sphere
+  href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.Sphere.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Sphere.Sphere
+  nameWithType: Sphere.Sphere
+- uid: Paramdigma.Core.Geometry.Sphere.ClosestParam(Paramdigma.Core.Geometry.Point3d)
+  name: ClosestParam(Point3d)
+  href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere_ClosestParam_Paramdigma_Core_Geometry_Point3d_
+  commentId: M:Paramdigma.Core.Geometry.Sphere.ClosestParam(Paramdigma.Core.Geometry.Point3d)
+  fullName: Paramdigma.Core.Geometry.Sphere.ClosestParam(Paramdigma.Core.Geometry.Point3d)
+  nameWithType: Sphere.ClosestParam(Point3d)
+- uid: Paramdigma.Core.Geometry.Sphere.ClosestParam*
+  name: ClosestParam
+  href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere_ClosestParam_
+  commentId: Overload:Paramdigma.Core.Geometry.Sphere.ClosestParam
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.Sphere.ClosestParam
+  nameWithType: Sphere.ClosestParam
 - uid: Paramdigma.Core.Geometry.Sphere.ClosestPointTo(Paramdigma.Core.Geometry.Point3d)
   name: ClosestPointTo(Point3d)
   href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere_ClosestPointTo_Paramdigma_Core_Geometry_Point3d_
@@ -4189,6 +4578,12 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Sphere.Plane
   nameWithType: Sphere.Plane
+- uid: Paramdigma.Core.Geometry.Sphere.PointAt(Paramdigma.Core.Geometry.Point2d)
+  name: PointAt(Point2d)
+  href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere_PointAt_Paramdigma_Core_Geometry_Point2d_
+  commentId: M:Paramdigma.Core.Geometry.Sphere.PointAt(Paramdigma.Core.Geometry.Point2d)
+  fullName: Paramdigma.Core.Geometry.Sphere.PointAt(Paramdigma.Core.Geometry.Point2d)
+  nameWithType: Sphere.PointAt(Point2d)
 - uid: Paramdigma.Core.Geometry.Sphere.PointAt(System.Double,System.Double)
   name: PointAt(Double, Double)
   href: api/Paramdigma.Core.Geometry.Sphere.html#Paramdigma_Core_Geometry_Sphere_PointAt_System_Double_System_Double_
@@ -5003,6 +5398,387 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Vector3d.UnitZ
   nameWithType: Vector3d.UnitZ
+- uid: Paramdigma.Core.Geometry.VectorNd
+  name: VectorNd
+  href: api/Paramdigma.Core.Geometry.VectorNd.html
+  commentId: T:Paramdigma.Core.Geometry.VectorNd
+  fullName: Paramdigma.Core.Geometry.VectorNd
+  nameWithType: VectorNd
+- uid: Paramdigma.Core.Geometry.VectorNd.#ctor(Paramdigma.Core.Geometry.VectorNd)
+  name: VectorNd(VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd__ctor_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.#ctor(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.VectorNd(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.VectorNd(VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.#ctor(System.Collections.Generic.List{System.Double})
+  name: VectorNd(List<Double>)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd__ctor_System_Collections_Generic_List_System_Double__
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.#ctor(System.Collections.Generic.List{System.Double})
+  name.vb: VectorNd(List(Of Double))
+  fullName: Paramdigma.Core.Geometry.VectorNd.VectorNd(System.Collections.Generic.List<System.Double>)
+  fullName.vb: Paramdigma.Core.Geometry.VectorNd.VectorNd(System.Collections.Generic.List(Of System.Double))
+  nameWithType: VectorNd.VectorNd(List<Double>)
+  nameWithType.vb: VectorNd.VectorNd(List(Of Double))
+- uid: Paramdigma.Core.Geometry.VectorNd.#ctor(System.Double[])
+  name: VectorNd(Double[])
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd__ctor_System_Double___
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.#ctor(System.Double[])
+  name.vb: VectorNd(Double())
+  fullName: Paramdigma.Core.Geometry.VectorNd.VectorNd(System.Double[])
+  fullName.vb: Paramdigma.Core.Geometry.VectorNd.VectorNd(System.Double())
+  nameWithType: VectorNd.VectorNd(Double[])
+  nameWithType.vb: VectorNd.VectorNd(Double())
+- uid: Paramdigma.Core.Geometry.VectorNd.#ctor(System.Int32)
+  name: VectorNd(Int32)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd__ctor_System_Int32_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.#ctor(System.Int32)
+  fullName: Paramdigma.Core.Geometry.VectorNd.VectorNd(System.Int32)
+  nameWithType: VectorNd.VectorNd(Int32)
+- uid: Paramdigma.Core.Geometry.VectorNd.#ctor*
+  name: VectorNd
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.VectorNd
+  nameWithType: VectorNd.VectorNd
+- uid: Paramdigma.Core.Geometry.VectorNd.Add(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: Add(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Add_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Add(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Add(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Add(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Add*
+  name: Add
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Add_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Add
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Add
+  nameWithType: VectorNd.Add
+- uid: Paramdigma.Core.Geometry.VectorNd.AngularDistance(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: AngularDistance(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_AngularDistance_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.AngularDistance(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.AngularDistance(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.AngularDistance(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.AngularDistance*
+  name: AngularDistance
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_AngularDistance_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.AngularDistance
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.AngularDistance
+  nameWithType: VectorNd.AngularDistance
+- uid: Paramdigma.Core.Geometry.VectorNd.AngularSimilarity(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: AngularSimilarity(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_AngularSimilarity_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.AngularSimilarity(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.AngularSimilarity(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.AngularSimilarity(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.AngularSimilarity*
+  name: AngularSimilarity
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_AngularSimilarity_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.AngularSimilarity
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.AngularSimilarity
+  nameWithType: VectorNd.AngularSimilarity
+- uid: Paramdigma.Core.Geometry.VectorNd.CosineSimilarity(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: CosineSimilarity(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_CosineSimilarity_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.CosineSimilarity(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.CosineSimilarity(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.CosineSimilarity(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.CosineSimilarity*
+  name: CosineSimilarity
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_CosineSimilarity_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.CosineSimilarity
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.CosineSimilarity
+  nameWithType: VectorNd.CosineSimilarity
+- uid: Paramdigma.Core.Geometry.VectorNd.Dimension
+  name: Dimension
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Dimension
+  commentId: P:Paramdigma.Core.Geometry.VectorNd.Dimension
+  fullName: Paramdigma.Core.Geometry.VectorNd.Dimension
+  nameWithType: VectorNd.Dimension
+- uid: Paramdigma.Core.Geometry.VectorNd.Dimension*
+  name: Dimension
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Dimension_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Dimension
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Dimension
+  nameWithType: VectorNd.Dimension
+- uid: Paramdigma.Core.Geometry.VectorNd.Distance(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: Distance(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Distance_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Distance(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Distance(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Distance(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Distance*
+  name: Distance
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Distance_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Distance
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Distance
+  nameWithType: VectorNd.Distance
+- uid: Paramdigma.Core.Geometry.VectorNd.Distance2(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: Distance2(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Distance2_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Distance2(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Distance2(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Distance2(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Distance2*
+  name: Distance2
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Distance2_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Distance2
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Distance2
+  nameWithType: VectorNd.Distance2
+- uid: Paramdigma.Core.Geometry.VectorNd.Divide(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  name: Divide(VectorNd, Double)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Divide_Paramdigma_Core_Geometry_VectorNd_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Divide(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Divide(Paramdigma.Core.Geometry.VectorNd, System.Double)
+  nameWithType: VectorNd.Divide(VectorNd, Double)
+- uid: Paramdigma.Core.Geometry.VectorNd.Divide*
+  name: Divide
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Divide_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Divide
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Divide
+  nameWithType: VectorNd.Divide
+- uid: Paramdigma.Core.Geometry.VectorNd.Dot(Paramdigma.Core.Geometry.VectorNd)
+  name: Dot(VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Dot_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Dot(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Dot(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Dot(VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Dot*
+  name: Dot
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Dot_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Dot
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Dot
+  nameWithType: VectorNd.Dot
+- uid: Paramdigma.Core.Geometry.VectorNd.DotProduct(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: DotProduct(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_DotProduct_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.DotProduct(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.DotProduct(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.DotProduct(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.DotProduct*
+  name: DotProduct
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_DotProduct_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.DotProduct
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.DotProduct
+  nameWithType: VectorNd.DotProduct
+- uid: Paramdigma.Core.Geometry.VectorNd.Equals(Paramdigma.Core.Geometry.VectorNd)
+  name: Equals(VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Equals_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Equals(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Equals(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Equals(VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Equals_System_Object_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Equals(System.Object)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Equals(System.Object)
+  nameWithType: VectorNd.Equals(Object)
+- uid: Paramdigma.Core.Geometry.VectorNd.Equals*
+  name: Equals
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Equals_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Equals
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Equals
+  nameWithType: VectorNd.Equals
+- uid: Paramdigma.Core.Geometry.VectorNd.GetEnumerator
+  name: GetEnumerator()
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_GetEnumerator
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.GetEnumerator
+  fullName: Paramdigma.Core.Geometry.VectorNd.GetEnumerator()
+  nameWithType: VectorNd.GetEnumerator()
+- uid: Paramdigma.Core.Geometry.VectorNd.GetEnumerator*
+  name: GetEnumerator
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_GetEnumerator_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.GetEnumerator
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.GetEnumerator
+  nameWithType: VectorNd.GetEnumerator
+- uid: Paramdigma.Core.Geometry.VectorNd.GetHashCode
+  name: GetHashCode()
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_GetHashCode
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.GetHashCode
+  fullName: Paramdigma.Core.Geometry.VectorNd.GetHashCode()
+  nameWithType: VectorNd.GetHashCode()
+- uid: Paramdigma.Core.Geometry.VectorNd.GetHashCode*
+  name: GetHashCode
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_GetHashCode_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.GetHashCode
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.GetHashCode
+  nameWithType: VectorNd.GetHashCode
+- uid: Paramdigma.Core.Geometry.VectorNd.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Item_System_Int32_
+  commentId: P:Paramdigma.Core.Geometry.VectorNd.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Item[System.Int32]
+  fullName.vb: Paramdigma.Core.Geometry.VectorNd.Item(System.Int32)
+  nameWithType: VectorNd.Item[Int32]
+  nameWithType.vb: VectorNd.Item(Int32)
+- uid: Paramdigma.Core.Geometry.VectorNd.Item*
+  name: Item
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Item_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Item
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Item
+  nameWithType: VectorNd.Item
+- uid: Paramdigma.Core.Geometry.VectorNd.Length
+  name: Length
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Length
+  commentId: P:Paramdigma.Core.Geometry.VectorNd.Length
+  fullName: Paramdigma.Core.Geometry.VectorNd.Length
+  nameWithType: VectorNd.Length
+- uid: Paramdigma.Core.Geometry.VectorNd.Length*
+  name: Length
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Length_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Length
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Length
+  nameWithType: VectorNd.Length
+- uid: Paramdigma.Core.Geometry.VectorNd.Length2
+  name: Length2
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Length2
+  commentId: P:Paramdigma.Core.Geometry.VectorNd.Length2
+  fullName: Paramdigma.Core.Geometry.VectorNd.Length2
+  nameWithType: VectorNd.Length2
+- uid: Paramdigma.Core.Geometry.VectorNd.Length2*
+  name: Length2
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Length2_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Length2
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Length2
+  nameWithType: VectorNd.Length2
+- uid: Paramdigma.Core.Geometry.VectorNd.Multiply(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  name: Multiply(VectorNd, Double)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Multiply_Paramdigma_Core_Geometry_VectorNd_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Multiply(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Multiply(Paramdigma.Core.Geometry.VectorNd, System.Double)
+  nameWithType: VectorNd.Multiply(VectorNd, Double)
+- uid: Paramdigma.Core.Geometry.VectorNd.Multiply*
+  name: Multiply
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Multiply_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Multiply
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Multiply
+  nameWithType: VectorNd.Multiply
+- uid: Paramdigma.Core.Geometry.VectorNd.Negate(Paramdigma.Core.Geometry.VectorNd)
+  name: Negate(VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Negate_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Negate(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Negate(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Negate(VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Negate*
+  name: Negate
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Negate_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Negate
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Negate
+  nameWithType: VectorNd.Negate
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Addition(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: Addition(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Addition_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.op_Addition(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Addition(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Addition(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Addition*
+  name: Addition
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Addition_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.op_Addition
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Addition
+  nameWithType: VectorNd.Addition
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Division(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  name: Division(VectorNd, Double)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Division_Paramdigma_Core_Geometry_VectorNd_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.op_Division(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Division(Paramdigma.Core.Geometry.VectorNd, System.Double)
+  nameWithType: VectorNd.Division(VectorNd, Double)
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Division*
+  name: Division
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Division_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.op_Division
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Division
+  nameWithType: VectorNd.Division
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Multiply(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  name: Multiply(VectorNd, Double)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Multiply_Paramdigma_Core_Geometry_VectorNd_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.op_Multiply(Paramdigma.Core.Geometry.VectorNd,System.Double)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Multiply(Paramdigma.Core.Geometry.VectorNd, System.Double)
+  nameWithType: VectorNd.Multiply(VectorNd, Double)
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Multiply*
+  name: Multiply
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Multiply_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.op_Multiply
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Multiply
+  nameWithType: VectorNd.Multiply
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Subtraction(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: Subtraction(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Subtraction_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.op_Subtraction(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Subtraction(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Subtraction(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.op_Subtraction*
+  name: Subtraction
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_op_Subtraction_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.op_Subtraction
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Subtraction
+  nameWithType: VectorNd.Subtraction
+- uid: Paramdigma.Core.Geometry.VectorNd.Substract(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  name: Substract(VectorNd, VectorNd)
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Substract_Paramdigma_Core_Geometry_VectorNd_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.Substract(Paramdigma.Core.Geometry.VectorNd,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Geometry.VectorNd.Substract(Paramdigma.Core.Geometry.VectorNd, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: VectorNd.Substract(VectorNd, VectorNd)
+- uid: Paramdigma.Core.Geometry.VectorNd.Substract*
+  name: Substract
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_Substract_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.Substract
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.Substract
+  nameWithType: VectorNd.Substract
+- uid: Paramdigma.Core.Geometry.VectorNd.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Paramdigma.Core.Geometry.VectorNd.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: VectorNd.IEnumerable.GetEnumerator()
+  nameWithType.vb: VectorNd.System.Collections.IEnumerable.GetEnumerator()
+- uid: Paramdigma.Core.Geometry.VectorNd.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Paramdigma.Core.Geometry.VectorNd.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: VectorNd.IEnumerable.GetEnumerator
+  nameWithType.vb: VectorNd.System.Collections.IEnumerable.GetEnumerator
+- uid: Paramdigma.Core.Geometry.VectorNd.ToString
+  name: ToString()
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_ToString
+  commentId: M:Paramdigma.Core.Geometry.VectorNd.ToString
+  fullName: Paramdigma.Core.Geometry.VectorNd.ToString()
+  nameWithType: VectorNd.ToString()
+- uid: Paramdigma.Core.Geometry.VectorNd.ToString*
+  name: ToString
+  href: api/Paramdigma.Core.Geometry.VectorNd.html#Paramdigma_Core_Geometry_VectorNd_ToString_
+  commentId: Overload:Paramdigma.Core.Geometry.VectorNd.ToString
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.VectorNd.ToString
+  nameWithType: VectorNd.ToString
 - uid: Paramdigma.Core.HalfEdgeMesh
   name: Paramdigma.Core.HalfEdgeMesh
   href: api/Paramdigma.Core.HalfEdgeMesh.html
@@ -5036,6 +5812,15 @@ references:
   fullName.vb: Paramdigma.Core.HalfEdgeMesh.Mesh.Mesh(System.Collections.Generic.List(Of Paramdigma.Core.Geometry.Point3d), System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Int32)))
   nameWithType: Mesh.Mesh(List<Point3d>, List<List<Int32>>)
   nameWithType.vb: Mesh.Mesh(List(Of Point3d), List(Of List(Of Int32)))
+- uid: Paramdigma.Core.HalfEdgeMesh.Mesh.#ctor(System.Collections.Generic.List{Paramdigma.Core.HalfEdgeMesh.MeshVertex},System.Collections.Generic.List{System.Collections.Generic.List{System.Int32}})
+  name: Mesh(List<MeshVertex>, List<List<Int32>>)
+  href: api/Paramdigma.Core.HalfEdgeMesh.Mesh.html#Paramdigma_Core_HalfEdgeMesh_Mesh__ctor_System_Collections_Generic_List_Paramdigma_Core_HalfEdgeMesh_MeshVertex__System_Collections_Generic_List_System_Collections_Generic_List_System_Int32___
+  commentId: M:Paramdigma.Core.HalfEdgeMesh.Mesh.#ctor(System.Collections.Generic.List{Paramdigma.Core.HalfEdgeMesh.MeshVertex},System.Collections.Generic.List{System.Collections.Generic.List{System.Int32}})
+  name.vb: Mesh(List(Of MeshVertex), List(Of List(Of Int32)))
+  fullName: Paramdigma.Core.HalfEdgeMesh.Mesh.Mesh(System.Collections.Generic.List<Paramdigma.Core.HalfEdgeMesh.MeshVertex>, System.Collections.Generic.List<System.Collections.Generic.List<System.Int32>>)
+  fullName.vb: Paramdigma.Core.HalfEdgeMesh.Mesh.Mesh(System.Collections.Generic.List(Of Paramdigma.Core.HalfEdgeMesh.MeshVertex), System.Collections.Generic.List(Of System.Collections.Generic.List(Of System.Int32)))
+  nameWithType: Mesh.Mesh(List<MeshVertex>, List<List<Int32>>)
+  nameWithType.vb: Mesh.Mesh(List(Of MeshVertex), List(Of List(Of Int32)))
 - uid: Paramdigma.Core.HalfEdgeMesh.Mesh.#ctor*
   name: Mesh
   href: api/Paramdigma.Core.HalfEdgeMesh.Mesh.html#Paramdigma_Core_HalfEdgeMesh_Mesh__ctor_
@@ -7097,6 +7882,502 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.LinearAlgebra.TripletData.Value
   nameWithType: TripletData.Value
+- uid: Paramdigma.Core.Optimization
+  name: Paramdigma.Core.Optimization
+  href: api/Paramdigma.Core.Optimization.html
+  commentId: N:Paramdigma.Core.Optimization
+  fullName: Paramdigma.Core.Optimization
+  nameWithType: Paramdigma.Core.Optimization
+- uid: Paramdigma.Core.Optimization.GradientDescent
+  name: GradientDescent
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html
+  commentId: T:Paramdigma.Core.Optimization.GradientDescent
+  fullName: Paramdigma.Core.Optimization.GradientDescent
+  nameWithType: GradientDescent
+- uid: Paramdigma.Core.Optimization.GradientDescent.#ctor(Paramdigma.Core.Optimization.GradientDescentOptions)
+  name: GradientDescent(GradientDescentOptions)
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html#Paramdigma_Core_Optimization_GradientDescent__ctor_Paramdigma_Core_Optimization_GradientDescentOptions_
+  commentId: M:Paramdigma.Core.Optimization.GradientDescent.#ctor(Paramdigma.Core.Optimization.GradientDescentOptions)
+  fullName: Paramdigma.Core.Optimization.GradientDescent.GradientDescent(Paramdigma.Core.Optimization.GradientDescentOptions)
+  nameWithType: GradientDescent.GradientDescent(GradientDescentOptions)
+- uid: Paramdigma.Core.Optimization.GradientDescent.#ctor*
+  name: GradientDescent
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html#Paramdigma_Core_Optimization_GradientDescent__ctor_
+  commentId: Overload:Paramdigma.Core.Optimization.GradientDescent.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.GradientDescent.GradientDescent
+  nameWithType: GradientDescent.GradientDescent
+- uid: Paramdigma.Core.Optimization.GradientDescent.FitnessFunction
+  name: GradientDescent.FitnessFunction
+  href: api/Paramdigma.Core.Optimization.GradientDescent.FitnessFunction.html
+  commentId: T:Paramdigma.Core.Optimization.GradientDescent.FitnessFunction
+  fullName: Paramdigma.Core.Optimization.GradientDescent.FitnessFunction
+  nameWithType: GradientDescent.FitnessFunction
+- uid: Paramdigma.Core.Optimization.GradientDescent.Minimize(Paramdigma.Core.Optimization.GradientDescent.FitnessFunction,System.Collections.Generic.List{System.Double})
+  name: Minimize(GradientDescent.FitnessFunction, List<Double>)
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html#Paramdigma_Core_Optimization_GradientDescent_Minimize_Paramdigma_Core_Optimization_GradientDescent_FitnessFunction_System_Collections_Generic_List_System_Double__
+  commentId: M:Paramdigma.Core.Optimization.GradientDescent.Minimize(Paramdigma.Core.Optimization.GradientDescent.FitnessFunction,System.Collections.Generic.List{System.Double})
+  name.vb: Minimize(GradientDescent.FitnessFunction, List(Of Double))
+  fullName: Paramdigma.Core.Optimization.GradientDescent.Minimize(Paramdigma.Core.Optimization.GradientDescent.FitnessFunction, System.Collections.Generic.List<System.Double>)
+  fullName.vb: Paramdigma.Core.Optimization.GradientDescent.Minimize(Paramdigma.Core.Optimization.GradientDescent.FitnessFunction, System.Collections.Generic.List(Of System.Double))
+  nameWithType: GradientDescent.Minimize(GradientDescent.FitnessFunction, List<Double>)
+  nameWithType.vb: GradientDescent.Minimize(GradientDescent.FitnessFunction, List(Of Double))
+- uid: Paramdigma.Core.Optimization.GradientDescent.Minimize*
+  name: Minimize
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html#Paramdigma_Core_Optimization_GradientDescent_Minimize_
+  commentId: Overload:Paramdigma.Core.Optimization.GradientDescent.Minimize
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.GradientDescent.Minimize
+  nameWithType: GradientDescent.Minimize
+- uid: Paramdigma.Core.Optimization.GradientDescent.Options
+  name: Options
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html#Paramdigma_Core_Optimization_GradientDescent_Options
+  commentId: F:Paramdigma.Core.Optimization.GradientDescent.Options
+  fullName: Paramdigma.Core.Optimization.GradientDescent.Options
+  nameWithType: GradientDescent.Options
+- uid: Paramdigma.Core.Optimization.GradientDescent.Result
+  name: Result
+  href: api/Paramdigma.Core.Optimization.GradientDescent.html#Paramdigma_Core_Optimization_GradientDescent_Result
+  commentId: F:Paramdigma.Core.Optimization.GradientDescent.Result
+  fullName: Paramdigma.Core.Optimization.GradientDescent.Result
+  nameWithType: GradientDescent.Result
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions
+  name: GradientDescentOptions
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html
+  commentId: T:Paramdigma.Core.Optimization.GradientDescentOptions
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions
+  nameWithType: GradientDescentOptions
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.#ctor(Paramdigma.Core.Optimization.GradientDescentOptions)
+  name: GradientDescentOptions(GradientDescentOptions)
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions__ctor_Paramdigma_Core_Optimization_GradientDescentOptions_
+  commentId: M:Paramdigma.Core.Optimization.GradientDescentOptions.#ctor(Paramdigma.Core.Optimization.GradientDescentOptions)
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.GradientDescentOptions(Paramdigma.Core.Optimization.GradientDescentOptions)
+  nameWithType: GradientDescentOptions.GradientDescentOptions(GradientDescentOptions)
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.#ctor(System.Double,System.Int32,System.Double,System.Double,System.Double)
+  name: GradientDescentOptions(Double, Int32, Double, Double, Double)
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions__ctor_System_Double_System_Int32_System_Double_System_Double_System_Double_
+  commentId: M:Paramdigma.Core.Optimization.GradientDescentOptions.#ctor(System.Double,System.Int32,System.Double,System.Double,System.Double)
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.GradientDescentOptions(System.Double, System.Int32, System.Double, System.Double, System.Double)
+  nameWithType: GradientDescentOptions.GradientDescentOptions(Double, Int32, Double, Double, Double)
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.#ctor*
+  name: GradientDescentOptions
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions__ctor_
+  commentId: Overload:Paramdigma.Core.Optimization.GradientDescentOptions.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.GradientDescentOptions
+  nameWithType: GradientDescentOptions.GradientDescentOptions
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.Default
+  name: Default
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_Default
+  commentId: P:Paramdigma.Core.Optimization.GradientDescentOptions.Default
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.Default
+  nameWithType: GradientDescentOptions.Default
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.Default*
+  name: Default
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_Default_
+  commentId: Overload:Paramdigma.Core.Optimization.GradientDescentOptions.Default
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.Default
+  nameWithType: GradientDescentOptions.Default
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.DefaultSmall
+  name: DefaultSmall
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_DefaultSmall
+  commentId: P:Paramdigma.Core.Optimization.GradientDescentOptions.DefaultSmall
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.DefaultSmall
+  nameWithType: GradientDescentOptions.DefaultSmall
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.DefaultSmall*
+  name: DefaultSmall
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_DefaultSmall_
+  commentId: Overload:Paramdigma.Core.Optimization.GradientDescentOptions.DefaultSmall
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.DefaultSmall
+  nameWithType: GradientDescentOptions.DefaultSmall
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.DerivativeStep
+  name: DerivativeStep
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_DerivativeStep
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentOptions.DerivativeStep
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.DerivativeStep
+  nameWithType: GradientDescentOptions.DerivativeStep
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.ErrorThreshold
+  name: ErrorThreshold
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_ErrorThreshold
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentOptions.ErrorThreshold
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.ErrorThreshold
+  nameWithType: GradientDescentOptions.ErrorThreshold
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.LearningRate
+  name: LearningRate
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_LearningRate
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentOptions.LearningRate
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.LearningRate
+  nameWithType: GradientDescentOptions.LearningRate
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.Limit
+  name: Limit
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_Limit
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentOptions.Limit
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.Limit
+  nameWithType: GradientDescentOptions.Limit
+- uid: Paramdigma.Core.Optimization.GradientDescentOptions.MaxIterations
+  name: MaxIterations
+  href: api/Paramdigma.Core.Optimization.GradientDescentOptions.html#Paramdigma_Core_Optimization_GradientDescentOptions_MaxIterations
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentOptions.MaxIterations
+  fullName: Paramdigma.Core.Optimization.GradientDescentOptions.MaxIterations
+  nameWithType: GradientDescentOptions.MaxIterations
+- uid: Paramdigma.Core.Optimization.GradientDescentResult
+  name: GradientDescentResult
+  href: api/Paramdigma.Core.Optimization.GradientDescentResult.html
+  commentId: T:Paramdigma.Core.Optimization.GradientDescentResult
+  fullName: Paramdigma.Core.Optimization.GradientDescentResult
+  nameWithType: GradientDescentResult
+- uid: Paramdigma.Core.Optimization.GradientDescentResult.Error
+  name: Error
+  href: api/Paramdigma.Core.Optimization.GradientDescentResult.html#Paramdigma_Core_Optimization_GradientDescentResult_Error
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentResult.Error
+  fullName: Paramdigma.Core.Optimization.GradientDescentResult.Error
+  nameWithType: GradientDescentResult.Error
+- uid: Paramdigma.Core.Optimization.GradientDescentResult.GradientLength
+  name: GradientLength
+  href: api/Paramdigma.Core.Optimization.GradientDescentResult.html#Paramdigma_Core_Optimization_GradientDescentResult_GradientLength
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentResult.GradientLength
+  fullName: Paramdigma.Core.Optimization.GradientDescentResult.GradientLength
+  nameWithType: GradientDescentResult.GradientLength
+- uid: Paramdigma.Core.Optimization.GradientDescentResult.Values
+  name: Values
+  href: api/Paramdigma.Core.Optimization.GradientDescentResult.html#Paramdigma_Core_Optimization_GradientDescentResult_Values
+  commentId: F:Paramdigma.Core.Optimization.GradientDescentResult.Values
+  fullName: Paramdigma.Core.Optimization.GradientDescentResult.Values
+  nameWithType: GradientDescentResult.Values
+- uid: Paramdigma.Core.Optimization.KMeansCluster
+  name: KMeansCluster
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html
+  commentId: T:Paramdigma.Core.Optimization.KMeansCluster
+  fullName: Paramdigma.Core.Optimization.KMeansCluster
+  nameWithType: KMeansCluster
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Add(Paramdigma.Core.Geometry.VectorNd)
+  name: Add(VectorNd)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Add_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.Add(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Add(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: KMeansCluster.Add(VectorNd)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Add*
+  name: Add
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Add_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Add
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Add
+  nameWithType: KMeansCluster.Add
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Average
+  name: Average()
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Average
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.Average
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Average()
+  nameWithType: KMeansCluster.Average()
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Average*
+  name: Average
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Average_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Average
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Average
+  nameWithType: KMeansCluster.Average
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Clear
+  name: Clear()
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Clear
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.Clear
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Clear()
+  nameWithType: KMeansCluster.Clear()
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Clear*
+  name: Clear
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Clear_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Clear
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Clear
+  nameWithType: KMeansCluster.Clear
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Contains(Paramdigma.Core.Geometry.VectorNd)
+  name: Contains(VectorNd)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Contains_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.Contains(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Contains(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: KMeansCluster.Contains(VectorNd)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Contains*
+  name: Contains
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Contains_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Contains
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Contains
+  nameWithType: KMeansCluster.Contains
+- uid: Paramdigma.Core.Optimization.KMeansCluster.CopyTo(Paramdigma.Core.Geometry.VectorNd[],System.Int32)
+  name: CopyTo(VectorNd[], Int32)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_CopyTo_Paramdigma_Core_Geometry_VectorNd___System_Int32_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.CopyTo(Paramdigma.Core.Geometry.VectorNd[],System.Int32)
+  name.vb: CopyTo(VectorNd(), Int32)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.CopyTo(Paramdigma.Core.Geometry.VectorNd[], System.Int32)
+  fullName.vb: Paramdigma.Core.Optimization.KMeansCluster.CopyTo(Paramdigma.Core.Geometry.VectorNd(), System.Int32)
+  nameWithType: KMeansCluster.CopyTo(VectorNd[], Int32)
+  nameWithType.vb: KMeansCluster.CopyTo(VectorNd(), Int32)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.CopyTo*
+  name: CopyTo
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_CopyTo_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.CopyTo
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.CopyTo
+  nameWithType: KMeansCluster.CopyTo
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Count
+  name: Count
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Count
+  commentId: P:Paramdigma.Core.Optimization.KMeansCluster.Count
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Count
+  nameWithType: KMeansCluster.Count
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Count*
+  name: Count
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Count_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Count
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Count
+  nameWithType: KMeansCluster.Count
+- uid: Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator
+  name: GetEnumerator()
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_GetEnumerator
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator()
+  nameWithType: KMeansCluster.GetEnumerator()
+- uid: Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator*
+  name: GetEnumerator
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_GetEnumerator_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator
+  nameWithType: KMeansCluster.GetEnumerator
+- uid: Paramdigma.Core.Optimization.KMeansCluster.IndexOf(Paramdigma.Core.Geometry.VectorNd)
+  name: IndexOf(VectorNd)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_IndexOf_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.IndexOf(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.IndexOf(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: KMeansCluster.IndexOf(VectorNd)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.IndexOf*
+  name: IndexOf
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_IndexOf_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.IndexOf
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.IndexOf
+  nameWithType: KMeansCluster.IndexOf
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Insert(System.Int32,Paramdigma.Core.Geometry.VectorNd)
+  name: Insert(Int32, VectorNd)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Insert_System_Int32_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.Insert(System.Int32,Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Insert(System.Int32, Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: KMeansCluster.Insert(Int32, VectorNd)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Insert*
+  name: Insert
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Insert_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Insert
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Insert
+  nameWithType: KMeansCluster.Insert
+- uid: Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly
+  name: IsReadOnly
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_IsReadOnly
+  commentId: P:Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly
+  nameWithType: KMeansCluster.IsReadOnly
+- uid: Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly*
+  name: IsReadOnly
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_IsReadOnly_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly
+  nameWithType: KMeansCluster.IsReadOnly
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Item_System_Int32_
+  commentId: P:Paramdigma.Core.Optimization.KMeansCluster.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Item[System.Int32]
+  fullName.vb: Paramdigma.Core.Optimization.KMeansCluster.Item(System.Int32)
+  nameWithType: KMeansCluster.Item[Int32]
+  nameWithType.vb: KMeansCluster.Item(Int32)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Item*
+  name: Item
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Item_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Item
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Item
+  nameWithType: KMeansCluster.Item
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Remove(Paramdigma.Core.Geometry.VectorNd)
+  name: Remove(VectorNd)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Remove_Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.Remove(Paramdigma.Core.Geometry.VectorNd)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Remove(Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: KMeansCluster.Remove(VectorNd)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.Remove*
+  name: Remove
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_Remove_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.Remove
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.Remove
+  nameWithType: KMeansCluster.Remove
+- uid: Paramdigma.Core.Optimization.KMeansCluster.RemoveAt(System.Int32)
+  name: RemoveAt(Int32)
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_RemoveAt_System_Int32_
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.RemoveAt(System.Int32)
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.RemoveAt(System.Int32)
+  nameWithType: KMeansCluster.RemoveAt(Int32)
+- uid: Paramdigma.Core.Optimization.KMeansCluster.RemoveAt*
+  name: RemoveAt
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_RemoveAt_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.RemoveAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.RemoveAt
+  nameWithType: KMeansCluster.RemoveAt
+- uid: Paramdigma.Core.Optimization.KMeansCluster.System#Collections#IEnumerable#GetEnumerator
+  name: IEnumerable.GetEnumerator()
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_System_Collections_IEnumerable_GetEnumerator
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.System#Collections#IEnumerable#GetEnumerator
+  name.vb: System.Collections.IEnumerable.GetEnumerator()
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.System.Collections.IEnumerable.GetEnumerator()
+  nameWithType: KMeansCluster.IEnumerable.GetEnumerator()
+  nameWithType.vb: KMeansCluster.System.Collections.IEnumerable.GetEnumerator()
+- uid: Paramdigma.Core.Optimization.KMeansCluster.System#Collections#IEnumerable#GetEnumerator*
+  name: IEnumerable.GetEnumerator
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_System_Collections_IEnumerable_GetEnumerator_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.System#Collections#IEnumerable#GetEnumerator
+  isSpec: "True"
+  name.vb: System.Collections.IEnumerable.GetEnumerator
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.System.Collections.IEnumerable.GetEnumerator
+  nameWithType: KMeansCluster.IEnumerable.GetEnumerator
+  nameWithType.vb: KMeansCluster.System.Collections.IEnumerable.GetEnumerator
+- uid: Paramdigma.Core.Optimization.KMeansCluster.ToString
+  name: ToString()
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_ToString
+  commentId: M:Paramdigma.Core.Optimization.KMeansCluster.ToString
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.ToString()
+  nameWithType: KMeansCluster.ToString()
+- uid: Paramdigma.Core.Optimization.KMeansCluster.ToString*
+  name: ToString
+  href: api/Paramdigma.Core.Optimization.KMeansCluster.html#Paramdigma_Core_Optimization_KMeansCluster_ToString_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansCluster.ToString
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansCluster.ToString
+  nameWithType: KMeansCluster.ToString
+- uid: Paramdigma.Core.Optimization.KMeansClustering
+  name: KMeansClustering
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html
+  commentId: T:Paramdigma.Core.Optimization.KMeansClustering
+  fullName: Paramdigma.Core.Optimization.KMeansClustering
+  nameWithType: KMeansClustering
+- uid: Paramdigma.Core.Optimization.KMeansClustering.#ctor(System.Int32,System.Int32,System.Collections.Generic.List{Paramdigma.Core.Geometry.VectorNd})
+  name: KMeansClustering(Int32, Int32, List<VectorNd>)
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering__ctor_System_Int32_System_Int32_System_Collections_Generic_List_Paramdigma_Core_Geometry_VectorNd__
+  commentId: M:Paramdigma.Core.Optimization.KMeansClustering.#ctor(System.Int32,System.Int32,System.Collections.Generic.List{Paramdigma.Core.Geometry.VectorNd})
+  name.vb: KMeansClustering(Int32, Int32, List(Of VectorNd))
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.KMeansClustering(System.Int32, System.Int32, System.Collections.Generic.List<Paramdigma.Core.Geometry.VectorNd>)
+  fullName.vb: Paramdigma.Core.Optimization.KMeansClustering.KMeansClustering(System.Int32, System.Int32, System.Collections.Generic.List(Of Paramdigma.Core.Geometry.VectorNd))
+  nameWithType: KMeansClustering.KMeansClustering(Int32, Int32, List<VectorNd>)
+  nameWithType.vb: KMeansClustering.KMeansClustering(Int32, Int32, List(Of VectorNd))
+- uid: Paramdigma.Core.Optimization.KMeansClustering.#ctor*
+  name: KMeansClustering
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering__ctor_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.KMeansClustering
+  nameWithType: KMeansClustering.KMeansClustering
+- uid: Paramdigma.Core.Optimization.KMeansClustering.Clusters
+  name: Clusters
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_Clusters
+  commentId: P:Paramdigma.Core.Optimization.KMeansClustering.Clusters
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.Clusters
+  nameWithType: KMeansClustering.Clusters
+- uid: Paramdigma.Core.Optimization.KMeansClustering.Clusters*
+  name: Clusters
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_Clusters_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.Clusters
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.Clusters
+  nameWithType: KMeansClustering.Clusters
+- uid: Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar(System.Collections.Generic.List{Paramdigma.Core.Geometry.VectorNd},Paramdigma.Core.Geometry.VectorNd)
+  name: FindIndexOfSimilar(List<VectorNd>, VectorNd)
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_FindIndexOfSimilar_System_Collections_Generic_List_Paramdigma_Core_Geometry_VectorNd__Paramdigma_Core_Geometry_VectorNd_
+  commentId: M:Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar(System.Collections.Generic.List{Paramdigma.Core.Geometry.VectorNd},Paramdigma.Core.Geometry.VectorNd)
+  name.vb: FindIndexOfSimilar(List(Of VectorNd), VectorNd)
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar(System.Collections.Generic.List<Paramdigma.Core.Geometry.VectorNd>, Paramdigma.Core.Geometry.VectorNd)
+  fullName.vb: Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar(System.Collections.Generic.List(Of Paramdigma.Core.Geometry.VectorNd), Paramdigma.Core.Geometry.VectorNd)
+  nameWithType: KMeansClustering.FindIndexOfSimilar(List<VectorNd>, VectorNd)
+  nameWithType.vb: KMeansClustering.FindIndexOfSimilar(List(Of VectorNd), VectorNd)
+- uid: Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar*
+  name: FindIndexOfSimilar
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_FindIndexOfSimilar_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.FindIndexOfSimilar
+  nameWithType: KMeansClustering.FindIndexOfSimilar
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompleted
+  name: IterationCompleted
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompleted
+  commentId: E:Paramdigma.Core.Optimization.KMeansClustering.IterationCompleted
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompleted
+  nameWithType: KMeansClustering.IterationCompleted
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs
+  name: KMeansClustering.IterationCompletedEventArgs
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html
+  commentId: T:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs
+  nameWithType: KMeansClustering.IterationCompletedEventArgs
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters
+  name: Clusters
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_Clusters
+  commentId: P:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters
+  nameWithType: KMeansClustering.IterationCompletedEventArgs.Clusters
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters*
+  name: Clusters
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_Clusters_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters
+  nameWithType: KMeansClustering.IterationCompletedEventArgs.Clusters
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
+  name: iteration
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_iteration
+  commentId: P:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
+  nameWithType: KMeansClustering.IterationCompletedEventArgs.iteration
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration*
+  name: iteration
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_iteration_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
+  nameWithType: KMeansClustering.IterationCompletedEventArgs.iteration
+- uid: Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted(Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs)
+  name: OnIterationCompleted(KMeansClustering.IterationCompletedEventArgs)
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_OnIterationCompleted_Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_
+  commentId: M:Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted(Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs)
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted(Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs)
+  nameWithType: KMeansClustering.OnIterationCompleted(KMeansClustering.IterationCompletedEventArgs)
+- uid: Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted*
+  name: OnIterationCompleted
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_OnIterationCompleted_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted
+  nameWithType: KMeansClustering.OnIterationCompleted
+- uid: Paramdigma.Core.Optimization.KMeansClustering.Run
+  name: Run()
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_Run
+  commentId: M:Paramdigma.Core.Optimization.KMeansClustering.Run
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.Run()
+  nameWithType: KMeansClustering.Run()
+- uid: Paramdigma.Core.Optimization.KMeansClustering.Run(System.Int32,System.Boolean)
+  name: Run(Int32, Boolean)
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_Run_System_Int32_System_Boolean_
+  commentId: M:Paramdigma.Core.Optimization.KMeansClustering.Run(System.Int32,System.Boolean)
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.Run(System.Int32, System.Boolean)
+  nameWithType: KMeansClustering.Run(Int32, Boolean)
+- uid: Paramdigma.Core.Optimization.KMeansClustering.Run*
+  name: Run
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_Run_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.Run
+  isSpec: "True"
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.Run
+  nameWithType: KMeansClustering.Run
 - uid: Paramdigma.Core.Settings
   name: Settings
   href: api/Paramdigma.Core.Settings.html
