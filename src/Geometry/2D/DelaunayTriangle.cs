@@ -51,13 +51,13 @@ namespace Paramdigma.Core.Geometry
             DelaunayPoint p0 = Vertices[0];
             DelaunayPoint p1 = Vertices[1];
             DelaunayPoint p2 = Vertices[2];
-            double dA = p0.X * p0.X + p0.Y * p0.Y;
-            double dB = p1.X * p1.X + p1.Y * p1.Y;
-            double dC = p2.X * p2.X + p2.Y * p2.Y;
+            double dA = (p0.X * p0.X) + (p0.Y * p0.Y);
+            double dB = (p1.X * p1.X) + (p1.Y * p1.Y);
+            double dC = (p2.X * p2.X) + (p2.Y * p2.Y);
 
-            double aux1 = (dA * (p2.Y - p1.Y) + dB * (p0.Y - p2.Y) + dC * (p1.Y - p0.Y));
-            double aux2 = -(dA * (p2.X - p1.X) + dB * (p0.X - p2.X) + dC * (p1.X - p0.X));
-            double div = (2 * (p0.X * (p2.Y - p1.Y) + p1.X * (p0.Y - p2.Y) + p2.X * (p1.Y - p0.Y)));
+            double aux1 = ((dA * (p2.Y - p1.Y)) + (dB * (p0.Y - p2.Y)) + (dC * (p1.Y - p0.Y)));
+            double aux2 = -((dA * (p2.X - p1.X)) + (dB * (p0.X - p2.X)) + (dC * (p1.X - p0.X)));
+            double div = (2 * ((p0.X * (p2.Y - p1.Y)) + (p1.X * (p0.Y - p2.Y)) + (p2.X * (p1.Y - p0.Y))));
 
             if (div == 0)
             {
@@ -66,13 +66,13 @@ namespace Paramdigma.Core.Geometry
 
             DelaunayPoint center = new DelaunayPoint(aux1 / div, aux2 / div);
             Circumcenter = center;
-            RadiusSquared = (center.X - p0.X) * (center.X - p0.X) + (center.Y - p0.Y) * (center.Y - p0.Y);
+            RadiusSquared = ((center.X - p0.X) * (center.X - p0.X)) + ((center.Y - p0.Y) * (center.Y - p0.Y));
         }
 
         public bool IsCounterClockwise(DelaunayPoint point1, DelaunayPoint point2, DelaunayPoint point3)
         {
-            double result = (point2.X - point1.X) * (point3.Y - point1.Y) -
-                (point3.X - point1.X) * (point2.Y - point1.Y);
+            double result = ((point2.X - point1.X) * (point3.Y - point1.Y)) -
+                ((point3.X - point1.X) * (point2.Y - point1.Y));
             return result > 0;
         }
 
@@ -92,8 +92,8 @@ namespace Paramdigma.Core.Geometry
         }
         public bool IsPointInsideCircumcircle(DelaunayPoint point)
         {
-            double d_squared = (point.X - Circumcenter.X) * (point.X - Circumcenter.X) +
-                            (point.Y - Circumcenter.Y) * (point.Y - Circumcenter.Y);
+            double d_squared = ((point.X - Circumcenter.X) * (point.X - Circumcenter.X)) +
+                            ((point.Y - Circumcenter.Y) * (point.Y - Circumcenter.Y));
             return d_squared < RadiusSquared;
         }
     }
