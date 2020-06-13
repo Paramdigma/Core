@@ -26,7 +26,7 @@ jobs:
       - name: 🧪 Test
         run: dotnet test --no-restore --verbosity normal
       - name: 🗜 Compress build files # This would actually build your project, using zip for an example artifact
-        run: zip --junk-paths Paramdigma.Core-${{github.ref}}.zip src/bin/Release/netstandard2.1/*
+        run: zip --junk-paths ./Paramdigma.Core.zip ./src/bin/Release/netstandard2.1/*
 
       - name: 📘 Create Release
         id: create_release
@@ -45,8 +45,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./Paramdigma.Core-${{github.ref}}.zip
-          asset_name: Paramdigma.Core-${{github.ref}}.zip
+          asset_path: ./Paramdigma.Core.zip
+          asset_name: Paramdigma.Core.zip
           asset_content_type: application/zip
       - name: 📦 Create the package
         run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
