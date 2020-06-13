@@ -57,7 +57,7 @@ namespace Paramdigma.Core.Geometry
 
             double aux1 = ((dA * (p2.Y - p1.Y)) + (dB * (p0.Y - p2.Y)) + (dC * (p1.Y - p0.Y)));
             double aux2 = -((dA * (p2.X - p1.X)) + (dB * (p0.X - p2.X)) + (dC * (p1.X - p0.X)));
-            double div = (2 * ((p0.X * (p2.Y - p1.Y)) + (p1.X * (p0.Y - p2.Y)) + (p2.X * (p1.Y - p0.Y))));
+            double div = (2 * (p0.X * (p2.Y - p1.Y))) + (p1.X * (p0.Y - p2.Y)) + (p2.X * (p1.Y - p0.Y));
 
             if (div == 0)
             {
