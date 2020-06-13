@@ -2,8 +2,9 @@ name: Deploy docs
 
 on:
   push:
-    tags:
-      - v*
+    release:
+      types:
+        - published
 
 jobs:
   build_and_publish:
