@@ -11,13 +11,21 @@ namespace Paramdigma.Core.Geometry
         /// Gets or sets the Domain in the X direction.
         /// </summary>
         /// <value></value>
-        public Interval XDomain { get; set; }
+        public Interval XDomain
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Gets or sets the Domain in the Y direction.
         /// </summary>
         /// <value></value>
-        public Interval YDomain { get; set; }
+        public Interval YDomain
+        {
+            get;
+            set;
+        }
 
         /// <summary>
         /// Gets the Bottom left corner of the BBox.
@@ -43,6 +51,19 @@ namespace Paramdigma.Core.Geometry
         /// <returns></returns>
         public Point2d TopRight => new Point2d(this.XDomain.End, this.YDomain.End);
 
+        public Point2d MidLeft => new Point2d(this.XDomain.Start, this.YDomain.RemapFromUnit(0.5));
+
+        public Point2d MidRight => new Point2d(this.XDomain.End, this.YDomain.RemapFromUnit(0.5));
+
+        public Point2d MidBottom => new Point2d(this.XDomain.RemapFromUnit(0.5), this.YDomain.Start);
+
+        public Point2d MidTop => new Point2d(this.XDomain.RemapFromUnit(0.5), this.YDomain.End);
+
+        /// <summary>
+        /// Gets the center of the bounding BBox.
+        /// </summary>
+        public Point2d Center => new Point2d(XDomain.RemapFromUnit(0.5), YDomain.RemapFromUnit(0.5));
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BoundingBox2d"/> class  from 2 points.
         /// </summary>
@@ -52,6 +73,10 @@ namespace Paramdigma.Core.Geometry
         {
             this.XDomain = new Interval(bottomLeftCorner.X, topRightCorner.X);
             this.YDomain = new Interval(bottomLeftCorner.Y, topRightCorner.Y);
+            if (this.XDomain.HasInvertedDirection)
+                this.XDomain.FlipDirection();
+            if (YDomain.HasInvertedDirection)
+                this.YDomain.FlipDirection();
         }
 
         /// <summary>
@@ -80,6 +105,15 @@ namespace Paramdigma.Core.Geometry
 
             this.XDomain = new Interval(xMin, xMax);
             this.YDomain = new Interval(yMin, yMax);
+        }
+
+        public bool ContainsPoint(Point2d pt) => XDomain.Contains(pt.X) && YDomain.Contains(pt.Y);
+
+        public bool IntersectsBox(BoundingBox2d box)
+        {
+            var xCheck = XDomain.Contains(box.XDomain.Start) || XDomain.Contains(box.XDomain.End);
+            var yCheck = YDomain.Contains(box.YDomain.Start) || YDomain.Contains(box.YDomain.End);
+            return xCheck && yCheck;
         }
     }
 }
