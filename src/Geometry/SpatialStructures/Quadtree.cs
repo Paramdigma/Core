@@ -88,10 +88,13 @@ namespace Paramdigma.Core.SpatialSearch
             if (this.Boundary.XDomain.Length < this.threshold || this.Boundary.YDomain.Length < this.threshold)
                 return pointsInRange;
 
-            pointsInRange.AddRange(this.southWest.QueryRange(range));
-            pointsInRange.AddRange(this.southEast.QueryRange(range));
-            pointsInRange.AddRange(this.northWest.QueryRange(range));
-            pointsInRange.AddRange(this.northEast.QueryRange(range));
+            if (this.southWest != null)
+            {
+                pointsInRange.AddRange(this.southWest.QueryRange(range));
+                pointsInRange.AddRange(this.southEast.QueryRange(range));
+                pointsInRange.AddRange(this.northWest.QueryRange(range));
+                pointsInRange.AddRange(this.northEast.QueryRange(range));
+            }
 
             return pointsInRange;
         }

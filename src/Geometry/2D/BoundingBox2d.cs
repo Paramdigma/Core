@@ -115,5 +115,7 @@ namespace Paramdigma.Core.Geometry
             var yCheck = YDomain.Contains(box.YDomain.Start) || YDomain.Contains(box.YDomain.End);
             return xCheck && yCheck;
         }
+
+        public override string ToString() => $"BBox2d [{this.XDomain.Start};{this.YDomain.Start}]-[{this.XDomain.End};{this.YDomain.End}]";
     }
 }
