@@ -107,16 +107,24 @@ namespace Paramdigma.Core.SpatialSearch
         private void Subdivide()
         {
             this.southWest = new QuadTree(
-                new BoundingBox2d(this.Boundary.BottomLeft, this.Boundary.Center),
+                new BoundingBox2d(
+                    this.Boundary.BottomLeft,
+                    this.Boundary.Center),
                 this.threshold);
             this.northWest = new QuadTree(
-                new BoundingBox2d(this.Boundary.MidLeft, this.Boundary.MidTop),
+                new BoundingBox2d(
+                    this.Boundary.MidLeft,
+                    this.Boundary.MidTop),
                 this.threshold);
             this.southEast = new QuadTree(
-                new BoundingBox2d(this.Boundary.MidBottom, this.Boundary.MidRight),
+                new BoundingBox2d(
+                    this.Boundary.MidBottom,
+                    this.Boundary.MidRight),
                 this.threshold);
             this.northEast = new QuadTree(
-                new BoundingBox2d(this.Boundary.Center, this.Boundary.TopRight),
+                new BoundingBox2d(
+                    this.Boundary.Center,
+                    this.Boundary.TopRight),
                 this.threshold);
         }
     }
