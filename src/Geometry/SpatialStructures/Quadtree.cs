@@ -5,28 +5,44 @@ using Paramdigma.Core.Geometry;
 namespace Paramdigma.Core.SpatialSearch
 {
     /// <summary>
-    /// Class to compute Quadtree spatial searches.
+    /// Class to compute 2 dimensional spatial searches by quad subdivision.
     /// </summary>
-    public class Quadtree
+    public class QuadTree
     {
-        // TODO: This class is empty!
+        /// <summary>
+        /// Boundary of this QuadTree.
+        /// </summary>
+        public readonly BoundingBox2d Boundary;
 
-        public BoundingBox2d Boundary;
-        public List<Point2d> Points;
+        /// <summary>
+        /// Gets or sets the list of points of this QuadTree.
+        /// </summary>
+        public readonly List<Point2d> Points;
 
-        public Quadtree(BoundingBox2d boundary, double threshold)
+        private readonly double threshold;
+
+        private QuadTree northEast;
+        private QuadTree northWest;
+        private QuadTree southEast;
+        private QuadTree southWest;
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QuadTree"/> class.
+        /// </summary>
+        /// <param name="boundary">Boundary of this QuadTree.</param>
+        /// <param name="threshold">Smallest allowed dimension.</param>
+        public QuadTree(BoundingBox2d boundary, double threshold)
         {
             this.Boundary = boundary;
             this.Points = new List<Point2d>();
+            this.threshold = threshold;
         }
 
-
-        private double threshold;
-        private Quadtree northWest;
-        private Quadtree northEast;
-        private Quadtree southWest;
-        private Quadtree southEast;
-
+        /// <summary>
+        /// Insert a point in the QuadTree.
+        /// </summary>
+        /// <param name="point">Point to insert.</param>
+        /// <returns>True if point was inserted.</returns>
         public bool Insert(Point2d point)
         {
             if (!this.Boundary.ContainsPoint(point))
@@ -50,22 +66,11 @@ namespace Paramdigma.Core.SpatialSearch
             return false;
         }
 
-        public void Subdivide()
-        {
-            this.southWest = new Quadtree(
-                new BoundingBox2d(this.Boundary.BottomLeft, this.Boundary.Center),
-                this.threshold);
-            this.northWest = new Quadtree(
-                new BoundingBox2d(this.Boundary.MidLeft, this.Boundary.MidTop),
-                this.threshold);
-            this.southEast = new Quadtree(
-                new BoundingBox2d(this.Boundary.MidBottom, this.Boundary.MidRight),
-                this.threshold);
-            this.northEast = new Quadtree(
-                new BoundingBox2d(this.Boundary.Center, this.Boundary.TopRight),
-                this.threshold);
-        }
-
+        /// <summary>
+        /// Query the QuadTree for all points contained in this range.
+        /// </summary>
+        /// <param name="range">Range to look for.</param>
+        /// <returns>Points contained in the range.</returns>
         public List<Point2d> QueryRange(BoundingBox2d range)
         {
             List<Point2d> pointsInRange = new List<Point2d>();
@@ -89,6 +94,22 @@ namespace Paramdigma.Core.SpatialSearch
             pointsInRange.AddRange(this.northEast.QueryRange(range));
 
             return pointsInRange;
+        }
+
+        private void Subdivide()
+        {
+            this.southWest = new QuadTree(
+                new BoundingBox2d(this.Boundary.BottomLeft, this.Boundary.Center),
+                this.threshold);
+            this.northWest = new QuadTree(
+                new BoundingBox2d(this.Boundary.MidLeft, this.Boundary.MidTop),
+                this.threshold);
+            this.southEast = new QuadTree(
+                new BoundingBox2d(this.Boundary.MidBottom, this.Boundary.MidRight),
+                this.threshold);
+            this.northEast = new QuadTree(
+                new BoundingBox2d(this.Boundary.Center, this.Boundary.TopRight),
+                this.threshold);
         }
     }
 }
