@@ -55,11 +55,30 @@ namespace Paramdigma.Core.Tests.Geometry
         }
 
 
-        public static DelaunayPoint RandomPoint(Random RandGenerator, double MinValue, double MaxValue)
+        private static DelaunayPoint RandomPoint(Random RandGenerator, double MinValue, double MaxValue)
         {
             double range = MaxValue - MinValue;
             DelaunayPoint randomPoint = new DelaunayPoint((RandGenerator.NextDouble() * range) + MinValue, (RandGenerator.NextDouble() * range) + MinValue);
             return randomPoint;
+        }
+
+        [Fact]
+        public void CanCompare_DelaunayEdges()
+        {
+            var edgeA = new DelaunayEdge(new DelaunayPoint(0,0),new DelaunayPoint(1,0) );
+            var edgeB = new DelaunayEdge(new DelaunayPoint(0,0),new DelaunayPoint(1,0) );
+            Assert.Equal(edgeA,edgeB);
+            Assert.Equal(edgeA.GetHashCode(),edgeB.GetHashCode());
+            Assert.NotNull(edgeA);
+        }
+
+        [Fact]
+        public void CanCreate_DelaunayPoint_FromPoint2d()
+        {
+            var pt = new Point2d(.5,.5);
+            var dpt = new DelaunayPoint(pt);
+            Assert.Equal(pt.X,dpt.X);
+            Assert.Equal(pt.Y,dpt.Y);
         }
     }
 }
