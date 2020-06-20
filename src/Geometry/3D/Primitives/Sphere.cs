@@ -5,7 +5,7 @@ using Paramdigma.Core.Geometry.Interfaces;
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>
-    /// Represents a spherical surface.
+    ///     Represents a spherical surface.
     /// </summary>
     public class Sphere : ISurface
     {
@@ -22,9 +22,9 @@ namespace Paramdigma.Core.Geometry
         public Sphere() : this(Plane.WorldXY, 1) { }
 
         /// <summary>
-        /// Gets or sets the base plane of the sphere.
+        ///     Gets or sets the base plane of the sphere.
         /// </summary>
-        /// <value><see cref="Plane"/>.</value>
+        /// <value><see cref="Plane" />.</value>
         public Plane Plane
         {
             get;
@@ -32,37 +32,56 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Gets or sets the radius of the sphere.
+        ///     Gets or sets the radius of the sphere.
         /// </summary>
-        /// <value><see cref="double"/>.</value>
+        /// <value><see cref="double" />.</value>
         public double Radius
         {
             get;
             set;
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public Interval DomainU
         {
             get;
             set;
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public Interval DomainV
         {
             get;
             set;
         }
 
-        /// <inheritdoc/>
-        public double DistanceTo(Point3d point) => Plane.Origin.DistanceTo(point) - Radius;
+        /// <inheritdoc />
+        public double DistanceTo(Point3d point) => this.Plane.Origin.DistanceTo(point) - this.Radius;
 
         /// <inheritdoc />
-        public Point3d ClosestPointTo(Point3d point) => Plane.Origin + ((point - Plane.Origin).Unit() * Radius);
+        public Point3d ClosestPointTo(Point3d point) => this.Plane.Origin + ((point - this.Plane.Origin).Unit() * this.Radius);
+
+        /// <inheritdoc />
+        public Plane FrameAt(double u, double v) => throw new NotImplementedException();
+
+        /// <inheritdoc />
+        public Vector3d NormalAt(double u, double v) => (this.PointAt(u, v) - this.Plane.Origin).Unit();
+
+
+        /// <inheritdoc />
+        public Point3d PointAt(double u, double v)
+        {
+            double x, y, z;
+            var tau = new Interval(0, Math.PI).RemapFromUnit(v);
+            var rho = new Interval(0, 2 * Math.PI).RemapFromUnit(u);
+            x = this.Radius * Math.Sin(tau) * Math.Cos(rho);
+            y = this.Radius * Math.Sin(tau) * Math.Sin(rho);
+            z = this.Radius * Math.Cos(tau);
+            return this.Plane.PointAt(x, y, z);
+        }
 
         /// <summary>
-        /// Returns the closest point on the sphere as a 2D point containing it's UV coordinates.
+        ///     Returns the closest point on the sphere as a 2D point containing it's UV coordinates.
         /// </summary>
         /// <param name="pt">Point to find closest to</param>
         /// <returns>UV Parameter of the closest point as a Point2d instance.</returns>
@@ -75,30 +94,11 @@ namespace Paramdigma.Core.Geometry
             return new Point2d(u, v);
         }
 
-        /// <inheritdoc/>
-        public Plane FrameAt(double u, double v) => throw new NotImplementedException();
-
-        /// <inheritdoc/>
-        public Vector3d NormalAt(double u, double v) => (PointAt(u, v) - Plane.Origin).Unit();
-
-
-        /// <inheritdoc/>
-        public Point3d PointAt(double u, double v)
-        {
-            double x, y, z;
-            var tau = new Interval(0, Math.PI).RemapFromUnit(v);
-            var rho = new Interval(0, 2 * Math.PI).RemapFromUnit(u);
-            x = Radius * Math.Sin(tau) * Math.Cos(rho);
-            y = Radius * Math.Sin(tau) * Math.Sin(rho);
-            z = Radius * Math.Cos(tau);
-            return Plane.PointAt(x, y, z);
-        }
-
         /// <summary>
-        /// Computes the point at a specified parameter, provided as a <see cref="Point2d"/> instance.
+        ///     Computes the point at a specified parameter, provided as a <see cref="Point2d" /> instance.
         /// </summary>
-        /// <param name="uvPoint"><see cref="Point2d"/> parameter coordinates.</param>
-        /// <returns><see cref="Point3d"/> instance of the specified point.</returns>
-        public Point3d PointAt(Point2d uvPoint) => PointAt(uvPoint.X, uvPoint.Y);
+        /// <param name="uvPoint"><see cref="Point2d" /> parameter coordinates.</param>
+        /// <returns><see cref="Point3d" /> instance of the specified point.</returns>
+        public Point3d PointAt(Point2d uvPoint) => this.PointAt(uvPoint.X, uvPoint.Y);
     }
 }

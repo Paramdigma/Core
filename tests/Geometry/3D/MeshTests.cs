@@ -7,7 +7,6 @@ namespace Paramdigma.Core.Tests.Geometry._3D
 {
     public class MeshTests
     {
-        
         public Mesh FlatSquare
         {
             get
@@ -22,62 +21,62 @@ namespace Paramdigma.Core.Tests.Geometry._3D
                 return mesh;
             }
         }
-        
+
+        [Fact]
+        public void CanCheck_QuadMesh()
+        {
+            var mesh = this.FlatSquare;
+            Assert.True(mesh.IsQuadMesh());
+            Assert.False(mesh.IsNgonMesh());
+            Assert.False(mesh.IsTriangularMesh());
+        }
+
+        [Fact]
+        public void CanCompute_Boundary()
+        {
+            var mesh = this.FlatSquare;
+            Assert.NotEmpty(mesh.Boundaries);
+            Assert.Single(mesh.Boundaries);
+        }
+
+        [Fact]
+        public void CanCompute_EulerCharacteristic()
+        {
+            var mesh = this.FlatSquare;
+            Assert.Equal(1, mesh.EulerCharacteristic);
+        }
+
+        [Fact]
+        public void CanConvert_ToString()
+        {
+            Assert.IsType<string>(this.FlatSquare.ToString());
+            Assert.IsType<string>(this.FlatSquare.GetMeshInfo());
+        }
+
         [Fact]
         public void CanCreate_Mesh()
         {
-            var mesh = FlatSquare;
+            var mesh = this.FlatSquare;
             Assert.NotNull(mesh);
             Assert.NotEmpty(mesh.Vertices);
             Assert.NotEmpty(mesh.Faces);
         }
 
         [Fact]
-        public void CanCompute_Boundary()
+        public void CanDetect_IsolatedFaces()
         {
-            var mesh = FlatSquare;
-            Assert.NotEmpty(mesh.Boundaries);
-            Assert.Single(mesh.Boundaries);
+            var mesh = this.FlatSquare;
+            Assert.False(mesh.HasIsolatedFaces());
         }
 
         [Fact]
         public void CanDetect_IsolatedVertices()
         {
-            var mesh = FlatSquare;
+            var mesh = this.FlatSquare;
             Assert.False(mesh.HasIsolatedVertices());
-            
-            mesh.Vertices.Add(new MeshVertex(3,0,0));
+
+            mesh.Vertices.Add(new MeshVertex(3, 0, 0));
             Assert.True(mesh.HasIsolatedVertices());
-
-        }
-        [Fact]
-        public void CanDetect_IsolatedFaces()
-        {
-            var mesh = FlatSquare;
-            Assert.False(mesh.HasIsolatedFaces());
-        }
-
-        [Fact]
-        public void CanCompute_EulerCharacteristic()
-        {
-            var mesh = FlatSquare;
-            Assert.Equal(1,mesh.EulerCharacteristic);
-        }
-
-        [Fact]
-        public void CanCheck_QuadMesh()
-        {
-            var mesh = FlatSquare;
-            Assert.True(mesh.IsQuadMesh());
-            Assert.False(mesh.IsNgonMesh());
-            Assert.False(mesh.IsTriangularMesh());
-        }
-        
-        [Fact]
-        public void CanConvert_ToString()
-        {
-            Assert.IsType<string>(FlatSquare.ToString());
-            Assert.IsType<string>(FlatSquare.GetMeshInfo());
         }
     }
 }

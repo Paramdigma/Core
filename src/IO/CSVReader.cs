@@ -3,9 +3,7 @@
 namespace Paramdigma.Core.IO
 {
     /// <summary>
-    /// CSV File reader.
+    ///     CSV File reader.
     /// </summary>
-    public static class CSVReader
-    {
-    }
+    public static class CSVReader { }
 }

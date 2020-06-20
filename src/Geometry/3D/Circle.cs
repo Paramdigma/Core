@@ -19,17 +19,16 @@ namespace Paramdigma.Core.Geometry
             var radians = t * 2 * Math.PI;
             var x = this.Radius * Math.Cos(radians);
             var y = this.Radius * Math.Sin(radians);
-            return Plane.PointAt(x, y, 0);
+            return this.Plane.PointAt(x, y, 0);
         }
 
-        public Vector3d TangentAt(double t) => NormalAt(t).Cross(this.Plane.ZAxis);
+        public Vector3d TangentAt(double t) => this.NormalAt(t).Cross(this.Plane.ZAxis);
 
-        public Vector3d NormalAt(double t) => (this.Plane.Origin - PointAt(t)).Unit();
+        public Vector3d NormalAt(double t) => (this.Plane.Origin - this.PointAt(t)).Unit();
 
-        public Vector3d BinormalAt(double t) => TangentAt(t).Cross(NormalAt(t));
+        public Vector3d BinormalAt(double t) => this.TangentAt(t).Cross(this.NormalAt(t));
 
 
-        public Plane FrameAt(double t) => new Plane(PointAt(t), NormalAt(t), BinormalAt(t), TangentAt(t));
-        
+        public Plane FrameAt(double t) => new Plane(this.PointAt(t), this.NormalAt(t), this.BinormalAt(t), this.TangentAt(t));
     }
 }

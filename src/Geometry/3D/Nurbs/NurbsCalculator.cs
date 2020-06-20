@@ -5,12 +5,12 @@ using Paramdigma.Core.Collections;
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>
-    /// Contains all methods related to 'The Nurbs Book 2nd Edition' implementation of NURBS curves and surfaces.
+    ///     Contains all methods related to 'The Nurbs Book 2nd Edition' implementation of NURBS curves and surfaces.
     /// </summary>
     public static class NurbsCalculator
     {
         /// <summary>
-        /// Constructs a Unit knot vector given a point count and degree.
+        ///     Constructs a Unit knot vector given a point count and degree.
         /// </summary>
         /// <param name="controlPointCount">Ammount of control points in the curve.</param>
         /// <param name="degree">Degree of the curve.</param>
@@ -20,17 +20,17 @@ namespace Paramdigma.Core.Geometry
             if (degree > controlPointCount)
                 throw new Exception("Degree cannot be bigger than 'ControlPoints - 1'");
             var knotVector = new double[controlPointCount + degree + 2];
-            for (int i = 0; i <= degree; i++)
+            for (var i = 0; i <= degree; i++)
                 knotVector[i] = 0.0;
-            for (int i = degree + 1; i < controlPointCount + 1; i++)
-                knotVector[i] = ((double)i - degree) / (controlPointCount - degree + 1);
-            for (int i = controlPointCount + 1; i < controlPointCount + degree + 2; i++)
+            for (var i = degree + 1; i < controlPointCount + 1; i++)
+                knotVector[i] = ((double)i - degree) / ((controlPointCount - degree) + 1);
+            for (var i = controlPointCount + 1; i < controlPointCount + degree + 2; i++)
                 knotVector[i] = 1.0;
             return knotVector;
         }
 
         /// <summary>
-        /// Compute a point on a power basis curve.
+        ///     Compute a point on a power basis curve.
         /// </summary>
         /// <param name="points">Curve points.</param>
         /// <param name="degree">Curve degree.</param>
@@ -39,13 +39,13 @@ namespace Paramdigma.Core.Geometry
         public static Point3d Horner1(Point3d[] points, int degree, double t)
         {
             var c = points[degree];
-            for (int i = degree - 1; i >= 0; i--)
+            for (var i = degree - 1; i >= 0; i--)
                 c = (c * t) + points[i];
             return c;
         }
 
         /// <summary>
-        /// Compute the value of a Bernstein polynomial.
+        ///     Compute the value of a Bernstein polynomial.
         /// </summary>
         /// <param name="index">Index of point to compute polynomial of.</param>
         /// <param name="degree">Degree of curve.</param>
@@ -54,27 +54,21 @@ namespace Paramdigma.Core.Geometry
         public static double Bernstein(int index, int degree, double t)
         {
             var temp = new List<double>();
-            for (int j = 0; j <= degree; j++)
-            {
+            for (var j = 0; j <= degree; j++)
                 temp.Add(0.0);
-            }
 
             temp[degree - index] = 1.0;
 
             var u1 = 1.0 - t;
             for (var k = 1; k <= degree; k++)
-            {
-                for (var j = degree; j >= k; j--)
-                {
-                    temp[j] = (u1 * temp[j]) + (t * temp[j - 1]);
-                }
-            }
+            for (var j = degree; j >= k; j--)
+                temp[j] = (u1 * temp[j]) + (t * temp[j - 1]);
 
             return temp[degree];
         }
 
         /// <summary>
-        /// Compute point on a power basis surface.
+        ///     Compute point on a power basis surface.
         /// </summary>
         /// <param name="controlPoints">Control point matrix.</param>
         /// <param name="degreeU">Surface degree in the U direction.</param>
@@ -85,13 +79,13 @@ namespace Paramdigma.Core.Geometry
         public static Point3d Horner2(Matrix<Point3d> controlPoints, int degreeU, int degreeV, double u, double v)
         {
             var b = new Point3d[degreeU];
-            for (int i = 0; i <= degreeU; i++)
+            for (var i = 0; i <= degreeU; i++)
                 b[i] = Horner1(controlPoints.Row(i), degreeV, v);
             return Horner1(b, degreeU, u);
         }
 
         /// <summary>
-        /// Compute all nth-degree Bernstein polynomials.
+        ///     Compute all nth-degree Bernstein polynomials.
         /// </summary>
         /// <param name="degree">Curve degree.</param>
         /// <param name="t">Parameter.</param>
@@ -100,11 +94,11 @@ namespace Paramdigma.Core.Geometry
         {
             var b = new double[degree + 1];
             b[0] = 1.0;
-            double u1 = 1.0 - t;
-            for (int j = 1; j <= degree; j++)
+            var u1 = 1.0 - t;
+            for (var j = 1; j <= degree; j++)
             {
                 var saved = 0.0;
-                for (int k = 0; k < j; k++)
+                for (var k = 0; k < j; k++)
                 {
                     var temp = b[k];
                     b[k] = saved + (u1 * temp);
@@ -118,7 +112,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Compute point on Bezier curve.
+        ///     Compute point on Bezier curve.
         /// </summary>
         /// <param name="controlPoints">Control ponts of the curve.</param>
         /// <param name="degree">Curve degree.</param>
@@ -126,17 +120,17 @@ namespace Paramdigma.Core.Geometry
         /// <returns></returns>
         public static Point3d PointOnBezierCurve(List<Point3d> controlPoints, int degree, double t)
         {
-            Point3d c = new Point3d();
+            var c = new Point3d();
 
-            double[] b = AllBernstein(degree, t);
-            for (int k = 0; k <= degree; k++)
+            var b = AllBernstein(degree, t);
+            for (var k = 0; k <= degree; k++)
                 c += b[k] * controlPoints[k];
 
             return c;
         }
 
         /// <summary>
-        /// Compute point on a Bézier curve by deCasteljau.
+        ///     Compute point on a Bézier curve by deCasteljau.
         /// </summary>
         /// <param name="controlPoints">Control points of the curve.</param>
         /// <param name="degree">Curve degree.</param>
@@ -146,23 +140,17 @@ namespace Paramdigma.Core.Geometry
         {
             var q = new Point3d[degree + 1];
             for (var i = 0; i <= degree; i++)
-            {
                 q[i] = new Point3d(controlPoints[i]);
-            }
 
             for (var k = 1; k <= degree; k++)
-            {
-                for (var i = 0; i <= degree - k; i++)
-                {
-                    q[i] = ((1.0 - t) * q[i]) + (t * q[i + 1]);
-                }
-            }
+            for (var i = 0; i <= degree - k; i++)
+                q[i] = ((1.0 - t) * q[i]) + (t * q[i + 1]);
 
             return q[0];
         }
 
         /// <summary>
-        /// Compute a point on a Bézier surface by deCasteljau.
+        ///     Compute a point on a Bézier surface by deCasteljau.
         /// </summary>
         /// <param name="controlPoints">Control points of the curve.</param>
         /// <param name="degreeU">Surface degree in the U direction.</param>
@@ -176,22 +164,18 @@ namespace Paramdigma.Core.Geometry
             if (degreeU <= degreeV)
             {
                 for (var j = 0; j <= degreeV; j++)
-                {
                     q.Add(DeCasteljau1(controlPoints.Row(j), degreeU, u));
-                }
 
                 return DeCasteljau1(q.ToArray(), degreeV, v);
             }
-            else
-            {
-                for (int i = 0; i <= degreeU; i++)
-                    q.Add(DeCasteljau1(controlPoints.Column(i), degreeU, u));
-                return DeCasteljau1(q.ToArray(), degreeU, u);
-            }
+
+            for (var i = 0; i <= degreeU; i++)
+                q.Add(DeCasteljau1(controlPoints.Column(i), degreeU, u));
+            return DeCasteljau1(q.ToArray(), degreeU, u);
         }
 
         /// <summary>
-        /// Determine the knot span index.
+        ///     Determine the knot span index.
         /// </summary>
         /// <param name="n">Degree.</param>
         /// <param name="degree">????.</param>
@@ -201,9 +185,7 @@ namespace Paramdigma.Core.Geometry
         public static int FindSpan(int n, int degree, double t, IList<double> knotVector)
         {
             if (t == knotVector[n + 1])
-            {
                 return n;
-            }
 
             var low = degree;
             var high = n + 1;
@@ -211,13 +193,9 @@ namespace Paramdigma.Core.Geometry
             while (t < knotVector[mid] || t >= knotVector[mid + 1])
             {
                 if (t < knotVector[mid])
-                {
                     high = mid;
-                }
                 else
-                {
                     low = mid;
-                }
 
                 mid = (low + high) / 2;
             }
@@ -226,7 +204,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Compute all non-zero basis functions of all degrees from 0 to "degree".
+        ///     Compute all non-zero basis functions of all degrees from 0 to "degree".
         /// </summary>
         /// <param name="span">Knot span index.</param>
         /// <param name="param">Parameter to compute.</param>
@@ -236,17 +214,15 @@ namespace Paramdigma.Core.Geometry
         public static double[,] AllBasisFuns(int span, double param, int degree, IList<double> knotVector)
         {
             var n = new double[degree + 1, degree + 1];
-            for (int i = 0; i <= degree; i++)
-            {
-                for (int j = 0; j <= i; j++)
-                    n[j, i] = OneBasisFun(degree, knotVector.Count - 1, knotVector, span - i + j, param);
-            }
+            for (var i = 0; i <= degree; i++)
+            for (var j = 0; j <= i; j++)
+                n[j, i] = OneBasisFun(degree, knotVector.Count - 1, knotVector, (span - i) + j, param);
 
             return n;
         }
 
         /// <summary>
-        /// Computes the basis functions of a span.
+        ///     Computes the basis functions of a span.
         /// </summary>
         /// <param name="span">Knot span.</param>
         /// <param name="param">Parameter to compute.</param>
@@ -261,7 +237,7 @@ namespace Paramdigma.Core.Geometry
             basisFunctions[0] = 1.0;
             for (var j = 1; j <= degree; j++)
             {
-                left[j] = param - knotVector[span + 1 - j];
+                left[j] = param - knotVector[(span + 1) - j];
                 right[j] = knotVector[span + j] - param;
                 var saved = 0.0;
                 for (var r = 0; r < j; r++)
@@ -278,7 +254,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Compute nonzero basis functions and their derivatives at a specified parameter.
+        ///     Compute nonzero basis functions and their derivatives at a specified parameter.
         /// </summary>
         /// <param name="span">Knot span.</param>
         /// <param name="param">Parameter.</param>
@@ -295,12 +271,12 @@ namespace Paramdigma.Core.Geometry
             var right = new double[degree + 1];
 
             ndu[0, 0] = 1.0;
-            for (int j = 1; j <= degree; j++)
+            for (var j = 1; j <= degree; j++)
             {
-                left[j] = param - knotVector[span + 1 - j];
+                left[j] = param - knotVector[(span + 1) - j];
                 right[j] = knotVector[span + j] - param;
                 var saved = 0.0;
-                for (int r = 0; r < j; r++)
+                for (var r = 0; r < j; r++)
                 {
                     ndu[j, r] = right[r + 1] + left[j - r];
                     var temp = ndu[r, j - 1] / ndu[j, r];
@@ -311,15 +287,15 @@ namespace Paramdigma.Core.Geometry
                 ndu[j, j] = saved;
             }
 
-            for (int j = 0; j <= degree; j++)
+            for (var j = 0; j <= degree; j++)
                 ders[0, j] = ndu[j, degree];
 
-            for (int r = 0; r <= degree; r++)
+            for (var r = 0; r <= degree; r++)
             {
                 var s1 = 0;
                 var s2 = 1;
                 a[0, 0] = 1.0;
-                for (int k = 1; k <= n; k++)
+                for (var k = 1; k <= n; k++)
                 {
                     var d = 0.0;
                     var rk = r - k;
@@ -330,10 +306,10 @@ namespace Paramdigma.Core.Geometry
                         d = a[s2, 0] * ndu[rk, pk];
                     }
 
-                    int j1 = (rk >= -1) ? 1 : -rk;
-                    int j2 = (r - 1 <= pk) ? k - 1 : degree - r;
+                    var j1 = rk >= -1 ? 1 : -rk;
+                    var j2 = r - 1 <= pk ? k - 1 : degree - r;
 
-                    for (int j = j1; j <= j2; j++)
+                    for (var j = j1; j <= j2; j++)
                     {
                         a[s2, j] = (a[s1, j] - a[s1, j - 1]) / ndu[pk + 1, rk + j];
                         d += a[s2, j] * ndu[rk + j, pk];
@@ -366,7 +342,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Compute the basis function 'Nip'.
+        ///     Compute the basis function 'Nip'.
         /// </summary>
         /// <param name="degree">Degree.</param>
         /// <param name="m">The high index of the knot vector.</param>
@@ -376,7 +352,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns></returns>
         public static double OneBasisFun(int degree, int m, IList<double> knotVector, int span, double param)
         {
-            if ((span == 0 && param == knotVector[0]) || (span == (m - degree - 1) && param == knotVector[m]))
+            if ((span == 0 && param == knotVector[0]) || (span == m - degree - 1 && param == knotVector[m]))
                 return 1.0;
 
             if (param < knotVector[span] || param >= knotVector[span + degree + 1])
@@ -384,18 +360,16 @@ namespace Paramdigma.Core.Geometry
 
             // Initialize zeroth-degree functions
             var n = new double[degree + 1];
-            for (int j = 0; j <= degree; j++)
-            {
+            for (var j = 0; j <= degree; j++)
                 if (param >= knotVector[span + j] && param < knotVector[span + j + 1])
                     n[j] = 1.0;
                 else
                     n[j] = 0.0;
-            }
 
-            for (int k = 1; k <= degree; k++)
+            for (var k = 1; k <= degree; k++)
             {
-                double saved = n[0] == 0.0 ? 0.0 : (param - knotVector[span]) * n[0] / (knotVector[span + k] - knotVector[span]);
-                for (int j = 0; j < (degree - k + 1); j++)
+                var saved = n[0] == 0.0 ? 0.0 : ((param - knotVector[span]) * n[0]) / (knotVector[span + k] - knotVector[span]);
+                for (var j = 0; j < (degree - k) + 1; j++)
                 {
                     var uLeft = knotVector[span + j + 1];
                     var uRight = knotVector[span + j + k + 1];
@@ -417,7 +391,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Compute derivatives of basis function 'Nip'.
+        ///     Compute derivatives of basis function 'Nip'.
         /// </summary>
         /// <param name="p"></param>
         /// <param name="m"></param>
@@ -432,30 +406,28 @@ namespace Paramdigma.Core.Geometry
             var ders = new double[n + 1];
             if (u < knotVector[i] || u >= knotVector[i + p + 1])
             {
-                for (int k = 0; k <= n; k++)
+                for (var k = 0; k <= n; k++)
                     ders[k] = 0.0;
                 return ders;
             }
 
             var tmpN = new double[p + 1, p + 1];
-            for (int j = 0; j <= p; j++)
-            {
+            for (var j = 0; j <= p; j++)
                 if (u >= knotVector[i + j] && u < knotVector[i + j + 1])
                     tmpN[j, 0] = 1.0;
-            }
 
-            for (int k = 1; k <= p; k++)
+            for (var k = 1; k <= p; k++)
             {
                 double saved;
                 if (tmpN[0, k - 1] == 0.0)
                     saved = 0.0;
                 else
-                    saved = (u - knotVector[i]) * tmpN[0, k - 1] / (knotVector[i + k] - knotVector[i]);
+                    saved = ((u - knotVector[i]) * tmpN[0, k - 1]) / (knotVector[i + k] - knotVector[i]);
 
-                for (int j = 0; j < p - k + 1; j++)
+                for (var j = 0; j < (p - k) + 1; j++)
                 {
-                    double uLeft = knotVector[i + j + 1];
-                    double uRight = knotVector[i + j + k + 1];
+                    var uLeft = knotVector[i + j + 1];
+                    var uRight = knotVector[i + j + k + 1];
                     if (tmpN[j + 1, k - 1] == 0.0)
                     {
                         tmpN[j, k] = saved;
@@ -463,7 +435,7 @@ namespace Paramdigma.Core.Geometry
                     }
                     else
                     {
-                        double temp = tmpN[j + 1, k - 1] / (uRight - uLeft);
+                        var temp = tmpN[j + 1, k - 1] / (uRight - uLeft);
                         tmpN[j, k] = saved + ((uRight - u) * temp);
                         saved = (u - uLeft) * temp;
                     }
@@ -472,34 +444,32 @@ namespace Paramdigma.Core.Geometry
 
             ders[0] = tmpN[0, p];
 
-            double[] tempND = new double[n + 1];
-            for (int k = 1; k <= n; k++)
+            var tempND = new double[n + 1];
+            for (var k = 1; k <= n; k++)
             {
-                for (int j = 0; j <= k; j++)
-                {
+                for (var j = 0; j <= k; j++)
                     tempND[j] = tmpN[j, p - k];
-                }
 
-                for (int jj = 1; jj <= k; jj++)
+                for (var jj = 1; jj <= k; jj++)
                 {
                     double saved;
                     if (tempND[0] == 0.0)
                         saved = 0.0;
                     else
-                        saved = tempND[0] / (knotVector[i + p - k + jj] - knotVector[i]);
-                    for (int j = 0; j < k - jj + 1; j++)
+                        saved = tempND[0] / (knotVector[((i + p) - k) + jj] - knotVector[i]);
+                    for (var j = 0; j < (k - jj) + 1; j++)
                     {
-                        double uLeft = knotVector[i + j + 1];
-                        double uRight = knotVector[i + j + p + jj + 1];
+                        var uLeft = knotVector[i + j + 1];
+                        var uRight = knotVector[i + j + p + jj + 1];
                         if (tempND[j + 1] == 0.0)
                         {
-                            tempND[j] = (p - k + jj) * saved;
+                            tempND[j] = ((p - k) + jj) * saved;
                             saved = 0.0;
                         }
                         else
                         {
-                            double temp = tempND[j + 1] / (uRight - uLeft);
-                            tempND[j] = (p - k + jj) * (saved - temp);
+                            var temp = tempND[j + 1] / (uRight - uLeft);
+                            tempND[j] = ((p - k) + jj) * (saved - temp);
                             saved = temp;
                         }
                     }
@@ -513,11 +483,11 @@ namespace Paramdigma.Core.Geometry
 
         public static Point3d CurvePoint(int n, int p, IList<double> knotVector, IList<Point3d> controlPoints, double u)
         {
-            int span = FindSpan(n, p, u, knotVector);
-            double[] basisFuns = BasisFuns(span, u, p, knotVector);
-            Point3d c = Point3d.Unset;
-            for (int i = 0; i <= p; i++)
-                c += basisFuns[i] * controlPoints[span - p + i];
+            var span = FindSpan(n, p, u, knotVector);
+            var basisFuns = BasisFuns(span, u, p, knotVector);
+            var c = Point3d.Unset;
+            for (var i = 0; i <= p; i++)
+                c += basisFuns[i] * controlPoints[(span - p) + i];
             return c;
         }
 
@@ -525,15 +495,15 @@ namespace Paramdigma.Core.Geometry
         {
             var ck = new Vector3d[d + 1];
             var du = Math.Min(d, p);
-            for (int k = p + 1; k <= d; k++)
+            for (var k = p + 1; k <= d; k++)
                 ck[k] = new Vector3d();
             var span = FindSpan(n, p, u, knotVector);
             var nders = DersBasisFuns(span, u, p, du, knotVector);
-            for (int k = 0; k <= du; k++)
+            for (var k = 0; k <= du; k++)
             {
                 ck[k] = new Vector3d();
-                for (int j = 0; j <= p; j++)
-                    ck[k] += nders[k, j] * (Vector3d)controlPoints[span - p + j];
+                for (var j = 0; j <= p; j++)
+                    ck[k] += nders[k, j] * (Vector3d)controlPoints[(span - p) + j];
             }
 
             return ck;
@@ -543,15 +513,13 @@ namespace Paramdigma.Core.Geometry
         {
             var r = r2 - r1;
             var pk = new Point3d[d + 1, r];
-            for (int i = 0; i <= r; i++)
+            for (var i = 0; i <= r; i++)
                 pk[0, i] = controlPoints[r1 + i];
-            for (int k = 1; k <= d; k++)
+            for (var k = 1; k <= d; k++)
             {
                 var tmp = (p - k) + 1;
-                for (int i = 0; i <= r - k; i++)
-                {
+                for (var i = 0; i <= r - k; i++)
                     pk[k, i] = (tmp * (Point3d)(pk[k - 1, i + 1] - pk[k - 1, i])) / (knotVector[r1 + i + p + 1] - knotVector[r1 + i + k]);
-                }
             }
 
             return pk;
@@ -561,15 +529,15 @@ namespace Paramdigma.Core.Geometry
         {
             var du = Math.Min(d, p);
             var ck = new Vector3d[d + 1];
-            for (int k = p + 1; k <= d; k++)
+            for (var k = p + 1; k <= d; k++)
                 ck[k] = new Vector3d();
             var span = FindSpan(n, p, u, knotVector);
             var basisFuns = AllBasisFuns(span, u, p, knotVector);
             var pk = CurveDerivCpts(n, p, knotVector, controlPoints, du, span - p, span);
-            for (int k = 0; k <= du; k++)
+            for (var k = 0; k <= du; k++)
             {
                 ck[k] = new Vector3d();
-                for (int j = 0; j <= p - k; j++)
+                for (var j = 0; j <= p - k; j++)
                     ck[k] += basisFuns[j, p - k] * (Vector3d)pk[k, j];
             }
 
@@ -585,11 +553,11 @@ namespace Paramdigma.Core.Geometry
             var nV = BasisFuns(vspan, v, q, knotVectorV);
             var uind = uspan - p;
             var surfPt = Point3d.Unset;
-            for (int l = 0; l <= q; l++)
+            for (var l = 0; l <= q; l++)
             {
                 var temp = Point3d.Unset;
                 var vind = vspan - q - l;
-                for (int k = 0; k <= p; k++)
+                for (var k = 0; k <= p; k++)
                     temp += nU[k] * controlPoints[uind + k, vind];
                 surfPt += nV[l] * temp;
             }
@@ -602,21 +570,13 @@ namespace Paramdigma.Core.Geometry
             var sKL = new Point3d[derivCount + 1, derivCount + 1];
             var du = Math.Min(derivCount, p);
             for (var k = p + 1; k <= derivCount; k++)
-            {
-                for (var l = 0; l <= derivCount - k; l++)
-                {
-                    sKL[k, l] = Point3d.Unset;
-                }
-            }
+            for (var l = 0; l <= derivCount - k; l++)
+                sKL[k, l] = Point3d.Unset;
 
             var dv = Math.Min(derivCount, q);
             for (var l = q + 1; l <= derivCount; l++)
-            {
-                for (var k = 0; k <= derivCount - 1; k++)
-                {
-                    sKL[k, l] = Point3d.Unset;
-                }
-            }
+            for (var k = 0; k <= derivCount - 1; k++)
+                sKL[k, l] = Point3d.Unset;
 
             var uSpan = FindSpan(n, p, u, knotVectorU);
             var nU = DersBasisFuns(uSpan, u, p, du, knotVectorU);
@@ -630,9 +590,7 @@ namespace Paramdigma.Core.Geometry
                 {
                     temp[s] = Point3d.Unset;
                     for (var r = 0; r <= p; r++)
-                    {
-                        temp[s] += nU[k, r] * controlPoints[uSpan - p + r, vSpan - q + s];
-                    }
+                        temp[s] += nU[k, r] * controlPoints[(uSpan - p) + r, (vSpan - q) + s];
 
                     var dd = Math.Min(derivCount - k, dv);
 
@@ -642,9 +600,7 @@ namespace Paramdigma.Core.Geometry
 
                         // TODO: Check ss, this was changed from 's' for naming conflicts but it might have been on purpose.
                         for (var ss = 0; ss <= q; ss++)
-                        {
                             sKL[k, l] += nV[l, ss] * temp[ss];
-                        }
                     }
                 }
             }
@@ -665,28 +621,18 @@ namespace Paramdigma.Core.Geometry
             {
                 var temp = CurveDerivCpts(n, p, knotVectorU, controlPoints.Column(j), du, r1, r2);
                 for (var k = 0; k <= du; k++)
-                {
-                    for (int i = 0; i <= r - k; i++)
-                    {
-                        pkl[k][0][i][j - s1] = temp[k, i];
-                    }
-                }
+                for (var i = 0; i <= r - k; i++)
+                    pkl[k][0][i][j - s1] = temp[k, i];
             }
 
             for (var k = 0; k <= du; k++)
+            for (var i = 0; i <= r - k; i++)
             {
-                for (var i = 0; i <= r - k; i++)
-                {
-                    var dd = Math.Min(d - k, dv);
-                    var temp = CurveDerivCpts(m, q, knotVectorV, pkl[k][0][i], dd, 0, s);
-                    for (var l = i; k <= dd; k++)
-                    {
-                        for (var j = 0; j <= s - l; j++)
-                        {
-                            pkl[k][l][i][j] = temp[l, j];
-                        }
-                    }
-                }
+                var dd = Math.Min(d - k, dv);
+                var temp = CurveDerivCpts(m, q, knotVectorV, pkl[k][0][i], dd, 0, s);
+                for (var l = i; k <= dd; k++)
+                for (var j = 0; j <= s - l; j++)
+                    pkl[k][l][i][j] = temp[l, j];
             }
 
             return pkl;
@@ -698,21 +644,13 @@ namespace Paramdigma.Core.Geometry
 
             var du = Math.Min(d, p);
             for (var k = p + 1; k <= d; k++)
-            {
-                for (var l = 0; l <= d - k; l++)
-                {
-                    skl[k, l] = Point3d.Unset;
-                }
-            }
+            for (var l = 0; l <= d - k; l++)
+                skl[k, l] = Point3d.Unset;
 
             var dv = Math.Min(d, q);
             for (var l = q + 1; l <= d; l++)
-            {
-                for (var k = 0; k <= d - l; k++)
-                {
-                    skl[k, l] = Point3d.Unset;
-                }
-            }
+            for (var k = 0; k <= d - l; k++)
+                skl[k, l] = Point3d.Unset;
 
             var uSpan = FindSpan(n, p, u, knotVectorU);
             var nV = AllBasisFuns(uSpan, u, p, knotVectorU);
@@ -745,16 +683,14 @@ namespace Paramdigma.Core.Geometry
             var span = FindSpan(n, p, u, knotVector);
             var N = BasisFuns(span, u, p, knotVector);
             var cw = new Point4d();
-            for (int j = 0; j <= p; j++)
-            {
-                cw += N[j] * controlPoints[span - p + j];
-            }
+            for (var j = 0; j <= p; j++)
+                cw += N[j] * controlPoints[(span - p) + j];
 
             return cw / cw.Weight;
         }
 
         /// <summary>
-        /// Compute C(u) derivatives from Cw(u) derivatives.
+        ///     Compute C(u) derivatives from Cw(u) derivatives.
         /// </summary>
         /// <param name="aDers"></param>
         /// <param name="wDers"></param>
@@ -764,13 +700,11 @@ namespace Paramdigma.Core.Geometry
         {
             var ders = new Vector3d[d + 1];
             double[,] bin = null; // TODO: Precompute 'binomial coefficients'
-            for (int k = 0; k <= d; k++)
+            for (var k = 0; k <= d; k++)
             {
                 var v = aDers[k];
-                for (int i = 1; i <= k; i++)
-                {
+                for (var i = 1; i <= k; i++)
                     v -= bin[k, i] * wDers[i] * ders[k - i];
-                }
 
                 ders[k] = v / wDers[0];
             }
@@ -779,7 +713,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Compute a point on a nurbs surface.
+        ///     Compute a point on a nurbs surface.
         /// </summary>
         /// <param name="n"></param>
         /// <param name="p"></param>
@@ -803,16 +737,12 @@ namespace Paramdigma.Core.Geometry
             {
                 temp[l] = new Point4d();
                 for (var k = 0; k <= p; k++)
-                {
-                    temp[l] += nU[k] * controlPoints[uspan - p + k, vspan - q + l];
-                }
+                    temp[l] += nU[k] * controlPoints[(uspan - p) + k, (vspan - q) + l];
             }
 
             var sW = new Point4d();
             for (var l = 0; l <= q; l++)
-            {
                 sW += nV[l] * temp[l];
-            }
 
             return (Point3d)(sW / sW.Weight);
         }

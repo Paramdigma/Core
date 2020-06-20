@@ -12,13 +12,9 @@ namespace Paramdigma.Core.Tests
         public Matrix<Point3d> FlatGrid(int size)
         {
             var m = new Matrix<Point3d>(size);
-            for (int i = 0; i < size; i++)
-            {
-                for (int j = 0; j < size; j++)
-                {
-                    m[i, j] = new Point3d(i, j, 0);
-                }
-            }
+            for (var i = 0; i < size; i++)
+            for (var j = 0; j < size; j++)
+                m[i, j] = new Point3d(i, j, 0);
 
             return m;
         }
@@ -28,7 +24,7 @@ namespace Paramdigma.Core.Tests
         public void Decasteljau2_Works(double u, double v)
         {
             const int n = 5;
-            var points = FlatGrid(n);
+            var points = this.FlatGrid(n);
             var pt = NurbsCalculator.DeCasteljau2(points, 3, 3, u, v);
 
             Assert.NotNull(pt);
@@ -38,7 +34,7 @@ namespace Paramdigma.Core.Tests
         public void Decasteljau1_Works()
         {
             var points = new List<Point3d>();
-            for (int i = 0; i < 5; i++)
+            for (var i = 0; i < 5; i++)
                 points.Add(new Point3d(i, 0, 0));
             var pt = NurbsCalculator.DeCasteljau1(points.ToArray(), points.Count - 1, 1);
         }
@@ -58,10 +54,11 @@ namespace Paramdigma.Core.Tests
             const int n = 100;
             for (var i = 0; i <= n; i++)
             {
-                var pt = NurbsCalculator.CurvePoint(3, 1, u, new Point3d[] { p0, p1, p2, p3 }, (double)i / n);
-                var pt2 = NurbsCalculator.CurvePoint(3, 2, u2, new Point3d[] { p0, p1, p2, p3 }, (double)i / n);
-                var pt3 = NurbsCalculator.CurvePoint(3, 3, u3, new Point3d[] { p0, p1, p2, p3 }, (double)i / n);
+                var pt = NurbsCalculator.CurvePoint(3, 1, u, new[] {p0, p1, p2, p3}, (double)i / n);
+                var pt2 = NurbsCalculator.CurvePoint(3, 2, u2, new[] {p0, p1, p2, p3}, (double)i / n);
+                var pt3 = NurbsCalculator.CurvePoint(3, 3, u3, new[] {p0, p1, p2, p3}, (double)i / n);
             }
+
             watch.Stop();
             Console.WriteLine(watch.Elapsed);
         }

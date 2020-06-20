@@ -7,20 +7,6 @@ namespace Paramdigma.Core.Tests
     public class IntervalTests
     {
         [Fact]
-        public void CanCreate_Interval()
-        {
-            var i0 = new Interval(0, 1);
-            var i1 = Interval.Unit;
-            var i2 = new Interval(i0);
-            
-            Assert.Equal(1, i0.Length);
-            Assert.Throws<ArithmeticException>(() => new Interval(double.NaN,1));
-            Assert.Throws<ArithmeticException>(() => new Interval(0, double.NaN));
-        }
-        
-
-
-        [Fact]
         public void Can_CheckAndModifyDirection()
         {
             var i = new Interval(1, 4);
@@ -28,6 +14,18 @@ namespace Paramdigma.Core.Tests
             i.FlipDirection();
             var dir2 = i.HasInvertedDirection;
             Assert.True(dir != dir2);
+        }
+
+        [Fact]
+        public void Can_CheckContainment()
+        {
+            var i = new Interval(0.455, 4.134);
+            const double n1 = 0.0;
+            const double n2 = 5.0;
+            const double n3 = 2.33;
+            Assert.False(i.Contains(n1));
+            Assert.False(i.Contains(n2));
+            Assert.True(i.Contains(n3));
         }
 
         [Fact]
@@ -57,15 +55,15 @@ namespace Paramdigma.Core.Tests
         }
 
         [Fact]
-        public void Can_CheckContainment()
+        public void CanCreate_Interval()
         {
-            var i = new Interval(0.455, 4.134);
-            const double n1 = 0.0;
-            const double n2 = 5.0;
-            const double n3 = 2.33;
-            Assert.False(i.Contains(n1));
-            Assert.False(i.Contains(n2));
-            Assert.True(i.Contains(n3));
+            var i0 = new Interval(0, 1);
+            var i1 = Interval.Unit;
+            var i2 = new Interval(i0);
+
+            Assert.Equal(1, i0.Length);
+            Assert.Throws<ArithmeticException>(() => new Interval(double.NaN, 1));
+            Assert.Throws<ArithmeticException>(() => new Interval(0, double.NaN));
         }
     }
 }

@@ -5,7 +5,7 @@ using Paramdigma.Core.Geometry;
 namespace Paramdigma.Core.LinearAlgebra
 {
     /// <summary>
-    /// Fit a line through a set of 2-dimensional points.
+    ///     Fit a line through a set of 2-dimensional points.
     /// </summary>
     public static class LeastSquaresLinearFit
     {
@@ -14,7 +14,7 @@ namespace Paramdigma.Core.LinearAlgebra
         // Found at: http://csharphelper.com/blog/2014/10/find-a-linear-least-squares-fit-for-a-set-of-points-in-c/
 
         /// <summary>
-        /// Find the least squares best fitting line to the given points.
+        ///     Find the least squares best fitting line to the given points.
         /// </summary>
         /// <param name="points">The points to fit the line through.</param>
         /// <param name="m">Height.</param>
@@ -28,7 +28,7 @@ namespace Paramdigma.Core.LinearAlgebra
             double s1 = points.Count;
             double sx = 0, sy = 0, sxx = 0, sxy = 0;
 
-            foreach (Point2d pt in points)
+            foreach (var pt in points)
             {
                 sx += pt.X;
                 sy += pt.Y;
@@ -47,9 +47,9 @@ namespace Paramdigma.Core.LinearAlgebra
         private static double ErrorSquared(List<Point2d> points, double m, double b)
         {
             double total = 0;
-            foreach (Point2d pt in points)
+            foreach (var pt in points)
             {
-                double dy = pt.Y - ((m * pt.X) + b);
+                var dy = pt.Y - ((m * pt.X) + b);
                 total += dy * dy;
             }
 

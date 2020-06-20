@@ -17,9 +17,9 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(Interval.Unit, box.DomainX);
             Assert.Equal(Interval.Unit, box.DomainY);
             Assert.Equal(Interval.Unit, box.DomainZ);
-            Assert.Equal(Point3d.WorldOrigin,box.Min);
-            Assert.Equal(new Point3d(1,1,1),box.Max );
-            Assert.Equal(new Point3d(.5,.5,.5), box.Center );
+            Assert.Equal(Point3d.WorldOrigin, box.Min);
+            Assert.Equal(new Point3d(1, 1, 1), box.Max);
+            Assert.Equal(new Point3d(.5, .5, .5), box.Center);
         }
 
         [Fact]
@@ -30,9 +30,9 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(Interval.Unit, box.DomainX);
             Assert.Equal(Interval.Unit, box.DomainY);
             Assert.Equal(Interval.Unit, box.DomainZ);
-            Assert.Equal(Point3d.WorldOrigin,box.Min);
-            Assert.Equal(new Point3d(1,1,1),box.Max );
-            Assert.Equal(new Point3d(.5,.5,.5), box.Center );
+            Assert.Equal(Point3d.WorldOrigin, box.Min);
+            Assert.Equal(new Point3d(1, 1, 1), box.Max);
+            Assert.Equal(new Point3d(.5, .5, .5), box.Center);
         }
     }
 }
