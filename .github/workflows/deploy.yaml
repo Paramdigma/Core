@@ -26,7 +26,7 @@ jobs:
       - name: 🧪 Test
         run: dotnet test --no-restore --verbosity normal
       - name: 🗜 Compress build files # This would actually build your project, using zip for an example artifact
-        run: zip --junk-paths ./Paramdigma.Core.zip ./src/bin/Release/netstandard2.1/*
+        run: zip --junk-paths ./Paramdigma.Core.zip ./src/bin/Release/netstandard2.0/*
 
       - name: 📘 Create Release
         id: create_release
