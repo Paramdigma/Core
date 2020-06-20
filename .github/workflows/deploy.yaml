@@ -47,7 +47,7 @@ jobs:
           asset_content_type: application/zip
       - name: 📦 Create the package
         run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
-      - run dotnet nuget add source https://nuget.pkg.github.com/Paramdigma/index.json --name github --username AlanRynne --password ${{secrets.GITHUB_TOKEN}}
+      - run: dotnet nuget add source https://nuget.pkg.github.com/Paramdigma/index.json --name github --username AlanRynne --password ${{secrets.GITHUB_TOKEN}}
       - name: 🚀 Publish the package to GPR
         run: dotnet nuget push ./src/bin/Release/*.nupkg --source github
 
