@@ -51,7 +51,7 @@ jobs:
       - name: 📦 Create the package
         run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
       - name: 🚀 Publish the package to GPR
-        run: dotnet nuget push ./src/bin/Release/*.nupkg
+        run: dotnet nuget push ./src/bin/Release/*.nupkg -k ${{secrets.GITHUB_TOKEN}} -s https://nuget.pkg.github.com/Paramdigma/index.json
         env:
           NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
