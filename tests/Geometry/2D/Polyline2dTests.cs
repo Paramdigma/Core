@@ -17,11 +17,11 @@ namespace Paramdigma.Core.Tests.Geometry
 
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] { new Polyline2d(new List<Point2d> { pt1, pt2, pt3, pt4 }, false), 3 };
-            yield return new object[] { new Polyline2d(new List<Point2d> { pt1, pt2, pt3, pt4 }, true), 4 };
+            yield return new object[] {new Polyline2d(new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4}, false), 3};
+            yield return new object[] {new Polyline2d(new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4}, true), 4};
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
 
     public class Polyline2dDataSet : IEnumerable<object[]>
@@ -36,10 +36,10 @@ namespace Paramdigma.Core.Tests.Geometry
 
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] { new Polyline2d(new List<Point2d> { pt1, pt2, pt3, pt4 }, false) };
+            yield return new object[] {new Polyline2d(new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4}, false)};
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
 
     public class Polyline2dTests
@@ -54,10 +54,7 @@ namespace Paramdigma.Core.Tests.Geometry
 
         [Theory]
         [ClassData(typeof(Polyline2dUnitSquareAndSegments))]
-        public void DefaultDomain_IsParametrizedByArcLength(Polyline2d polyline, double expectedLength)
-        {
-            Assert.True(polyline.Domain.End == expectedLength);
-        }
+        public void DefaultDomain_IsParametrizedByArcLength(Polyline2d polyline, double expectedLength) => Assert.True(polyline.Domain.End == expectedLength);
 
         [Theory]
         [ClassData(typeof(Polyline2dDataSet))]

@@ -5,99 +5,32 @@
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>
-    /// Abstract class representing a generic vector entity. All vector related entities must inherit from it.
+    ///     Abstract class representing a generic vector entity. All vector related entities must inherit from it.
     /// </summary>
     public abstract class BasePoint
     {
-        /// <summary>
-        /// Gets or sets x Coordinate.
-        /// </summary>
-        public double X
-        {
-            get
-            {
-                return this.x;
-            }
-
-            set
-            {
-                if (this.IsUnset)
-                    this.IsUnset = false;
-                this.x = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets y Coordinate.
-        /// </summary>
-        public double Y
-        {
-            get
-            {
-                return this.y;
-            }
-
-            set
-            {
-                if (this.IsUnset)
-                    this.IsUnset = false;
-                y = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets z Coordinate.
-        /// </summary>
-        public double Z
-        {
-            get
-            {
-                return this.z;
-            }
-
-            set
-            {
-                if (this.IsUnset)
-                    this.IsUnset = false;
-                this.z = value;
-            }
-        }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the current point is unset.
-        /// </summary>
-        /// <value>True if Unset.</value>
-        public bool IsUnset
-        {
-            get; set;
-        }
-
         private double x;
         private double y;
         private double z;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BasePoint"/> class.
+        ///     Initializes a new instance of the <see cref="BasePoint" /> class.
         /// </summary>
         /// <returns>New origin point.</returns>
         protected BasePoint()
-            : this(0, 0, 0)
-        {
+            : this(0, 0, 0) =>
             this.IsUnset = true;
-        }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BasePoint"/> class.
+        ///     Initializes a new instance of the <see cref="BasePoint" /> class.
         /// </summary>
         /// <param name="point">Point to copy coordinates from.</param>
         /// <returns></returns>
         protected BasePoint(BasePoint point)
-            : this(point.X, point.Y, point.Z)
-        {
-        }
+            : this(point.X, point.Y, point.Z) { }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="BasePoint"/> class by cartesian coordinates.
+        ///     Initializes a new instance of the <see cref="BasePoint" /> class by cartesian coordinates.
         /// </summary>
         /// <param name="xCoord">X coordinate.</param>
         /// <param name="yCoord">Y coordinate.</param>
@@ -111,7 +44,62 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Add a point to this point.
+        ///     Gets or sets x Coordinate.
+        /// </summary>
+        public double X
+        {
+            get => this.x;
+
+            set
+            {
+                if (this.IsUnset)
+                    this.IsUnset = false;
+                this.x = value;
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets y Coordinate.
+        /// </summary>
+        public double Y
+        {
+            get => this.y;
+
+            set
+            {
+                if (this.IsUnset)
+                    this.IsUnset = false;
+                this.y = value;
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets z Coordinate.
+        /// </summary>
+        public double Z
+        {
+            get => this.z;
+
+            set
+            {
+                if (this.IsUnset)
+                    this.IsUnset = false;
+                this.z = value;
+            }
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether the current point is unset.
+        /// </summary>
+        /// <value>True if Unset.</value>
+        public bool IsUnset
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Add a point to this point.
         /// </summary>
         /// <param name="point">Point to add.</param>
         public void Add(BasePoint point)
@@ -119,11 +107,11 @@ namespace Paramdigma.Core.Geometry
             this.x += point.X;
             this.y += point.Y;
             this.z += point.Z;
-            IsUnset = false;
+            this.IsUnset = false;
         }
 
         /// <summary>
-        /// Substract a point from this one.
+        ///     Substract a point from this one.
         /// </summary>
         /// <param name="point">Point to substract.</param>
         public void Substract(BasePoint point)
@@ -135,7 +123,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Multiply this point by a number.
+        ///     Multiply this point by a number.
         /// </summary>
         /// <param name="scalar">Number to multiply by.</param>
         public void Multiply(double scalar)
@@ -146,7 +134,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Divide this point by a number.
+        ///     Divide this point by a number.
         /// </summary>
         /// <param name="scalar">Number to divide by.</param>
         public void Divide(double scalar)
@@ -157,7 +145,7 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Negates this point.
+        ///     Negates this point.
         /// </summary>
         public void Negate()
         {
@@ -167,30 +155,27 @@ namespace Paramdigma.Core.Geometry
         }
 
         /// <summary>
-        /// Returns the string representation of this point.
+        ///     Returns the string representation of this point.
         /// </summary>
         /// <returns></returns>
         public override string ToString() => "{ " + this.x + ", " + this.y + ", " + this.z + " }";
 
         /// <summary>
-        /// Converts a point to an array of numbers.
+        ///     Converts a point to an array of numbers.
         /// </summary>
         /// <returns>Array with cartesian coordinates of point.</returns>
-        public double[] ToArray() => new[] { this.x, this.y, this.z };
+        public double[] ToArray() => new[] {this.x, this.y, this.z};
 
         /// <summary>
-        /// Performs a deep clone of the point.
+        ///     Performs a deep clone of the point.
         /// </summary>
         /// <param name="obj">Object to compare to.</param>
         /// <returns>Returns a copy of this BasePoint instance.</returns>
-        
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override bool Equals(object obj)
         {
             if (!(obj is BasePoint))
-            {
                 return false;
-            }
 
             var pt = (BasePoint)obj;
             return Math.Abs(this.X - pt.X) <= Settings.Tolerance
@@ -198,7 +183,7 @@ namespace Paramdigma.Core.Geometry
                 && Math.Abs(this.Z - pt.Z) <= Settings.Tolerance;
         }
 
-        /// <inheritdoc/>
+        /// <inheritdoc />
         public override int GetHashCode()
         {
             unchecked
@@ -211,7 +196,7 @@ namespace Paramdigma.Core.Geometry
                 var tY = (int)(this.Y * (1 / tol)) * tol;
                 var tZ = (int)(this.Z * (1 / tol)) * tol;
 
-                int hash = hashingBase;
+                var hash = hashingBase;
                 hash = (hash * hashingMultiplier) ^ tX.GetHashCode();
                 hash = (hash * hashingMultiplier) ^ tY.GetHashCode();
                 hash = (hash * hashingMultiplier) ^ tZ.GetHashCode();

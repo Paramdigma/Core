@@ -3,7 +3,7 @@ using System;
 namespace Paramdigma.Core.Exceptions
 {
     /// <summary>
-    /// Represents errors that ocur when using a geometry that has the 'isUnset' flag set to true.
+    ///     Represents errors that ocur when using a geometry that has the 'isUnset' flag set to true.
     /// </summary>
     public class UnsetGeometryException : Exception
     {

@@ -7,7 +7,6 @@ namespace Paramdigma.Core.Tests.Geometry._3D
 {
     public class MeshVertexTests
     {
-        
         public Mesh FlatSquare
         {
             get
@@ -24,9 +23,8 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         }
 
         [Fact]
-        public void CanCompute_Adjacencies()
-        {
-            FlatSquare.Vertices.ForEach(vertex =>
+        public void CanCompute_Adjacencies() =>
+            this.FlatSquare.Vertices.ForEach(vertex =>
             {
                 Assert.Single(vertex.AdjacentFaces());
                 Assert.Single(vertex.AdjacentCorners());
@@ -36,22 +34,19 @@ namespace Paramdigma.Core.Tests.Geometry._3D
                 Assert.Equal(2, vertex.Valence());
                 Assert.True(vertex.OnBoundary());
             });
-        }
+
+        [Fact]
+        public void CanConvert_ToString() =>
+            this.FlatSquare.Vertices.ForEach(vertex =>
+            {
+                Assert.NotNull(vertex.ToString());
+            });
 
         [Fact]
         public void CanCreate()
         {
             Assert.NotNull(new MeshVertex());
             Assert.NotNull(new MeshVertex(Point3d.WorldOrigin));
-        }
-
-        [Fact]
-        public void CanConvert_ToString()
-        {
-            FlatSquare.Vertices.ForEach(vertex =>
-            {
-                Assert.NotNull(vertex.ToString());
-            });
         }
     }
 }

@@ -3,9 +3,7 @@
 namespace Paramdigma.Core.IO
 {
     /// <summary>
-    /// CSV File Writter.
+    ///     CSV File Writter.
     /// </summary>
-    public static class CSVWritter
-    {
-    }
+    public static class CSVWritter { }
 }

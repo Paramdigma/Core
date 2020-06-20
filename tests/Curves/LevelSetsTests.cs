@@ -24,23 +24,23 @@ namespace Paramdigma.Core.Tests.Curves
                 var mesh = new Mesh(vertices, new List<List<int>> {face});
                 return mesh;
             }
-        }    
-        
+        }
+
         [Fact]
         public void CanCompute_GradientInFace_ReturnsValidVector()
         {
-            var c = LevelSets.ComputeGradientField("scalar-1", Triangle);
-            Assert.Equal(Triangle.Faces.Count,c.Count);
+            var c = LevelSets.ComputeGradientField("scalar-1", this.Triangle);
+            Assert.Equal(this.Triangle.Faces.Count, c.Count);
             Assert.Equal(new Vector3d(0, -1, -1).Unit(), c[0].Unit());
         }
 
         [Fact]
         public void CanCompute_LevelInFace_ReturnsValidLine()
         {
-            LevelSets.ComputeLevels("scalar-1", new List<double> {0.5}, Triangle, out var levelSets);
+            LevelSets.ComputeLevels("scalar-1", new List<double> {0.5}, this.Triangle, out var levelSets);
             Assert.NotEmpty(levelSets);
             var v = (Vector3d)levelSets[0][0];
-            Assert.Equal(new Vector3d(1,0,0),v.Unit());
+            Assert.Equal(new Vector3d(1, 0, 0), v.Unit());
         }
     }
 }

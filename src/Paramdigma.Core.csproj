@@ -3,12 +3,19 @@
     <!-- Target Framework -->
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <Description>Computational Geometry library for .NET</Description>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Title>Paramdigma Core</Title>
+        <PackageProjectUrl>https://paramdigma.com/Core/</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Paramdigma/Core/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageVersion>0.0.7</PackageVersion>
+        <AssemblyVersion>0.0.7</AssemblyVersion>
     </PropertyGroup>
 
     <PropertyGroup>
         <PackageId>Paramdigma.Core</PackageId>
-        <Version>0.0.6</Version>
+        <Version>0.0.7</Version>
         <Authors>Alan Rynne</Authors>
         <Company>Paramdigma</Company>
         <PackageDescription>Computational Geometry library for .Net</PackageDescription>

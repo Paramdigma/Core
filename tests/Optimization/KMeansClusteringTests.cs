@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestPlatform.CommunicationUtilities;
 using Paramdigma.Core.Collections;
 using Paramdigma.Core.Geometry;
 using Paramdigma.Core.Optimization;
@@ -14,17 +13,14 @@ namespace Paramdigma.Core.Tests.Optimization
     {
         private readonly ITestOutputHelper testOutputHelper;
 
-        public KMeansClusteringTests(ITestOutputHelper testOutputHelper)
-        {
-            this.testOutputHelper = testOutputHelper;
-        }
+        public KMeansClusteringTests(ITestOutputHelper testOutputHelper) => this.testOutputHelper = testOutputHelper;
 
         public List<VectorNd> createClusterAround(Point3d pt, double radius, int count)
         {
             var cluster = new List<VectorNd>();
             var rnd = new Random();
             var range = new Interval(-radius, radius);
-            for (int i = 0; i < count; i++)
+            for (var i = 0; i < count; i++)
             {
                 var x = pt.X + rnd.NextDouble();
                 var y = pt.Y + rnd.NextDouble();
@@ -36,7 +32,7 @@ namespace Paramdigma.Core.Tests.Optimization
         }
 
         [Theory]
-        [InlineData(4, 20 )]
+        [InlineData(4, 20)]
         [InlineData(6, 18)]
         [InlineData(10, 15)]
         public void KMeans_MainTest(int expectedClusters, int expectedClusterCount)
@@ -46,15 +42,15 @@ namespace Paramdigma.Core.Tests.Optimization
             var cir = new Circle(Plane.WorldXY, 10);
             var pts = new List<Point3d>();
 
-            for (int i = 0; i < expectedClusters; i++)
+            for (var i = 0; i < expectedClusters; i++)
             {
                 var pt = cir.PointAt((double)i / expectedClusters);
                 pts.Add(pt);
-                vectors.AddRange(createClusterAround(pt, 1, expectedClusterCount));
+                vectors.AddRange(this.createClusterAround(pt, 1, expectedClusterCount));
             }
-            
+
             Assert.True(vectors.Count == expectedClusters * expectedClusterCount);
-            bool eventCheck = false;
+            var eventCheck = false;
             // When
             var kMeans = new KMeansClustering(100, expectedClusters, vectors);
             kMeans.IterationCompleted += (sender, args) =>
@@ -62,7 +58,6 @@ namespace Paramdigma.Core.Tests.Optimization
                 Assert.True(args.iteration >= 0);
                 Assert.True(args.Clusters.Count == expectedClusters);
                 eventCheck = true;
-                
             };
             kMeans.Run();
             //Assert the Iteration completed event has been raised
@@ -81,8 +76,6 @@ namespace Paramdigma.Core.Tests.Optimization
                     Assert.True(dist <= 2, $"Distance was bigger: {dist}");
                 }
             });
-            
-            
         }
     }
 }

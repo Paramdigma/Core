@@ -1,80 +1,110 @@
 ﻿namespace Paramdigma.Core.HalfEdgeMesh
 {
     /// <summary>
-    /// Represents a mesh half-edge.
+    ///     Represents a mesh half-edge.
     /// </summary>
     public class MeshHalfEdge
     {
         /// <summary>
-        /// Gets or sets the vertex linked to this half-edge.
+        ///     Initializes a new instance of the <see cref="MeshHalfEdge" /> class.
         /// </summary>
-        public MeshVertex Vertex { get; set; }
+        public MeshHalfEdge() => this.Index = -1;
 
         /// <summary>
-        /// Gets or sets the edge linked to this half-edge.
+        ///     Gets or sets the vertex linked to this half-edge.
         /// </summary>
-        public MeshEdge Edge { get; set; }
-
-        /// <summary>
-        /// Gets or sets the face linked to this half-edge.
-        /// </summary>
-        public MeshFace Face { get; set; }
-
-        /// <summary>
-        /// Gets or sets the corner linked to this half-edge.
-        /// </summary>
-        public MeshCorner Corner { get; set; }
-
-        /// <summary>
-        /// Gets or sets the next half-edge in a face.
-        /// </summary>
-        public MeshHalfEdge Next { get; set; }
-
-        /// <summary>
-        /// Gets or sets the previous half-edge in a face.
-        /// </summary>
-        public MeshHalfEdge Prev { get; set; }
-
-        /// <summary>
-        /// Gets or sets the opposite half-edge.
-        /// </summary>
-        public MeshHalfEdge Twin { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the half-edge lies on a boundary.
-        /// </summary>
-        public bool OnBoundary { get; set; }
-
-        /// <summary>
-        /// Gets or sets the half-edge index.
-        /// </summary>
-        public int Index { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MeshHalfEdge"/> class.
-        /// </summary>
-        public MeshHalfEdge()
+        public MeshVertex Vertex
         {
-            Index = -1;
+            get;
+            set;
         }
 
         /// <summary>
-        /// Gets the previous vertex of the half-edge.
+        ///     Gets or sets the edge linked to this half-edge.
         /// </summary>
-        public MeshVertex PreviousVertex => Twin.Vertex;
+        public MeshEdge Edge
+        {
+            get;
+            set;
+        }
 
         /// <summary>
-        /// Gets the opposite face of the half-edge.
+        ///     Gets or sets the face linked to this half-edge.
         /// </summary>
-        public MeshFace AdjacentFace => Twin.Face;
+        public MeshFace Face
+        {
+            get;
+            set;
+        }
 
         /// <summary>
-        /// Gets the string representation of the half-edge.
+        ///     Gets or sets the corner linked to this half-edge.
+        /// </summary>
+        public MeshCorner Corner
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets or sets the next half-edge in a face.
+        /// </summary>
+        public MeshHalfEdge Next
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets or sets the previous half-edge in a face.
+        /// </summary>
+        public MeshHalfEdge Prev
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets or sets the opposite half-edge.
+        /// </summary>
+        public MeshHalfEdge Twin
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets or sets a value indicating whether the half-edge lies on a boundary.
+        /// </summary>
+        public bool OnBoundary
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets or sets the half-edge index.
+        /// </summary>
+        public int Index
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets the previous vertex of the half-edge.
+        /// </summary>
+        public MeshVertex PreviousVertex => this.Twin.Vertex;
+
+        /// <summary>
+        ///     Gets the opposite face of the half-edge.
+        /// </summary>
+        public MeshFace AdjacentFace => this.Twin.Face;
+
+        /// <summary>
+        ///     Gets the string representation of the half-edge.
         /// </summary>
         /// <returns></returns>
-        public override string ToString()
-        {
-            return "Half-edge " + this.Index;
-        }
+        public override string ToString() => "Half-edge " + this.Index;
     }
 }

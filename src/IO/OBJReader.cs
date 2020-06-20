@@ -3,9 +3,7 @@
 namespace Paramdigma.Core.IO
 {
     /// <summary>
-    /// OBJ File Reader.
+    ///     OBJ File Reader.
     /// </summary>
-    public static class OBJReader
-    {
-    }
+    public static class OBJReader { }
 }
