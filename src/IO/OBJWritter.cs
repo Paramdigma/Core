@@ -3,9 +3,7 @@
 namespace Paramdigma.Core.IO
 {
     /// <summary>
-    /// OBJ File Writter.
+    ///     OBJ File Writter.
     /// </summary>
-    public class OBJWritter
-    {
-    }
+    public class OBJWritter { }
 }

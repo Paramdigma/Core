@@ -30,20 +30,30 @@ namespace Paramdigma.Core.Optimization
         public GradientDescentResult Result;
 
         /// <summary>
+        ///     Initializes a new instance of the <see cref="GradientDescent" /> class with given options.
+        /// </summary>
+        /// <param name="options">Settings to apply to this GD instance.</param>
+        public GradientDescent(GradientDescentOptions options)
+        {
+            this.Result = default;
+            this.Options = options;
+        }
+
+        /// <summary>
         ///     Run gradient descent algorithm.
         /// </summary>
         /// <param name="function">Delegate function to compute the fitness.</param>
         /// <param name="inputValues">Input values to compute the fitness from.</param>
         public void Minimize(FitnessFunction function, List<double> inputValues)
         {
-            Result.Values = inputValues;
+            this.Result.Values = inputValues;
 
             // Run minimization at least once
             var iter = 0;
             double gLength;
             do
             {
-                List<double> gradient = ComputeGradient(function, Result.Values);
+                var gradient = this.ComputeGradient(function, this.Result.Values);
 
                 // Compute gradient length
                 gLength = 0;
@@ -51,15 +61,14 @@ namespace Paramdigma.Core.Optimization
                 gLength = Math.Sqrt(gLength);
 
                 // Update values
-                for (var i = 0; i < Result.Values.Count; i++)
-                    Result.Values[i] -= gradient[i];
-                Result.Error = function(Result.Values);
-                Result.GradientLength = gLength;
+                for (var i = 0; i < this.Result.Values.Count; i++)
+                    this.Result.Values[i] -= gradient[i];
+                this.Result.Error = function(this.Result.Values);
+                this.Result.GradientLength = gLength;
                 iter++; // Increase iteration count
-            }
-            while (gLength > Options.Limit && iter < Options.MaxIterations &&
-                     Result.Error > Options.ErrorThreshold);
-            string customError = Result.Error > 1E5 ? $"{Result.Error:0.###e-000}" : $"{Result.Error:0.00000}";
+            } while (gLength > this.Options.Limit && iter < this.Options.MaxIterations && this.Result.Error > this.Options.ErrorThreshold);
+
+            var customError = this.Result.Error > 1E5 ? $"{this.Result.Error:0.###e-000}" : $"{this.Result.Error:0.00000}";
             Console.ResetColor();
         }
 
@@ -78,13 +87,13 @@ namespace Paramdigma.Core.Optimization
 
             for (var i = 0; i < inputValues.Count; i++)
             {
-                double dV = ComputePartialDerivative(i, func, inputValues, Options.DerivativeStep);
-                gradient.Add(dV * Options.LearningRate);
+                var dV = this.ComputePartialDerivative(i, func, inputValues, this.Options.DerivativeStep);
+                gradient.Add(dV * this.Options.LearningRate);
                 derivativeSquareSum += dV * dV;
             }
 
             // Root of the sum of squares is the length
-            double gradientLength = Math.Sqrt(derivativeSquareSum);
+            var gradientLength = Math.Sqrt(derivativeSquareSum);
 
             // gradientLength = Math.Sqrt(gradientLength);
             // Divide the gradient values by the gradient lenght
@@ -117,19 +126,9 @@ namespace Paramdigma.Core.Optimization
             inputValues[inputIndex] += step; // Reset value to original
 
             // Compute partial derivative using 2-point method
-            partialDerivative = (error1 - error2) / 2 * step;
+            partialDerivative = ((error1 - error2) / 2) * step;
 
             return partialDerivative;
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="GradientDescent"/> class with given options.
-        /// </summary>
-        /// <param name="options">Settings to apply to this GD instance.</param>
-        public GradientDescent(GradientDescentOptions options)
-        {
-            Result = default;
-            Options = options;
         }
     }
 }

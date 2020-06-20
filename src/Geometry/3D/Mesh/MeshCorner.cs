@@ -1,45 +1,50 @@
 ﻿namespace Paramdigma.Core.HalfEdgeMesh
 {
     /// <summary>
-    /// Represents a corner of a given mesh face.
+    ///     Represents a corner of a given mesh face.
     /// </summary>
     public class MeshCorner
     {
         /// <summary>
-        /// Gets or sets the corner's first half-edge.
+        ///     Initializes a new instance of the <see cref="MeshCorner" /> class.
         /// </summary>
-        public MeshHalfEdge HalfEdge { get; set; }
+        public MeshCorner() => this.Index = -1;
 
         /// <summary>
-        /// Gets or sets the index of the mesh corner.
+        ///     Gets or sets the corner's first half-edge.
         /// </summary>
-        public int Index { get; set; }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="MeshCorner"/> class.
-        /// </summary>
-        public MeshCorner()
+        public MeshHalfEdge HalfEdge
         {
-            Index = -1;
+            get;
+            set;
         }
 
         /// <summary>
-        /// Gets the mesh corner vertex.
+        ///     Gets or sets the index of the mesh corner.
+        /// </summary>
+        public int Index
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        ///     Gets the mesh corner vertex.
         /// </summary>
         public MeshVertex Vertex => this.HalfEdge.Prev.Vertex;
 
         /// <summary>
-        /// Gets the face the mesh corner belongs to.
+        ///     Gets the face the mesh corner belongs to.
         /// </summary>
         public MeshFace Face => this.HalfEdge.Face;
 
         /// <summary>
-        /// Gets the next corner.
+        ///     Gets the next corner.
         /// </summary>
         public MeshCorner Next => this.HalfEdge.Next.Corner;
 
         /// <summary>
-        /// Gets the previous corner.
+        ///     Gets the previous corner.
         /// </summary>
         public MeshCorner Prev => this.HalfEdge.Prev.Corner;
     }

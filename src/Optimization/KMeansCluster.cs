@@ -5,115 +5,84 @@ using Paramdigma.Core.Geometry;
 namespace Paramdigma.Core.Optimization
 {
     /// <summary>
-    /// Represents a vector cluster for the K-Means Clustering Algorithm.
+    ///     Represents a vector cluster for the K-Means Clustering Algorithm.
     /// </summary>
     public class KMeansCluster : IList<VectorNd>
     {
         private readonly IList<VectorNd> list = new List<VectorNd>();
 
         /// <summary>
-        /// Gets or sets the vector at the given index.
+        ///     Gets or sets the vector at the given index.
         /// </summary>
         /// <param name="index">Index of the desired object.</param>
-        public VectorNd this[int index] { get => list[index]; set => list[index] = value; }
+        public VectorNd this[int index]
+        {
+            get => this.list[index];
+            set => this.list[index] = value;
+        }
 
         /// <summary>
-        /// Gets the amount of clusters.
+        ///     Gets the amount of clusters.
         /// </summary>
-        public int Count => list.Count;
+        public int Count => this.list.Count;
 
         /// <summary>
-        /// Gets a value indicating whether the cluster is readOnly.
+        ///     Gets a value indicating whether the cluster is readOnly.
         /// </summary>
-        public bool IsReadOnly => list.IsReadOnly;
+        public bool IsReadOnly => this.list.IsReadOnly;
 
         /// <summary>
-        /// Computes the average of this cluster.
+        ///     Add a new vector to the cluster.
+        /// </summary>
+        /// <param name="item">Vector to add.</param>
+        public void Add(VectorNd item) => this.list.Add(item);
+
+        /// <inheritdoc />
+        public void Clear() => this.list.Clear();
+
+        /// <inheritdoc />
+        public bool Contains(VectorNd item) => this.list.Contains(item);
+
+        /// <inheritdoc />
+        public void CopyTo(VectorNd[] array, int arrayIndex) => this.list.CopyTo(array, arrayIndex);
+
+        /// <inheritdoc />
+        public IEnumerator<VectorNd> GetEnumerator() => this.list.GetEnumerator();
+
+        /// <inheritdoc />
+        public int IndexOf(VectorNd item) => this.list.IndexOf(item);
+
+        /// <inheritdoc />
+        public void Insert(int index, VectorNd item) => this.list.Insert(index, item);
+
+        /// <inheritdoc />
+        public bool Remove(VectorNd item) => this.list.Remove(item);
+
+        /// <inheritdoc />
+        public void RemoveAt(int index) => this.list.RemoveAt(index);
+
+        IEnumerator IEnumerable.GetEnumerator() => this.list.GetEnumerator();
+
+        /// <summary>
+        ///     Computes the average of this cluster.
         /// </summary>
         /// <returns>Average vector of the current cluster.</returns>
         public VectorNd Average()
         {
-            if (list.Count == 0)
+            if (this.list.Count == 0)
                 return new VectorNd(0);
-            else if (list.Count == 1)
-                return list[0];
+            if (this.list.Count == 1)
+                return this.list[0];
 
-            var result = new VectorNd(list[0].Dimension);
-            foreach (var vector in list)
-            {
+            var result = new VectorNd(this.list[0].Dimension);
+            foreach (var vector in this.list)
                 result += vector;
-            }
 
-            result /= list.Count;
+            result /= this.list.Count;
             return result;
         }
 
-        /// <summary>
-        /// Add a new vector to the cluster.
-        /// </summary>
-        /// <param name="item">Vector to add.</param>
-        public void Add(VectorNd item)
-        {
-            list.Add(item);
-        }
-
-        /// <inheritdoc/>
-        public void Clear()
-        {
-            list.Clear();
-        }
-
-        /// <inheritdoc/>
-        public bool Contains(VectorNd item)
-        {
-            return list.Contains(item);
-        }
-
-        /// <inheritdoc/>
-        public void CopyTo(VectorNd[] array, int arrayIndex)
-        {
-            list.CopyTo(array, arrayIndex);
-        }
-
-        /// <inheritdoc/>
-        public IEnumerator<VectorNd> GetEnumerator()
-        {
-            return list.GetEnumerator();
-        }
-
-        /// <inheritdoc/>
-        public int IndexOf(VectorNd item)
-        {
-            return list.IndexOf(item);
-        }
-
-        /// <inheritdoc/>
-        public void Insert(int index, VectorNd item)
-        {
-            list.Insert(index, item);
-        }
-
-        /// <inheritdoc/>
-        public bool Remove(VectorNd item)
-        {
-            return list.Remove(item);
-        }
-
-        /// <inheritdoc/>
-        public void RemoveAt(int index)
-        {
-            list.RemoveAt(index);
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return list.GetEnumerator();
-        }
-
-        /// <inheritdoc/>
-        public override string ToString()
-        {
-            return "Paramdigma.Core.Cluster[" + this.Count + "]";
-        }
+        /// <inheritdoc />
+        public override string ToString() => "Paramdigma.Core.Cluster[" + this.Count + "]";
     }
 }

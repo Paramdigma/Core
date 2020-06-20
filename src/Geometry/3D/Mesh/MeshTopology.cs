@@ -3,7 +3,7 @@
 namespace Paramdigma.Core.HalfEdgeMesh
 {
     /// <summary>
-    /// Topology exporer for meshes. Contains all methods to explore mesh connections between members.
+    ///     Topology exporer for meshes. Contains all methods to explore mesh connections between members.
     /// </summary>
     public class MeshTopology
     {
@@ -12,216 +12,191 @@ namespace Paramdigma.Core.HalfEdgeMesh
         private readonly Mesh mesh;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="MeshTopology"/> class.
+        ///     Initializes a new instance of the <see cref="MeshTopology" /> class.
         /// </summary>
         /// <param name="mesh">Mesh to construct topology connections from.</param>
         public MeshTopology(Mesh mesh)
         {
             this.mesh = mesh;
 
-            VertexVertex = new Dictionary<int, List<int>>();
-            VertexFaces = new Dictionary<int, List<int>>();
-            VertexEdges = new Dictionary<int, List<int>>();
-            FaceVertex = new Dictionary<int, List<int>>();
-            FaceFace = new Dictionary<int, List<int>>();
-            FaceEdge = new Dictionary<int, List<int>>();
-            EdgeVertex = new Dictionary<int, List<int>>();
-            EdgeFace = new Dictionary<int, List<int>>();
-            EdgeEdge = new Dictionary<int, List<int>>();
+            this.VertexVertex = new Dictionary<int, List<int>>();
+            this.VertexFaces = new Dictionary<int, List<int>>();
+            this.VertexEdges = new Dictionary<int, List<int>>();
+            this.FaceVertex = new Dictionary<int, List<int>>();
+            this.FaceFace = new Dictionary<int, List<int>>();
+            this.FaceEdge = new Dictionary<int, List<int>>();
+            this.EdgeVertex = new Dictionary<int, List<int>>();
+            this.EdgeFace = new Dictionary<int, List<int>>();
+            this.EdgeEdge = new Dictionary<int, List<int>>();
         }
 
         /// <summary>
-        /// Gets vertex-Vertex topological connections.
+        ///     Gets vertex-Vertex topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> VertexVertex { get; }
+        public Dictionary<int, List<int>> VertexVertex
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets vertex-Face topological connections.
+        ///     Gets vertex-Face topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> VertexFaces { get; }
+        public Dictionary<int, List<int>> VertexFaces
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets vertex-Edge topological connections.
+        ///     Gets vertex-Edge topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> VertexEdges { get; }
+        public Dictionary<int, List<int>> VertexEdges
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets edge-Edge topological connections.
+        ///     Gets edge-Edge topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> EdgeEdge { get; }
+        public Dictionary<int, List<int>> EdgeEdge
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets edge-Vertex topological connections.
+        ///     Gets edge-Vertex topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> EdgeVertex { get; }
+        public Dictionary<int, List<int>> EdgeVertex
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets edge-Face topological connections.
+        ///     Gets edge-Face topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> EdgeFace { get; }
+        public Dictionary<int, List<int>> EdgeFace
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets face-Vertex topological connections.
+        ///     Gets face-Vertex topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> FaceVertex { get; }
+        public Dictionary<int, List<int>> FaceVertex
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets face-Edge topological connections.
+        ///     Gets face-Edge topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> FaceEdge { get; }
+        public Dictionary<int, List<int>> FaceEdge
+        {
+            get;
+        }
 
         /// <summary>
-        /// Gets face-Face topological connections.
+        ///     Gets face-Face topological connections.
         /// </summary>
-        public Dictionary<int, List<int>> FaceFace { get; }
+        public Dictionary<int, List<int>> FaceFace
+        {
+            get;
+        }
 
         /// <summary>
-        /// Computes vertex adjacency for the whole mesh and stores it in the appropriate dictionaries.
+        ///     Computes vertex adjacency for the whole mesh and stores it in the appropriate dictionaries.
         /// </summary>
         public void ComputeVertexAdjacency()
         {
-            foreach (MeshVertex vertex in mesh.Vertices)
+            foreach (var vertex in this.mesh.Vertices)
             {
-                foreach (MeshVertex adjacent in vertex.AdjacentVertices())
-                {
-                    if (!VertexVertex.ContainsKey(vertex.Index))
-                    {
-                        VertexVertex.Add(vertex.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in vertex.AdjacentVertices())
+                    if (!this.VertexVertex.ContainsKey(vertex.Index))
+                        this.VertexVertex.Add(vertex.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        VertexVertex[vertex.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.VertexVertex[vertex.Index].Add(adjacent.Index);
 
-                foreach (MeshFace adjacent in vertex.AdjacentFaces())
-                {
-                    if (!VertexFaces.ContainsKey(vertex.Index))
-                    {
-                        VertexFaces.Add(vertex.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in vertex.AdjacentFaces())
+                    if (!this.VertexFaces.ContainsKey(vertex.Index))
+                        this.VertexFaces.Add(vertex.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        VertexFaces[vertex.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.VertexFaces[vertex.Index].Add(adjacent.Index);
 
-                foreach (MeshEdge adjacent in vertex.AdjacentEdges())
-                {
-                    if (!VertexEdges.ContainsKey(vertex.Index))
-                    {
-                        VertexEdges.Add(vertex.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in vertex.AdjacentEdges())
+                    if (!this.VertexEdges.ContainsKey(vertex.Index))
+                        this.VertexEdges.Add(vertex.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        VertexEdges[vertex.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.VertexEdges[vertex.Index].Add(adjacent.Index);
             }
         }
 
         /// <summary>
-        /// Computes face adjacency for the whole mesh and stores it in the appropriate dictionaries.
+        ///     Computes face adjacency for the whole mesh and stores it in the appropriate dictionaries.
         /// </summary>
         public void ComputeFaceAdjacency()
         {
-            foreach (MeshFace face in mesh.Faces)
+            foreach (var face in this.mesh.Faces)
             {
-                foreach (MeshVertex adjacent in face.AdjacentVertices())
-                {
-                    if (!FaceVertex.ContainsKey(face.Index))
-                    {
-                        FaceVertex.Add(face.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in face.AdjacentVertices())
+                    if (!this.FaceVertex.ContainsKey(face.Index))
+                        this.FaceVertex.Add(face.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        FaceVertex[face.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.FaceVertex[face.Index].Add(adjacent.Index);
 
-                foreach (MeshFace adjacent in face.AdjacentFaces())
-                {
-                    if (!FaceFace.ContainsKey(face.Index))
-                    {
-                        FaceFace.Add(face.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in face.AdjacentFaces())
+                    if (!this.FaceFace.ContainsKey(face.Index))
+                        this.FaceFace.Add(face.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        FaceFace[face.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.FaceFace[face.Index].Add(adjacent.Index);
 
-                foreach (MeshEdge adjacent in face.AdjacentEdges())
-                {
-                    if (!FaceEdge.ContainsKey(face.Index))
-                    {
-                        FaceEdge.Add(face.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in face.AdjacentEdges())
+                    if (!this.FaceEdge.ContainsKey(face.Index))
+                        this.FaceEdge.Add(face.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        FaceEdge[face.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.FaceEdge[face.Index].Add(adjacent.Index);
             }
         }
 
         /// <summary>
-        /// Computes edge adjacency for the whole mesh and stores it in the appropriate dictionaries.
+        ///     Computes edge adjacency for the whole mesh and stores it in the appropriate dictionaries.
         /// </summary>
         public void ComputeEdgeAdjacency()
         {
-            foreach (MeshEdge edge in mesh.Edges)
+            foreach (var edge in this.mesh.Edges)
             {
-                foreach (MeshVertex adjacent in edge.AdjacentVertices())
-                {
-                    if (!EdgeVertex.ContainsKey(edge.Index))
-                        EdgeVertex.Add(edge.Index, new List<int>() { adjacent.Index });
+                foreach (var adjacent in edge.AdjacentVertices())
+                    if (!this.EdgeVertex.ContainsKey(edge.Index))
+                        this.EdgeVertex.Add(edge.Index, new List<int> {adjacent.Index});
                     else
-                        EdgeVertex[edge.Index].Add(adjacent.Index);
-                }
+                        this.EdgeVertex[edge.Index].Add(adjacent.Index);
 
-                foreach (MeshFace adjacent in edge.AdjacentFaces())
-                {
-                    if (!EdgeFace.ContainsKey(edge.Index))
-                    {
-                        EdgeFace.Add(edge.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in edge.AdjacentFaces())
+                    if (!this.EdgeFace.ContainsKey(edge.Index))
+                        this.EdgeFace.Add(edge.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        EdgeFace[edge.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.EdgeFace[edge.Index].Add(adjacent.Index);
 
-                foreach (MeshEdge adjacent in edge.AdjacentEdges())
-                {
-                    if (!EdgeEdge.ContainsKey(edge.Index))
-                    {
-                        EdgeEdge.Add(edge.Index, new List<int>() { adjacent.Index });
-                    }
+                foreach (var adjacent in edge.AdjacentEdges())
+                    if (!this.EdgeEdge.ContainsKey(edge.Index))
+                        this.EdgeEdge.Add(edge.Index, new List<int> {adjacent.Index});
                     else
-                    {
-                        EdgeEdge[edge.Index].Add(adjacent.Index);
-                    }
-                }
+                        this.EdgeEdge[edge.Index].Add(adjacent.Index);
             }
         }
 
         /// <summary>
-        /// Gets the string representation of a given topology dictionary.
+        ///     Gets the string representation of a given topology dictionary.
         /// </summary>
         /// <param name="dict">Dictionary to convert.</param>
         /// <returns></returns>
         public string TopologyDictToString(Dictionary<int, List<int>> dict)
         {
-            string finalString = string.Empty;
+            var finalString = string.Empty;
 
-            foreach (KeyValuePair<int, List<int>> pair in dict)
+            foreach (var pair in dict)
             {
-                string tmpString = "Key: " + pair.Key.ToString() + " --> ";
-                foreach (int i in pair.Value)
-                {
+                var tmpString = "Key: " + pair.Key + " --> ";
+                foreach (var i in pair.Value)
                     tmpString += i + " ";
-                }
 
                 tmpString += "\n";
                 finalString += tmpString;

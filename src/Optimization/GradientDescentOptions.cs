@@ -6,47 +6,47 @@ namespace Paramdigma.Core.Optimization
     public struct GradientDescentOptions
     {
         /// <summary>
-        /// Threshold to stop minimization.
+        ///     Threshold to stop minimization.
         /// </summary>
         public double Limit;
 
         /// <summary>
-        /// Maximum iterations for the gradient descent.
+        ///     Maximum iterations for the gradient descent.
         /// </summary>
         public int MaxIterations;
 
         /// <summary>
-        /// Step size to compute partial derivatives.
+        ///     Step size to compute partial derivatives.
         /// </summary>
         public double DerivativeStep;
 
         /// <summary>
-        /// Scaling factor for the gradient. Effectively speeds up or down the minimization.
+        ///     Scaling factor for the gradient. Effectively speeds up or down the minimization.
         /// </summary>
         public double LearningRate;
 
         /// <summary>
-        /// Minimum error to consider the results acceptable.
+        ///     Minimum error to consider the results acceptable.
         /// </summary>
         public double ErrorThreshold;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GradientDescentOptions"/> struct given an existing one.
+        ///     Initializes a new instance of the <see cref="GradientDescentOptions" /> struct given an existing one.
         /// </summary>
         /// <param name="options">Options to duplicate.</param>
         public GradientDescentOptions(GradientDescentOptions options)
         {
-            Limit = options.Limit;
-            MaxIterations = options.MaxIterations;
-            DerivativeStep = options.DerivativeStep;
-            LearningRate = options.LearningRate;
-            ErrorThreshold = options.ErrorThreshold;
+            this.Limit = options.Limit;
+            this.MaxIterations = options.MaxIterations;
+            this.DerivativeStep = options.DerivativeStep;
+            this.LearningRate = options.LearningRate;
+            this.ErrorThreshold = options.ErrorThreshold;
         }
 
         // TODO: Fill in this fields!
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="GradientDescentOptions"/> struct given all it's values individually.
+        ///     Initializes a new instance of the <see cref="GradientDescentOptions" /> struct given all it's values individually.
         /// </summary>
         /// <param name="threshold"></param>
         /// <param name="maxIterations"></param>
@@ -55,20 +55,20 @@ namespace Paramdigma.Core.Optimization
         /// <param name="errorThreshold"></param>
         public GradientDescentOptions(double threshold, int maxIterations, double derivativeStep, double learningRate, double errorThreshold)
         {
-            Limit = threshold;
-            MaxIterations = maxIterations;
-            DerivativeStep = derivativeStep;
-            LearningRate = learningRate;
-            ErrorThreshold = errorThreshold;
+            this.Limit = threshold;
+            this.MaxIterations = maxIterations;
+            this.DerivativeStep = derivativeStep;
+            this.LearningRate = learningRate;
+            this.ErrorThreshold = errorThreshold;
         }
 
         /// <summary>
-        /// Gets a GradientDescentOptions instance with the default values.
+        ///     Gets a GradientDescentOptions instance with the default values.
         /// </summary>
         public static GradientDescentOptions Default => new GradientDescentOptions(0.001, 10000, 0.01, 20, .01);
 
         /// <summary>
-        /// Gets a GradientDescentOptions instance with small values.
+        ///     Gets a GradientDescentOptions instance with small values.
         /// </summary>
         /// <returns></returns>
         public static GradientDescentOptions DefaultSmall => new GradientDescentOptions(0.0001, 10000, 0.02, 40, .001);

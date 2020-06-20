@@ -1,21 +1,20 @@
 using System.Collections.Generic;
-using System.Linq;
 using Paramdigma.Core.Geometry;
 
 namespace Paramdigma.Core.SpatialSearch
 {
     /// <summary>
-    /// Class to compute 2 dimensional spatial searches by quad subdivision.
+    ///     Class to compute 2 dimensional spatial searches by quad subdivision.
     /// </summary>
     public class QuadTree
     {
         /// <summary>
-        /// Boundary of this QuadTree.
+        ///     Boundary of this QuadTree.
         /// </summary>
         public readonly BoundingBox2d Boundary;
 
         /// <summary>
-        /// Gets or sets the list of points of this QuadTree.
+        ///     Gets or sets the list of points of this QuadTree.
         /// </summary>
         public readonly List<Point2d> Points;
 
@@ -27,7 +26,7 @@ namespace Paramdigma.Core.SpatialSearch
         private QuadTree southWest;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="QuadTree"/> class.
+        ///     Initializes a new instance of the <see cref="QuadTree" /> class.
         /// </summary>
         /// <param name="boundary">Boundary of this QuadTree.</param>
         /// <param name="threshold">Smallest allowed dimension.</param>
@@ -39,7 +38,7 @@ namespace Paramdigma.Core.SpatialSearch
         }
 
         /// <summary>
-        /// Insert a point in the QuadTree.
+        ///     Insert a point in the QuadTree.
         /// </summary>
         /// <param name="point">Point to insert.</param>
         /// <returns>True if point was inserted.</returns>
@@ -67,13 +66,13 @@ namespace Paramdigma.Core.SpatialSearch
         }
 
         /// <summary>
-        /// Query the QuadTree for all points contained in this range.
+        ///     Query the QuadTree for all points contained in this range.
         /// </summary>
         /// <param name="range">Range to look for.</param>
         /// <returns>Points contained in the range.</returns>
         public List<Point2d> QueryRange(BoundingBox2d range)
         {
-            List<Point2d> pointsInRange = new List<Point2d>();
+            var pointsInRange = new List<Point2d>();
 
             if (!this.Boundary.IntersectsBox(range))
                 return pointsInRange;

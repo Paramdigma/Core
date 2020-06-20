@@ -1,8 +1,8 @@
 # Architectrual Geometry Library for .Net
 
-![Target Framework](https://img.shields.io/badge/Target%20Framework-.NetStandard2.1-blueviolet.svg)
+[![Target Framework](https://img.shields.io/badge/Target%20Framework-.NetStandard2.0-blueviolet.svg)](https://docs.microsoft.com/en-us/dotnet/standard/net-standard)
 ![Project Status](https://img.shields.io/badge/Status-Under%20Development-red.svg)
-[![License](https://img.shields.io/github/license/Paramdigma/Core.svg)](https://github.com/Paramdigma/Core/blob/development/LICENSE)
+[![License](https://img.shields.io/github/license/Paramdigma/Core.svg)](https://github.com/Paramdigma/Core/blob/master/LICENSE)
 ![Main language](https://img.shields.io/github/languages/top/Paramdigma/Core.svg)
 ![Code Size](https://img.shields.io/github/languages/code-size/Paramdigma/Core.svg)
 

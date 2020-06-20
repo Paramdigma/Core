@@ -6,9 +6,6 @@ namespace Paramdigma.Core.Geometry
     {
         public List<DelaunayTriangle> AdjacentTriangles;
 
-        public DelaunayPoint(double x, double y) : base(x, y)
-        {
-            AdjacentTriangles = new List<DelaunayTriangle>();
-        }
+        public DelaunayPoint(double x, double y) : base(x, y) => this.AdjacentTriangles = new List<DelaunayTriangle>();
     }
 }

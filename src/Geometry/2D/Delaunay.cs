@@ -3,92 +3,88 @@ using System.Collections.Generic;
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>
-    /// Class holding all the delaunay and vornoi classes in 2 dimensions.
+    ///     Class holding all the delaunay and vornoi classes in 2 dimensions.
     /// </summary>
     public static class Delaunay
     {
-        
         public static List<DelaunayTriangle> Compute(List<DelaunayPoint> points, List<DelaunayTriangle> border)
         {
-            List<DelaunayTriangle> triangulation = new List<DelaunayTriangle>(border);
+            var triangulation = new List<DelaunayTriangle>(border);
             points.Reverse();
-            foreach (DelaunayPoint point in points)
+            foreach (var point in points)
             {
-                List<DelaunayTriangle> badTriangles = FindBadTriangles(point, triangulation);
-                List<DelaunayEdge> polygon = FindHoleBoundaries(badTriangles);
-                foreach (DelaunayTriangle triangle in badTriangles)
+                var badTriangles = FindBadTriangles(point, triangulation);
+                var polygon = FindHoleBoundaries(badTriangles);
+                foreach (var triangle in badTriangles)
                 {
-                    foreach (DelaunayPoint vertex in triangle.Vertices)
-                    {
+                    foreach (var vertex in triangle.Vertices)
                         vertex.AdjacentTriangles.Remove(triangle);
-                    }
                     if (triangulation.Contains(triangle)) triangulation.Remove(triangle);
                 }
-                foreach (DelaunayEdge edge in polygon)
+
+                foreach (var edge in polygon)
                 {
-                    DelaunayTriangle triangle = new DelaunayTriangle(point, edge.StartPoint, edge.EndPoint);
+                    var triangle = new DelaunayTriangle(point, edge.StartPoint, edge.EndPoint);
                     triangulation.Add(triangle);
                 }
             }
+
             return triangulation;
         }
 
         public static List<DelaunayEdge> Voronoi(List<DelaunayTriangle> triangulation)
         {
-            List<DelaunayEdge> voronoiEdges = new List<DelaunayEdge>();
-            foreach (DelaunayTriangle triangle in triangulation)
+            var voronoiEdges = new List<DelaunayEdge>();
+            foreach (var triangle in triangulation)
+            foreach (var neigbour in triangle.TrianglesWithSharedEdges())
             {
-                foreach (DelaunayTriangle neigbour in triangle.TrianglesWithSharedEdges())
-                {
-                    DelaunayEdge edge = new DelaunayEdge(triangle.Circumcenter, neigbour.Circumcenter);
-                    voronoiEdges.Add(edge);
-
-                }
+                var edge = new DelaunayEdge(triangle.Circumcenter, neigbour.Circumcenter);
+                voronoiEdges.Add(edge);
             }
+
             return voronoiEdges;
         }
 
         private static List<DelaunayEdge> FindHoleBoundaries(List<DelaunayTriangle> badTriangles)
         {
-            List<DelaunayEdge> boundaryEdges = new List<DelaunayEdge>();
-            List<DelaunayEdge> duplicateEdges = new List<DelaunayEdge>();
-            foreach (DelaunayTriangle triangle in badTriangles)
+            var boundaryEdges = new List<DelaunayEdge>();
+            var duplicateEdges = new List<DelaunayEdge>();
+            foreach (var triangle in badTriangles)
             {
-                DelaunayEdge e = new DelaunayEdge(triangle.Vertices[0], triangle.Vertices[1]);
+                var e = new DelaunayEdge(triangle.Vertices[0], triangle.Vertices[1]);
                 if (!boundaryEdges.Contains(e))
                     boundaryEdges.Add(e);
                 else
                     duplicateEdges.Add(e);
-                DelaunayEdge f = new DelaunayEdge(triangle.Vertices[1], triangle.Vertices[2]);
+                var f = new DelaunayEdge(triangle.Vertices[1], triangle.Vertices[2]);
                 if (!boundaryEdges.Contains(f))
                     boundaryEdges.Add(f);
                 else
                     duplicateEdges.Add(f);
-                DelaunayEdge j = new DelaunayEdge(triangle.Vertices[2], triangle.Vertices[0]);
+                var j = new DelaunayEdge(triangle.Vertices[2], triangle.Vertices[0]);
                 if (!boundaryEdges.Contains(j))
                     boundaryEdges.Add(j);
                 else
                     duplicateEdges.Add(j);
             }
 
-            for (int i = boundaryEdges.Count - 1; i >= 0; i--)
+            for (var i = boundaryEdges.Count - 1; i >= 0; i--)
             {
-                DelaunayEdge e = boundaryEdges[i];
+                var e = boundaryEdges[i];
                 if (duplicateEdges.Contains(e))
                     boundaryEdges.Remove(e);
             }
+
             return boundaryEdges;
         }
 
         private static List<DelaunayTriangle> FindBadTriangles(DelaunayPoint point, List<DelaunayTriangle> triangles)
         {
-            List<DelaunayTriangle> badTriangles = new List<DelaunayTriangle>();
-            foreach (DelaunayTriangle triangle in triangles)
-            {
-                if (triangle.IsPointInsideCircumcircle(point)) badTriangles.Add(triangle);
-            }
+            var badTriangles = new List<DelaunayTriangle>();
+            foreach (var triangle in triangles)
+                if (triangle.IsPointInsideCircumcircle(point))
+                    badTriangles.Add(triangle);
             return badTriangles;
         }
-
     }
 }

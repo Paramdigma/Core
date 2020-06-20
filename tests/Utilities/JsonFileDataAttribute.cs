@@ -9,8 +9,8 @@ using Xunit.Sdk;
 namespace Paramdigma.Core.Tests
 {
     /// <summary>
-    /// Data Attribute to extract text data out of JSON files
-    /// From: https://andrewlock.net/creating-a-custom-xunit-theory-test-dataattribute-to-load-data-from-json-files/
+    ///     Data Attribute to extract text data out of JSON files
+    ///     From: https://andrewlock.net/creating-a-custom-xunit-theory-test-dataattribute-to-load-data-from-json-files/
     /// </summary>
     public class JsonFileDataAttribute : DataAttribute
     {
@@ -18,14 +18,14 @@ namespace Paramdigma.Core.Tests
         private readonly string propertyName;
 
         /// <summary>
-        /// Load data from a JSON file as the data source for a theory
+        ///     Load data from a JSON file as the data source for a theory
         /// </summary>
         /// <param name="filePath">The absolute or relative path to the JSON file to load</param>
         public JsonFileDataAttribute(string filePath)
             : this(filePath, null) { }
 
         /// <summary>
-        /// Load data from a JSON file as the data source for a theory
+        ///     Load data from a JSON file as the data source for a theory
         /// </summary>
         /// <param name="filePath">The absolute or relative path to the JSON file to load</param>
         /// <param name="propertyName">The name of the property on the JSON file that contains the data for the test</param>
@@ -39,30 +39,26 @@ namespace Paramdigma.Core.Tests
         public override IEnumerable<object[]> GetData(MethodInfo testMethod)
         {
             if (testMethod == null)
-            { throw new ArgumentNullException(nameof(testMethod)); }
+                throw new ArgumentNullException(nameof(testMethod));
 
             // Get the absolute path to the JSON file
-            var path = Path.IsPathRooted(filePath)
-                ? filePath
-                : Path.GetRelativePath(Directory.GetCurrentDirectory(), filePath);
+            var path = Path.IsPathRooted(this.filePath)
+                ? this.filePath
+                : Path.GetRelativePath(Directory.GetCurrentDirectory(), this.filePath);
 
             if (!File.Exists(path))
-            {
                 throw new ArgumentException($"Could not find file at path: {path}");
-            }
 
             // Load the file
-            var fileData = File.ReadAllText(filePath);
+            var fileData = File.ReadAllText(this.filePath);
 
-            if (string.IsNullOrEmpty(propertyName))
-            {
+            if (string.IsNullOrEmpty(this.propertyName))
                 //whole file is the data
                 return JsonConvert.DeserializeObject<List<object[]>>(fileData);
-            }
 
             // Only use the specified property as the data
             var allData = JObject.Parse(fileData);
-            var data = allData[propertyName];
+            var data = allData[this.propertyName];
             return data.ToObject<List<object[]>>();
         }
     }

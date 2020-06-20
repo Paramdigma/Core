@@ -3,7 +3,12 @@
     <!-- Target Framework -->
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <Description>Architectural Geometry library for .NET</Description>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Title>Paramdigma Core</Title>
+        <PackageProjectUrl>https://paramdigma.com/Core/</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Paramdigma/Core/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryType>git</RepositoryType>
     </PropertyGroup>
 
     <PropertyGroup>
