@@ -3,7 +3,8 @@
     <!-- Target Framework -->
 
     <PropertyGroup>
-        <TargetFramework>netstandard2.1</TargetFramework>
+        <Description>Architectural Geometry library for .NET</Description>
+        <TargetFramework>netstandard2.0</TargetFramework>
     </PropertyGroup>
 
     <PropertyGroup>

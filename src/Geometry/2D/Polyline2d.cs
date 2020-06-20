@@ -176,7 +176,7 @@ namespace Paramdigma.Core.Geometry
             // ccw <=> the edge leaving V[rmin] is left of the entering edge
             double result;
             if (rmin == 0)
-                result = new Line2d(vertices[^1], vertices[0]).IsLeft(vertices[1]);
+                result = new Line2d(vertices[vertices.Count - 1], vertices[0]).IsLeft(vertices[1]);
             else
                 result = new Line2d(vertices[rmin - 1], vertices[rmin]).IsLeft(vertices[rmin + 1]);
 

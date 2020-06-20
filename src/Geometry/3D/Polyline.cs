@@ -65,7 +65,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         /// Gets a value indicating whether the polyline is closed (first point == last point).
         /// </summary>
-        public bool IsClosed => knots[0] == knots[^1];
+        public bool IsClosed => knots[0] == knots[this.knots.Count- 1];
 
         /// <summary>
         /// Gets a value indicating whether the polyline is unset.
