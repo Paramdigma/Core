@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class KMeansCluster
+    <title>Class QuadTree
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class KMeansCluster
+    <meta name="title" content="Class QuadTree
    ">
     <meta name="generator" content="docfx 2.45.1.0">
     
@@ -356,8 +356,8 @@
                           <li class="">
                             <a href="Paramdigma.Core.Optimization.GradientDescentResult.html" title="GradientDescentResult" class="">GradientDescentResult</a>
                           </li>
-                          <li class="active">
-                            <a href="Paramdigma.Core.Optimization.KMeansCluster.html" title="KMeansCluster" class="active">KMeansCluster</a>
+                          <li class="">
+                            <a href="Paramdigma.Core.Optimization.KMeansCluster.html" title="KMeansCluster" class="">KMeansCluster</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Optimization.KMeansClustering.html" title="KMeansClustering" class="">KMeansClustering</a>
@@ -380,8 +380,8 @@
                           <li class="">
                             <a href="Paramdigma.Core.SpatialSearch.PointCloudMember.html" title="PointCloudMember" class="">PointCloudMember</a>
                           </li>
-                          <li class="">
-                            <a href="Paramdigma.Core.SpatialSearch.QuadTree.html" title="QuadTree" class="">QuadTree</a>
+                          <li class="active">
+                            <a href="Paramdigma.Core.SpatialSearch.QuadTree.html" title="QuadTree" class="active">QuadTree</a>
                           </li>
                         </ul>  </li>
                   </ul>        </div>
@@ -391,104 +391,42 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Paramdigma.Core.Optimization.KMeansCluster">
+            <article class="content wrap" id="_content" data-uid="Paramdigma.Core.SpatialSearch.QuadTree">
   
   
-  <h1 id="Paramdigma_Core_Optimization_KMeansCluster" data-uid="Paramdigma.Core.Optimization.KMeansCluster" class="text-break">Class KMeansCluster
+  <h1 id="Paramdigma_Core_SpatialSearch_QuadTree" data-uid="Paramdigma.Core.SpatialSearch.QuadTree" class="text-break">Class QuadTree
   </h1>
-  <div class="markdown level0 summary"><p>Represents a vector cluster for the K-Means Clustering Algorithm.</p>
+  <div class="markdown level0 summary"><p>Class to compute 2 dimensional spatial searches by quad subdivision.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">KMeansCluster</span></div>
+    <div class="level1"><span class="xref">QuadTree</span></div>
   </div>
-  <h6><strong>Namespace</strong>: <a class="xref" href="Paramdigma.Core.Optimization.html">Paramdigma.Core.Optimization</a></h6>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Paramdigma.Core.SpatialSearch.html">Paramdigma.Core.SpatialSearch</a></h6>
   <h6><strong>Assembly</strong>: Paramdigma.Core.dll</h6>
-  <h5 id="Paramdigma_Core_Optimization_KMeansCluster_syntax">Syntax</h5>
+  <h5 id="Paramdigma_Core_SpatialSearch_QuadTree_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class KMeansCluster : IList&lt;VectorNd&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class QuadTree : object</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Count.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_QuadTree__ctor_Paramdigma_Core_Geometry_BoundingBox2d_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.QuadTree.%23ctor(Paramdigma.Core.Geometry.BoundingBox2d%2CSystem.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L27">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/Quadtree.cs/#L33">View Source</a>
   </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Count_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Count*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Count" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Count">Count</h4>
-  <div class="markdown level1 summary"><p>Gets the amount of clusters.</p>
+  <a id="Paramdigma_Core_SpatialSearch_QuadTree__ctor_" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.#ctor*"></a>
+  <h4 id="Paramdigma_Core_SpatialSearch_QuadTree__ctor_Paramdigma_Core_Geometry_BoundingBox2d_System_Double_" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.#ctor(Paramdigma.Core.Geometry.BoundingBox2d,System.Double)">QuadTree(BoundingBox2d, Double)</h4>
+  <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Paramdigma.Core.SpatialSearch.QuadTree.html">QuadTree</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int Count { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_IsReadOnly.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L32">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_IsReadOnly_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_IsReadOnly" data-uid="Paramdigma.Core.Optimization.KMeansCluster.IsReadOnly">IsReadOnly</h4>
-  <div class="markdown level1 summary"><p>Gets a value indicating whether the cluster is readOnly.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool IsReadOnly { get; }</code></pre>
-  </div>
-  <h5 class="propertyValue">Property Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L18">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Item_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Item*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Item_System_Int32_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Item(System.Int32)">Item[Int32]</h4>
-  <div class="markdown level1 summary"><p>Gets or sets the vector at the given index.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VectorNd this[int index] { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public QuadTree(BoundingBox2d boundary, double threshold)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -501,14 +439,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td><p>Index of the desired object.</p>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.BoundingBox2d.html">BoundingBox2d</a></td>
+        <td><span class="parametername">boundary</span></td>
+        <td><p>Boundary of this QuadTree.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">threshold</span></td>
+        <td><p>Smallest allowed dimension.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="propertyValue">Property Value</h5>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_QuadTree_Boundary.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.QuadTree.Boundary%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/Quadtree.cs/#L14">View Source</a>
+  </span>
+  <h4 id="Paramdigma_Core_SpatialSearch_QuadTree_Boundary" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.Boundary">Boundary</h4>
+  <div class="markdown level1 summary"><p>Boundary of this QuadTree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly BoundingBox2d Boundary</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -518,7 +479,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.BoundingBox2d.html">BoundingBox2d</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_QuadTree_Points.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.QuadTree.Points%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/Quadtree.cs/#L19">View Source</a>
+  </span>
+  <h4 id="Paramdigma_Core_SpatialSearch_QuadTree_Points" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.Points">Points</h4>
+  <div class="markdown level1 summary"><p>Gets or sets the list of points of this QuadTree.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly List&lt;Point2d&gt; Points</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -527,19 +518,19 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Add_Paramdigma_Core_Geometry_VectorNd_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Add(Paramdigma.Core.Geometry.VectorNd)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_QuadTree_Insert_Paramdigma_Core_Geometry_Point2d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.QuadTree.Insert(Paramdigma.Core.Geometry.Point2d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L38">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/Quadtree.cs/#L45">View Source</a>
   </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Add_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Add*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Add_Paramdigma_Core_Geometry_VectorNd_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Add(Paramdigma.Core.Geometry.VectorNd)">Add(VectorNd)</h4>
-  <div class="markdown level1 summary"><p>Add a new vector to the cluster.</p>
+  <a id="Paramdigma_Core_SpatialSearch_QuadTree_Insert_" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.Insert*"></a>
+  <h4 id="Paramdigma_Core_SpatialSearch_QuadTree_Insert_Paramdigma_Core_Geometry_Point2d_" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.Insert(Paramdigma.Core.Geometry.Point2d)">Insert(Point2d)</h4>
+  <div class="markdown level1 summary"><p>Insert a point in the QuadTree.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Add(VectorNd item)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Insert(Point2d point)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -552,89 +543,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
-        <td><span class="parametername">item</span></td>
-        <td><p>Vector to add.</p>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a></td>
+        <td><span class="parametername">point</span></td>
+        <td><p>Point to insert.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Average.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Average%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L70">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Average_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Average*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Average" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Average">Average()</h4>
-  <div class="markdown level1 summary"><p>Computes the average of this cluster.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VectorNd Average()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
-        <td><p>Average vector of the current cluster.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Clear.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L41">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Clear_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Clear*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Clear" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Clear">Clear()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Clear()</code></pre>
-  </div>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Contains_Paramdigma_Core_Geometry_VectorNd_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Contains(Paramdigma.Core.Geometry.VectorNd)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L44">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Contains_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Contains*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Contains_Paramdigma_Core_Geometry_VectorNd_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Contains(Paramdigma.Core.Geometry.VectorNd)">Contains(VectorNd)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Contains(VectorNd item)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -649,24 +561,26 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if point was inserted.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_CopyTo_Paramdigma_Core_Geometry_VectorNd___System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.CopyTo(Paramdigma.Core.Geometry.VectorNd%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_QuadTree_QueryRange_Paramdigma_Core_Geometry_BoundingBox2d_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.QuadTree.QueryRange(Paramdigma.Core.Geometry.BoundingBox2d)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L47">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/Quadtree.cs/#L73">View Source</a>
   </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_CopyTo_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.CopyTo*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_CopyTo_Paramdigma_Core_Geometry_VectorNd___System_Int32_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.CopyTo(Paramdigma.Core.Geometry.VectorNd[],System.Int32)">CopyTo(VectorNd[], Int32)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Paramdigma_Core_SpatialSearch_QuadTree_QueryRange_" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.QueryRange*"></a>
+  <h4 id="Paramdigma_Core_SpatialSearch_QuadTree_QueryRange_Paramdigma_Core_Geometry_BoundingBox2d_" data-uid="Paramdigma.Core.SpatialSearch.QuadTree.QueryRange(Paramdigma.Core.Geometry.BoundingBox2d)">QueryRange(BoundingBox2d)</h4>
+  <div class="markdown level1 summary"><p>Query the QuadTree for all points contained in this range.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyTo(VectorNd[] array, int arrayIndex)</code></pre>
+    <pre><code class="lang-csharp hljs">public List&lt;Point2d&gt; QueryRange(BoundingBox2d range)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -679,76 +593,10 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a>[]</td>
-        <td><span class="parametername">array</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">arrayIndex</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_GetEnumerator.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L50">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_GetEnumerator_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_GetEnumerator" data-uid="Paramdigma.Core.Optimization.KMeansCluster.GetEnumerator">GetEnumerator()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IEnumerator&lt;VectorNd&gt; GetEnumerator()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">IEnumerator</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a>&gt;</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_IndexOf_Paramdigma_Core_Geometry_VectorNd_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.IndexOf(Paramdigma.Core.Geometry.VectorNd)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L53">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_IndexOf_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.IndexOf*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_IndexOf_Paramdigma_Core_Geometry_VectorNd_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.IndexOf(Paramdigma.Core.Geometry.VectorNd)">IndexOf(VectorNd)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public int IndexOf(VectorNd item)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
+        <td><a class="xref" href="Paramdigma.Core.Geometry.BoundingBox2d.html">BoundingBox2d</a></td>
+        <td><span class="parametername">range</span></td>
+        <td><p>Range to look for.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -762,154 +610,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Insert_System_Int32_Paramdigma_Core_Geometry_VectorNd_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Insert(System.Int32%2CParamdigma.Core.Geometry.VectorNd)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L56">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Insert_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Insert*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Insert_System_Int32_Paramdigma_Core_Geometry_VectorNd_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Insert(System.Int32,Paramdigma.Core.Geometry.VectorNd)">Insert(Int32, VectorNd)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void Insert(int index, VectorNd item)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_Remove_Paramdigma_Core_Geometry_VectorNd_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.Remove(Paramdigma.Core.Geometry.VectorNd)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L59">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_Remove_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Remove*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_Remove_Paramdigma_Core_Geometry_VectorNd_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.Remove(Paramdigma.Core.Geometry.VectorNd)">Remove(VectorNd)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Remove(VectorNd item)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Paramdigma.Core.Geometry.VectorNd.html">VectorNd</a></td>
-        <td><span class="parametername">item</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_RemoveAt_System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.RemoveAt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L62">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_RemoveAt_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.RemoveAt*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_RemoveAt_System_Int32_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void RemoveAt(int index)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster_ToString.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster.ToString%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L86">View Source</a>
-  </span>
-  <a id="Paramdigma_Core_Optimization_KMeansCluster_ToString_" data-uid="Paramdigma.Core.Optimization.KMeansCluster.ToString*"></a>
-  <h4 id="Paramdigma_Core_Optimization_KMeansCluster_ToString" data-uid="Paramdigma.Core.Optimization.KMeansCluster.ToString">ToString()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.String</span></td>
-        <td></td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a>&gt;</td>
+        <td><p>Points contained in the range.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -921,10 +624,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Optimization_KMeansCluster.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Optimization.KMeansCluster%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_QuadTree.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.QuadTree%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Optimization/KMeansCluster.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/Quadtree.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

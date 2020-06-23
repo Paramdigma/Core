@@ -381,7 +381,7 @@
                             <a href="Paramdigma.Core.SpatialSearch.PointCloudMember.html" title="PointCloudMember" class="">PointCloudMember</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.SpatialSearch.Quadtree.html" title="Quadtree" class="">Quadtree</a>
+                            <a href="Paramdigma.Core.SpatialSearch.QuadTree.html" title="QuadTree" class="">QuadTree</a>
                           </li>
                         </ul>  </li>
                   </ul>        </div>
@@ -404,47 +404,23 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">Polyline2d</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.ToString()</span>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Paramdigma.Core.Geometry.html">Paramdigma.Core.Geometry</a></h6>
   <h6><strong>Assembly</strong>: Paramdigma.Core.dll</h6>
   <h5 id="Paramdigma_Core_Geometry_Polyline2d_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class Polyline2d</code></pre>
+    <pre><code class="lang-csharp hljs">public class Polyline2d : object</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d__ctor_System_Collections_Generic_List_Paramdigma_Core_Geometry_Point2d__System_Boolean_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.%23ctor(System.Collections.Generic.List%7BParamdigma.Core.Geometry.Point2d%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d__ctor_List_Paramdigma_Core_Geometry_Point2d__System_Boolean_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.%23ctor(List%7BParamdigma.Core.Geometry.Point2d%7D%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L23">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L23">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d__ctor_" data-uid="Paramdigma.Core.Geometry.Polyline2d.#ctor*"></a>
-  <h4 id="Paramdigma_Core_Geometry_Polyline2d__ctor_System_Collections_Generic_List_Paramdigma_Core_Geometry_Point2d__System_Boolean_" data-uid="Paramdigma.Core.Geometry.Polyline2d.#ctor(System.Collections.Generic.List{Paramdigma.Core.Geometry.Point2d},System.Boolean)">Polyline2d(List&lt;Point2d&gt;, Boolean)</h4>
+  <h4 id="Paramdigma_Core_Geometry_Polyline2d__ctor_List_Paramdigma_Core_Geometry_Point2d__System_Boolean_" data-uid="Paramdigma.Core.Geometry.Polyline2d.#ctor(List{Paramdigma.Core.Geometry.Point2d},System.Boolean)">Polyline2d(List&lt;Point2d&gt;, Boolean)</h4>
   <div class="markdown level1 summary"><p>Initializes a new instance of the <a class="xref" href="Paramdigma.Core.Geometry.Polyline2d.html">Polyline2d</a> class.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -463,7 +439,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a>&gt;</td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a>&gt;</td>
         <td><span class="parametername">vertices</span></td>
         <td><p>Vertices of the polyline.</p>
 </td>
@@ -480,10 +456,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_BoundingBox.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.BoundingBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_BoundingBox.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.BoundingBox%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L71">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L68">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_BoundingBox_" data-uid="Paramdigma.Core.Geometry.Polyline2d.BoundingBox*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_BoundingBox" data-uid="Paramdigma.Core.Geometry.Polyline2d.BoundingBox">BoundingBox</h4>
@@ -512,10 +488,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Domain.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Domain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Domain.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Domain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L65">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L62">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_Domain_" data-uid="Paramdigma.Core.Geometry.Polyline2d.Domain*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_Domain" data-uid="Paramdigma.Core.Geometry.Polyline2d.Domain">Domain</h4>
@@ -543,10 +519,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_IsClosed.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.IsClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_IsClosed.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.IsClosed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L91">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L88">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_IsClosed_" data-uid="Paramdigma.Core.Geometry.Polyline2d.IsClosed*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_IsClosed" data-uid="Paramdigma.Core.Geometry.Polyline2d.IsClosed">IsClosed</h4>
@@ -575,10 +551,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Length.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Length.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L77">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L74">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_Length_" data-uid="Paramdigma.Core.Geometry.Polyline2d.Length*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_Length" data-uid="Paramdigma.Core.Geometry.Polyline2d.Length">Length</h4>
@@ -606,10 +582,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Segments.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Segments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Segments.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Segments%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L52">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L49">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_Segments_" data-uid="Paramdigma.Core.Geometry.Polyline2d.Segments*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_Segments" data-uid="Paramdigma.Core.Geometry.Polyline2d.Segments">Segments</h4>
@@ -630,7 +606,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Line2d.html">Line2d</a>&gt;</td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Line2d.html">Line2d</a>&gt;</td>
         <td><p>List of segments.</p>
 </td>
       </tr>
@@ -638,10 +614,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Vertices.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Vertices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Vertices.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Vertices%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L34">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L34">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_Vertices_" data-uid="Paramdigma.Core.Geometry.Polyline2d.Vertices*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_Vertices" data-uid="Paramdigma.Core.Geometry.Polyline2d.Vertices">Vertices</h4>
@@ -662,7 +638,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a>&gt;</td>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Paramdigma.Core.Geometry.Point2d.html">Point2d</a>&gt;</td>
         <td><p>List of vertices.</p>
 </td>
       </tr>
@@ -672,10 +648,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Area.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Area%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Area.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Area%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L117">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L110">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_Area_" data-uid="Paramdigma.Core.Geometry.Polyline2d.Area*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_Area" data-uid="Paramdigma.Core.Geometry.Polyline2d.Area">Area()</h4>
@@ -704,10 +680,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_IsClockwise.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.IsClockwise%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_IsClockwise.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.IsClockwise%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L147">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L137">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_IsClockwise_" data-uid="Paramdigma.Core.Geometry.Polyline2d.IsClockwise*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_IsClockwise" data-uid="Paramdigma.Core.Geometry.Polyline2d.IsClockwise">IsClockwise()</h4>
@@ -735,28 +711,12 @@ FALSE if the polyline is CCW.</p>
       </tr>
     </tbody>
   </table>
-  <h5 class="exceptions">Exceptions</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Condition</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Exception</span></td>
-        <td><p>Throws an exception if the polyline is not closed or is degenerate.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Reparametrize.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Reparametrize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d_Reparametrize.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d.Reparametrize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L191">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L178">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_Polyline2d_Reparametrize_" data-uid="Paramdigma.Core.Geometry.Polyline2d.Reparametrize*"></a>
   <h4 id="Paramdigma_Core_Geometry_Polyline2d_Reparametrize" data-uid="Paramdigma.Core.Geometry.Polyline2d.Reparametrize">Reparametrize()</h4>
@@ -775,10 +735,10 @@ FALSE if the polyline is CCW.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/new/ae578e165764e2ed1a718326f4307ebc632c34ad/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_Polyline2d.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.Polyline2d%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/blob/ae578e165764e2ed1a718326f4307ebc632c34ad/src/Geometry/2D/Polyline2d.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/2D/Polyline2d.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
