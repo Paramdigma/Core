@@ -12,16 +12,22 @@ jobs:
     steps:
       - name: 🛎 Checkout repo
         uses: actions/checkout@v2
+        
       - name: 🚧 Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
           dotnet-version: 3.1.101
+          source-url: https://nuget.pkg.github.com/paramdigma/index.json
+          
       - name: ⚙️ Install dependencies
         run: dotnet restore
+        
       - name: 🏗 Build
         run: dotnet build --configuration Release --no-restore
+        
       - name: 🧪 Test
         run: dotnet test --no-restore --verbosity normal
+        
       - name: 🗜 Compress build files # This would actually build your project, using zip for an example artifact
         run: zip --junk-paths ./Paramdigma.Core.zip ./src/bin/Release/netstandard2.0/*
 
@@ -45,11 +51,11 @@ jobs:
           asset_path: ./Paramdigma.Core.zip
           asset_name: Paramdigma.Core.zip
           asset_content_type: application/zip
+  
       - name: 📦 Create the package
         run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
-      - run: dotnet nuget add source https://nuget.pkg.github.com/Paramdigma/index.json --name github --username AlanRynne --password ${{secrets.GITHUB_TOKEN}}
       - name: 🚀 Publish the package to GPR
-        run: dotnet nuget push ./src/bin/Release/*.nupkg --source github
+        run: dotnet nuget push src/bin/Release/*.nupkg
 
   deploy_docs:
     runs-on: ubuntu-latest
