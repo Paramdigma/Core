@@ -1,72 +1,71 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>
-    ///     Class holding all the delaunay and vornoi classes in 2 dimensions.
+    /// Class holding all the delaunay and Voronoi classes in 2 dimensions.
     /// </summary>
     public static class Delaunay
     {
-        public static List<DelaunayTriangle> Compute(List<DelaunayPoint> points, List<DelaunayTriangle> border)
+        /// <summary>
+        /// Compute the delaunay triangulation of a given list of points.
+        /// </summary>
+        /// <param name="points">Points to find delaunay tessellation.</param>
+        /// <param name="border">Border to start from.</param>
+        /// <returns>List of <see cref="DelaunayTriangle"/>.</returns>
+        public static IEnumerable<DelaunayTriangle> Compute(IEnumerable<DelaunayPoint> points, IEnumerable<DelaunayTriangle> border)
         {
             var triangulation = new List<DelaunayTriangle>(border);
-            points.Reverse();
             foreach (var point in points)
             {
-                var badTriangles = FindBadTriangles(point, triangulation);
+                var badTriangles = FindBadTriangles(point, triangulation).ToList();
                 var polygon = FindHoleBoundaries(badTriangles);
                 foreach (var triangle in badTriangles)
                 {
                     foreach (var vertex in triangle.Vertices)
+                    {
                         vertex.AdjacentTriangles.Remove(triangle);
-                    if (triangulation.Contains(triangle)) triangulation.Remove(triangle);
+                    }
+
+                    if (triangulation.Contains(triangle))
+                        triangulation.Remove(triangle);
                 }
 
-                foreach (var edge in polygon)
-                {
-                    var triangle = new DelaunayTriangle(point, edge.StartPoint, edge.EndPoint);
-                    triangulation.Add(triangle);
-                }
+                triangulation.AddRange(polygon.Select(edge => new DelaunayTriangle(point, edge.StartPoint, edge.EndPoint)));
             }
 
             return triangulation;
         }
 
-        public static List<DelaunayEdge> Voronoi(List<DelaunayTriangle> triangulation)
-        {
-            var voronoiEdges = new List<DelaunayEdge>();
-            foreach (var triangle in triangulation)
-            foreach (var neigbour in triangle.TrianglesWithSharedEdges())
-            {
-                var edge = new DelaunayEdge(triangle.Circumcenter, neigbour.Circumcenter);
-                voronoiEdges.Add(edge);
-            }
+        /// <summary>
+        /// Computes the Voronoi diagram of a given Delaunay triangulation as a list of <see cref="DelaunayTriangle"/> instances.
+        /// </summary>
+        /// <param name="triangulation">Delaunay triangulation.</param>
+        /// <returns>Collection of lines representing the Voronoi cells.</returns>
+        public static IEnumerable<Line2d> Voronoi(IEnumerable<DelaunayTriangle> triangulation)
+            => from triangle in triangulation
+               from neighbour in triangle.TrianglesWithSharedEdges()
+               select new Line2d(triangle.Circumcenter, neighbour.Circumcenter);
 
-            return voronoiEdges;
-        }
-
-        private static List<DelaunayEdge> FindHoleBoundaries(List<DelaunayTriangle> badTriangles)
+        private static IEnumerable<DelaunayEdge> FindHoleBoundaries(IEnumerable<DelaunayTriangle> badTriangles)
         {
             var boundaryEdges = new List<DelaunayEdge>();
             var duplicateEdges = new List<DelaunayEdge>();
             foreach (var triangle in badTriangles)
             {
-                var e = new DelaunayEdge(triangle.Vertices[0], triangle.Vertices[1]);
-                if (!boundaryEdges.Contains(e))
-                    boundaryEdges.Add(e);
-                else
-                    duplicateEdges.Add(e);
-                var f = new DelaunayEdge(triangle.Vertices[1], triangle.Vertices[2]);
-                if (!boundaryEdges.Contains(f))
-                    boundaryEdges.Add(f);
-                else
-                    duplicateEdges.Add(f);
-                var j = new DelaunayEdge(triangle.Vertices[2], triangle.Vertices[0]);
-                if (!boundaryEdges.Contains(j))
-                    boundaryEdges.Add(j);
-                else
-                    duplicateEdges.Add(j);
+                for (int i = 0; i < triangle.Vertices.Count; i++)
+                {
+                    var e = new DelaunayEdge(
+                        triangle.Vertices[i],
+                        triangle.Vertices[(i + 1) % triangle.Vertices.Count]);
+                    if (!boundaryEdges.Contains(e))
+                        boundaryEdges.Add(e);
+                    else
+                        duplicateEdges.Add(e);
+                }
             }
+
 
             for (var i = boundaryEdges.Count - 1; i >= 0; i--)
             {
@@ -78,13 +77,7 @@ namespace Paramdigma.Core.Geometry
             return boundaryEdges;
         }
 
-        private static List<DelaunayTriangle> FindBadTriangles(DelaunayPoint point, List<DelaunayTriangle> triangles)
-        {
-            var badTriangles = new List<DelaunayTriangle>();
-            foreach (var triangle in triangles)
-                if (triangle.IsPointInsideCircumcircle(point))
-                    badTriangles.Add(triangle);
-            return badTriangles;
-        }
+        private static IEnumerable<DelaunayTriangle> FindBadTriangles(Point2d point, IEnumerable<DelaunayTriangle> triangles)
+            => triangles.Where(triangle => triangle.IsPointInsideCircumcircle(point));
     }
 }
