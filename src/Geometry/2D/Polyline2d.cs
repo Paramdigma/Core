@@ -68,7 +68,7 @@ namespace Paramdigma.Core.Geometry
         ///     Gets the bounding box of the polyline.
         /// </summary>
         /// <returns>2D bounding box.</returns>
-        public BoundingBox2d BoundingBox => new BoundingBox2d(this);
+        public Box2d BoundingBox => new Box2d(this);
 
         /// <summary>
         ///     Gets the length of the polyline.

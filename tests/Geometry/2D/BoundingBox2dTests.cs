@@ -8,13 +8,13 @@ namespace Paramdigma.Core.Tests.Geometry
         [Fact]
         public void CanCreate_FromTwoCorners()
         {
-            Assert.NotNull(new BoundingBox2d( new Point2d(1,1),Point2d.Origin));
+            Assert.NotNull(new Box2d( new Point2d(1,1),Point2d.Origin));
         }
 
         [Fact]
         public void CanGet_AllFourCorners()
         {
-            var box = new BoundingBox2d(Point2d.Origin, new Point2d(1, 1));
+            var box = new Box2d(Point2d.Origin, new Point2d(1, 1));
             
             Assert.Equal(new Point2d(0,0),box.BottomLeft);
             Assert.Equal(new Point2d(1,0),box.BottomRight);

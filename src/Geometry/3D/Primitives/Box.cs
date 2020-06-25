@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Paramdigma.Core.Collections;
 
 namespace Paramdigma.Core.Geometry
@@ -16,6 +17,13 @@ namespace Paramdigma.Core.Geometry
         /// <param name="domainZ">Range of values in the Z axis.</param>
         public Box(Plane plane, Interval domainX, Interval domainY, Interval domainZ)
         {
+            if (domainX.HasInvertedDirection)
+                domainX.FlipDirection();
+            if (domainY.HasInvertedDirection)
+                domainY.FlipDirection();
+            if (domainZ.HasInvertedDirection)
+                domainZ.FlipDirection();
+
             this.Plane = plane;
             this.DomainX = domainX;
             this.DomainY = domainY;
@@ -82,9 +90,46 @@ namespace Paramdigma.Core.Geometry
         ///     Gets the center point of the box.
         /// </summary>
         /// <returns><see cref="Point3d" />.</returns>
-        public Point3d Center => new Point3d(
-            this.DomainX.RemapFromUnit(0.5),
-            this.DomainY.RemapFromUnit(0.5),
-            this.DomainZ.RemapFromUnit(0.5));
+        public Point3d Center => new Point3d(this.DomainX.RemapFromUnit(0.5), this.DomainY.RemapFromUnit(0.5), this.DomainZ.RemapFromUnit(0.5));
+
+        public bool Contains(Point3d point) => DomainX.Contains(point.X)
+                                            && DomainY.Contains(point.Y)
+                                            && DomainZ.Contains(point.Z);
+
+        public bool Intersects(Box box)
+        {
+            var xCheck = this.DomainX.Contains(box.DomainX.Start) || this.DomainX.Contains(box.DomainX.End);
+            var yCheck = this.DomainY.Contains(box.DomainY.Start) || this.DomainY.Contains(box.DomainY.End);
+            var zCheck = this.DomainZ.Contains(box.DomainZ.Start) || this.DomainY.Contains(box.DomainZ.End);
+            return xCheck && yCheck && zCheck;
+        }
+
+        public Point3d BottomNorthEast => new Point3d(this.DomainX.End, this.DomainY.End, this.DomainZ.Start);
+
+        public Point3d BottomNorthWest => new Point3d(this.DomainX.Start, this.DomainY.End, this.DomainZ.Start);
+
+        public Point3d BottomSouthEast => new Point3d(this.DomainX.End, this.DomainY.Start, this.DomainZ.Start);
+
+        public Point3d BottomSouthWest => new Point3d(this.DomainX.Start, this.DomainY.Start, this.DomainZ.Start);
+
+        public Point3d TopNorthEast => new Point3d(this.DomainX.End, this.DomainY.End, this.DomainZ.End);
+
+        public Point3d TopNorthWest => new Point3d(this.DomainX.Start, this.DomainY.End, this.DomainZ.End);
+
+        public Point3d TopSouthEast => new Point3d(this.DomainX.End, this.DomainY.Start, this.DomainZ.End);
+
+        public Point3d TopSouthWest => new Point3d(this.DomainX.Start, this.DomainY.Start, this.DomainZ.End);
+
+        public IEnumerable<Point3d> Corners => new List<Point3d>
+        {
+            BottomNorthEast,
+            BottomNorthWest,
+            BottomSouthWest,
+            BottomSouthEast,
+            TopNorthEast,
+            TopNorthWest,
+            TopSouthWest,
+            TopNorthEast,
+        };
     }
 }

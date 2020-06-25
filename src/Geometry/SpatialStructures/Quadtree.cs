@@ -6,17 +6,26 @@ namespace Paramdigma.Core.SpatialSearch
     /// <summary>
     ///     Class to compute 2 dimensional spatial searches by quad subdivision.
     /// </summary>
-    public class QuadTree
+    public class QuadTree : ISpatialTree<Box2d, Point2d>
     {
         /// <summary>
         ///     Boundary of this QuadTree.
         /// </summary>
-        public readonly BoundingBox2d Boundary;
+        public Box2d Boundary
+        {
+            get;
+        }
 
         /// <summary>
-        ///     Gets or sets the list of points of this QuadTree.
+        ///     Gets the list of points of this QuadTree.
         /// </summary>
-        public readonly List<Point2d> Points;
+        public List<Point2d> Points
+        {
+            get;
+        }
+
+        public bool ThresholdReached => this.Boundary.XDomain.Length < this.threshold
+                                     || this.Boundary.YDomain.Length < this.threshold;
 
         private readonly double threshold;
 
@@ -31,7 +40,7 @@ namespace Paramdigma.Core.SpatialSearch
         /// </summary>
         /// <param name="boundary">Boundary of this QuadTree.</param>
         /// <param name="threshold">Smallest allowed dimension.</param>
-        public QuadTree(BoundingBox2d boundary, double threshold)
+        public QuadTree(Box2d boundary, double threshold)
         {
             this.Boundary = boundary;
             this.Points = new List<Point2d>();
@@ -49,22 +58,20 @@ namespace Paramdigma.Core.SpatialSearch
             if (!this.Boundary.ContainsPoint(point))
                 return false;
 
-            if (this.Boundary.XDomain.Length < this.threshold
-             || this.Boundary.YDomain.Length < this.threshold)
+
+            if (ThresholdReached)
             {
                 this.Points.Add(point);
                 return true;
             }
 
-            this.Subdivide();
+            if (this.northEast == null)
+                this.Subdivide();
 
-            if (this.northEast.Insert(point)
-             || this.northWest.Insert(point)
-             || this.southWest.Insert(point)
-             || this.southEast.Insert(point))
-                return true;
-
-            return false;
+            return this.northEast.Insert(point)
+                || this.northWest.Insert(point)
+                || this.southWest.Insert(point)
+                || this.southEast.Insert(point);
         }
 
 
@@ -73,7 +80,7 @@ namespace Paramdigma.Core.SpatialSearch
         /// </summary>
         /// <param name="range">Range to look for.</param>
         /// <returns>Points contained in the range.</returns>
-        public List<Point2d> QueryRange(BoundingBox2d range)
+        public IEnumerable<Point2d> QueryRange(Box2d range)
         {
             var pointsInRange = new List<Point2d>();
 
@@ -92,13 +99,13 @@ namespace Paramdigma.Core.SpatialSearch
              || this.Boundary.YDomain.Length < this.threshold)
                 return pointsInRange;
 
-            if (this.southWest != null)
-            {
-                pointsInRange.AddRange(this.southWest.QueryRange(range));
-                pointsInRange.AddRange(this.southEast.QueryRange(range));
-                pointsInRange.AddRange(this.northWest.QueryRange(range));
-                pointsInRange.AddRange(this.northEast.QueryRange(range));
-            }
+            if (this.southWest == null)
+                return pointsInRange;
+
+            pointsInRange.AddRange(this.southWest.QueryRange(range));
+            pointsInRange.AddRange(this.southEast.QueryRange(range));
+            pointsInRange.AddRange(this.northWest.QueryRange(range));
+            pointsInRange.AddRange(this.northEast.QueryRange(range));
 
             return pointsInRange;
         }
@@ -107,22 +114,22 @@ namespace Paramdigma.Core.SpatialSearch
         private void Subdivide()
         {
             this.southWest = new QuadTree(
-                new BoundingBox2d(
+                new Box2d(
                     this.Boundary.BottomLeft,
                     this.Boundary.Center),
                 this.threshold);
             this.northWest = new QuadTree(
-                new BoundingBox2d(
+                new Box2d(
                     this.Boundary.MidLeft,
                     this.Boundary.MidTop),
                 this.threshold);
             this.southEast = new QuadTree(
-                new BoundingBox2d(
+                new Box2d(
                     this.Boundary.MidBottom,
                     this.Boundary.MidRight),
                 this.threshold);
             this.northEast = new QuadTree(
-                new BoundingBox2d(
+                new Box2d(
                     this.Boundary.Center,
                     this.Boundary.TopRight),
                 this.threshold);

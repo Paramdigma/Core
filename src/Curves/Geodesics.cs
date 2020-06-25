@@ -5,13 +5,13 @@ using Paramdigma.Core.HalfEdgeMesh;
 namespace Paramdigma.Core.Curves
 {
     /// <summary>
-    ///     Static class to compute geodeesics on triangular meshes.
+    ///     Static class to compute geodesics on triangular meshes.
     /// </summary>
     public static class Geodesics
     {
         /// <summary>
         ///     Computes a geodesic on a mesh given a starting point and an initial direction.
-        ///     Returns true if successfull and false if something went wrong.
+        ///     Returns true if successful and false if something went wrong.
         /// </summary>
         /// <param name="meshPoint">Point.</param>
         /// <param name="vector">Direction.</param>
