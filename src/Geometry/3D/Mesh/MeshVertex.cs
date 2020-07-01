@@ -55,9 +55,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
         ///     Gets dictionary of user values.
         /// </summary>
         /// <value></value>
-        public Dictionary<string, double> UserValues =>
-            // Set private property to auto initialize if null.
-            this.userValues ?? new Dictionary<string, double>();
+        public Dictionary<string, double> UserValues => this.userValues ?? new Dictionary<string, double>();
 
         // Calculate the valence of a vertex
 

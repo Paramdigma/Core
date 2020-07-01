@@ -25,7 +25,7 @@ namespace Paramdigma.Core
             get
             {
                 var t = Tolerance.ToString("N14");
-                return t.Substring(t.IndexOf(".") + 1).IndexOf("1") + 1;
+                return t.Substring(t.IndexOf(".", StringComparison.Ordinal) + 1).IndexOf("1", StringComparison.Ordinal) + 1;
             }
         }
 

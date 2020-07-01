@@ -69,7 +69,6 @@ namespace Paramdigma.Core.Geometry
         public Vector3d NormalAt(double u, double v) =>
             (this.PointAt(u, v) - this.Plane.Origin).Unit();
 
-
         /// <inheritdoc />
         public Point3d PointAt(double u, double v)
         {
@@ -86,7 +85,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     Returns the closest point on the sphere as a 2D point containing it's UV coordinates.
         /// </summary>
-        /// <param name="pt">Point to find closest to</param>
+        /// <param name="pt">Point to find closest to.</param>
         /// <returns>UV Parameter of the closest point as a Point2d instance.</returns>
         public Point2d ClosestParam(Point3d pt)
         {

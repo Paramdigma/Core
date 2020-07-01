@@ -198,9 +198,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <inheritdoc />
-        public override int GetHashCode() =>
-            // TODO: Non consistent getHashCode implementation
-            base.GetHashCode() ^ this.weight.GetHashCode();
+        public override int GetHashCode() => base.GetHashCode() ^ this.weight.GetHashCode();
 
 
         // TODO: Add hasWeightedCoordinates boolean and implement a weightCoordinates() method

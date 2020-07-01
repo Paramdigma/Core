@@ -47,6 +47,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     Gets or sets the coordinate at the given dimension.
         /// </summary>
+        /// <param name="dimension">Dimensions of the vector.</param>
         /// <value>The value of the specified dimension.</value>
         public double this[int dimension]
         {

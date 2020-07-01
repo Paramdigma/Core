@@ -16,7 +16,6 @@ namespace Paramdigma.Core.LinearAlgebra
             this.N = n;
             this.Values = new List<TripletData>();
         }
-        // Public fields
 
 
         /// <summary>

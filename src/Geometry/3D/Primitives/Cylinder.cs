@@ -16,9 +16,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="plane">The plane of the cylinder.</param>
         /// <param name="radius">The radius of the cylinder.</param>
         /// <param name="domain">The cylinder height range.</param>
-        /// <exception cref="ArgumentOutOfRangeException">Throws when radius is smaller or equal to 0</exception>
+        /// <exception cref="ArgumentOutOfRangeException">Throws when radius is smaller or equal to 0.</exception>
         /// <exception cref="ArgumentException">Throws when the height domain is tiny.</exception>
-        /// <exception cref="ArgumentNullException">Throws when the passed plane is null</exception>
+        /// <exception cref="ArgumentNullException">Throws when the passed plane is null.</exception>
         public Cylinder(Plane plane, double radius, Interval domain)
         {
             if (radius <= 0)

@@ -11,17 +11,17 @@ namespace Paramdigma.Core
     {
         public enum LineLineIntersectionStatus
         {
-            NoIntersection, Point, Error
+            NoIntersection, Point, Error,
         }
 
         public enum LinePlaneIntersectionStatus
         {
-            NoIntersection, Point, OnPlane
+            NoIntersection, Point, OnPlane,
         }
 
         public enum RayFacePerimeterIntersectionStatus
         {
-            NoIntersection, Point, Error
+            NoIntersection, Point, Error,
         }
 
         public struct LineLineIntersectionResult

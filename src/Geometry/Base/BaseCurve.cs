@@ -14,7 +14,6 @@ namespace Paramdigma.Core.Geometry
         ///     Initializes a new instance of the <see cref="BaseCurve" /> class.
         /// </summary>
         protected BaseCurve() => this.Domain = Interval.Unit;
-        // Public properties
 
 
         /// <summary>

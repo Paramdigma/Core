@@ -1,4 +1,5 @@
 using System.IO;
+using System.Linq;
 using Paramdigma.Core.HalfEdgeMesh;
 
 #pragma warning disable 1591
@@ -31,6 +32,7 @@ namespace Paramdigma.Core.IO
                 count++;
             }
 
+<<<<<<< develop:src/IO/OffWriter.cs
             foreach (var face in mesh.Faces)
             {
                 if (!face.IsBoundaryLoop())
@@ -48,6 +50,20 @@ namespace Paramdigma.Core.IO
 
             File.WriteAllLines(filePath, offLines);
             return OffResult.Ok;
+=======
+            foreach (string faceString in from face in mesh.Faces
+                                          where !face.IsBoundaryLoop()
+                                          let vertices = face.AdjacentVertices()
+                                          let faceString = vertices.Count.ToString()
+                                          select face.AdjacentVertices().Aggregate(faceString, (current, v) => current + " " + v.Index))
+            {
+                offLines[count] = faceString;
+                count++;
+            }
+
+            File.WriteAllLines(filePath, offLines);
+            return OFFResult.Ok;
+>>>>>>> Big warning cleanup:src/IO/OFFWritter.cs
         }
     }
 }

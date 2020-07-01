@@ -162,9 +162,7 @@ namespace Paramdigma.Core.Collections
         /// <param name="column">Column location.</param>
         /// <param name="row">Row location.</param>
         /// <returns>List of corner neighbours (Diagonally connected).</returns>
-        public List<T> GetCornerNeighboursAt(int column, int row) => throw
-            // TODO: Implement GetCornerNeighboursOfEntityAt()
-            new NotImplementedException();
+        public List<T> GetCornerNeighboursAt(int column, int row) => throw new NotImplementedException();
 
 
         /// <summary>
@@ -173,9 +171,7 @@ namespace Paramdigma.Core.Collections
         /// <param name="column">Column location.</param>
         /// <param name="row">Row location.</param>
         /// <returns>List of contiguous neighbours ( Up / Left / Down / Right ).</returns>
-        public List<T> GetContiguousNeighboursAt(int column, int row) => throw
-            // TODO: Implement GetContiguousNeighboursOfEntityAt()
-            new NotImplementedException();
+        public List<T> GetContiguousNeighboursAt(int column, int row) => throw new NotImplementedException();
 
 
         /// <summary>

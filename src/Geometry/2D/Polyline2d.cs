@@ -190,7 +190,6 @@ namespace Paramdigma.Core.Geometry
         public void Reparametrize()
         {
             var ratio = 1 / this.domain.End;
-
             double currentParam = 0;
 
             this.segments.ForEach(

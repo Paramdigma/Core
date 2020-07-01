@@ -186,9 +186,13 @@ namespace Paramdigma.Core
 
                 // recompute sc for this edge
                 if (-d < 0.0)
+                {
                     sN = 0.0;
+                }
                 else if (-d > a)
+                {
                     sN = sD;
+                }
                 else
                 {
                     sN = -d;
@@ -202,9 +206,13 @@ namespace Paramdigma.Core
 
                 // recompute sc for this edge
                 if (-d + b < 0.0)
+                {
                     sN = 0;
+                }
                 else if (-d + b > a)
+                {
                     sN = sD;
+                }
                 else
                 {
                     sN = -d + b;
