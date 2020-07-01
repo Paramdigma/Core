@@ -5,10 +5,10 @@ namespace Paramdigma.Core.LinearAlgebra
     /// <summary>
     ///     Represents a complex number (a number with real + imaginary components).
     /// </summary>
-    public class Complex
+    public struct Complex
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Complex" /> class.
+        ///     Initializes a new instance of the <see cref="Complex" /> struct.
         /// </summary>
         /// <param name="real">Real component.</param>
         /// <param name="imaginary">Imaginary component.</param>

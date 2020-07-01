@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Paramdigma.Core.Geometry;
 
 namespace Paramdigma.Core.LinearAlgebra
@@ -28,10 +29,11 @@ namespace Paramdigma.Core.LinearAlgebra
         {
             // Perform the calculation.
             // Find the values S1, Sx, Sy, Sxx, and Sxy.
-            double s1 = points.Count;
+            var enumerable = points as Point2d[] ?? points.ToArray();
+            double s1 = enumerable.Length;
             double sx = 0, sy = 0, sxx = 0, sxy = 0;
 
-            foreach (var pt in points)
+            foreach (var pt in enumerable)
             {
                 sx += pt.X;
                 sy += pt.Y;
@@ -43,7 +45,7 @@ namespace Paramdigma.Core.LinearAlgebra
             m = (sxy * s1 - sx * sy) / (sxx * s1 - sx * sx);
             b = (sxy * sx - sy * sxx) / (sx * sx - s1 * sxx);
 
-            return Math.Sqrt(ErrorSquared(points, m, b));
+            return Math.Sqrt(ErrorSquared(enumerable, m, b));
         }
 
 
