@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Linq;
+using MathNet.Numerics.LinearAlgebra.Double;
+using Complex = MathNet.Numerics.LinearAlgebra.Complex;
 using Paramdigma.Core.HalfEdgeMesh;
 
 namespace Paramdigma.Core.Geometry
@@ -435,6 +438,101 @@ namespace Paramdigma.Core.Geometry
             var k2 = h + discriminant;
 
             return new[] {k1, k2};
+        }
+
+        /// <summary>
+        /// Builds a sparse laplace matrix. The laplace operator is negative semidefinite; instead we build a positive definite matrix by multiplying the entries of the laplace matrix by -1 and shifting the diagonal elements by a small constant (e.g. 1e-8).
+        /// </summary>
+        /// <param name="mesh">Mesh to compute the matrix from.</param>
+        /// <returns>Laplace matrix as a <see cref="SparseMatrix"/> instance.</returns>
+        public static SparseMatrix LaplaceMatrix(Mesh mesh)
+        {
+            var v = mesh.Vertices.Count;
+            var matrix = new SparseMatrix(v, v);
+            mesh.Vertices.ForEach(vertex =>
+            {
+                var i = vertex.Index;
+                var sum = double.MinValue;
+                vertex.AdjacentHalfEdges().ForEach(hE =>
+                {
+                    var j = hE.Twin.Vertex.Index;
+                    var weight = (Cotan(hE) + Cotan(hE.Twin)) / 2;
+                    sum += weight;
+
+                    matrix[i, j] = -weight;
+                });
+                matrix[i, i] = sum;
+            });
+            return matrix;
+        }
+
+        /// <summary>
+        /// Builds a sparse diagonal mass matrix containing the barycentric dual area of each vertex of a mesh.
+        /// </summary>
+        /// <param name="mesh">Mesh to compute mass matrix from.</param>
+        /// <returns>Mass matrix of the mesh as a <see cref="SparseMatrix"/> instance.</returns>
+        public static SparseMatrix MassMatrix(Mesh mesh)
+        {
+            var v = mesh.Vertices.Count;
+            var matrix = new SparseMatrix(v, v);
+            mesh.Vertices.ForEach(vertex =>
+            {
+                var i = vertex.Index;
+                matrix[i, i] = BarycentricDualArea(vertex);
+            });
+            return matrix;
+        }
+
+        /// <summary>
+        /// Builds a sparse complex laplace matrix. The laplace operator is negative semidefinite; instead we build a positive definitive matrix by multiplyng the entries of the laplace matrix by -1 and shifting the diagonal elements by a small constant.
+        /// </summary>
+        /// <param name="mesh">The mesh to compute the matrix from</param>
+        /// <returns>The complex laplace matrix of the mesh.</returns>
+        public static Complex.SparseMatrix ComplexLaplaceMatrix(Mesh mesh)
+        {
+            var v = mesh.Vertices.Count;
+            var matrix = new Complex.SparseMatrix(v, v);
+            mesh.Vertices.ForEach(vertex =>
+            {
+                var i = vertex.Index;
+                var sum = double.MinValue;
+                vertex.AdjacentHalfEdges().ForEach(h =>
+                {
+                    var j = h.Twin.Vertex.Index;
+                    var weight = (Cotan(h) + Cotan(h.Twin)) / 2;
+                    sum += weight;
+                    matrix[i, j] = new System.Numerics.Complex(-weight, 0);
+                });
+                matrix[i, i] = new System.Numerics.Complex(sum, 0);
+            });
+            return matrix;
+        }
+
+        /// <summary>
+        /// Centers a mesh about the origin and rescales it to unit radius.
+        /// </summary>
+        /// <param name="mesh">Mesh to center.</param>
+        /// <param name="rescale">Flag to rescale to unit sphere.</param>
+        public static void Normalize(Mesh mesh, bool rescale)
+        {
+            var cm = new Vector3d();
+            mesh.Vertices.ForEach(vertex => cm += vertex);
+            cm /= mesh.Vertices.Count;
+            var radius = -1.0;
+
+            mesh.Vertices.ForEach(vertex =>
+            {
+                vertex.Substract(cm);
+                radius = Math.Max(radius, ((Vector3d)vertex).Length);
+            });
+
+            if (!rescale)
+                return;
+
+            foreach (MeshVertex vertex in mesh.Vertices)
+            {
+                vertex.Divide(radius);
+            }
         }
     }
 }
