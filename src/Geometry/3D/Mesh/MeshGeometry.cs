@@ -172,7 +172,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="corner">Corner.</param>
         public static double Angle(MeshCorner corner)
         {
-            var u = Vector(corner.HalfEdge).Unit();
+            var u = Vector(corner.HalfEdge.Prev).Unit();
             var v = -Vector(corner.HalfEdge.Next).Unit();
 
             return Math.Acos(Math.Max(-1, Math.Min(1.0, u.Dot(v))));
@@ -236,7 +236,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <returns>The dualarea.</returns>
         /// <param name="vertex">Vertex.</param>
-        public static double CircumcentricDualarea(MeshVertex vertex)
+        public static double CircumcentricDualArea(MeshVertex vertex)
         {
             var area = 0.0;
             foreach (var hE in vertex.AdjacentHalfEdges())
@@ -385,8 +385,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <param name="vertex">Vertex to compute Gaussian curvature.</param>
         /// <returns>Number representing the gaussian curvature at that vertex.</returns>
-        public static double ScalarGaussCurvature(MeshVertex vertex) =>
-            AngleDefect(vertex) / CircumcentricDualarea(vertex);
+        public static double ScalarGaussCurvature(MeshVertex vertex) => AngleDefect(vertex);
 
 
         /// <summary>
@@ -424,7 +423,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Returns an array of 2 values {k1, k2}.</returns>
         public static double[] PrincipalCurvatures(MeshVertex vertex)
         {
-            var a = CircumcentricDualarea(vertex);
+            var a = CircumcentricDualArea(vertex);
             var h = ScalarMeanCurvature(vertex) / a;
             var k = AngleDefect(vertex) / a;
 

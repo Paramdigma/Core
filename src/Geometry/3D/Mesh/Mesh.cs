@@ -512,14 +512,14 @@ namespace Paramdigma.Core.HalfEdgeMesh
                 this.Corners.Add(corner);
             }
 
-            // Check mesh for common errors
-            if (this.HasIsolatedFaces() || this.HasIsolatedVertices() || this.HasNonManifoldEdges())
-                return false;
-
             // Index elements
             this.IndexElements();
 
-            return true;
+            // Check mesh for common errors
+            var check = !this.HasIsolatedFaces();
+            var check2 = !this.HasIsolatedVertices();
+            var check3 = !this.HasNonManifoldEdges();
+            return check && check2 && check3;
         }
 
 

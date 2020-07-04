@@ -29,6 +29,8 @@ namespace Paramdigma.Core.IO
             // Check if length of lines correct
             if (nVertex + nFaces + 2 != lines.Length)
                 return OffResult.IncorrectFormat;
+            // if (nVertex + nFaces + 2 != lines.Length)
+            //     return OFFResult.IncorrectFormat;
 
             // Iterate through all the lines containing the mesh data
             const int start = 2;
