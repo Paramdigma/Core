@@ -451,7 +451,7 @@ namespace Paramdigma.Core.Geometry
             mesh.Vertices.ForEach(vertex =>
             {
                 var i = vertex.Index;
-                var sum = double.MinValue;
+                var sum = Settings.Tolerance;
                 vertex.AdjacentHalfEdges().ForEach(hE =>
                 {
                     var j = hE.Twin.Vertex.Index;

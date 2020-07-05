@@ -13,8 +13,8 @@ namespace Paramdigma.Core.DiscreteDifferentialGeometry
     public class HeatMethod
     {
         private readonly Mesh mesh;
-        private readonly SparseMatrix laplace;
-        private readonly SparseMatrix meanFlow;
+        public readonly SparseMatrix laplace;
+        public readonly SparseMatrix meanFlow;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="HeatMethod"/> class.
@@ -29,8 +29,6 @@ namespace Paramdigma.Core.DiscreteDifferentialGeometry
             this.laplace = MeshGeometry.LaplaceMatrix(mesh);
             var temp = this.laplace.Multiply(t);
             this.meanFlow = m.Add(temp) as SparseMatrix;
-            Console.WriteLine(this.meanFlow[0,0]);
-            Console.WriteLine(this.meanFlow[5,5]);
         }
 
         private Dictionary<MeshFace, Vector3d> ComputeVectorField(DenseMatrix u)

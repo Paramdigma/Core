@@ -40,12 +40,11 @@ namespace Paramdigma.Core.Tests.Geometry
 
         [Fact]
         private void CanCompute_CornerAngles() =>
-            this.FlatSquare.Corners.ForEach(
-                corner =>
-                {
-                    var angle = MeshGeometry.Angle(corner);
-                    Assert.True(Math.Abs(angle - 0.5 * Math.PI) < Settings.Tolerance);
-                });
+            this.FlatSquare.Corners.ForEach(corner =>
+            {
+                var angle = MeshGeometry.Angle(corner);
+                Assert.True(Math.Abs(angle) < Settings.Tolerance);
+            });
 
 
         [Fact]
