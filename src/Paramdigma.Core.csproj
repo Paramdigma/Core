@@ -22,6 +22,8 @@
 
     <!-- Add Nuget Packages and other  dependencies -->
     <ItemGroup>
+        <PackageReference Include="alglib.net" Version="3.16.0" />
+        <PackageReference Include="CSparse" Version="3.4.5" />
         <PackageReference Include="MathNet.Numerics" Version="4.11.0" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     </ItemGroup>

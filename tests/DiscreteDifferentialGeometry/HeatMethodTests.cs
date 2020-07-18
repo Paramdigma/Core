@@ -22,6 +22,8 @@ namespace Paramdigma.Core.Tests.DiscreteDifferentialGeometry
         [InlineData("../../../../tests/Data/meshes/sphere.off")]
         public void CanCompute_HeatMethod(string path)
         {
+
+            
             var indices = new int[] {2, 5, 9};
             
             OFFReader.ReadMeshFromFile(path, out var data);

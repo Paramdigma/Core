@@ -469,11 +469,12 @@ namespace Paramdigma.Core.Geometry
         /// Builds a sparse diagonal mass matrix containing the barycentric dual area of each vertex of a mesh.
         /// </summary>
         /// <param name="mesh">Mesh to compute mass matrix from.</param>
-        /// <returns>Mass matrix of the mesh as a <see cref="SparseMatrix"/> instance.</returns>
+        /// <returns>Mass matrix of the mesh as a <see cref="<template>
         public static SparseMatrix MassMatrix(Mesh mesh)
         {
             var v = mesh.Vertices.Count;
             var matrix = new SparseMatrix(v, v);
+
             mesh.Vertices.ForEach(vertex =>
             {
                 var i = vertex.Index;

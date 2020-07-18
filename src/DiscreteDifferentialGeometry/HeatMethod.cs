@@ -111,6 +111,8 @@ namespace Paramdigma.Core.DiscreteDifferentialGeometry
             SubtractMinimumDistance(phi);
 
             return phi;
+
+            // return null;
         }
     }
 }
