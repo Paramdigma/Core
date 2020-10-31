@@ -366,6 +366,7 @@ dotnet_naming_rule.parameters_rule.style=camel_case_style
 dotnet_naming_rule.parameters_rule.severity=warning
 
 # Microsoft .NET properties
+csharp_new_line_between_query_expression_clauses=true
 csharp_prefer_braces=false:none
 csharp_space_after_keywords_in_control_flow_statements=true
 csharp_space_between_method_call_parameter_list_parentheses=false
@@ -373,7 +374,12 @@ csharp_space_between_method_declaration_parameter_list_parentheses=false
 csharp_space_between_parentheses=false
 
 # ReSharper properties
+resharper_align_multiline_argument=true
+resharper_align_multiline_calls_chain=true
 resharper_braces_redundant=true
+resharper_csharp_outdent_dots=true
+resharper_csharp_wrap_after_declaration_lpar=true
+resharper_csharp_wrap_parameters_style=chop_if_long
 resharper_empty_block_style=together_same_line
 resharper_local_function_body=expression_body
 resharper_space_within_catch_parentheses=false
@@ -385,6 +391,8 @@ resharper_space_within_parentheses=false
 resharper_space_within_switch_parentheses=false
 resharper_space_within_using_parentheses=false
 resharper_space_within_while_parentheses=false
+resharper_wrap_before_linq_expression=true
+resharper_wrap_linq_expressions=chop_always
 
 ##########################################
 # License

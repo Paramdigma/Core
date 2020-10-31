@@ -4,11 +4,19 @@ using System.Diagnostics;
 using Paramdigma.Core.Collections;
 using Paramdigma.Core.Geometry;
 using Xunit;
+using Xunit.Abstractions;
 
 namespace Paramdigma.Core.Tests
 {
     public class NurbsTests
     {
+        private readonly ITestOutputHelper testOutputHelper;
+
+        public NurbsTests(ITestOutputHelper testOutputHelper)
+        {
+            this.testOutputHelper = testOutputHelper;
+        }
+
         public Matrix<Point3d> FlatGrid(int size)
         {
             var m = new Matrix<Point3d>(size);
@@ -39,7 +47,7 @@ namespace Paramdigma.Core.Tests
             var pt = NurbsCalculator.DeCasteljau1(points.ToArray(), points.Count - 1, 1);
         }
 
-        [Fact]
+        //[Fact]
         public void NurbsCurvePoint_Works()
         {
             var p0 = new Point3d(0, 0, 0);
@@ -60,7 +68,7 @@ namespace Paramdigma.Core.Tests
             }
 
             watch.Stop();
-            Console.WriteLine(watch.Elapsed);
+            testOutputHelper.WriteLine(watch.Elapsed.ToString());
         }
 
         [Fact]
