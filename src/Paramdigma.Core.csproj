@@ -9,6 +9,7 @@
         <PackageProjectUrl>https://paramdigma.com/Core/</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Paramdigma/Core/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup>

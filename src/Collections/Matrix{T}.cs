@@ -86,7 +86,11 @@ namespace Paramdigma.Core.Collections
             return col;
         }
 
-
+        /// <summary>
+        ///     Gets the amount of items in this matrix.
+        /// </summary>
+        public int Count => this.data.Length;
+        
         // ----- ORDERING METHODS -----
 
 
