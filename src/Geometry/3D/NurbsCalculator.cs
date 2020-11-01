@@ -598,12 +598,12 @@ namespace Paramdigma.Core.Geometry
             for (var k = p + 1; k <= d; k++)
                 ck[k] = new Vector3d();
             var span = FindSpan(n, p, u, knotVector);
-            var nders = DerivativeBasisFunctions(span, u, p, du, knotVector);
+            var nDerivatives = DerivativeBasisFunctions(span, u, p, du, knotVector);
             for (var k = 0; k <= du; k++)
             {
                 ck[k] = new Vector3d();
                 for (var j = 0; j <= p; j++)
-                    ck[k] += nders[k, j] * ( Vector3d ) controlPoints[span - p + j];
+                    ck[k] += nDerivatives[k, j] * ( Vector3d ) controlPoints[span - p + j];
             }
 
             return ck;
@@ -651,7 +651,7 @@ namespace Paramdigma.Core.Geometry
             for (var k = p + 1; k <= d; k++)
                 ck[k] = new Vector3d();
             var span = FindSpan(n, p, u, knotVector);
-            var basisFuns = AllBasisFuns(span, u, p, knotVector);
+            var basisFunctions = AllBasisFuns(span, u, p, knotVector);
             var pk = CurveDerivCpts(
                 n,
                 p,
@@ -664,7 +664,7 @@ namespace Paramdigma.Core.Geometry
             {
                 ck[k] = new Vector3d();
                 for (var j = 0; j <= p - k; j++)
-                    ck[k] += basisFuns[j, p - k] * ( Vector3d ) pk[k, j];
+                    ck[k] += basisFunctions[j, p - k] * ( Vector3d ) pk[k, j];
             }
 
             return ck;
@@ -915,7 +915,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="knotVector">List of numbers representing the knot vector of the curve.</param>
         /// <param name="controlPoints">The control points for the curve.</param>
         /// <param name="u">Parameter along the curve to compute the point at.</param>
-        /// <returns></returns>
+        /// <returns>A point along the curve.</returns>
         public static Point3d CurvePoint(
             int n,
             int p,
@@ -988,7 +988,7 @@ namespace Paramdigma.Core.Geometry
             var vspan = FindSpan(m, q, v, knotVectorV);
             var nV = BasisFunctions(vspan, v, q, knotVectorV);
 
-            var temp = new Point4d[q];
+            var temp = new Point4d[q+1];
             for (var l = 0; l <= q; l++)
             {
                 temp[l] = new Point4d();

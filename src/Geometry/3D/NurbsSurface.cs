@@ -13,6 +13,7 @@ namespace Paramdigma.Core.Geometry
         public Matrix<Point4d> ControlPoints;
 
         public int DegreeU;
+        
         public int DegreeV;
 
         public List<double> KnotsU;
@@ -32,11 +33,14 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <inheritdoc />
         public Interval DomainU => new Interval(this.KnotsU[0], this.KnotsU[this.KnotsU.Count - 1]);
 
+        /// <inheritdoc />
         public Interval DomainV => new Interval(this.KnotsV[0], this.KnotsV[this.KnotsV.Count - 1]);
 
 
+        /// <inheritdoc />
         public Point3d PointAt(double u, double v) => NurbsCalculator.SurfacePoint(
             this.ControlPoints.N - 1,
             this.DegreeU,
@@ -49,12 +53,19 @@ namespace Paramdigma.Core.Geometry
             v);
 
 
+        /// <inheritdoc />
         public Vector3d NormalAt(double u, double v) => throw new System.NotImplementedException();
 
+
+        /// <inheritdoc />
         public Plane FrameAt(double u, double v) => throw new System.NotImplementedException();
 
+
+        /// <inheritdoc />
         public double DistanceTo(Point3d point) => throw new System.NotImplementedException();
 
+
+        /// <inheritdoc />
         public Point3d ClosestPointTo(Point3d point) => throw new System.NotImplementedException();
     }
 }
