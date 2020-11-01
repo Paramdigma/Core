@@ -10,9 +10,11 @@ namespace Paramdigma.Core.Geometry
         /// <inheritdoc />
         public InvalidCurveException() { }
 
+
         /// <inheritdoc />
         public InvalidCurveException(string message)
             : base(message) { }
+
 
         /// <inheritdoc />
         public InvalidCurveException(string message, Exception innerException)

@@ -12,6 +12,7 @@ namespace Paramdigma.Core.Tests.Geometry
             yield return new object[] {new Point3d(2, 2, -1), new Point3d(2, 2, -1)};
         }
 
+
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
 }

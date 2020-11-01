@@ -14,11 +14,13 @@ namespace Paramdigma.Core.Collections
         // https://codereview.stackexchange.com/questions/194732/class-matrix-implementation
         private T[,] data;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Matrix{T}" /> class.
         /// </summary>
         /// <param name="n">Size of the square Matrix.</param>
         public Matrix(int n) => this.data = new T[n, n];
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Matrix{T}" /> class of the specified size.
@@ -27,11 +29,13 @@ namespace Paramdigma.Core.Collections
         /// <param name="m">Row size.</param>
         public Matrix(int n, int m) => this.data = new T[n, m];
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Matrix{T}" /> class from a 2D array.
         /// </summary>
         /// <param name="data">2D array of data.</param>
         public Matrix(T[,] data) => this.data = data;
+
 
         /// <summary>
         ///     Gets columns.
@@ -52,6 +56,7 @@ namespace Paramdigma.Core.Collections
         /// <param name="column">Column.</param>
         public ref T this[int row, int column] => ref this.data[row, column];
 
+
         /// <summary>
         ///     Get the row of a matrix at the specified index.
         /// </summary>
@@ -65,6 +70,7 @@ namespace Paramdigma.Core.Collections
 
             return row;
         }
+
 
         /// <summary>
         ///     Get the column of a matrix at the specified index.
@@ -80,34 +86,47 @@ namespace Paramdigma.Core.Collections
             return col;
         }
 
+
         // ----- ORDERING METHODS -----
+
 
         /// <summary>
         ///     Turns columns into rows and rows into columns.
         /// </summary>
         public void FlipMatrix() => throw
-            // TODO: Implement FlipMatrix()
-            new NotImplementedException();
+                                        // TODO: Implement FlipMatrix()
+                                        new NotImplementedException();
+
 
         /// <summary>
         ///     Increment Matrix column size by a specified amount.
         ///     It accepts both increasing and decreasing the size.
         /// </summary>
         /// <param name="incrementN">Positive or negative increment.</param>
-        public void IncrementColumns(int incrementN) => this.ResizeMatrix(ref this.data, this.N + incrementN, this.M);
+        public void IncrementColumns(int incrementN) => this.ResizeMatrix(
+            ref this.data,
+            this.N + incrementN,
+            this.M);
+
 
         /// <summary>
         ///     Increment Matrix row size by a specified amount.
         ///     It accepts both increasing and decreasing the size.
         /// </summary>
         /// <param name="incrementM">Positive or negative increment.</param>
-        public void IncrementRows(int incrementM) => this.ResizeMatrix(ref this.data, this.N, this.M + incrementM);
+        public void IncrementRows(int incrementM) => this.ResizeMatrix(
+            ref this.data,
+            this.N,
+            this.M + incrementM);
+
 
         /// <summary>
         ///     Increase or decrease the matrix size symetrically.
         /// </summary>
         /// <param name="symetricIncrement">Symetric increase/decrease.</param>
-        public void IncrementMatrixSize(int symetricIncrement) => this.IncrementMatrixSize(symetricIncrement, symetricIncrement);
+        public void IncrementMatrixSize(int symetricIncrement) =>
+            this.IncrementMatrixSize(symetricIncrement, symetricIncrement);
+
 
         /// <summary>
         ///     Increase or decrease the column size of the matrix.
@@ -119,6 +138,7 @@ namespace Paramdigma.Core.Collections
             this.IncrementColumns(columnIncrement);
             this.IncrementRows(rowIncrement);
         }
+
 
         /// <summary>
         ///     Obtains all neighbour entities surrounding the specified matrix coordinates.
@@ -135,6 +155,7 @@ namespace Paramdigma.Core.Collections
             return neighbours;
         }
 
+
         /// <summary>
         ///     Obtains corner neighbour entities surrounding the specified matrix coordinates.
         /// </summary>
@@ -144,6 +165,7 @@ namespace Paramdigma.Core.Collections
         public List<T> GetCornerNeighboursAt(int column, int row) => throw
             // TODO: Implement GetCornerNeighboursOfEntityAt()
             new NotImplementedException();
+
 
         /// <summary>
         ///     Obtains contiguous neighbour entities surrounding the specified matrix coordinates.
@@ -155,10 +177,12 @@ namespace Paramdigma.Core.Collections
             // TODO: Implement GetContiguousNeighboursOfEntityAt()
             new NotImplementedException();
 
+
         /// <summary>
         ///     Resizes any given 2 dimensional array.
         ///     It accepts smaller and bigger array outputs.
-        ///     Obtained from: https://stackoverflow.com/questions/6539571/how-to-resize-multidimensional-2d-array-in-c .
+        ///     Obtained from:
+        ///     https://stackoverflow.com/questions/6539571/how-to-resize-multidimensional-2d-array-in-c .
         /// </summary>
         /// <param name="original">2D Array to resize.</param>
         /// <param name="newCoNum">Number of resulting columns in the array.</param>

@@ -18,24 +18,17 @@ namespace Paramdigma.Core.LinearAlgebra
         }
         // Public fields
 
+
         /// <summary>
         ///     Gets values held by this triplet.
         /// </summary>
         /// <value></value>
-        public List<TripletData> Values
-        {
-            get;
-        }
+        public List<TripletData> Values { get; }
 
-        public int M
-        {
-            get;
-        }
+        public int M { get; }
 
-        public int N
-        {
-            get;
-        }
+        public int N { get; }
+
 
         // Methods
         public void AddEntry(double value, int m, int n)
@@ -48,22 +41,10 @@ namespace Paramdigma.Core.LinearAlgebra
 
     public struct TripletData
     {
-        public int Row
-        {
-            get;
-            set;
-        }
+        public int Row { get; set; }
 
-        public int Column
-        {
-            get;
-            set;
-        }
+        public int Column { get; set; }
 
-        public double Value
-        {
-            get;
-            set;
-        }
+        public double Value { get; set; }
     }
 }

@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Tests
             Assert.True(dir != dir2);
         }
 
+
         [Fact]
         public void Can_CheckContainment()
         {
@@ -28,6 +29,7 @@ namespace Paramdigma.Core.Tests
             Assert.True(i.Contains(n3));
         }
 
+
         [Fact]
         public void Can_CropNumbers()
         {
@@ -35,13 +37,14 @@ namespace Paramdigma.Core.Tests
             const double n1 = 0.0;
             const double n2 = 5.0;
             const double n3 = 2.33;
-            var n1c = i.Crop(n1);
-            var n2c = i.Crop(n2);
-            var n3c = i.Crop(n3);
-            Assert.True(n1c == i.Start);
-            Assert.True(n2c == i.End);
-            Assert.True(n3c == n3);
+            var n1C = i.Crop(n1);
+            var n2C = i.Crop(n2);
+            var n3C = i.Crop(n3);
+            Assert.True(Math.Abs(n1C - i.Start) < Settings.Tolerance);
+            Assert.True(Math.Abs(n2C - i.End) < Settings.Tolerance);
+            Assert.True(Math.Abs(n3C - n3) < Settings.Tolerance);
         }
+
 
         [Fact]
         public void Can_RemapNumbers()
@@ -49,18 +52,16 @@ namespace Paramdigma.Core.Tests
             var i = new Interval(1, 3);
             const double n = 2.0;
             var nMap = i.RemapToUnit(n);
-            Assert.True(nMap == 0.5);
+            Assert.True(Math.Abs(nMap - 0.5) < Settings.Tolerance);
             var nRemap = i.RemapFromUnit(nMap);
-            Assert.True(n == nRemap);
+            Assert.True(Math.Abs(n - nRemap) < Settings.Tolerance);
         }
+
 
         [Fact]
         public void CanCreate_Interval()
         {
-            var i0 = new Interval(0, 1);
-            var i1 = Interval.Unit;
-            var i2 = new Interval(i0);
-
+            var i0 = Interval.Unit;
             Assert.Equal(1, i0.Length);
             Assert.Throws<ArithmeticException>(() => new Interval(double.NaN, 1));
             Assert.Throws<ArithmeticException>(() => new Interval(0, double.NaN));

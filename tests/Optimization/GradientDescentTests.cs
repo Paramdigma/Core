@@ -11,7 +11,10 @@ namespace Paramdigma.Core.Tests.Optimization
         public void GradientDescent_Line()
         {
             var line = new Line(Point3d.WorldOrigin, new Point3d(1, 1, 0));
-            var gd = new GradientDescent(GradientDescentOptions.Default) {Options = {MaxIterations = 1}};
+            var gd = new GradientDescent(GradientDescentOptions.Default)
+            {
+                Options = {MaxIterations = 1}
+            };
             var input = 1;
 
             gd.Options.MaxIterations = 100;

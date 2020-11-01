@@ -10,7 +10,8 @@ namespace Paramdigma.Core.Geometry
     public class Cylinder : ISurface
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Cylinder" /> class from it's individual components.
+        ///     Initializes a new instance of the <see cref="Cylinder" /> class from it's individual
+        ///     components.
         /// </summary>
         /// <param name="plane">The plane of the cylinder.</param>
         /// <param name="radius">The radius of the cylinder.</param>
@@ -31,35 +32,24 @@ namespace Paramdigma.Core.Geometry
             this.DomainV = Interval.Unit;
         }
 
+
         /// <summary>
         ///     Gets or sets the base plane of the cylinder.
         /// </summary>
         /// <value><see cref="Plane" />.</value>
-        public Plane Plane
-        {
-            get;
-            set;
-        }
+        public Plane Plane { get; set; }
 
         /// <summary>
         ///     Gets or sets the radius of the cylinder.
         /// </summary>
         /// <value><see cref="double" />.</value>
-        public double Radius
-        {
-            get;
-            set;
-        }
+        public double Radius { get; set; }
 
         /// <summary>
         ///     Gets or sets the height range of the cylinder.
         /// </summary>
         /// <value><see cref="Interval" />.</value>
-        public Interval HeightRange
-        {
-            get;
-            set;
-        }
+        public Interval HeightRange { get; set; }
 
         /// <summary>
         ///     Gets the cylinder height.
@@ -67,18 +57,11 @@ namespace Paramdigma.Core.Geometry
         public double Height => this.HeightRange.Length;
 
         /// <inheritdoc />
-        public Interval DomainU
-        {
-            get;
-            set;
-        }
+        public Interval DomainU { get; set; }
 
         /// <inheritdoc />
-        public Interval DomainV
-        {
-            get;
-            set;
-        }
+        public Interval DomainV { get; set; }
+
 
         /// <inheritdoc />
         public Plane FrameAt(double u, double v)
@@ -87,12 +70,14 @@ namespace Paramdigma.Core.Geometry
             throw new NotImplementedException();
         }
 
+
         /// <summary>
         ///     Compute the distance from a point to this cylinder.
         /// </summary>
         /// <param name="point">Point to compute with.</param>
         /// <returns>Number representing the distance.</returns>
         public double DistanceTo(Point3d point) => throw new NotImplementedException();
+
 
         /// <summary>
         ///     Compute the closes point of a point in this cylinder.
@@ -101,12 +86,14 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Point3d instance of the closest point in the cylinder.</returns>
         public Point3d ClosestPointTo(Point3d point) => throw new NotImplementedException();
 
+
         /// <inheritdoc />
         public Vector3d NormalAt(double u, double v)
         {
             this.CheckParameters(u, v);
             throw new NotImplementedException();
         }
+
 
         /// <inheritdoc />
         public Point3d PointAt(double u, double v)
@@ -121,6 +108,7 @@ namespace Paramdigma.Core.Geometry
             z = v;
             return this.Plane.PointAt(x, y, z);
         }
+
 
         private void CheckParameters(double u, double v)
         {

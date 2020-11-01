@@ -22,6 +22,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(new Point3d(.5, .5, .5), box.Center);
         }
 
+
         [Fact]
         public void CanCreate_FromPlaneAndDimensions()
         {

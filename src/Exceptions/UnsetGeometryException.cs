@@ -10,10 +10,14 @@ namespace Paramdigma.Core.Exceptions
         /// <inheritdoc />
         public UnsetGeometryException() { }
 
+
         /// <inheritdoc />
         public UnsetGeometryException(string message) : base(message) { }
 
+
         /// <inheritdoc />
-        public UnsetGeometryException(string message, Exception innerException) : base(message, innerException) { }
+        public UnsetGeometryException(string message, Exception innerException) : base(
+            message,
+            innerException) { }
     }
 }

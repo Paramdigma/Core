@@ -10,6 +10,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [Fact]
         public void CanCompute_FrameAtParameter() { }
 
+
         [Fact]
         public void CanCompute_NormalAtParameter()
         {
@@ -18,6 +19,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             var expected = Vector3d.UnitZ;
             Assert.Equal(expected, actual);
         }
+
 
         [Fact]
         public void ComputeClosestParam_ThenPointAtParam_GivesSamePoint()
@@ -30,6 +32,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(pt, sphere.PointAt(param));
         }
 
+
         [Fact]
         public void ComputeClosestPoint_GivesAccurateResult()
         {
@@ -38,6 +41,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(new Point3d(1, 0, 0), sphere.ClosestPointTo(pt));
         }
 
+
         [Fact]
         public void ComputeDistance_GivesAccurateResult()
         {
@@ -45,6 +49,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             var pt = new Point3d(4, 0, 0);
             Assert.Equal(3.0, sphere.DistanceTo(pt));
         }
+
 
         [Fact]
         public void Create_SphereWithEmptyConstructor_ReturnsXYPlaneUnitSphere()
@@ -56,6 +61,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(Interval.Unit, sphere.DomainV);
         }
 
+
         [Fact]
         public void Create_SphereWithPlaneAndRadius_ReturnsValidSphere()
         {
@@ -66,7 +72,9 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(Interval.Unit, sphere.DomainV);
         }
 
+
         [Fact]
-        public void Create_SphereWithZeroRadius_ThrowsException() => Assert.Throws<ArithmeticException>(() => new Sphere(Plane.WorldXY, 0));
+        public void Create_SphereWithZeroRadius_ThrowsException() =>
+            Assert.Throws<ArithmeticException>(() => new Sphere(Plane.WorldXY, 0));
     }
 }

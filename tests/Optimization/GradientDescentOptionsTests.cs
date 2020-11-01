@@ -19,6 +19,7 @@ namespace Paramdigma.Core.Tests.Optimization
             Assert.Equal(expected, actual);
         }
 
+
         [Fact]
         public void CanCreate_DefaultSmall()
         {
@@ -32,6 +33,7 @@ namespace Paramdigma.Core.Tests.Optimization
             );
             Assert.Equal(expected, actual);
         }
+
 
         [Fact]
         public void CanCreate_FromExisting()

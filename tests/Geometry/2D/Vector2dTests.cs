@@ -9,11 +9,12 @@ namespace Paramdigma.Core.Tests.Geometry
         public void Can_AddVector()
         {
             var pt = new Vector2d(0, 1);
-            var v = (Point2d)pt;
+            var v = ( Point2d ) pt;
             var pt2 = pt + v;
             var expected = new Vector2d(0, 2);
             Assert.True(pt2 == expected);
         }
+
 
         [Fact]
         public void CanBe_Added()
@@ -23,19 +24,20 @@ namespace Paramdigma.Core.Tests.Geometry
             const double c = 4.11;
             var ptA = new Vector2d(a, b);
             var ptB = new Vector2d(b, c);
-            var s = ptA - ptB;
             var ptResult = new Vector2d(a + b, b + c);
             Assert.True(ptA + ptB == ptResult);
         }
+
 
         [Fact]
         public void CanBe_ConvertedTo()
         {
             var pt = new Vector2d(0, 1);
-            var v = (Point2d)pt;
+            var v = ( Point2d ) pt;
             Vector2d pt2 = v;
             Assert.True(pt == pt2);
         }
+
 
         [Fact]
         public void CanBe_ConvertedToString()
@@ -45,6 +47,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var s = v.ToString();
             Assert.True(s == result);
         }
+
 
         [Fact]
         public void CanBe_Divided()
@@ -56,6 +59,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Vector2d(a / m, b / m);
             Assert.True(ptA / m == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Multiplied()
@@ -69,6 +73,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(m * ptA == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Negated()
         {
@@ -78,6 +83,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Vector2d(-a, -b);
             Assert.True(-ptA == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Substracted()
@@ -91,6 +97,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA - ptB == ptResult);
         }
 
+
         [Fact]
         public void CanCompute_DotProduct()
         {
@@ -98,6 +105,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var v2 = new Vector2d(3.211, -2.22);
             var dot = v.DotProduct(v2);
         }
+
 
         [Fact]
         public void CanCompute_PerpendicularVector()
@@ -108,6 +116,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(perp == expected);
         }
 
+
         [Fact]
         public void CanCompute_PerpProduct()
         {
@@ -115,6 +124,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var v2 = new Vector2d(3.211, -2.22);
             var dot = v.PerpProduct(v2);
         }
+
 
         [Fact]
         public void CanUnitize()
@@ -125,6 +135,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(v == expected);
         }
 
+
         [Fact]
         public void Create_FromPoint()
         {
@@ -133,6 +144,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(expected == copy);
         }
 
+
         [Fact]
         public void Create_Origin()
         {
@@ -140,6 +152,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var expected = new Vector2d(0, 0);
             Assert.True(empty == expected);
         }
+
 
         [Fact]
         public void EqualsAndHashCode_HaveConsistentResults()

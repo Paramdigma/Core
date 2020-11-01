@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Geometry
         private List<Line> segments;
         private bool segmentsNeedUpdate;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Polyline" /> class.
         /// </summary>
@@ -25,6 +26,7 @@ namespace Paramdigma.Core.Geometry
             this.segments = new List<Line>();
             this.segmentsNeedUpdate = false;
         }
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Polyline" /> class from a list of points.
@@ -36,6 +38,7 @@ namespace Paramdigma.Core.Geometry
             this.segments = new List<Line>();
             this.RebuildSegments();
         }
+
 
         /// <summary>
         ///     Gets the segment lines of the polyline.
@@ -60,10 +63,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     Gets the list of knots for this polyline.
         /// </summary>
-        public List<Point3d> Knots
-        {
-            get;
-        }
+        public List<Point3d> Knots { get; }
 
         /// <summary>
         ///     Gets a value indicating whether the polyline is closed (first point == last point).
@@ -75,11 +75,16 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         public bool IsUnset => this.Knots.Count == 0;
 
-        /// <inheritdoc />
-        public IEnumerator<Point3d> GetEnumerator() => ((IEnumerable<Point3d>)this.Knots).GetEnumerator();
 
         /// <inheritdoc />
-        IEnumerator IEnumerable.GetEnumerator() => ((IEnumerable<Point3d>)this.Knots).GetEnumerator();
+        public IEnumerator<Point3d> GetEnumerator() =>
+            (( IEnumerable<Point3d> ) this.Knots).GetEnumerator();
+
+
+        /// <inheritdoc />
+        IEnumerator IEnumerable.GetEnumerator() =>
+            (( IEnumerable<Point3d> ) this.Knots).GetEnumerator();
+
 
         /// <summary>
         ///     Add a new knot vertex at the end of the polyline.
@@ -91,6 +96,7 @@ namespace Paramdigma.Core.Geometry
             this.segmentsNeedUpdate = true;
         }
 
+
         /// <summary>
         ///     Add a new knot vertex at the specified index.
         /// </summary>
@@ -101,6 +107,7 @@ namespace Paramdigma.Core.Geometry
             this.Knots.Insert(index, knot); // Add knot to list
             this.segmentsNeedUpdate = true;
         }
+
 
         /// <summary>
         ///     Delete a specific knot if it exists in the polyline.
@@ -115,6 +122,7 @@ namespace Paramdigma.Core.Geometry
             this.segmentsNeedUpdate = true;
         }
 
+
         /// <summary>
         ///     Delete a knot at a specific index.
         /// </summary>
@@ -128,6 +136,7 @@ namespace Paramdigma.Core.Geometry
             this.Knots.RemoveAt(index);
             this.segmentsNeedUpdate = true;
         }
+
 
         private void RebuildSegments()
         {
@@ -144,30 +153,45 @@ namespace Paramdigma.Core.Geometry
             }
         }
 
-        /// <inheritdoc />
-        public override Vector3d BinormalAt(double t) => (from segment in this.segments
-                                                          where segment.Domain.Contains(t)
-                                                          select segment.BinormalAt(t)).FirstOrDefault();
 
         /// <inheritdoc />
-        public override Vector3d NormalAt(double t) => (from segment in this.segments
-                                                        where segment.Domain.Contains(t)
-                                                        select segment.NormalAt(t)).FirstOrDefault();
+        public override Vector3d BinormalAt(double t) => (
+                                                             from segment in this.segments
+                                                             where segment.Domain.Contains(t)
+                                                             select segment.BinormalAt(t))
+           .FirstOrDefault();
+
 
         /// <inheritdoc />
-        public override Point3d PointAt(double t) => (from segment in this.segments
-                                                      where segment.Domain.Contains(t)
-                                                      select segment.PointAt(t)).FirstOrDefault();
+        public override Vector3d NormalAt(double t) => (
+                                                           from segment in this.segments
+                                                           where segment.Domain.Contains(t)
+                                                           select segment.NormalAt(t))
+           .FirstOrDefault();
+
 
         /// <inheritdoc />
-        public override Vector3d TangentAt(double t) => (from segment in this.segments
+        public override Point3d PointAt(double t) => (
+                                                         from segment in this.segments
                                                          where segment.Domain.Contains(t)
-                                                         select segment.TangentAt(t)).FirstOrDefault();
+                                                         select segment.PointAt(t))
+           .FirstOrDefault();
+
 
         /// <inheritdoc />
-        public override Plane FrameAt(double t) => (from segment in this.segments
-                                                    where segment.Domain.Contains(t)
-                                                    select segment.FrameAt(t)).FirstOrDefault();
+        public override Vector3d TangentAt(double t) => (
+                                                            from segment in this.segments
+                                                            where segment.Domain.Contains(t)
+                                                            select segment.TangentAt(t))
+           .FirstOrDefault();
+
+
+        /// <inheritdoc />
+        public override Plane FrameAt(double t) => (
+                                                       from segment in this.segments
+                                                       where segment.Domain.Contains(t)
+                                                       select segment.FrameAt(t)).FirstOrDefault();
+
 
         /// <inheritdoc />
         protected override double ComputeLength()
@@ -177,8 +201,10 @@ namespace Paramdigma.Core.Geometry
             return length;
         }
 
+
         /// <summary>
-        ///     Checks the validity of the polyline. Currently only checks if some segments are collapsed (length == 0).
+        ///     Checks the validity of the polyline. Currently only checks if some segments are collapsed
+        ///     (length == 0).
         /// </summary>
         /// <returns>True if polyline has no collapsed segments.</returns>
         public override bool CheckValidity()

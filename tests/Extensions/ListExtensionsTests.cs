@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Tests.Extensions
             }
         }
 
+
         [Fact]
         public void CanCreate_RepeatedDefault()
         {

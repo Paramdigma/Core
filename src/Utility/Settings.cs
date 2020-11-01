@@ -1,3 +1,4 @@
+using System;
 using System.IO;
 using System.Reflection;
 using Newtonsoft.Json;
@@ -14,11 +15,7 @@ namespace Paramdigma.Core
         /// <summary>
         ///     Gets the minimum value allowed when using this library.
         /// </summary>
-        public static double Tolerance
-        {
-            get;
-            private set;
-        } = 0.0000001;
+        public static double Tolerance { get; private set; } = 0.0000001;
 
         /// <summary>
         ///     Gets how many decimals are allowed when using the library.
@@ -32,16 +29,19 @@ namespace Paramdigma.Core
             }
         }
 
+
         /// <summary>
         ///     Gets the default tessellation level when converting nurbs to meshes.
         /// </summary>
         /// <returns>Integer representing the default tessellation level.</returns>
         public static int GetDefaultTesselationLevel() => tesselationLevel;
 
+
         /// <summary>
         ///     Sets the default tessellation level when converting nurbs to meshes.
         /// </summary>
         private static void SetDefaultTesselationLevel(int value) => tesselationLevel = value;
+
 
         /// <summary>
         ///     Modifies the tolerance and computes the maxDecimals value accordingly.
@@ -49,29 +49,33 @@ namespace Paramdigma.Core
         /// <param name="tolerance">Desired tolerance.</param>
         public static void SetTolerance(double tolerance) => Tolerance = tolerance;
 
+
         /// <summary>
         ///     Reset the Settings to it's default values.
         /// </summary>
         public static void Reset()
         {
             var assembly = typeof(Settings).GetTypeInfo().Assembly;
-            using (var stream = assembly.GetManifestResourceStream("Paramdigma.Core.Data.Settings.json"))
-            using (var reader = new StreamReader(stream))
+            using (var stream =
+                assembly.GetManifestResourceStream("Paramdigma.Core.Data.Settings.json"))
             {
-                var result = reader.ReadToEnd();
-                var json = JsonConvert.DeserializeObject<EmbeddedSettings>(result);
-                SetTolerance(json.Tolerance);
-                SetDefaultTesselationLevel(json.DefaultTesselation);
+                using (var reader = new StreamReader(stream ?? throw new InvalidOperationException("Could not get settings.")))
+                {
+                    var result = reader.ReadToEnd();
+                    var json = JsonConvert.DeserializeObject<EmbeddedSettings>(result);
+                    SetTolerance(json.Tolerance);
+                    SetDefaultTesselationLevel(json.DefaultTesselation);
+                }
             }
         }
-
-        /// <summary>
-        ///     This struct holds the settings from the embedded json file. It is only used to reset.
-        /// </summary>
-        private struct EmbeddedSettings
-        {
-            public double Tolerance;
-            public int DefaultTesselation;
-        }
+    }
+    
+    /// <summary>
+    ///     This struct holds the settings from the embedded json file. It is only used to reset.
+    /// </summary>
+    internal struct EmbeddedSettings
+    {
+        public double Tolerance;
+        public int DefaultTesselation;
     }
 }

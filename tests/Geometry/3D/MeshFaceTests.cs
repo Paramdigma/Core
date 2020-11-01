@@ -23,43 +23,37 @@ namespace Paramdigma.Core.Tests.Geometry
             }
         }
 
+
         [Fact]
         public void CanCompute_FaceArea() =>
-            FlatSquare.Faces.ForEach(face =>
-            {
-                Assert.Equal(0.5, face.Area);
-            });
+            FlatSquare.Faces.ForEach(face => { Assert.Equal(0.5, face.Area); });
+
 
         [Fact]
         public void CanCompute_FaceNormal() =>
-            FlatSquare.Faces.ForEach(face =>
-            {
-                Assert.Equal(Vector3d.UnitZ, face.Normal);
-            });
+            FlatSquare.Faces.ForEach(face => { Assert.Equal(Vector3d.UnitZ, face.Normal); });
+
 
         [Fact]
         public void CanCompute_FaceTopology() =>
-            FlatSquare.Faces.ForEach(face =>
-            {
-                Assert.Single(face.AdjacentFaces());
-                Assert.Equal(3, face.AdjacentEdges().Count);
-                Assert.Equal(3, face.AdjacentCorners().Count);
-                Assert.Equal(3, face.AdjacentHalfEdges().Count);
-                Assert.Equal(3, face.AdjacentVertices().Count);
-            });
+            FlatSquare.Faces.ForEach(
+                face =>
+                {
+                    Assert.Single(face.AdjacentFaces());
+                    Assert.Equal(3, face.AdjacentEdges().Count);
+                    Assert.Equal(3, face.AdjacentCorners().Count);
+                    Assert.Equal(3, face.AdjacentHalfEdges().Count);
+                    Assert.Equal(3, face.AdjacentVertices().Count);
+                });
+
 
         [Fact]
         public void CanConvert_ToString() =>
-            FlatSquare.Faces.ForEach(face =>
-            {
-                Assert.NotNull(face.ToString());
-            });
+            FlatSquare.Faces.ForEach(face => { Assert.NotNull(face.ToString()); });
+
 
         [Fact]
         public void CanGet_Index() =>
-            FlatSquare.Faces.ForEach(face =>
-            {
-                Assert.True(face.Index >= 0);
-            });
+            FlatSquare.Faces.ForEach(face => { Assert.True(face.Index >= 0); });
     }
 }

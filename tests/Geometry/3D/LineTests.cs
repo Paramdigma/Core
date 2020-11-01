@@ -8,8 +8,10 @@ namespace Paramdigma.Core.Tests.Geometry
     {
         internal Line TestLine = new Line(Point3d.WorldOrigin, new Point3d(1, 1, 1));
 
+
         [Fact]
         public override void CanCheck_Validity() => Assert.True(this.TestLine.IsValid);
+
 
         [Fact]
         public override void CanGet_BiNormal()
@@ -18,8 +20,10 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(biNorm != null);
         }
 
+
         [Fact]
-        public override void CanGet_Length() => Assert.True(this.TestLine.Length == Math.Sqrt(3));
+        public override void CanGet_Length() => Assert.True(Math.Abs(this.TestLine.Length - Math.Sqrt(3)) < Settings.Tolerance);
+
 
         [Fact]
         public override void CanGet_Normal()
@@ -31,6 +35,7 @@ namespace Paramdigma.Core.Tests.Geometry
             line.NormalAt(0.5);
         }
 
+
         [Fact]
         public override void CanGet_PerpFrame()
         {
@@ -38,12 +43,14 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(biNorm != null);
         }
 
+
         [Fact]
         public override void CanGet_PointAt()
         {
             var pt = this.TestLine.PointAt(.5);
             Assert.True(pt == new Point3d(0.5, 0.5, 0.5));
         }
+
 
         [Fact]
         public override void CanGet_Tangent()

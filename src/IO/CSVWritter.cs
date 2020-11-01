@@ -5,5 +5,5 @@ namespace Paramdigma.Core.IO
     /// <summary>
     ///     CSV File Writter.
     /// </summary>
-    public static class CSVWritter { }
+    public static class CsvWritter { }
 }

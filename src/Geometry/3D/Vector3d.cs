@@ -12,12 +12,15 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         public Vector3d() { }
 
+
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Vector3d" /> class with the same values as the provided vector.
+        ///     Initializes a new instance of the <see cref="Vector3d" /> class with the same values as the
+        ///     provided vector.
         /// </summary>
         /// <param name="vector">Vector to copy values from.</param>
         public Vector3d(Vector3d vector)
             : base(vector) { }
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Vector3d" /> class from a v.
@@ -26,6 +29,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>New vector with the same coordinate values as the given v.</returns>
         public Vector3d(Point3d point)
             : base(point) { }
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Vector3d" /> class given it's 3 coordinates.
@@ -36,6 +40,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Vector entity with the specified coordinate values.</returns>
         public Vector3d(double xCoord, double yCoord, double zCoord)
             : base(xCoord, yCoord, zCoord) { }
+
 
         /// <summary>
         ///     Gets the Euclidean length squared of this vector.
@@ -67,6 +72,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Vector {0,1,0}.</returns>
         public static Vector3d UnitZ => new Vector3d(0, 0, 1);
 
+
         /// <summary>
         ///     Divides this vector by it's euclidean length.
         /// </summary>
@@ -77,6 +83,7 @@ namespace Paramdigma.Core.Geometry
             this.Y /= length;
             this.Z /= length;
         }
+
 
         /// <summary>
         ///     Returns a normalized copy of this vector.
@@ -91,12 +98,14 @@ namespace Paramdigma.Core.Geometry
             return new Vector3d(x, y, z);
         }
 
+
         /// <summary>
         ///     Computes the dot product of this vector and v.
         /// </summary>
         /// <param name="v">Vector.</param>
         /// <returns>Dot product.</returns>
         public double Dot(Vector3d v) => DotProduct(this, v);
+
 
         /// <summary>
         ///     Returns the cross product of this vector and v.
@@ -105,6 +114,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Cross product vector.</returns>
         public Vector3d Cross(Vector3d v) => CrossProduct(this, v);
 
+
         /// <summary>
         ///     Gets the scalar product (dot product) of two given vectors
         ///     Dot product = u1*v1 + u2*v2 + u3*v3.
@@ -112,7 +122,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u">First vector.</param>
         /// <param name="v">Second vector.</param>
         /// <returns>Numerical value of the dot product.</returns>
-        public static double DotProduct(Vector3d u, Vector3d v) => (u.X * v.X) + (u.Y * v.Y) + (u.Z * v.Z);
+        public static double DotProduct(Vector3d u, Vector3d v) =>
+            u.X * v.X + u.Y * v.Y + u.Z * v.Z;
+
 
         /// <summary>
         ///     Computes the vector product (cross product) of two given vectors
@@ -123,12 +135,13 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Vector result of the cross product.</returns>
         public static Vector3d CrossProduct(Vector3d u, Vector3d v)
         {
-            var x = (u.Y * v.Z) - (u.Z * v.Y);
-            var y = (u.Z * v.X) - (u.X * v.Z);
-            var z = (u.X * v.Y) - (u.Y * v.X);
+            var x = u.Y * v.Z - u.Z * v.Y;
+            var y = u.Z * v.X - u.X * v.Z;
+            var z = u.X * v.Y - u.Y * v.X;
 
             return new Vector3d(x, y, z);
         }
+
 
         /// <summary>
         ///     Computes the angle in Radians between two given vectors
@@ -137,7 +150,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u">First vector.</param>
         /// <param name="v">Second vector.</param>
         /// <returns>Angle formed between u and v.</returns>
-        public static double Angle(Vector3d u, Vector3d v) => Math.Acos(DotProduct(u, v) / (u.Length * v.Length));
+        public static double Angle(Vector3d u, Vector3d v) =>
+            Math.Acos(DotProduct(u, v) / (u.Length * v.Length));
+
 
         /// <summary>
         ///     Adds one vector to another.
@@ -145,7 +160,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">First vector to add.</param>
         /// <param name="v2">Second vector to add.</param>
         /// <returns>New vector entity with the result of the addition.</returns>
-        public static Vector3d operator +(Vector3d v, Vector3d v2) => new Vector3d(v.X + v2.X, v.Y + v2.Y, v.Z + v2.Z);
+        public static Vector3d operator +(Vector3d v, Vector3d v2) =>
+            new Vector3d(v.X + v2.X, v.Y + v2.Y, v.Z + v2.Z);
+
 
         /// <summary>
         ///     Substracts one vector from another.
@@ -153,7 +170,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">Vector to substract from.</param>
         /// <param name="v2">Vector to be substracted.</param>
         /// <returns>New vector entity with the result of the substraction.</returns>
-        public static Vector3d operator -(Vector3d v, Vector3d v2) => new Vector3d(v.X - v2.X, v.Y - v2.Y, v.Z - v2.Z);
+        public static Vector3d operator -(Vector3d v, Vector3d v2) =>
+            new Vector3d(v.X - v2.X, v.Y - v2.Y, v.Z - v2.Z);
+
 
         /// <summary>
         ///     Multiply one vector by a number.
@@ -161,7 +180,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">Vector to multiply.</param>
         /// <param name="scalar">Number to multiply with.</param>
         /// <returns>New vector entity with the result of the multiplication.</returns>
-        public static Vector3d operator *(Vector3d v, double scalar) => new Vector3d(v.X * scalar, v.Y * scalar, v.Z * scalar);
+        public static Vector3d operator *(Vector3d v, double scalar) =>
+            new Vector3d(v.X * scalar, v.Y * scalar, v.Z * scalar);
+
 
         /// <summary>
         ///     Multiply one vector by a number.
@@ -169,7 +190,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="scalar">Number to multiply with.</param>
         /// <param name="v">Vector to multiply.</param>
         /// <returns>New vector entity with the result of the multiplication.</returns>
-        public static Vector3d operator *(double scalar, Vector3d v) => new Vector3d(v.X * scalar, v.Y * scalar, v.Z * scalar);
+        public static Vector3d operator *(double scalar, Vector3d v) =>
+            new Vector3d(v.X * scalar, v.Y * scalar, v.Z * scalar);
+
 
         /// <summary>
         ///     Negate a vector.
@@ -182,13 +205,16 @@ namespace Paramdigma.Core.Geometry
                 v.Y != 0 ? -v.Y : 0,
                 v.Z != 0 ? -v.Z : 0);
 
+
         /// <summary>
         ///     Divide a vector by a number.
         /// </summary>
         /// <param name="v">Vector to be divided.</param>
         /// <param name="scalar">Number to be divided by.</param>
         /// <returns>New vector entity with the result of the division.</returns>
-        public static Vector3d operator /(Vector3d v, double scalar) => new Vector3d(v.X / scalar, v.Y / scalar, v.Z / scalar);
+        public static Vector3d operator /(Vector3d v, double scalar) =>
+            new Vector3d(v.X / scalar, v.Y / scalar, v.Z / scalar);
+
 
         /// <summary>
         ///     Checks if two vectors are equal.
@@ -196,7 +222,8 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">First vector.</param>
         /// <param name="w">Second vector.</param>
         /// <returns>Result of the comparison between v and w.</returns>
-        public static bool operator ==(Vector3d v, Vector3d w) => v.Equals(w);
+        public static bool operator ==(Vector3d v, Vector3d w) => v?.Equals(w) ?? false;
+
 
         /// <summary>
         ///     Checks if two vectors are not equal.
@@ -204,16 +231,19 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">First vector.</param>
         /// <param name="w">Second vector.</param>
         /// <returns>Result of the comparison between v and w.</returns>
-        public static bool operator !=(Vector3d v, Vector3d w) => !v.Equals(w);
+        public static bool operator !=(Vector3d v, Vector3d w) => !v?.Equals(w) ?? true;
+
 
         /// <inheritdoc />
         public override bool Equals(object obj) => base.Equals(obj);
+
 
         /// <summary>
         ///     Converts a vector into a string.
         /// </summary>
         /// <returns>Returns a string representation of this vector.</returns>
         public override string ToString() => "Vector3d" + base.ToString();
+
 
         /// <inheritdoc />
         public override int GetHashCode() => base.GetHashCode();

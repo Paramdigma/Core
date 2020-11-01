@@ -22,6 +22,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             }
         }
 
+
         [Fact]
         public void CanCheck_QuadMesh()
         {
@@ -31,6 +32,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.False(mesh.IsTriangularMesh());
         }
 
+
         [Fact]
         public void CanCompute_Boundary()
         {
@@ -39,6 +41,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Single(mesh.Boundaries);
         }
 
+
         [Fact]
         public void CanCompute_EulerCharacteristic()
         {
@@ -46,12 +49,14 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(1, mesh.EulerCharacteristic);
         }
 
+
         [Fact]
         public void CanConvert_ToString()
         {
             Assert.IsType<string>(this.FlatSquare.ToString());
             Assert.IsType<string>(this.FlatSquare.GetMeshInfo());
         }
+
 
         [Fact]
         public void CanCreate_Mesh()
@@ -62,12 +67,14 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.NotEmpty(mesh.Faces);
         }
 
+
         [Fact]
         public void CanDetect_IsolatedFaces()
         {
             var mesh = this.FlatSquare;
             Assert.False(mesh.HasIsolatedFaces());
         }
+
 
         [Fact]
         public void CanDetect_IsolatedVertices()
