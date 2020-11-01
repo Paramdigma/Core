@@ -5,8 +5,8 @@ using Paramdigma.Core.HalfEdgeMesh;
 
 namespace Paramdigma.Core.IO
 {
-    /// <summary>Writter class.</summary>
-    public static class OFFWritter
+    /// <summary>OFF format writer class.</summary>
+    public static class OffWriter
     {
         /// <summary>
         ///     Write a Half-Edge mesh to a .OFF file.
@@ -14,7 +14,7 @@ namespace Paramdigma.Core.IO
         /// <param name="mesh">Half-edge mesh to export.</param>
         /// <param name="filePath">Path to save the file to.</param>
         /// <returns></returns>
-        public static OFFResult WriteMeshToFile(Mesh mesh, string filePath)
+        public static OffResult WriteMeshToFile(Mesh mesh, string filePath)
         {
             var offLines = new string[mesh.Vertices.Count + mesh.Faces.Count + 2];
 
@@ -47,7 +47,7 @@ namespace Paramdigma.Core.IO
             }
 
             File.WriteAllLines(filePath, offLines);
-            return OFFResult.OK;
+            return OffResult.Ok;
         }
     }
 }

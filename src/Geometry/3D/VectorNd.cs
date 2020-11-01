@@ -84,6 +84,9 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Comparison result.</returns>
         public bool Equals(VectorNd vector)
         {
+            if (vector == null)
+                return false;
+
             var max = Math.Max(this.Dimension, vector.Dimension);
             for (var index = 0; index < max; index++)
             {

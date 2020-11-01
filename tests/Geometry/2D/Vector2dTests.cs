@@ -24,7 +24,6 @@ namespace Paramdigma.Core.Tests.Geometry
             const double c = 4.11;
             var ptA = new Vector2d(a, b);
             var ptB = new Vector2d(b, c);
-            var s = ptA - ptB;
             var ptResult = new Vector2d(a + b, b + c);
             Assert.True(ptA + ptB == ptResult);
         }

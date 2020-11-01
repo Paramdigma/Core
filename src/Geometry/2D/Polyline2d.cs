@@ -153,13 +153,10 @@ namespace Paramdigma.Core.Geometry
             {
                 if (this.vertices[i].Y > ymin)
                     continue;
-                if (this.vertices[i].Y == ymin)
-                    // just as low
-                {
-                    if (this.vertices[i].X < xmin)
-                        // and to left
-                        continue;
-                }
+                
+                if (Math.Abs(this.vertices[i].Y - ymin) < Settings.Tolerance
+                 && this.vertices[i].X < xmin)
+                    continue;
 
                 rmin = i; // a new rightmost lowest vertex
                 xmin = this.vertices[i].X;
@@ -192,7 +189,6 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         public void Reparametrize()
         {
-            var maxParameter = this.domain.End;
             var ratio = 1 / this.domain.End;
 
             double currentParam = 0;

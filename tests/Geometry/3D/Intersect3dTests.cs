@@ -12,11 +12,11 @@ namespace Paramdigma.Core.Tests.Geometry
             var lineB = new Line(new Point3d(1, 0, 0), new Point3d(0, 1, 1));
 
             var status = Intersect3D.LineLine(lineA, lineB, out var result);
-            Assert.Equal(Intersect3D.ISLineLine.Point, status);
+            Assert.Equal(Intersect3D.LineLineIntersectionStatus.Point, status);
             Assert.Equal(new Point3d(0.5, 0.5, 0.5), result.PointA);
             Assert.Equal(new Point3d(0.5, 0.5, 0.5), result.PointB);
-            Assert.Equal(0.5, result.TA);
-            Assert.Equal(0.5, result.TB);
+            Assert.Equal(0.5, result.ParamA);
+            Assert.Equal(0.5, result.ParamB);
         }
 
 
@@ -30,7 +30,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var plane = Plane.WorldXY;
 
             var status = Intersect3D.LinePlane(lineA, plane, out var actual);
-            Assert.Equal(Intersect3D.ISLinePlane.Point, status);
+            Assert.Equal(Intersect3D.LinePlaneIntersectionStatus.Point, status);
             Assert.Equal(expected, actual);
         }
 
@@ -44,7 +44,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var plane = Plane.WorldXY;
 
             var status = Intersect3D.LinePlane(lineA, plane, out var actual);
-            Assert.Equal(Intersect3D.ISLinePlane.NoIntersection, status);
+            Assert.Equal(Intersect3D.LinePlaneIntersectionStatus.NoIntersection, status);
             Assert.Null(actual);
         }
 
@@ -58,7 +58,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var plane = Plane.WorldXY;
 
             var status = Intersect3D.LinePlane(lineA, plane, out var actual);
-            Assert.Equal(Intersect3D.ISLinePlane.NoIntersection, status);
+            Assert.Equal(Intersect3D.LinePlaneIntersectionStatus.NoIntersection, status);
             Assert.Null(actual);
         }
 
@@ -72,7 +72,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var plane = Plane.WorldXY;
 
             var status = Intersect3D.LinePlane(lineA, plane, out var actual);
-            Assert.Equal(Intersect3D.ISLinePlane.OnPlane, status);
+            Assert.Equal(Intersect3D.LinePlaneIntersectionStatus.OnPlane, status);
             Assert.Null(actual);
         }
     }

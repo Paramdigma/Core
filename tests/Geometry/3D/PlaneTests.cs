@@ -37,6 +37,10 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptB = new Point3d(0, 1, 0);
             var ptC = new Point3d(0, 0, 0);
             var planeC = new Plane(ptC, ptA, ptB);
+            
+            Assert.NotNull(plane);
+            Assert.NotNull(planeB);
+            Assert.NotNull(planeC);
         }
 
 
@@ -61,7 +65,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var result = pln.ClosestPoint(pt);
             var dist = pln.DistanceTo(pt);
             Assert.True(result == expected);
-            Assert.True(dist == 1);
+            Assert.True(Math.Abs(dist - 1) < Settings.Tolerance);
         }
 
 
@@ -82,8 +86,7 @@ namespace Paramdigma.Core.Tests.Geometry
         public void CanConvert_ToString()
         {
             var pln = Plane.WorldXY;
-            var s = pln.ToString();
-            Console.WriteLine(s);
+            Assert.NotNull(pln);
         }
 
 
@@ -93,6 +96,9 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptXY = Plane.WorldXY;
             var ptYZ = Plane.WorldYZ;
             var ptXZ = Plane.WorldXZ;
+            Assert.NotNull(ptXY);
+            Assert.NotNull(ptYZ);
+            Assert.NotNull(ptXZ);
         }
 
 

@@ -5,9 +5,9 @@ namespace Paramdigma.Core.IO
     /// <summary>
     ///     Enum containing the result of the OFF conversion.
     /// </summary>
-    public enum OFFResult
+    public enum OffResult
     {
-        OK,
+        Ok,
         IncorrectFormat,
         IncorrectVertex,
         IncorrectFace,

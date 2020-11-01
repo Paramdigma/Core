@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
 
 namespace Paramdigma.Core.HalfEdgeMesh
@@ -35,7 +36,9 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.CreateVertices(vertices);
 
             // - Iterate through faces, creating face, edge, and halfedge objects (and connecting where possible)
-            this.CreateFaces(faceIndexes);
+            var result = this.CreateFaces(faceIndexes);
+            if (!result)
+                throw new Exception("Couldn't create faces for this mesh");
         }
 
 
@@ -375,7 +378,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
 
         // Takes a List containing another List per face with the vertex indexes belonging to that face
-        private bool CreateFaces(List<List<int>> faceIndexes)
+        private bool CreateFaces(IEnumerable<List<int>> faceIndexes)
         {
             var edgeCount = new Dictionary<string, int>();
             var existingHalfEdges = new Dictionary<string, MeshHalfEdge>();
@@ -467,29 +470,29 @@ namespace Paramdigma.Core.HalfEdgeMesh
                     this.Boundaries.Add(f);
 
                     var boundaryCycle = new List<MeshHalfEdge>();
-                    var hE = h;
+                    var halfEdge = h;
                     do
                     {
-                        var bH = new MeshHalfEdge();
-                        this.HalfEdges.Add(bH);
-                        boundaryCycle.Add(bH);
+                        var boundaryHalfEdge = new MeshHalfEdge();
+                        this.HalfEdges.Add(boundaryHalfEdge);
+                        boundaryCycle.Add(boundaryHalfEdge);
 
-                        var nextHE = hE.Next;
-                        while (hasTwinHalfEdge[nextHE])
-                            nextHE = nextHE.Twin.Next;
+                        var nextHalfEdge = halfEdge.Next;
+                        while (hasTwinHalfEdge[nextHalfEdge])
+                            nextHalfEdge = nextHalfEdge.Twin.Next;
 
-                        bH.Vertex = nextHE.Vertex;
-                        bH.Edge = hE.Edge;
-                        bH.OnBoundary = true;
+                        boundaryHalfEdge.Vertex = nextHalfEdge.Vertex;
+                        boundaryHalfEdge.Edge = halfEdge.Edge;
+                        boundaryHalfEdge.OnBoundary = true;
+                        
+                        boundaryHalfEdge.Face = f;
+                        f.HalfEdge = boundaryHalfEdge;
+                        
+                        boundaryHalfEdge.Twin = halfEdge;
+                        halfEdge.Twin = boundaryHalfEdge;
 
-                        bH.Face = f;
-                        f.HalfEdge = bH;
-
-                        bH.Twin = hE;
-                        hE.Twin = bH;
-
-                        hE = nextHE;
-                    } while (hE != h);
+                        halfEdge = nextHalfEdge;
+                    } while (halfEdge != h);
 
                     var n = boundaryCycle.Count;
                     for (var j = 0; j < n; j++)
@@ -501,12 +504,12 @@ namespace Paramdigma.Core.HalfEdgeMesh
                     }
                 }
 
-                if (!h.OnBoundary)
-                {
-                    var corner = new MeshCorner {HalfEdge = h};
-                    h.Corner = corner;
-                    this.Corners.Add(corner);
-                }
+                if (h.OnBoundary)
+                    continue;
+                
+                var corner = new MeshCorner {HalfEdge = h};
+                h.Corner = corner;
+                this.Corners.Add(corner);
             }
 
             // Check mesh for common errors
@@ -549,10 +552,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
         /// </summary>
         private enum IsMeshResult
         {
-            Triangular,
-            Quad,
-            Ngon,
-            Error
+            Triangular, Quad, Ngon, Error
         }
 
         private struct FaceData

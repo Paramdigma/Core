@@ -114,7 +114,7 @@ namespace Paramdigma.Core.Optimization
                 this.Clusters = newClusters;
                 var iterArgs = new IterationCompletedEventArgs
                 {
-                    iteration = iteration, Clusters = newClusters
+                    Iteration = iteration, Clusters = newClusters
                 };
                 this.OnIterationCompleted(iterArgs);
                 iteration++;
@@ -170,8 +170,14 @@ namespace Paramdigma.Core.Optimization
         /// </summary>
         public class IterationCompletedEventArgs : EventArgs
         {
-            public int iteration { get; set; }
-
+            /// <summary>
+            /// Iteration number.
+            /// </summary>
+            public int Iteration { get; set; }
+            
+            /// <summary>
+            /// Clusters for current iteration.
+            /// </summary>
             public List<KMeansCluster> Clusters { get; set; }
         }
     }

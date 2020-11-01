@@ -17,7 +17,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var point1 = new DelaunayPoint(0, maxY);
             var point2 = new DelaunayPoint(maxX, maxY);
             var point3 = new DelaunayPoint(maxX, 0);
-            var point4 = new DelaunayPoint(maxX / 2, maxY / 2);
+            var point4 = new DelaunayPoint(maxX / 2.0, maxY / 2.0);
 
             var triangle1 = new DelaunayTriangle(point0, point1, point2);
             var triangle2 = new DelaunayTriangle(point0, point2, point3);

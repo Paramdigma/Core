@@ -222,7 +222,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">First vector.</param>
         /// <param name="w">Second vector.</param>
         /// <returns>Result of the comparison between v and w.</returns>
-        public static bool operator ==(Vector3d v, Vector3d w) => v.Equals(w);
+        public static bool operator ==(Vector3d v, Vector3d w) => v?.Equals(w) ?? false;
 
 
         /// <summary>
@@ -231,7 +231,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">First vector.</param>
         /// <param name="w">Second vector.</param>
         /// <returns>Result of the comparison between v and w.</returns>
-        public static bool operator !=(Vector3d v, Vector3d w) => !v.Equals(w);
+        public static bool operator !=(Vector3d v, Vector3d w) => !v?.Equals(w) ?? true;
 
 
         /// <inheritdoc />

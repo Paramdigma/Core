@@ -8,7 +8,7 @@ namespace Paramdigma.Core.IO
     /// <summary>
     ///     Class containing the resulting mesh data extracted from an .OFF file.
     /// </summary>
-    public class OFFMeshData
+    public class OffMeshData
     {
         /// <summary>
         ///     Gets or sets the mesh vertices.

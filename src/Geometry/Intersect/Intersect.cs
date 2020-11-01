@@ -18,7 +18,7 @@ namespace Paramdigma.Core
         /// <param name="plane">The 3d plane to intersect.</param>
         /// <param name="intersectionPoint">The resulting intersection point, if it exists.</param>
         /// <returns>Intersection result.</returns>
-        public static ISLinePlane LinePlane(Line line, Plane plane, out Point3d intersectionPoint)
+        public static LinePlaneIntersectionStatus LinePlane(Line line, Plane plane, out Point3d intersectionPoint)
         {
             var u = line.EndPoint - line.StartPoint;
             var w = line.StartPoint - plane.Origin;
@@ -33,11 +33,11 @@ namespace Paramdigma.Core
                 {
                     // Segment lies in plane
                     intersectionPoint = null;
-                    return ISLinePlane.OnPlane;
+                    return LinePlaneIntersectionStatus.OnPlane;
                 }
 
                 intersectionPoint = null;
-                return ISLinePlane.NoIntersection;
+                return LinePlaneIntersectionStatus.NoIntersection;
             }
 
             // They are not parallel
@@ -46,11 +46,11 @@ namespace Paramdigma.Core
             if (sI < 0 || sI > 1)
             {
                 intersectionPoint = null;
-                return ISLinePlane.NoIntersection;
+                return LinePlaneIntersectionStatus.NoIntersection;
             }
 
             intersectionPoint = line.StartPoint + u * sI; // Compute segment intersection point
-            return ISLinePlane.Point;
+            return LinePlaneIntersectionStatus.Point;
         }
 
 
@@ -62,7 +62,7 @@ namespace Paramdigma.Core
         /// <param name="result">The resulting intersection point.</param>
         /// <param name="halfEdge">The half-edge on where the intersection lies.</param>
         /// <returns>Intersection result.</returns>
-        public static ISRayFacePerimeter RayFacePerimeter(
+        public static RayFacePerimeterIntersectionStatus RayFacePerimeter(
             Ray ray,
             MeshFace face,
             out Point3d result,
@@ -78,53 +78,53 @@ namespace Paramdigma.Core
             var temp = new Point3d();
 
             var line = new Line(vertices[0], vertices[1]);
-            if (LinePlane(line, perpPlane, out temp) != ISLinePlane.Point)
+            if (LinePlane(line, perpPlane, out temp) != LinePlaneIntersectionStatus.Point)
             {
                 result = null;
                 halfEdge = null;
-                return ISRayFacePerimeter.Point;
+                return RayFacePerimeterIntersectionStatus.Point;
             } // No intersection found
 
             if (temp != ray.Origin && temp != null)
             {
                 result = temp;
                 halfEdge = null;
-                return ISRayFacePerimeter.Point;
+                return RayFacePerimeterIntersectionStatus.Point;
             } // Intersection found
 
             line = new Line(vertices[1], vertices[2]);
-            if (LinePlane(line, perpPlane, out temp) != ISLinePlane.Point)
+            if (LinePlane(line, perpPlane, out temp) != LinePlaneIntersectionStatus.Point)
             {
                 result = null;
                 halfEdge = null;
-                return ISRayFacePerimeter.NoIntersection;
+                return RayFacePerimeterIntersectionStatus.NoIntersection;
             }
 
             if (temp != ray.Origin && temp != null)
             {
                 result = temp;
                 halfEdge = null;
-                return ISRayFacePerimeter.Point;
+                return RayFacePerimeterIntersectionStatus.Point;
             }
 
             line = new Line(vertices[2], vertices[0]);
-            if (LinePlane(line, perpPlane, out temp) != ISLinePlane.Point)
+            if (LinePlane(line, perpPlane, out temp) != LinePlaneIntersectionStatus.Point)
             {
                 result = null;
                 halfEdge = null;
-                return ISRayFacePerimeter.NoIntersection;
+                return RayFacePerimeterIntersectionStatus.NoIntersection;
             }
 
             if (temp != ray.Origin && temp != null)
             {
                 result = temp;
                 halfEdge = null;
-                return ISRayFacePerimeter.Point;
+                return RayFacePerimeterIntersectionStatus.Point;
             }
 
             result = null;
             halfEdge = null;
-            return ISRayFacePerimeter.Error;
+            return RayFacePerimeterIntersectionStatus.Error;
         }
 
 
@@ -135,7 +135,7 @@ namespace Paramdigma.Core
         /// <param name="lineB">Second line to intersect.</param>
         /// <param name="result">Struct containing the intersection result.</param>
         /// <returns>Returns an enum containing the intersection status.</returns>
-        public static ISLineLine LineLine(Line lineA, Line lineB, out IRLineLine result)
+        public static LineLineIntersectionStatus LineLine(Line lineA, Line lineB, out LineLineIntersectionResult result)
         {
             var u = lineA.EndPoint - lineA.StartPoint;
             var v = lineB.EndPoint - lineB.StartPoint;
@@ -220,16 +220,16 @@ namespace Paramdigma.Core
             var dP = w + (sc * u - tc * v); // =  S1(sc) - S2(tc)
             result = default;
             result.Distance = dP.Length; // return the closest distance
-            result.TA = sc;
-            result.TB = tc;
+            result.ParamA = sc;
+            result.ParamB = tc;
             result.PointA = lineA.PointAt(sc);
             result.PointB = lineB.PointAt(tc);
 
             if (result.Distance <= Settings.Tolerance)
-                return ISLineLine.Point;
+                return LineLineIntersectionStatus.Point;
             if (result.Distance > Settings.Tolerance)
-                return ISLineLine.NoIntersection;
-            return ISLineLine.Error;
+                return LineLineIntersectionStatus.NoIntersection;
+            return LineLineIntersectionStatus.Error;
         }
     }
 }

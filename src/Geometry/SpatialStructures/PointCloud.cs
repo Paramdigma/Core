@@ -9,60 +9,68 @@ namespace Paramdigma.Core.SpatialSearch
     /// </summary>
     public class PointCloud : IList<PointCloudMember>
     {
-        private List<PointCloudMember> points { get; }
+        /// <summary>
+        /// Constructs a new point-cloud from a list of point cloud members..
+        /// </summary>
+        /// <param name="points">List of point-cloud members.</param>
+        public PointCloud(List<PointCloudMember> points) => this.Points = points;
+
+
+        private List<PointCloudMember> Points { get; }
 
 
         /// <inheritdoc />
-        public IEnumerator<PointCloudMember> GetEnumerator() => this.points.GetEnumerator();
-
-        IEnumerator IEnumerable.GetEnumerator() => (( IEnumerable ) this.points).GetEnumerator();
+        public IEnumerator<PointCloudMember> GetEnumerator() => this.Points.GetEnumerator();
 
 
-        /// <inheritdoc />
-        public void Add(PointCloudMember item) => this.points.Add(item);
+        IEnumerator IEnumerable.GetEnumerator() => (( IEnumerable ) this.Points).GetEnumerator();
 
 
         /// <inheritdoc />
-        public void Clear() => this.points.Clear();
+        public void Add(PointCloudMember item) => this.Points.Add(item);
 
 
         /// <inheritdoc />
-        public bool Contains(PointCloudMember item) => this.points.Contains(item);
+        public void Clear() => this.Points.Clear();
+
+
+        /// <inheritdoc />
+        public bool Contains(PointCloudMember item) => this.Points.Contains(item);
 
 
         /// <inheritdoc />
         public void CopyTo(PointCloudMember[] array, int arrayIndex) =>
-            this.points.CopyTo(array, arrayIndex);
+            this.Points.CopyTo(array, arrayIndex);
 
 
         /// <inheritdoc />
-        public bool Remove(PointCloudMember item) => this.points.Remove(item);
+        public bool Remove(PointCloudMember item) => this.Points.Remove(item);
 
 
         /// <inheritdoc />
-        public int Count => this.points.Count;
+        public int Count => this.Points.Count;
 
         /// <inheritdoc />
-        public bool IsReadOnly => (( ICollection<PointCloudMember> ) this.points).IsReadOnly;
-
-
-        /// <inheritdoc />
-        public int IndexOf(PointCloudMember item) => this.points.IndexOf(item);
+        public bool IsReadOnly => (( ICollection<PointCloudMember> ) this.Points).IsReadOnly;
 
 
         /// <inheritdoc />
-        public void Insert(int index, PointCloudMember item) => this.points.Insert(index, item);
+        public int IndexOf(PointCloudMember item) => this.Points.IndexOf(item);
 
 
         /// <inheritdoc />
-        public void RemoveAt(int index) => this.points.RemoveAt(index);
+        public void Insert(int index, PointCloudMember item) => this.Points.Insert(index, item);
+
+
+        /// <inheritdoc />
+        public void RemoveAt(int index) => this.Points.RemoveAt(index);
 
 
         /// <inheritdoc />
         public PointCloudMember this[int index]
         {
-            get => this.points[index];
-            set => this.points[index] = value;
+            get => this.Points[index];
+            set => this.Points[index] = value;
         }
     }
 }

@@ -24,7 +24,6 @@ namespace Paramdigma.Core.Tests.Geometry
             const double c = 4.11;
             var ptA = new Point2d(a, b);
             var ptB = new Point2d(b, c);
-            var s = ptA - ptB;
             var ptResult = new Point2d(a + b, b + c);
             Assert.True(ptA + ptB == ptResult);
         }
@@ -117,10 +116,8 @@ namespace Paramdigma.Core.Tests.Geometry
             var pt2 = new Point2d(1, -1);
             var b1 = pt == pt2;
             var b2 = pt.GetHashCode() == pt2.GetHashCode();
-            var other = "S";
             Assert.True(b1 && b1 == b2);
             Assert.False(pt != pt2);
-            Assert.False(pt.Equals(other));
         }
     }
 }

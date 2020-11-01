@@ -9,36 +9,28 @@ namespace Paramdigma.Core
     /// </summary>
     public static partial class Intersect3D
     {
-        public enum ISLineLine
+        public enum LineLineIntersectionStatus
         {
-            NoIntersection,
-            Point,
-            Error
+            NoIntersection, Point, Error
         }
 
-        // INFO: IS prefix stands for Intersection Status
-        // INFO: IR prefix stands for Intersection Result
-        public enum ISLinePlane
+        public enum LinePlaneIntersectionStatus
         {
-            NoIntersection,
-            Point,
-            OnPlane
+            NoIntersection, Point, OnPlane
         }
 
-        public enum ISRayFacePerimeter
+        public enum RayFacePerimeterIntersectionStatus
         {
-            NoIntersection,
-            Point,
-            Error
+            NoIntersection, Point, Error
         }
 
-        public struct IRLineLine
+        public struct LineLineIntersectionResult
         {
             public double Distance { get; set; }
 
-            public double TA { get; set; }
+            public double ParamA { get; set; }
 
-            public double TB { get; set; }
+            public double ParamB { get; set; }
 
             public Point3d PointA { get; set; }
 

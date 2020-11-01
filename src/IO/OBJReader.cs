@@ -5,5 +5,5 @@ namespace Paramdigma.Core.IO
     /// <summary>
     ///     OBJ File Reader.
     /// </summary>
-    public static class OBJReader { }
+    public static class ObjReader { }
 }

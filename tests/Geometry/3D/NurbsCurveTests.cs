@@ -3,7 +3,6 @@ using System.Linq;
 using Paramdigma.Core.Geometry;
 using Paramdigma.Core.Tests.Conversions;
 using Xunit;
-using Xunit.Abstractions;
 using RG = Rhino.Geometry;
 
 namespace Paramdigma.Core.Tests.Geometry._3D
@@ -19,16 +18,9 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             new Point3d(0, 9, 0)
         };
 
-        private readonly ITestOutputHelper testOutputHelper;
+        private NurbsCurve Curve => new NurbsCurve(this.controlPoints, 3);
 
-
-        public NurbsCurveTests(ITestOutputHelper testOutputHelper) =>
-            this.testOutputHelper = testOutputHelper;
-
-
-        private NurbsCurve curve => new NurbsCurve(this.controlPoints, 3);
-
-        private RG.NurbsCurve rhCurve
+        private RG.NurbsCurve RhCurve
         {
             get
             {
@@ -48,8 +40,8 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [InlineData(1.0)]
         public void CanGet_PointAt(double t)
         {
-            var point = this.curve.PointAt(t);
-            var rhPoint = this.rhCurve.PointAt(t);
+            var point = this.Curve.PointAt(t);
+            var rhPoint = this.RhCurve.PointAt(t);
             Assert.True(point.DistanceTo(rhPoint.ToCore()) < Settings.Tolerance);
         }
 
@@ -61,8 +53,8 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [InlineData(1.0)]
         public void CanGet_TangentAt(double t)
         {
-            var vector = this.curve.TangentAt(t);
-            var rhVector = this.rhCurve.TangentAt(t);
+            var vector = this.Curve.TangentAt(t);
+            var rhVector = this.RhCurve.TangentAt(t);
             Assert.True((vector - rhVector.ToCore()).Length < Settings.Tolerance);
         }
 
@@ -71,8 +63,8 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [ClassData(typeof(NurbsCurveUnitParamData))]
         public void CanGet_NormalAt(double t)
         {
-            var vector = this.curve.NormalAt(t);
-            var rhVector = this.rhCurve.DerivativeAt(t, 2)[2];
+            var vector = this.Curve.NormalAt(t);
+            var rhVector = this.RhCurve.DerivativeAt(t, 2)[2];
             var length = (vector - rhVector.ToCore().Unit()).Length;
             Assert.True(length < Settings.Tolerance);
         }
@@ -85,8 +77,8 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [InlineData(1.0)]
         public void CanGet_BiNormalAt(double t)
         {
-            var vector = this.curve.BinormalAt(t);
-            var rhVector = this.rhCurve.DerivativeAt(t, 3)[3];
+            var vector = this.Curve.BinormalAt(t);
+            var rhVector = this.RhCurve.DerivativeAt(t, 3)[3];
             var length = (vector - rhVector.ToCore().Unit()).Length;
             Assert.True(length < Settings.Tolerance);
         }

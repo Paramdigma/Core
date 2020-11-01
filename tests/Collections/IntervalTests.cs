@@ -37,12 +37,12 @@ namespace Paramdigma.Core.Tests
             const double n1 = 0.0;
             const double n2 = 5.0;
             const double n3 = 2.33;
-            var n1c = i.Crop(n1);
-            var n2c = i.Crop(n2);
-            var n3c = i.Crop(n3);
-            Assert.True(Math.Abs(n1c - i.Start) < Settings.Tolerance);
-            Assert.True(Math.Abs(n2c - i.End) < Settings.Tolerance);
-            Assert.True(Math.Abs(n3c - n3) < Settings.Tolerance);
+            var n1C = i.Crop(n1);
+            var n2C = i.Crop(n2);
+            var n3C = i.Crop(n3);
+            Assert.True(Math.Abs(n1C - i.Start) < Settings.Tolerance);
+            Assert.True(Math.Abs(n2C - i.End) < Settings.Tolerance);
+            Assert.True(Math.Abs(n3C - n3) < Settings.Tolerance);
         }
 
 
@@ -61,10 +61,7 @@ namespace Paramdigma.Core.Tests
         [Fact]
         public void CanCreate_Interval()
         {
-            var i0 = new Interval(0, 1);
-            var i1 = Interval.Unit;
-            var i2 = new Interval(i0);
-
+            var i0 = Interval.Unit;
             Assert.Equal(1, i0.Length);
             Assert.Throws<ArithmeticException>(() => new Interval(double.NaN, 1));
             Assert.Throws<ArithmeticException>(() => new Interval(0, double.NaN));

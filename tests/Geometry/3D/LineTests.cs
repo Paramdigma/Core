@@ -22,7 +22,7 @@ namespace Paramdigma.Core.Tests.Geometry
 
 
         [Fact]
-        public override void CanGet_Length() => Assert.True(this.TestLine.Length == Math.Sqrt(3));
+        public override void CanGet_Length() => Assert.True(Math.Abs(this.TestLine.Length - Math.Sqrt(3)) < Settings.Tolerance);
 
 
         [Fact]

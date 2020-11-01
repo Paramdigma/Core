@@ -82,13 +82,9 @@ namespace Paramdigma.Core.Geometry
         public override Vector3d NormalAt(double t)
         {
             var tangent = this.TangentAt(t);
-            var v = new Vector3d();
-
-            if (Math.Abs(tangent.Dot(Vector3d.UnitZ) - 1) < Settings.Tolerance)
-                v = Vector3d.UnitX;
-            else
-                v = Vector3d.UnitZ;
-
+            var v = Math.Abs(tangent.Dot(Vector3d.UnitZ) - 1) < Settings.Tolerance
+                        ? Vector3d.UnitX
+                        : Vector3d.UnitZ;
             return tangent.Cross(v);
         }
 
@@ -119,6 +115,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <returns>Line length.</returns>
         protected override double ComputeLength() => this.StartPoint.DistanceTo(this.EndPoint);
+
 
         /// <summary>
         /// Explicitly converts a line to it's vector representation.

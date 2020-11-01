@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
 using Xunit;
@@ -68,7 +69,6 @@ namespace Paramdigma.Core.Tests.Geometry
             var pt3 = pt2 * 2;
             pt2.Multiply(2);
             Assert.True(pt2 == pt3);
-            var pt4 = pt2 / 2;
             pt2.Divide(2);
             Assert.True(pt2 == new Point3d(1, 0, 0));
             pt2.Negate();
@@ -84,7 +84,6 @@ namespace Paramdigma.Core.Tests.Geometry
             const double c = 4.11;
             var ptA = new Point3d(a, b, c);
             var ptB = new Point3d(b, c, a);
-            var s = ptA - ptB;
             var ptResult = new Point3d(a + b, b + c, c + a);
             Assert.True(ptA + ptB == ptResult);
         }
@@ -164,7 +163,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var v = Vector3d.UnitX;
             var arr = v.ToArray();
             Assert.True(arr.Length == 3);
-            Assert.True(arr[0] == 1 && arr[1] == 0 && arr[2] == 0);
+            Assert.True(Math.Abs(arr[0] - 1) < Settings.Tolerance && arr[1] == 0 && arr[2] == 0);
         }
     }
 }

@@ -48,19 +48,22 @@ namespace Paramdigma.Core.Tests
             for (var i = 0; i < 5; i++)
                 points.Add(new Point3d(i, 0, 0));
             var pt = NurbsCalculator.DeCasteljau1(points.ToArray(), points.Count - 1, 1);
+            Assert.NotNull(pt);
         }
 
 
-        //[Fact]
+        [Fact]
         public void NurbsCurvePoint_Works()
         {
             var p0 = new Point3d(0, 0, 0);
             var p1 = new Point3d(1, 3, 0);
             var p2 = new Point3d(1.4, 5, 0);
             var p3 = new Point3d(0, 7, 0);
-            var u = NurbsCalculator.CreateUnitKnotVector(3, 1);
-            var u2 = NurbsCalculator.CreateUnitKnotVector(3, 2);
-            var u3 = NurbsCalculator.CreateUnitKnotVector(3, 3);
+            var pts = new[] {p0, p1, p2, p3};
+
+            var u = NurbsCalculator.CreateUnitKnotVector(pts.Length, 1);
+            var u2 = NurbsCalculator.CreateUnitKnotVector(pts.Length, 2);
+            var u3 = NurbsCalculator.CreateUnitKnotVector(pts.Length, 3);
             var watch = new Stopwatch();
             watch.Start();
             const int n = 100;
@@ -70,20 +73,23 @@ namespace Paramdigma.Core.Tests
                     3,
                     1,
                     u,
-                    new[] {p0, p1, p2, p3},
+                    pts,
                     ( double ) i / n);
                 var pt2 = NurbsCalculator.CurvePoint(
                     3,
                     2,
                     u2,
-                    new[] {p0, p1, p2, p3},
+                    pts,
                     ( double ) i / n);
                 var pt3 = NurbsCalculator.CurvePoint(
                     3,
                     3,
                     u3,
-                    new[] {p0, p1, p2, p3},
+                    pts,
                     ( double ) i / n);
+                Assert.NotNull(pt);
+                Assert.NotNull(pt2);
+                Assert.NotNull(pt3);
             }
 
             watch.Stop();
@@ -95,8 +101,11 @@ namespace Paramdigma.Core.Tests
         public void TestKnotVector()
         {
             var u = NurbsCalculator.CreateUnitKnotVector(3, 1);
-            var u2 = NurbsCalculator.CreateUnitKnotVector(3, 2);
-            var u3 = NurbsCalculator.CreateUnitKnotVector(3, 3);
+            var u2 = NurbsCalculator.CreateUnitKnotVector(4, 2);
+            var u3 = NurbsCalculator.CreateUnitKnotVector(5, 3);
+            Assert.NotNull(u);
+            Assert.NotNull(u2);
+            Assert.NotNull(u3);
         }
     }
 }
