@@ -10,23 +10,16 @@
         /// </summary>
         public MeshCorner() => this.Index = -1;
 
+
         /// <summary>
         ///     Gets or sets the corner's first half-edge.
         /// </summary>
-        public MeshHalfEdge HalfEdge
-        {
-            get;
-            set;
-        }
+        public MeshHalfEdge HalfEdge { get; set; }
 
         /// <summary>
         ///     Gets or sets the index of the mesh corner.
         /// </summary>
-        public int Index
-        {
-            get;
-            set;
-        }
+        public int Index { get; set; }
 
         /// <summary>
         ///     Gets the mesh corner vertex.

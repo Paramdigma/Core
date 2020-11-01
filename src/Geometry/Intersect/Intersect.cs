@@ -49,9 +49,10 @@ namespace Paramdigma.Core
                 return ISLinePlane.NoIntersection;
             }
 
-            intersectionPoint = line.StartPoint + (u * sI); // Compute segment intersection point
+            intersectionPoint = line.StartPoint + u * sI; // Compute segment intersection point
             return ISLinePlane.Point;
         }
+
 
         /// <summary>
         ///     Compute the intersection between a mesh face perimeter and a ray tangent to the face.
@@ -61,7 +62,11 @@ namespace Paramdigma.Core
         /// <param name="result">The resulting intersection point.</param>
         /// <param name="halfEdge">The half-edge on where the intersection lies.</param>
         /// <returns>Intersection result.</returns>
-        public static ISRayFacePerimeter RayFacePerimeter(Ray ray, MeshFace face, out Point3d result, out MeshHalfEdge halfEdge)
+        public static ISRayFacePerimeter RayFacePerimeter(
+            Ray ray,
+            MeshFace face,
+            out Point3d result,
+            out MeshHalfEdge halfEdge)
         {
             var faceNormal = MeshGeometry.FaceNormal(face);
             var biNormal = Vector3d.CrossProduct(ray.Direction, faceNormal);
@@ -93,14 +98,14 @@ namespace Paramdigma.Core
                 result = null;
                 halfEdge = null;
                 return ISRayFacePerimeter.NoIntersection;
-            } // No intersection found
+            }
 
             if (temp != ray.Origin && temp != null)
             {
                 result = temp;
                 halfEdge = null;
                 return ISRayFacePerimeter.Point;
-            } // Intersection found
+            }
 
             line = new Line(vertices[2], vertices[0]);
             if (LinePlane(line, perpPlane, out temp) != ISLinePlane.Point)
@@ -122,6 +127,7 @@ namespace Paramdigma.Core
             return ISRayFacePerimeter.Error;
         }
 
+
         /// <summary>
         ///     Compute the intersection between two 3-dimensional lines.
         /// </summary>
@@ -139,7 +145,7 @@ namespace Paramdigma.Core
             var c = v.Dot(v); // always >= 0
             var d = u.Dot(w);
             var e = v.Dot(w);
-            var d2 = (a * c) - (b * b); // always >= 0
+            var d2 = a * c - b * b; // always >= 0
             double sc, sN, sD = d2; // sc = sN / sD, default sD = D >= 0
             double tc, tN, tD = d2; // tc = tN / tD, default tD = D >= 0
 
@@ -155,8 +161,8 @@ namespace Paramdigma.Core
             else
             {
                 // get the closest points on the infinite lines
-                sN = (b * e) - (c * d);
-                tN = (a * e) - (b * d);
+                sN = b * e - c * d;
+                tN = a * e - b * d;
                 if (sN < 0.0)
                 {
                     // sc < 0 => the s=0 edge is visible
@@ -211,7 +217,7 @@ namespace Paramdigma.Core
             tc = Math.Abs(tN) < Settings.Tolerance ? 0.0 : tN / tD;
 
             // get the difference of the two closest points
-            var dP = w + ((sc * u) - (tc * v)); // =  S1(sc) - S2(tc)
+            var dP = w + (sc * u - tc * v); // =  S1(sc) - S2(tc)
             result = default;
             result.Distance = dP.Length; // return the closest distance
             result.TA = sc;

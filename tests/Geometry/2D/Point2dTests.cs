@@ -15,6 +15,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(pt2 == expected);
         }
 
+
         [Fact]
         public void CanBe_Added()
         {
@@ -28,14 +29,16 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA + ptB == ptResult);
         }
 
+
         [Fact]
         public void CanBe_ConvertedToVector()
         {
             var pt = new Point2d(0, 1);
             Vector2d v = pt;
-            var pt2 = (Point2d)v;
+            var pt2 = ( Point2d ) v;
             Assert.True(pt == pt2);
         }
+
 
         [Fact]
         public void CanBe_Divided()
@@ -47,6 +50,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Point2d(a / m, b / m);
             Assert.True(ptA / m == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Multiplied()
@@ -60,6 +64,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(m * ptA == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Negated()
         {
@@ -69,6 +74,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Point2d(-a, -b);
             Assert.True(-ptA == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Substracted()
@@ -82,6 +88,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA - ptB == ptResult);
         }
 
+
         [Fact]
         public void Create_FromPoint()
         {
@@ -89,6 +96,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var copy = new Point2d(expected);
             Assert.True(expected == copy);
         }
+
 
         [Fact]
         public void Create_Origin()
@@ -100,6 +108,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(origin == expected);
             Assert.True(empty == expected);
         }
+
 
         [Fact]
         public void EqualsAndHashCode_HaveConsistentResults()

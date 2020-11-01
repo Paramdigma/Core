@@ -32,6 +32,7 @@ namespace Paramdigma.Core.IO
             }
 
             foreach (var face in mesh.Faces)
+            {
                 if (!face.IsBoundaryLoop())
                 {
                     var vertices = face.AdjacentVertices();
@@ -43,6 +44,7 @@ namespace Paramdigma.Core.IO
                     offLines[count] = faceString;
                     count++;
                 }
+            }
 
             File.WriteAllLines(filePath, offLines);
             return OFFResult.OK;

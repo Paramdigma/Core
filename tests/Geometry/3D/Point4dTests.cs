@@ -19,6 +19,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA + ptB == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Added_WithVector()
         {
@@ -33,6 +34,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA + v == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Created()
         {
@@ -42,6 +44,7 @@ namespace Paramdigma.Core.Tests.Geometry
 
             Assert.Equal(pt42, pt4);
         }
+
 
         [Fact]
         public void CanBe_Divided()
@@ -55,6 +58,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Point4d(a / m, b / m, c / m, d / m);
             Assert.True(ptA / m == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Multiplied()
@@ -70,6 +74,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(m * ptA == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Negated()
         {
@@ -82,6 +87,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Point4d(-a, -b, -c, d);
             Assert.True(-ptA == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Subtracted()
@@ -98,6 +104,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, actual);
         }
 
+
         [Fact]
         public void CanCheck_Equality()
         {
@@ -107,14 +114,15 @@ namespace Paramdigma.Core.Tests.Geometry
             const double d = 1.344;
 
             var ptA = new Point4d(a, b, c, d);
-            var expectedEqual = new Point4d(a + (Settings.Tolerance / 2), b, c, d);
-            var expectedNotEqual = new Point4d(a + (Settings.Tolerance * 2), b, c, d);
+            var expectedEqual = new Point4d(a + Settings.Tolerance / 2, b, c, d);
+            var expectedNotEqual = new Point4d(a + Settings.Tolerance * 2, b, c, d);
             Assert.True(ptA == expectedEqual);
             Assert.Equal(ptA.GetHashCode(), expectedEqual.GetHashCode());
             Assert.True(ptA != expectedNotEqual);
             Assert.NotEqual(ptA.GetHashCode(), expectedNotEqual.GetHashCode());
             Assert.False(ptA == null);
         }
+
 
         [Fact]
         public void CanCreate_FromPointAndWeight()
@@ -125,6 +133,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(pt, pt4.Position);
             Assert.Equal(weight, pt4.Weight);
         }
+
 
         [Fact]
         public void CanToggle_IsUnset_OnWeightChange()

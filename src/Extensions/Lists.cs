@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Extensions
         /// <returns>//TODO.</returns>
         public static List<T> RepeatedDefault<T>(int count) => Repeated(default(T), count);
 
+
         /// <summary>
         ///     Initializes a new list full of objects initialized the values of the specified instance of T.
         /// </summary>

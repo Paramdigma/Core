@@ -31,37 +31,48 @@ namespace Paramdigma.Core.Optimization
         /// </summary>
         public bool IsReadOnly => this.list.IsReadOnly;
 
+
         /// <summary>
         ///     Add a new vector to the cluster.
         /// </summary>
         /// <param name="item">Vector to add.</param>
         public void Add(VectorNd item) => this.list.Add(item);
 
+
         /// <inheritdoc />
         public void Clear() => this.list.Clear();
+
 
         /// <inheritdoc />
         public bool Contains(VectorNd item) => this.list.Contains(item);
 
+
         /// <inheritdoc />
         public void CopyTo(VectorNd[] array, int arrayIndex) => this.list.CopyTo(array, arrayIndex);
+
 
         /// <inheritdoc />
         public IEnumerator<VectorNd> GetEnumerator() => this.list.GetEnumerator();
 
+
         /// <inheritdoc />
         public int IndexOf(VectorNd item) => this.list.IndexOf(item);
+
 
         /// <inheritdoc />
         public void Insert(int index, VectorNd item) => this.list.Insert(index, item);
 
+
         /// <inheritdoc />
         public bool Remove(VectorNd item) => this.list.Remove(item);
+
 
         /// <inheritdoc />
         public void RemoveAt(int index) => this.list.RemoveAt(index);
 
+
         IEnumerator IEnumerable.GetEnumerator() => this.list.GetEnumerator();
+
 
         /// <summary>
         ///     Computes the average of this cluster.
@@ -81,6 +92,7 @@ namespace Paramdigma.Core.Optimization
             result /= this.list.Count;
             return result;
         }
+
 
         /// <inheritdoc />
         public override string ToString() => "Paramdigma.Core.Cluster[" + this.Count + "]";

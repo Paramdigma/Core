@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Tests
             Assert.True(dir != dir2);
         }
 
+
         [Fact]
         public void Can_CheckContainment()
         {
@@ -28,6 +29,7 @@ namespace Paramdigma.Core.Tests
             Assert.True(i.Contains(n3));
         }
 
+
         [Fact]
         public void Can_CropNumbers()
         {
@@ -38,10 +40,11 @@ namespace Paramdigma.Core.Tests
             var n1c = i.Crop(n1);
             var n2c = i.Crop(n2);
             var n3c = i.Crop(n3);
-            Assert.True(n1c == i.Start);
-            Assert.True(n2c == i.End);
-            Assert.True(n3c == n3);
+            Assert.True(Math.Abs(n1c - i.Start) < Settings.Tolerance);
+            Assert.True(Math.Abs(n2c - i.End) < Settings.Tolerance);
+            Assert.True(Math.Abs(n3c - n3) < Settings.Tolerance);
         }
+
 
         [Fact]
         public void Can_RemapNumbers()
@@ -49,10 +52,11 @@ namespace Paramdigma.Core.Tests
             var i = new Interval(1, 3);
             const double n = 2.0;
             var nMap = i.RemapToUnit(n);
-            Assert.True(nMap == 0.5);
+            Assert.True(Math.Abs(nMap - 0.5) < Settings.Tolerance);
             var nRemap = i.RemapFromUnit(nMap);
-            Assert.True(n == nRemap);
+            Assert.True(Math.Abs(n - nRemap) < Settings.Tolerance);
         }
+
 
         [Fact]
         public void CanCreate_Interval()

@@ -22,8 +22,10 @@ namespace Paramdigma.Core.Geometry
             this.DomainZ = domainZ;
         }
 
+
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Box" /> class from 2 corners. Both corners will form the diagonal of
+        ///     Initializes a new instance of the <see cref="Box" /> class from 2 corners. Both corners will
+        ///     form the diagonal of
         ///     the box.
         /// </summary>
         /// <param name="lower">Lower left corner point.</param>
@@ -36,51 +38,39 @@ namespace Paramdigma.Core.Geometry
             this.DomainZ = new Interval(lower.Z, upper.Z);
         }
 
+
         /// <summary>
         ///     Gets or sets the box's base plane.
         /// </summary>
         /// <value><see cref="Plane" />.</value>
-        public Plane Plane
-        {
-            get;
-            set;
-        }
+        public Plane Plane { get; set; }
 
         /// <summary>
         ///     Gets or sets the box's X axis domain.
         /// </summary>
         /// <value><see cref="Interval" />.</value>
-        public Interval DomainX
-        {
-            get;
-            set;
-        }
+        public Interval DomainX { get; set; }
 
         /// <summary>
         ///     Gets or sets the box's Y axis domain.
         /// </summary>
         /// <value><see cref="Interval" />.</value>
-        public Interval DomainY
-        {
-            get;
-            set;
-        }
+        public Interval DomainY { get; set; }
 
         /// <summary>
         ///     Gets or sets the box's Z axis domain.
         /// </summary>
         /// <value><see cref="Interval" />.</value>
-        public Interval DomainZ
-        {
-            get;
-            set;
-        }
+        public Interval DomainZ { get; set; }
 
         /// <summary>
         ///     Gets the corner point with lowest values.
         /// </summary>
         /// <returns><see cref="Point3d" />.</returns>
-        public Point3d Min => new Point3d(this.DomainX.Start, this.DomainY.Start, this.DomainZ.Start);
+        public Point3d Min => new Point3d(
+            this.DomainX.Start,
+            this.DomainY.Start,
+            this.DomainZ.Start);
 
         /// <summary>
         ///     Gets the corner point with highest values.
@@ -92,6 +82,9 @@ namespace Paramdigma.Core.Geometry
         ///     Gets the center point of the box.
         /// </summary>
         /// <returns><see cref="Point3d" />.</returns>
-        public Point3d Center => new Point3d(this.DomainX.RemapFromUnit(0.5), this.DomainY.RemapFromUnit(0.5), this.DomainZ.RemapFromUnit(0.5));
+        public Point3d Center => new Point3d(
+            this.DomainX.RemapFromUnit(0.5),
+            this.DomainY.RemapFromUnit(0.5),
+            this.DomainZ.RemapFromUnit(0.5));
     }
 }

@@ -13,7 +13,10 @@ namespace Paramdigma.Core.Tests.Optimization
     {
         private readonly ITestOutputHelper testOutputHelper;
 
-        public KMeansClusteringTests(ITestOutputHelper testOutputHelper) => this.testOutputHelper = testOutputHelper;
+
+        public KMeansClusteringTests(ITestOutputHelper testOutputHelper) =>
+            this.testOutputHelper = testOutputHelper;
+
 
         public List<VectorNd> createClusterAround(Point3d pt, double radius, int count)
         {
@@ -31,6 +34,7 @@ namespace Paramdigma.Core.Tests.Optimization
             return cluster;
         }
 
+
         [Theory]
         [InlineData(4, 20)]
         [InlineData(6, 18)]
@@ -44,7 +48,7 @@ namespace Paramdigma.Core.Tests.Optimization
 
             for (var i = 0; i < expectedClusters; i++)
             {
-                var pt = cir.PointAt((double)i / expectedClusters);
+                var pt = cir.PointAt(( double ) i / expectedClusters);
                 pts.Add(pt);
                 vectors.AddRange(this.createClusterAround(pt, 1, expectedClusterCount));
             }
@@ -63,19 +67,20 @@ namespace Paramdigma.Core.Tests.Optimization
             //Assert the Iteration completed event has been raised
             Assert.True(eventCheck);
             // Then
-            kMeans.Clusters.ForEach(cluster =>
-            {
-                Assert.NotEmpty(cluster);
-                var first = new Point3d(cluster[0][0], cluster[0][1], cluster[0][2]);
-                var closest = pts.First(pt => pt.DistanceTo(first) <= 2);
-                foreach (var vector in cluster)
+            kMeans.Clusters.ForEach(
+                cluster =>
                 {
-                    var pt = new Point3d(vector[0], vector[1], vector[2]);
-                    var dist = pt.DistanceTo(closest);
-                    //testOutputHelper.WriteLine($"Distance: {dist}");
-                    Assert.True(dist <= 2, $"Distance was bigger: {dist}");
-                }
-            });
+                    Assert.NotEmpty(cluster);
+                    var first = new Point3d(cluster[0][0], cluster[0][1], cluster[0][2]);
+                    var closest = pts.First(pt => pt.DistanceTo(first) <= 2);
+                    foreach (var vector in cluster)
+                    {
+                        var pt = new Point3d(vector[0], vector[1], vector[2]);
+                        var dist = pt.DistanceTo(closest);
+                        //testOutputHelper.WriteLine($"Distance: {dist}");
+                        Assert.True(dist <= 2, $"Distance was bigger: {dist}");
+                    }
+                });
         }
     }
 }

@@ -15,6 +15,7 @@ namespace Paramdigma.Core.Geometry
         private bool segmentsNeedUpdate;
         private List<Point2d> vertices;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Polyline2d" /> class.
         /// </summary>
@@ -23,9 +24,11 @@ namespace Paramdigma.Core.Geometry
         public Polyline2d(List<Point2d> vertices, bool closed)
         {
             this.vertices = vertices;
-            this.IsClosed = closed; // Call the property (not the field), to have if add the first point at the end if necessary.
+            this.IsClosed =
+                closed; // Call the property (not the field), to have if add the first point at the end if necessary.
             this.RebuildSegments();
         }
+
 
         /// <summary>
         ///     Gets or sets the polyline vertices.
@@ -103,6 +106,7 @@ namespace Paramdigma.Core.Geometry
             }
         }
 
+
         /// <summary>
         ///     Computes the area of the polyline.
         /// </summary>
@@ -125,6 +129,7 @@ namespace Paramdigma.Core.Geometry
             area += v[n].X * (v[1].Y - v[n - 1].Y); // wrap-around term
             return area / 2.0;
         }
+
 
         /// <summary>
         ///     Checks if the current polyline is CW or CCW.
@@ -150,9 +155,11 @@ namespace Paramdigma.Core.Geometry
                     continue;
                 if (this.vertices[i].Y == ymin)
                     // just as low
+                {
                     if (this.vertices[i].X < xmin)
                         // and to left
                         continue;
+                }
 
                 rmin = i; // a new rightmost lowest vertex
                 xmin = this.vertices[i].X;
@@ -163,14 +170,22 @@ namespace Paramdigma.Core.Geometry
             // ccw <=> the edge leaving V[rmin] is left of the entering edge
             double result;
             if (rmin == 0)
-                result = new Line2d(this.vertices[this.vertices.Count - 1], this.vertices[0]).IsLeft(this.vertices[1]);
+            {
+                result =
+                    new Line2d(this.vertices[this.vertices.Count - 1], this.vertices[0]).IsLeft(
+                        this.vertices[1]);
+            }
             else
-                result = new Line2d(this.vertices[rmin - 1], this.vertices[rmin]).IsLeft(this.vertices[rmin + 1]);
+            {
+                result = new Line2d(this.vertices[rmin - 1], this.vertices[rmin]).IsLeft(
+                    this.vertices[rmin + 1]);
+            }
 
             if (result == 0)
                 throw new Exception("Polyline is degenerate, cannot compute orientation.");
             return result < 0;
         }
+
 
         /// <summary>
         ///     Reparametrizes the current curve to a unit interval.
@@ -182,15 +197,17 @@ namespace Paramdigma.Core.Geometry
 
             double currentParam = 0;
 
-            this.segments.ForEach(segment =>
-            {
-                var nextParam = currentParam + (segment.Domain.Length * ratio);
-                segment.Domain = new Interval(currentParam, nextParam);
-                currentParam = nextParam;
-            });
+            this.segments.ForEach(
+                segment =>
+                {
+                    var nextParam = currentParam + segment.Domain.Length * ratio;
+                    segment.Domain = new Interval(currentParam, nextParam);
+                    currentParam = nextParam;
+                });
 
             this.domain = Interval.Unit;
         }
+
 
         private void RebuildSegments()
         {
@@ -206,6 +223,7 @@ namespace Paramdigma.Core.Geometry
 
             this.domain = new Interval(0, currentParam);
         }
+
 
         private Line2d BuildSegment(ref double currentParam, Point2d vertA, Point2d vertB)
         {

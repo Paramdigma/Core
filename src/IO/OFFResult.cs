@@ -7,8 +7,12 @@ namespace Paramdigma.Core.IO
     /// </summary>
     public enum OFFResult
     {
-        OK, IncorrectFormat, IncorrectVertex,
-        IncorrectFace, NonMatchingVerticesSize, NonMatchingFacesSize,
+        OK,
+        IncorrectFormat,
+        IncorrectVertex,
+        IncorrectFace,
+        NonMatchingVerticesSize,
+        NonMatchingFacesSize,
         FileNotFound
     }
 }

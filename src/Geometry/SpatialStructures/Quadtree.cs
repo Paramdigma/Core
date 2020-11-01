@@ -25,6 +25,7 @@ namespace Paramdigma.Core.SpatialSearch
         private QuadTree southEast;
         private QuadTree southWest;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="QuadTree" /> class.
         /// </summary>
@@ -37,6 +38,7 @@ namespace Paramdigma.Core.SpatialSearch
             this.threshold = threshold;
         }
 
+
         /// <summary>
         ///     Insert a point in the QuadTree.
         /// </summary>
@@ -47,8 +49,8 @@ namespace Paramdigma.Core.SpatialSearch
             if (!this.Boundary.ContainsPoint(point))
                 return false;
 
-
-            if (this.Boundary.XDomain.Length < this.threshold || this.Boundary.YDomain.Length < this.threshold)
+            if (this.Boundary.XDomain.Length < this.threshold
+             || this.Boundary.YDomain.Length < this.threshold)
             {
                 this.Points.Add(point);
                 return true;
@@ -65,6 +67,7 @@ namespace Paramdigma.Core.SpatialSearch
             return false;
         }
 
+
         /// <summary>
         ///     Query the QuadTree for all points contained in this range.
         /// </summary>
@@ -77,14 +80,16 @@ namespace Paramdigma.Core.SpatialSearch
             if (!this.Boundary.IntersectsBox(range))
                 return pointsInRange;
 
-            this.Points.ForEach(pt =>
-            {
-                if (range.ContainsPoint(pt))
-                    pointsInRange.Add(pt);
-            });
+            this.Points.ForEach(
+                pt =>
+                {
+                    if (range.ContainsPoint(pt))
+                        pointsInRange.Add(pt);
+                });
 
             // If we reached threshold return
-            if (this.Boundary.XDomain.Length < this.threshold || this.Boundary.YDomain.Length < this.threshold)
+            if (this.Boundary.XDomain.Length < this.threshold
+             || this.Boundary.YDomain.Length < this.threshold)
                 return pointsInRange;
 
             if (this.southWest != null)
@@ -97,6 +102,7 @@ namespace Paramdigma.Core.SpatialSearch
 
             return pointsInRange;
         }
+
 
         private void Subdivide()
         {

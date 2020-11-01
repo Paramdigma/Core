@@ -36,6 +36,7 @@ namespace Paramdigma.Core.IO
             var faces = new List<List<int>>();
 
             for (var i = start; i < lines.Length; i++)
+            {
                 if (i < nVertex + start)
                 {
                     // Extract vertices
@@ -73,6 +74,7 @@ namespace Paramdigma.Core.IO
 
                     faces.Add(vertexIndexes);
                 }
+            }
 
             // Set data output
             data.Vertices = vertices;

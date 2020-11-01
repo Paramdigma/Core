@@ -13,10 +13,12 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
         // Constructor
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="MeshVertex" /> class.
         /// </summary>
         public MeshVertex() => this.userValues = new Dictionary<string, double>();
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="MeshVertex" /> class from a 3D point.
@@ -26,8 +28,10 @@ namespace Paramdigma.Core.HalfEdgeMesh
             : base(pt) =>
             this.userValues = new Dictionary<string, double>();
 
+
         /// <summary>
-        ///     Initializes a new instance of the <see cref="MeshVertex" /> class from it's cartesian coordiantes.
+        ///     Initializes a new instance of the <see cref="MeshVertex" /> class from it's cartesian
+        ///     coordiantes.
         /// </summary>
         /// <param name="x">X Coordiante.</param>
         /// <param name="y">Y Coordinate.</param>
@@ -36,23 +40,16 @@ namespace Paramdigma.Core.HalfEdgeMesh
             : base(x, y, z) =>
             this.userValues = new Dictionary<string, double>();
 
+
         /// <summary>
         ///     Gets or sets the half-edge this vertex is attached to.
         /// </summary>
-        public MeshHalfEdge HalfEdge
-        {
-            get;
-            set;
-        }
+        public MeshHalfEdge HalfEdge { get; set; }
 
         /// <summary>
         ///     Gets or sets the index of the vertex.
         /// </summary>
-        public int Index
-        {
-            get;
-            set;
-        }
+        public int Index { get; set; }
 
         /// <summary>
         ///     Gets dictionary of user values.
@@ -64,11 +61,13 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
         // Calculate the valence of a vertex
 
+
         /// <summary>
         ///     Computes the valence of the vertex.
         /// </summary>
         /// <returns></returns>
         public int Valence() => this.AdjacentHalfEdges().Count;
+
 
         /// <summary>
         ///     Check if vertex is isolated, meaning corresponding half-edge is null.
@@ -76,11 +75,13 @@ namespace Paramdigma.Core.HalfEdgeMesh
         /// <returns></returns>
         public bool IsIsolated() => this.HalfEdge == null;
 
+
         /// <summary>
         ///     Check if vertex is on mesh boundary.
         /// </summary>
         /// <returns></returns>
         public bool OnBoundary() => this.AdjacentHalfEdges().Any(halfEdge => halfEdge.OnBoundary);
+
 
         /// <summary>
         ///     Returns a list with all adjacent HE_HalfEdge of this vertex.
@@ -98,6 +99,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
             return halfEdges;
         }
+
 
         /// <summary>
         ///     Returns a list with all adjacent HE_Face of a vertex.
@@ -117,6 +119,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return faces;
         }
 
+
         /// <summary>
         ///     Returns a list with all the adjacent HE_Vertex of this vertex.
         /// </summary>
@@ -133,6 +136,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
             return vertices;
         }
+
 
         /// <summary>
         ///     Returns a list with all the adjacent HE_Edge of this vertex.
@@ -151,6 +155,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return edges;
         }
 
+
         /// <summary>
         ///     Returns a list with all the adjacent HE_Corners of this vertex.
         /// </summary>
@@ -168,6 +173,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
             return corners;
         }
+
 
         /// <summary>
         ///     Returns the string representation of this vertex.

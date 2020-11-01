@@ -6,6 +6,14 @@ namespace Paramdigma.Core.Tests.Geometry
 {
     public class Point3dTests
     {
+        public static IEnumerable<object[]> UnsetPointData => new List<object[]>
+        {
+            new object[] {new Point3d()},
+            new object[] {Point3d.Unset},
+            new object[] {new Point4d()}
+        };
+
+
         [Theory]
         [ClassData(typeof(Point3dEqualDataset))]
         public void EqualsAndHashCode_HaveConsistentResults(Point3d pt, Point3d pt2)
@@ -17,6 +25,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.False(pt != pt2);
         }
 
+
         [Theory]
         [MemberData(nameof(UnsetPointData))]
         public void CanToggleUnset_WithX(BasePoint pt)
@@ -25,6 +34,7 @@ namespace Paramdigma.Core.Tests.Geometry
             pt.X += 1;
             Assert.False(pt.IsUnset);
         }
+
 
         [Theory]
         [MemberData(nameof(UnsetPointData))]
@@ -35,6 +45,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.False(pt.IsUnset);
         }
 
+
         [Theory]
         [MemberData(nameof(UnsetPointData))]
         public void CanToggleUnset_WithZ(BasePoint pt)
@@ -44,7 +55,6 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.False(pt.IsUnset);
         }
 
-        public static IEnumerable<object[]> UnsetPointData => new List<object[]> {new object[] {new Point3d()}, new object[] {Point3d.Unset}, new object[] {new Point4d()}};
 
         [Fact]
         public void Can_OperateOnItself()
@@ -65,6 +75,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(pt2 == new Point3d(-1, 0, 0));
         }
 
+
         [Fact]
         public void CanBe_Added()
         {
@@ -78,6 +89,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA + ptB == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Created()
         {
@@ -86,11 +98,12 @@ namespace Paramdigma.Core.Tests.Geometry
             var pt4 = new Point4d(1, 0, 0, 1);
             var npt2 = new Point3d(pt2);
             var npt4 = new Point3d(pt4);
-            var npt5 = (Point3d)pt4;
+            var npt5 = ( Point3d ) pt4;
             Assert.True(pt3 == npt2);
             Assert.True(pt3 == npt4);
             Assert.True(pt3 == npt5);
         }
+
 
         [Fact]
         public void CanBe_Divided()
@@ -104,6 +117,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA / m == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Multiplied()
         {
@@ -116,6 +130,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptA * m == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Negated()
         {
@@ -127,6 +142,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(-ptA == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Substracted()
         {
@@ -135,11 +151,12 @@ namespace Paramdigma.Core.Tests.Geometry
             const double c = 4.11;
             var ptA = new Point3d(a, b, c);
             var v = new Vector3d(b, c, a);
-            var ptB = (Point3d)v;
+            var ptB = ( Point3d ) v;
             var ptResult = new Point3d(a - b, b - c, c - a);
             Assert.True(ptA - ptB == ptResult);
             Assert.True(ptA - v == ptResult);
         }
+
 
         [Fact]
         public void CanConvert_ToArray()

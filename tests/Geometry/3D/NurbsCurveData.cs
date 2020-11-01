@@ -20,6 +20,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             yield return new object[] {1.0};
         }
 
+
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
 }

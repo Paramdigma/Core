@@ -18,8 +18,10 @@ namespace Paramdigma.Core.Geometry
             this.EndPoint = endPoint;
         }
 
+
         /// <summary>
-        ///     Initializes a new instance of the <see cref="Line" /> class from an origin point, a direction and a specified
+        ///     Initializes a new instance of the <see cref="Line" /> class from an origin point, a direction
+        ///     and a specified
         ///     length.
         /// </summary>
         /// <param name="origin">Start point of the line.</param>
@@ -28,26 +30,20 @@ namespace Paramdigma.Core.Geometry
         public Line(Point3d origin, Vector3d direction, double length)
         {
             this.StartPoint = origin;
-            this.EndPoint = origin + (direction.Unit() * length);
+            this.EndPoint = origin + direction.Unit() * length;
         }
+
 
         /// <summary>
         ///     Gets or sets the lines's start point.
         /// </summary>
-        public Point3d StartPoint
-        {
-            get;
-            set;
-        }
+        public Point3d StartPoint { get; set; }
 
         /// <summary>
         ///     Gets or sets the line's end point.
         /// </summary>
-        public Point3d EndPoint
-        {
-            get;
-            set;
-        }
+        public Point3d EndPoint { get; set; }
+
 
         /// <summary>
         ///     Checks if line is valid.
@@ -55,12 +51,15 @@ namespace Paramdigma.Core.Geometry
         /// <returns>True if valid.</returns>
         public override bool CheckValidity() => this.Length >= Settings.Tolerance;
 
+
         /// <summary>
         ///     Computes thepoint at the given parameter.
         /// </summary>
         /// <param name="t">Parameter of the point. Must be between 0 and 1.</param>
         /// <returns>Point at specified parameter.</returns>
-        public override Point3d PointAt(double t) => this.StartPoint + (this.Domain.RemapToUnit(t) * (this.EndPoint - this.StartPoint));
+        public override Point3d PointAt(double t) =>
+            this.StartPoint + this.Domain.RemapToUnit(t) * (this.EndPoint - this.StartPoint);
+
 
         /// <summary>
         ///     Computes the tangent at the given parameter.
@@ -73,6 +72,7 @@ namespace Paramdigma.Core.Geometry
             tangent.Unitize();
             return tangent;
         }
+
 
         /// <summary>
         ///     Computes the normal at the given parameter.
@@ -92,19 +92,27 @@ namespace Paramdigma.Core.Geometry
             return tangent.Cross(v);
         }
 
+
         /// <summary>
         ///     Computes the bi-normal vector at the given parameter.
         /// </summary>
         /// <param name="t">Parameter of the bi-normal vector. Must be between 0 and 1.</param>
         /// <returns>Bi-normal vector at specified parameter.</returns>
-        public override Vector3d BinormalAt(double t) => Vector3d.CrossProduct(this.TangentAt(t), this.NormalAt(t));
+        public override Vector3d BinormalAt(double t) =>
+            Vector3d.CrossProduct(this.TangentAt(t), this.NormalAt(t));
+
 
         /// <summary>
         ///     Computes the perpendicular frame at the given parameter.
         /// </summary>
         /// <param name="t">Parameter of the frame. Must be between 0 and 1.</param>
         /// <returns>Frame at specified parameter.</returns>
-        public override Plane FrameAt(double t) => new Plane(this.PointAt(t), this.TangentAt(t), this.NormalAt(t), this.BinormalAt(t));
+        public override Plane FrameAt(double t) => new Plane(
+            this.PointAt(t),
+            this.TangentAt(t),
+            this.NormalAt(t),
+            this.BinormalAt(t));
+
 
         /// <summary>
         ///     Computes the length of the line.
@@ -112,6 +120,11 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Line length.</returns>
         protected override double ComputeLength() => this.StartPoint.DistanceTo(this.EndPoint);
 
+        /// <summary>
+        /// Explicitly converts a line to it's vector representation.
+        /// </summary>
+        /// <param name="line">Line to convert.</param>
+        /// <returns>Vector defining the line direction and length.</returns>
         public static explicit operator Vector3d(Line line) => line.EndPoint - line.StartPoint;
     }
 }

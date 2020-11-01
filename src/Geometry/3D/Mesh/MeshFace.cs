@@ -17,23 +17,16 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.Index = -1;
         }
 
+
         /// <summary>
         ///     Gets or sets one of the  half-edges surrounding the face.
         /// </summary>
-        public MeshHalfEdge HalfEdge
-        {
-            get;
-            set;
-        }
+        public MeshHalfEdge HalfEdge { get; set; }
 
         /// <summary>
         ///     Gets or sets the face index on the mesh face list.
         /// </summary>
-        public int Index
-        {
-            get;
-            set;
-        }
+        public int Index { get; set; }
 
         /// <summary>
         ///     Gets the area of the face.
@@ -46,6 +39,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
         /// </summary>
         /// <returns>Returns the perpendicular vector to the face.</returns>
         public Vector3d Normal => MeshGeometry.FaceNormal(this);
+
 
         /// <summary>
         ///     Get all adjacent edges to this face.
@@ -64,6 +58,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return edges;
         }
 
+
         /// <summary>
         ///     Get all adjacent half-edges to this face.
         /// </summary>
@@ -81,6 +76,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return halfEdges;
         }
 
+
         /// <summary>
         ///     Get all adjacent vertices to this face.
         /// </summary>
@@ -97,6 +93,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
             return vertices;
         }
+
 
         /// <summary>
         ///     Get all adjacent faces to this face.
@@ -116,6 +113,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return faces;
         }
 
+
         /// <summary>
         ///     Get all adjacent corners to this face.
         /// </summary>
@@ -133,11 +131,13 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return corners;
         }
 
+
         /// <summary>
         ///     Checks if the current face is a boundary face.
         /// </summary>
         /// <returns>Returns true if the face is a boundary face, false if not.</returns>
         public bool IsBoundaryLoop() => this.HalfEdge.OnBoundary;
+
 
         /// <summary>
         ///     Convert the mesh face to string.

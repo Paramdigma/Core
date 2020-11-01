@@ -21,12 +21,20 @@ namespace Paramdigma.Core.Tests.Geometry
 
             var triangle1 = new DelaunayTriangle(point0, point1, point2);
             var triangle2 = new DelaunayTriangle(point0, point2, point3);
-            var border = new List<DelaunayTriangle> { triangle1, triangle2 };
+            var border = new List<DelaunayTriangle> {triangle1, triangle2};
 
             var delaunay = Delaunay.Compute(
-                new List<DelaunayPoint> { point0, point1, point2, point3, point4 },
-                border
-            ).ToList();
+                                        new List<DelaunayPoint>
+                                        {
+                                            point0,
+                                            point1,
+                                            point2,
+                                            point3,
+                                            point4
+                                        },
+                                        border
+                                    )
+                                   .ToList();
             Assert.True(delaunay.Count == 4);
 
             var voronoi = Delaunay.Voronoi(delaunay);
@@ -34,51 +42,59 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(voronoi.ToList().Count == 8);
         }
 
-        private List<DelaunayPoint> GeneratePoints(int ammount, double maxX, double maxY, out List<DelaunayTriangle> border)
-        {
 
-            DelaunayPoint point0 = new DelaunayPoint(0, 0);
-            DelaunayPoint point1 = new DelaunayPoint(0, maxY);
-            DelaunayPoint point2 = new DelaunayPoint(maxX, maxY);
-            DelaunayPoint point3 = new DelaunayPoint(maxX, 0);
-            List<DelaunayPoint> points = new List<DelaunayPoint>() { point0, point1, point2, point3 };
-            DelaunayTriangle triangle1 = new DelaunayTriangle(point0, point1, point2);
-            DelaunayTriangle triangle2 = new DelaunayTriangle(point0, point2, point3);
-            border = new List<DelaunayTriangle> { triangle1, triangle2 };
-            Random rnd = new Random();
-            List<DelaunayPoint> points2 = new List<DelaunayPoint>();
-            for (int i = 0; i < ammount - 4; i++)
-            {
-                points2.Add(RandomPoint(rnd, 0, maxX));
-            }
-            return points2;
+        private List<DelaunayPoint> GeneratePoints(
+            int ammount,
+            double maxX,
+            double maxY,
+            out List<DelaunayTriangle> border)
+        {
+            var point0 = new DelaunayPoint(0, 0);
+            var point1 = new DelaunayPoint(0, maxY);
+            var point2 = new DelaunayPoint(maxX, maxY);
+            var point3 = new DelaunayPoint(maxX, 0);
+            var triangle1 = new DelaunayTriangle(point0, point1, point2);
+            var triangle2 = new DelaunayTriangle(point0, point2, point3);
+            border = new List<DelaunayTriangle> {triangle1, triangle2};
+            var rnd = new Random();
+            var points = new List<DelaunayPoint>();
+            for (var i = 0; i < ammount - 4; i++)
+                points.Add(RandomPoint(rnd, 0, maxX));
+            return points;
         }
 
 
-        private static DelaunayPoint RandomPoint(Random RandGenerator, double MinValue, double MaxValue)
+        private static DelaunayPoint RandomPoint(
+            Random randGenerator,
+            double minValue,
+            double maxValue)
         {
-            double range = MaxValue - MinValue;
-            DelaunayPoint randomPoint = new DelaunayPoint((RandGenerator.NextDouble() * range) + MinValue, (RandGenerator.NextDouble() * range) + MinValue);
+            var range = maxValue - minValue;
+            var randomPoint = new DelaunayPoint(
+                randGenerator.NextDouble() * range + minValue,
+                randGenerator.NextDouble() * range + minValue);
             return randomPoint;
         }
+
 
         [Fact]
         public void CanCompare_DelaunayEdges()
         {
-            var edgeA = new DelaunayEdge(new DelaunayPoint(0,0),new DelaunayPoint(1,0) );
-            var edgeB = new DelaunayEdge(new DelaunayPoint(0,0),new DelaunayPoint(1,0) );
-            Assert.Equal(edgeA,edgeB);
-            Assert.Equal(edgeA.GetHashCode(),edgeB.GetHashCode());
+            var edgeA = new DelaunayEdge(new DelaunayPoint(0, 0), new DelaunayPoint(1, 0));
+            var edgeB = new DelaunayEdge(new DelaunayPoint(0, 0), new DelaunayPoint(1, 0));
+            Assert.Equal(edgeA, edgeB);
+            Assert.Equal(edgeA.GetHashCode(), edgeB.GetHashCode());
             Assert.NotNull(edgeA);
         }
+
 
         [Fact]
         public void CanCreate_DelaunayPoint_FromPoint2d()
         {
-            var pt = new Point2d(.5,.5);
+            var pt = new Point2d(.5, .5);
             var dpt = new DelaunayPoint(pt);
-            Assert.Equal(pt.X,dpt.X);
-            Assert.Equal(pt.Y,dpt.Y);
+            Assert.Equal(pt.X, dpt.X);
+            Assert.Equal(pt.Y, dpt.Y);
         }
     }
 }

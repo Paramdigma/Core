@@ -15,6 +15,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(actual, expected);
         }
 
+
         [Fact]
         public void CanCreate_FromDefaultConstructor()
         {
@@ -23,6 +24,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(1, cyl.Radius);
             Assert.Equal(1, cyl.Height);
         }
+
 
         [Fact]
         public void CanCreate_FromPlaneHeightRadius()

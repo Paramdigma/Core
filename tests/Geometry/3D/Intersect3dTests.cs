@@ -34,6 +34,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, actual);
         }
 
+
         [Fact]
         public void CannotIntersect_Line_Plane_DoNotTouch()
         {
@@ -47,6 +48,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Null(actual);
         }
 
+
         [Fact]
         public void CannotIntersect_Line_Plane_DoNotTouchAndAreParallel()
         {
@@ -59,6 +61,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(Intersect3D.ISLinePlane.NoIntersection, status);
             Assert.Null(actual);
         }
+
 
         [Fact]
         public void CannotIntersect_Line_Plane_Parallel()

@@ -18,29 +18,23 @@ namespace Paramdigma.Core.Geometry
             this.Direction = direction ?? throw new ArgumentNullException(nameof(direction));
         }
 
+
         /// <summary>
         ///     Gets or sets the origin point of the ray.
         /// </summary>
-        public Point3d Origin
-        {
-            get;
-            set;
-        }
+        public Point3d Origin { get; set; }
 
         /// <summary>
         ///     Gets or sets the direction vector of the ray.
         /// </summary>
-        public Vector3d Direction
-        {
-            get;
-            set;
-        }
+        public Vector3d Direction { get; set; }
+
 
         /// <summary>
         ///     Computes a point in the ray at the given parameter.
         /// </summary>
         /// <param name="t">Parameter to obtain point.</param>
         /// <returns>Returns a point at the specified parameter of the Ray.</returns>
-        public Point3d PointAt(double t) => this.Origin + (t * this.Direction);
+        public Point3d PointAt(double t) => this.Origin + t * this.Direction;
     }
 }

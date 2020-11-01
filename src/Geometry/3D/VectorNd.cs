@@ -12,11 +12,13 @@ namespace Paramdigma.Core.Geometry
     {
         private List<double> values;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="VectorNd" /> class.
         /// </summary>
         /// <param name="vector">Vector to copy.</param>
         public VectorNd(VectorNd vector) => this.values = new List<double>(vector);
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="VectorNd" /> class.
@@ -25,17 +27,22 @@ namespace Paramdigma.Core.Geometry
         /// <param name="dimension">Dimension.</param>
         public VectorNd(int dimension) => this.InitializeZeroVector(dimension);
 
+
         /// <summary>
-        ///     Initializes a new instance of the <see cref="VectorNd" /> class  from a given list of coordinates.
+        ///     Initializes a new instance of the <see cref="VectorNd" /> class  from a given list of
+        ///     coordinates.
         /// </summary>
         /// <param name="values">List of values for the vector.</param>
         public VectorNd(List<double> values) => this.values = values;
 
+
         /// <summary>
-        ///     Initializes a new instance of the <see cref="VectorNd" /> class from a given list of parameters.
+        ///     Initializes a new instance of the <see cref="VectorNd" /> class from a given list of
+        ///     parameters.
         /// </summary>
         /// <param name="values">Number parameters.</param>
         public VectorNd(params double[] values) : this(values.ToList()) { }
+
 
         /// <summary>
         ///     Gets or sets the coordinate at the given dimension.
@@ -62,10 +69,13 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         public double Length2 => this.ComputeLength2();
 
+
         /// <inheritdoc />
         public IEnumerator<double> GetEnumerator() => this.values.GetEnumerator();
 
+
         IEnumerator IEnumerable.GetEnumerator() => this.values.GetEnumerator();
+
 
         /// <summary>
         ///     Compare this vector with another.
@@ -87,12 +97,14 @@ namespace Paramdigma.Core.Geometry
             return true;
         }
 
+
         /// <summary>
         ///     Gets the dot product of this vector with another.
         /// </summary>
         /// <param name="vector">Vector to compute dot product with.</param>
         /// <returns>Dot product result.</returns>
         public double Dot(VectorNd vector) => DotProduct(this, vector);
+
 
         private double ComputeLength2()
         {
@@ -101,12 +113,14 @@ namespace Paramdigma.Core.Geometry
             return length;
         }
 
+
         private void InitializeZeroVector(int dimension)
         {
             this.values = new List<double>(dimension);
             for (var i = 0; i < dimension; i++)
                 this.values.Add(.0);
         }
+
 
         /// <summary>
         ///     Computes the distance between two N-dimensional vectors.
@@ -115,6 +129,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="b">Vector B.</param>
         /// <returns>Distance between vectors.</returns>
         public static double Distance(VectorNd a, VectorNd b) => Math.Sqrt(Distance2(a, b));
+
 
         /// <summary>
         ///     Computes the square distance between two N-dimensional vectors.
@@ -135,13 +150,16 @@ namespace Paramdigma.Core.Geometry
             return dist;
         }
 
+
         /// <summary>
         ///     Computes the cosine similarity between two vectors.
         /// </summary>
         /// <param name="a">Vector A.</param>
         /// <param name="b">Vector B.</param>
         /// <returns>Cosine similarity value.</returns>
-        public static double CosineSimilarity(VectorNd a, VectorNd b) => a.Dot(b) / (a.Length * b.Length);
+        public static double CosineSimilarity(VectorNd a, VectorNd b) =>
+            a.Dot(b) / (a.Length * b.Length);
+
 
         /// <summary>
         ///     Computes the angular distance between two vectors.
@@ -149,7 +167,9 @@ namespace Paramdigma.Core.Geometry
         /// <param name="a">Vector A.</param>
         /// <param name="b">Vector B.</param>
         /// <returns>Angular distance value.</returns>
-        public static double AngularDistance(VectorNd a, VectorNd b) => Math.Acos(CosineSimilarity(a, b)) / Math.PI;
+        public static double AngularDistance(VectorNd a, VectorNd b) =>
+            Math.Acos(CosineSimilarity(a, b)) / Math.PI;
+
 
         /// <summary>
         ///     Angular similarity value between two vectors.
@@ -158,6 +178,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="b">Vector B.</param>
         /// <returns>Angular similarity value.</returns>
         public static double AngularSimilarity(VectorNd a, VectorNd b) => 1 - AngularDistance(a, b);
+
 
         /// <summary>
         ///     Adds two N dimensional vectors.
@@ -179,6 +200,7 @@ namespace Paramdigma.Core.Geometry
             return result;
         }
 
+
         /// <summary>
         ///     Subtract two N dimensional vectors.
         /// </summary>
@@ -186,6 +208,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="b">Vector B.</param>
         /// <returns>Vector substraction result.</returns>
         public static VectorNd Substract(VectorNd a, VectorNd b) => Add(a, Negate(b));
+
 
         /// <summary>
         ///     Multiply an N dimensional vector by a number.
@@ -201,13 +224,16 @@ namespace Paramdigma.Core.Geometry
             return result;
         }
 
+
         /// <summary>
         ///     Divide an N dimensional vector by a number.
         /// </summary>
         /// <param name="vector">Vector to divide.</param>
         /// <param name="scalar">Number to divide by.</param>
         /// <returns>Vector division result.</returns>
-        public static VectorNd Divide(VectorNd vector, double scalar) => Multiply(vector, 1 / scalar);
+        public static VectorNd Divide(VectorNd vector, double scalar) =>
+            Multiply(vector, 1 / scalar);
+
 
         /// <summary>
         ///     Negate a given vector.
@@ -221,6 +247,7 @@ namespace Paramdigma.Core.Geometry
                 result[i] = -vector[i];
             return result;
         }
+
 
         /// <summary>
         ///     Computes the dot product between two vectors.
@@ -242,17 +269,21 @@ namespace Paramdigma.Core.Geometry
             return result;
         }
 
-        /// <inheritdoc />
-        public static VectorNd operator +(VectorNd vectorA, VectorNd vectorB) => Add(vectorA, vectorB);
 
-        /// <inheritdoc />
-        public static VectorNd operator -(VectorNd vectorA, VectorNd vectorB) => Substract(vectorA, vectorB);
+        public static VectorNd operator +(VectorNd vectorA, VectorNd vectorB) =>
+            Add(vectorA, vectorB);
 
-        /// <inheritdoc />
-        public static VectorNd operator *(VectorNd vector, double scalar) => Multiply(vector, scalar);
 
-        /// <inheritdoc />
+        public static VectorNd operator -(VectorNd vectorA, VectorNd vectorB) =>
+            Substract(vectorA, vectorB);
+
+
+        public static VectorNd operator *(VectorNd vector, double scalar) =>
+            Multiply(vector, scalar);
+
+
         public static VectorNd operator /(VectorNd vector, double scalar) => Divide(vector, scalar);
+
 
         /// <summary>
         ///     Compare this vector with another object.
@@ -267,20 +298,21 @@ namespace Paramdigma.Core.Geometry
             return false;
         }
 
+
         /// <inheritdoc />
         public override int GetHashCode()
         {
             unchecked
             {
                 // Choose large primes to avoid hashing collisions
-                const int hashingBase = (int)2166136261;
+                const int hashingBase = ( int ) 2166136261;
                 const int hashingMultiplier = 16777619;
                 var tol = Settings.Tolerance * 2;
                 var hash = hashingBase;
 
                 foreach (var coord in this.values)
                 {
-                    var tCoord = (int)(coord * (1 / tol)) * tol; // Round to tolerance
+                    var tCoord = ( int ) (coord * (1 / tol)) * tol; // Round to tolerance
                     hash = (hash * hashingMultiplier) ^ tCoord.GetHashCode();
                 }
 
@@ -288,7 +320,9 @@ namespace Paramdigma.Core.Geometry
             }
         }
 
+
         /// <inheritdoc />
-        public override string ToString() => "VectorNd[" + this[0] + "," + this[1] + "," + this[2] + ",...]";
+        public override string ToString() =>
+            "VectorNd[" + this[0] + "," + this[1] + "," + this[2] + ",...]";
     }
 }

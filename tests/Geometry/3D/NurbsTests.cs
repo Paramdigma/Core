@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Paramdigma.Core.Collections;
@@ -12,20 +11,23 @@ namespace Paramdigma.Core.Tests
     {
         private readonly ITestOutputHelper testOutputHelper;
 
-        public NurbsTests(ITestOutputHelper testOutputHelper)
-        {
+
+        public NurbsTests(ITestOutputHelper testOutputHelper) =>
             this.testOutputHelper = testOutputHelper;
-        }
+
 
         public Matrix<Point3d> FlatGrid(int size)
         {
             var m = new Matrix<Point3d>(size);
             for (var i = 0; i < size; i++)
-            for (var j = 0; j < size; j++)
-                m[i, j] = new Point3d(i, j, 0);
+            {
+                for (var j = 0; j < size; j++)
+                    m[i, j] = new Point3d(i, j, 0);
+            }
 
             return m;
         }
+
 
         [Theory]
         [InlineData(0.0, 0.0)]
@@ -38,6 +40,7 @@ namespace Paramdigma.Core.Tests
             Assert.NotNull(pt);
         }
 
+
         [Fact]
         public void Decasteljau1_Works()
         {
@@ -46,6 +49,7 @@ namespace Paramdigma.Core.Tests
                 points.Add(new Point3d(i, 0, 0));
             var pt = NurbsCalculator.DeCasteljau1(points.ToArray(), points.Count - 1, 1);
         }
+
 
         //[Fact]
         public void NurbsCurvePoint_Works()
@@ -62,14 +66,30 @@ namespace Paramdigma.Core.Tests
             const int n = 100;
             for (var i = 0; i <= n; i++)
             {
-                var pt = NurbsCalculator.CurvePoint(3, 1, u, new[] {p0, p1, p2, p3}, (double)i / n);
-                var pt2 = NurbsCalculator.CurvePoint(3, 2, u2, new[] {p0, p1, p2, p3}, (double)i / n);
-                var pt3 = NurbsCalculator.CurvePoint(3, 3, u3, new[] {p0, p1, p2, p3}, (double)i / n);
+                var pt = NurbsCalculator.CurvePoint(
+                    3,
+                    1,
+                    u,
+                    new[] {p0, p1, p2, p3},
+                    ( double ) i / n);
+                var pt2 = NurbsCalculator.CurvePoint(
+                    3,
+                    2,
+                    u2,
+                    new[] {p0, p1, p2, p3},
+                    ( double ) i / n);
+                var pt3 = NurbsCalculator.CurvePoint(
+                    3,
+                    3,
+                    u3,
+                    new[] {p0, p1, p2, p3},
+                    ( double ) i / n);
             }
 
             watch.Stop();
-            testOutputHelper.WriteLine(watch.Elapsed.ToString());
+            this.testOutputHelper.WriteLine(watch.Elapsed.ToString());
         }
+
 
         [Fact]
         public void TestKnotVector()

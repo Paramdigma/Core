@@ -22,25 +22,26 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             }
         }
 
+
         [Fact]
         public void CanCompute_Adjacencies() =>
-            this.FlatSquare.Vertices.ForEach(vertex =>
-            {
-                Assert.Single(vertex.AdjacentFaces());
-                Assert.Single(vertex.AdjacentCorners());
-                Assert.Equal(2, vertex.AdjacentVertices().Count);
-                Assert.Equal(2, vertex.AdjacentEdges().Count);
-                Assert.Equal(2, vertex.AdjacentHalfEdges().Count);
-                Assert.Equal(2, vertex.Valence());
-                Assert.True(vertex.OnBoundary());
-            });
+            this.FlatSquare.Vertices.ForEach(
+                vertex =>
+                {
+                    Assert.Single(vertex.AdjacentFaces());
+                    Assert.Single(vertex.AdjacentCorners());
+                    Assert.Equal(2, vertex.AdjacentVertices().Count);
+                    Assert.Equal(2, vertex.AdjacentEdges().Count);
+                    Assert.Equal(2, vertex.AdjacentHalfEdges().Count);
+                    Assert.Equal(2, vertex.Valence());
+                    Assert.True(vertex.OnBoundary());
+                });
+
 
         [Fact]
         public void CanConvert_ToString() =>
-            this.FlatSquare.Vertices.ForEach(vertex =>
-            {
-                Assert.NotNull(vertex.ToString());
-            });
+            this.FlatSquare.Vertices.ForEach(vertex => { Assert.NotNull(vertex.ToString()); });
+
 
         [Fact]
         public void CanCreate()

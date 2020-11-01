@@ -7,6 +7,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
     {
         public Circle testCircle => new Circle(Plane.WorldXY, 1);
 
+
         [Fact]
         public void CanCompute_BinormalAt()
         {
@@ -16,8 +17,12 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(this.testCircle.BinormalAt(0.75), Vector3d.UnitZ);
         }
 
+
         [Fact]
-        public void CanCompute_FrameAt() => Assert.Equal(this.testCircle.FrameAt(0), new Plane(this.testCircle.PointAt(0), -Vector3d.UnitX, Vector3d.UnitZ));
+        public void CanCompute_FrameAt() => Assert.Equal(
+            this.testCircle.FrameAt(0),
+            new Plane(this.testCircle.PointAt(0), -Vector3d.UnitX, Vector3d.UnitZ));
+
 
         [Fact]
         public void CanCompute_NormalAt()
@@ -28,6 +33,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(this.testCircle.NormalAt(0.75), Vector3d.UnitY);
         }
 
+
         [Fact]
         public void CanCompute_PointAt()
         {
@@ -36,6 +42,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(this.testCircle.PointAt(0.5), -Vector3d.UnitX);
             Assert.Equal(this.testCircle.PointAt(0.75), -Vector3d.UnitY);
         }
+
 
         [Fact]
         public void CanCompute_TangentAt()

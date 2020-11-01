@@ -37,21 +37,26 @@ namespace Paramdigma.Core.Tests.Geometry
             }
         }
 
+
         [Fact]
         private void CanCompute_CornerAngles() =>
-            this.FlatSquare.Corners.ForEach(corner =>
-            {
-                var angle = MeshGeometry.Angle(corner);
-                Assert.True(Math.Abs(angle - (0.5 * Math.PI)) < Settings.Tolerance);
-            });
+            this.FlatSquare.Corners.ForEach(
+                corner =>
+                {
+                    var angle = MeshGeometry.Angle(corner);
+                    Assert.True(Math.Abs(angle - 0.5 * Math.PI) < Settings.Tolerance);
+                });
+
 
         [Fact]
         private void CanCompute_EdgeLengths() =>
-            this.FlatSquare.Edges.ForEach(edge =>
-            {
-                var length = MeshGeometry.Length(edge);
-                Assert.True(Math.Abs(length - 1) < Settings.Tolerance);
-            });
+            this.FlatSquare.Edges.ForEach(
+                edge =>
+                {
+                    var length = MeshGeometry.Length(edge);
+                    Assert.True(Math.Abs(length - 1) < Settings.Tolerance);
+                });
+
 
         [Fact]
         private void CanCompute_FaceArea()
@@ -60,12 +65,14 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(Math.Abs(area - 0.5) < Settings.Tolerance);
         }
 
+
         [Fact]
         private void CanCompute_FaceNormal()
         {
             var normal = MeshGeometry.FaceNormal(this.FlatTriangle.Faces[0]);
             Assert.Equal(Vector3d.UnitZ, normal);
         }
+
 
         [Fact]
         private void CanCompute_MeshArea()
@@ -74,16 +81,18 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(Math.Abs(area - 0.5) < Settings.Tolerance);
         }
 
+
         [Fact]
         private void CanCompute_VertexNormal() =>
-            this.FlatTriangle.Vertices.ForEach(vertex =>
-            {
-                var normal = MeshGeometry.VertexNormalAngleWeighted(vertex);
-                Assert.Equal(Vector3d.UnitZ, normal);
-                normal = MeshGeometry.VertexNormalEquallyWeighted(vertex);
-                Assert.Equal(Vector3d.UnitZ, normal);
-                normal = MeshGeometry.VertexNormalAreaWeighted(vertex);
-                Assert.Equal(Vector3d.UnitZ, normal);
-            });
+            this.FlatTriangle.Vertices.ForEach(
+                vertex =>
+                {
+                    var normal = MeshGeometry.VertexNormalAngleWeighted(vertex);
+                    Assert.Equal(Vector3d.UnitZ, normal);
+                    normal = MeshGeometry.VertexNormalEquallyWeighted(vertex);
+                    Assert.Equal(Vector3d.UnitZ, normal);
+                    normal = MeshGeometry.VertexNormalAreaWeighted(vertex);
+                    Assert.Equal(Vector3d.UnitZ, normal);
+                });
     }
 }

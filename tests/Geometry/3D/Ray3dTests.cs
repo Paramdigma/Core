@@ -15,6 +15,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, actual);
         }
 
+
         [Fact]
         public void CanCreate_AndThrowExceptions()
         {

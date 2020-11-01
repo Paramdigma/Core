@@ -19,7 +19,12 @@ namespace Paramdigma.Core.Curves
         /// <param name="maxIter">Maximum iterations.</param>
         /// <param name="geodesic">Geodesic curves.</param>
         /// <returns>True if successful.</returns>
-        public static bool StartDir(MeshPoint meshPoint, Vector3d vector, Mesh mesh, int maxIter, out List<Point3d> geodesic)
+        public static bool StartDir(
+            MeshPoint meshPoint,
+            Vector3d vector,
+            Mesh mesh,
+            int maxIter,
+            out List<Point3d> geodesic)
         {
             // Get initial face on the mesh
             var initialFace = mesh.Faces[meshPoint.FaceIndex];
@@ -48,8 +53,12 @@ namespace Paramdigma.Core.Curves
                 var nextFace = halfEdge.Twin.Face;
 
                 // Flip vector to next face
-                var perpVector = Vector3d.CrossProduct(thisDirection, MeshGeometry.FaceNormal(thisFace));
-                var nextVector = Vector3d.CrossProduct(MeshGeometry.FaceNormal(nextFace), perpVector);
+                var perpVector = Vector3d.CrossProduct(
+                    thisDirection,
+                    MeshGeometry.FaceNormal(thisFace));
+                var nextVector = Vector3d.CrossProduct(
+                    MeshGeometry.FaceNormal(nextFace),
+                    perpVector);
 
                 // Assign iteration variables to current
                 thisPoint = nextPoint;

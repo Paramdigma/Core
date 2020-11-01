@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(!ReferenceEquals(pln, plnC));
         }
 
+
         [Fact]
         public void CanBe_Compared()
         {
@@ -24,6 +25,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, actual);
             Assert.Equal(expected.GetHashCode(), actual.GetHashCode());
         }
+
 
         [Fact]
         public void CanBe_Created()
@@ -37,6 +39,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var planeC = new Plane(ptC, ptA, ptB);
         }
 
+
         [Fact]
         public void CanBe_Flipped()
         {
@@ -47,6 +50,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(xy.YAxis, flipped.XAxis);
             Assert.Equal(xy.ZAxis, -flipped.ZAxis);
         }
+
 
         [Fact]
         public void CanCompute_ClosestPoint()
@@ -60,6 +64,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(dist == 1);
         }
 
+
         [Fact]
         public void CanCompute_Points()
         {
@@ -72,6 +77,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptB == expectedPtB);
         }
 
+
         [Fact]
         public void CanConvert_ToString()
         {
@@ -80,6 +86,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Console.WriteLine(s);
         }
 
+
         [Fact]
         public void CanCreate_SpecialPlanes()
         {
@@ -87,6 +94,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptYZ = Plane.WorldYZ;
             var ptXZ = Plane.WorldXZ;
         }
+
 
         [Fact]
         public void CanRemap_FromXYPlane()
@@ -98,6 +106,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, result);
         }
 
+
         [Fact]
         public void CanRemap_ToXYPlane()
         {
@@ -107,6 +116,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var result = yz.RemapToWorldXYSpace(pt);
             Assert.Equal(expected, result);
         }
+
 
         [Fact]
         public void LinearPoints_ThrowError()

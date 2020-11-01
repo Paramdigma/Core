@@ -14,6 +14,7 @@ namespace Paramdigma.Core.Optimization
         private readonly int maxIterations;
         private int currentIterations;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="KMeansClustering" /> class.
         /// </summary>
@@ -27,14 +28,12 @@ namespace Paramdigma.Core.Optimization
             this.InitializeClusters(data);
         }
 
+
         /// <summary>
         ///     Gets or sets the list of clusters.
         /// </summary>
-        public List<KMeansCluster> Clusters
-        {
-            get;
-            set;
-        }
+        public List<KMeansCluster> Clusters { get; set; }
+
 
         private void InitializeClusters(List<VectorNd> data)
         {
@@ -42,18 +41,22 @@ namespace Paramdigma.Core.Optimization
             for (var i = 0; i < this.clusterCount; i++)
                 this.Clusters.Add(new KMeansCluster());
 
-            data.ForEach(vector => this.Clusters[new Random().Next() % this.clusterCount].Add(vector));
+            data.ForEach(
+                vector => this.Clusters[new Random().Next() % this.clusterCount].Add(vector));
         }
+
 
         /// <summary>
         ///     Run the algorithm until it reaches the maximum amount of iterations.
         /// </summary>
         public void Run() => this.Run(this.maxIterations, false);
 
+
         /// <summary>
         ///     Run the k-means clustering algorithm for a specified amount of iterations.
         /// </summary>
         /// <param name="iterations">Iterations to run.</param>
+        /// <param name="allowEmptyClusters">True to allow the optimization to leave clusters empty.</param>
         public void Run(int iterations, bool allowEmptyClusters)
         {
             var rnd = new Random();
@@ -73,39 +76,46 @@ namespace Paramdigma.Core.Optimization
                     newClusters.Add(new KMeansCluster());
 
                 // Find the closest average for each vector in each cluster
-                this.Clusters.ForEach(cluster =>
-                {
-                    var ind = this.Clusters.IndexOf(cluster);
-                    for (var i = 0; i < cluster.Count; i++)
+                this.Clusters.ForEach(
+                    cluster =>
                     {
-                        var vector = cluster[i];
-                        var simIndex = this.FindIndexOfSimilar(averages, vector);
-                        newClusters[simIndex].Add(vector);
-                        if (simIndex != ind)
-                            hasChanged = true;
-                    }
-                });
-
-                // Check for empty clusters
-                if (!allowEmptyClusters)
-                    newClusters.ForEach(cluster =>
-                    {
-                        if (cluster.Count == 0)
+                        var ind = this.Clusters.IndexOf(cluster);
+                        for (var i = 0; i < cluster.Count; i++)
                         {
-                            Console.WriteLine("Cluster has no mass");
-                            var biggest = newClusters.OrderByDescending(x => x.Count)
-                                                     .First();
-
-                            var randomVector = biggest[rnd.Next(biggest.Count)];
-
-                            biggest.Remove(randomVector);
-                            cluster.Add(randomVector);
+                            var vector = cluster[i];
+                            var simIndex = this.FindIndexOfSimilar(averages, vector);
+                            newClusters[simIndex].Add(vector);
+                            if (simIndex != ind)
+                                hasChanged = true;
                         }
                     });
 
+                // Check for empty clusters
+                if (!allowEmptyClusters)
+                {
+                    newClusters.ForEach(
+                        cluster =>
+                        {
+                            if (cluster.Count == 0)
+                            {
+                                Console.WriteLine("Cluster has no mass");
+                                var biggest = newClusters.OrderByDescending(x => x.Count)
+                                                         .First();
+
+                                var randomVector = biggest[rnd.Next(biggest.Count)];
+
+                                biggest.Remove(randomVector);
+                                cluster.Add(randomVector);
+                            }
+                        });
+                }
+
                 // Update clusters and increase iteration
                 this.Clusters = newClusters;
-                var iterArgs = new IterationCompletedEventArgs {iteration = iteration, Clusters = newClusters};
+                var iterArgs = new IterationCompletedEventArgs
+                {
+                    iteration = iteration, Clusters = newClusters
+                };
                 this.OnIterationCompleted(iterArgs);
                 iteration++;
                 this.currentIterations++;
@@ -113,6 +123,7 @@ namespace Paramdigma.Core.Optimization
                   && iteration < iterations
                   && this.currentIterations < this.maxIterations);
         }
+
 
         /// <summary>
         ///     Find the index of the most similar vector to a given one.
@@ -139,33 +150,29 @@ namespace Paramdigma.Core.Optimization
             return minIndex;
         }
 
+
         /// <summary>
         ///     Raised when an iteration is completed.
         /// </summary>
         public event EventHandler<IterationCompletedEventArgs> IterationCompleted;
 
+
         /// <summary>
         ///     Method to call when an iteration is completed.
         /// </summary>
         /// <param name="iterArgs">Data for the current iteration.</param>
-        protected virtual void OnIterationCompleted(IterationCompletedEventArgs iterArgs) => this.IterationCompleted?.Invoke(this, iterArgs);
+        protected virtual void OnIterationCompleted(IterationCompletedEventArgs iterArgs) =>
+            this.IterationCompleted?.Invoke(this, iterArgs);
+
 
         /// <summary>
         ///     Data for the current iteration event.
         /// </summary>
         public class IterationCompletedEventArgs : EventArgs
         {
-            public int iteration
-            {
-                get;
-                set;
-            }
+            public int iteration { get; set; }
 
-            public List<KMeansCluster> Clusters
-            {
-                get;
-                set;
-            }
+            public List<KMeansCluster> Clusters { get; set; }
         }
     }
 }

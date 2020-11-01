@@ -8,10 +8,27 @@ namespace Paramdigma.Core.Geometry
     /// </summary>
     public class NurbsCurve : BaseCurve
     {
+        /// <summary>
+        /// The control points of the nurbs curve.
+        /// </summary>
         public List<Point3d> ControlPoints;
+
+        /// <summary>
+        /// The degree of the curve.
+        /// </summary>
         public int Degree;
+
+        /// <summary>
+        /// The nurbs curve knot vector.
+        /// </summary>
         public List<double> Knots;
 
+
+        /// <summary>
+        /// Initializes a new instance of <see cref="NurbsCurve"/> by it's control points and degree.
+        /// </summary>
+        /// <param name="controlPoints">The control points to create the curve with.</param>
+        /// <param name="degree">The desired degree of the curve. Degree cannot be > (ControlPoints - 1)</param>
         public NurbsCurve(List<Point3d> controlPoints, int degree)
         {
             this.ControlPoints = controlPoints;
@@ -19,10 +36,11 @@ namespace Paramdigma.Core.Geometry
             this.Degree = degree;
         }
 
+
         /// <summary>
         ///     Gets the count of the control points - 1.
         /// </summary>
-        private int n => this.ControlPoints.Count - 1;
+        private int N => this.ControlPoints.Count - 1;
 
         /// <summary>
         ///     The start point of the curve.
@@ -44,6 +62,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         public Vector3d EndTangent => this.TangentAt(this.Domain.End);
 
+
         /// <summary>
         ///     Computes the specific amount of derivatives on the specified parameter.
         /// </summary>
@@ -52,7 +71,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>Array containing the </returns>
         private IList<Vector3d> DerivativesAt(double t, int count) =>
             NurbsCalculator.CurveDerivsAlg1(
-                this.n,
+                this.N,
                 this.Degree,
                 this.Knots,
                 this.ControlPoints,
@@ -63,26 +82,32 @@ namespace Paramdigma.Core.Geometry
 
         /// <inheritdoc />
         public override Point3d PointAt(double t) =>
-            NurbsCalculator.CurvePoint(this.n, this.Degree, this.Knots, this.ControlPoints, t);
+            NurbsCalculator.CurvePoint(this.N, this.Degree, this.Knots, this.ControlPoints, t);
+
 
         /// <inheritdoc />
         public override Vector3d TangentAt(double t) => this.DerivativesAt(t, 1)[1].Unit();
 
+
         /// <inheritdoc />
         public override Vector3d NormalAt(double t) => this.DerivativesAt(t, 2)[2].Unit();
 
+
         /// <inheritdoc />
         public override Vector3d BinormalAt(double t) => this.DerivativesAt(t, 3)[3].Unit();
+
 
         /// <inheritdoc />
         public override Plane FrameAt(double t)
         {
             var ders = this.DerivativesAt(t, 3);
-            return new Plane((Point3d)ders[0], ders[1], ders[2], ders[3]);
+            return new Plane(( Point3d ) ders[0], ders[1], ders[2], ders[3]);
         }
+
 
         /// <inheritdoc />
         public override bool CheckValidity() => true;
+
 
         /// <inheritdoc />
         protected override double ComputeLength() => throw new NotImplementedException();

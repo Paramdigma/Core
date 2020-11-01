@@ -19,6 +19,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(Math.Abs(a2 - q) <= Settings.Tolerance);
         }
 
+
         [Fact]
         public void CanBe_Added()
         {
@@ -32,6 +33,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(vA + vB == ptResult);
         }
 
+
         [Fact]
         public void CanBe_ConvertedToString()
         {
@@ -40,6 +42,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var s = v.ToString();
             Assert.True(s == result);
         }
+
 
         [Fact]
         public void CanBe_Created()
@@ -53,6 +56,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(pt == newVp);
         }
 
+
         [Fact]
         public void CanBe_Divided()
         {
@@ -64,6 +68,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Vector3d(a / m, b / m, c / m);
             Assert.True(v / m == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Multiplied()
@@ -77,6 +82,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(v * m == ptResult);
         }
 
+
         [Fact]
         public void CanBe_Negated()
         {
@@ -87,6 +93,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Vector3d(-a, -b, -c);
             Assert.True(-v == ptResult);
         }
+
 
         [Fact]
         public void CanBe_Substracted()
@@ -99,6 +106,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptResult = new Vector3d(a - b, b - c, c - a);
             Assert.True(vA - vB == ptResult);
         }
+
 
         [Fact]
         public void EqualsAndHashCode_HaveConsistentResults()

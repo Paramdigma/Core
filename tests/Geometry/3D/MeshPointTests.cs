@@ -15,6 +15,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(0.6, pt.W);
         }
 
+
         [Fact]
         public void CanConvert_ToString()
         {
