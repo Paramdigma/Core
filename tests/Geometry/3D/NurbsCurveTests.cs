@@ -15,7 +15,6 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             new Point3d(1, 3, 0),
             new Point3d(1.4, 5, 0),
             new Point3d(0, 7, 0),
-            new Point3d(0, 9, 0)
         };
 
         private NurbsCurve Curve => new NurbsCurve(this.controlPoints, 3);
@@ -38,7 +37,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [InlineData(0.1)]
         [InlineData(0.2)]
         [InlineData(1.0)]
-        public void CanGet_PointAt(double t)
+        private void CanGet_PointAt(double t)
         {
             var point = this.Curve.PointAt(t);
             var rhPoint = this.RhCurve.PointAt(t);

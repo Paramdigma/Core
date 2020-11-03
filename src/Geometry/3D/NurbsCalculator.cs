@@ -17,7 +17,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Degree of the curve.</param>
         /// <exception cref="Exception">Throws an error if degree is bigger than controlPoints+1</exception>
         /// <returns></returns>
-        public static double[] CreateUnitKnotVector(int controlPointCount, int degree)
+        public static double[] CreateUniformKnotVector(int controlPointCount, int degree)
         {
             if (degree > controlPointCount)
                 throw new Exception("Degree cannot be bigger than 'ControlPoints - 1'");
@@ -945,7 +945,7 @@ namespace Paramdigma.Core.Geometry
             double[,] bin = null; // TODO: Precompute 'binomial coefficients'
             if (bin == null)
                 throw new Exception("Must compute binomial coefficients first");
-            
+
             for (var k = 0; k <= d; k++)
             {
                 var v = aDers[k];
@@ -988,7 +988,7 @@ namespace Paramdigma.Core.Geometry
             var vspan = FindSpan(m, q, v, knotVectorV);
             var nV = BasisFunctions(vspan, v, q, knotVectorV);
 
-            var temp = new Point4d[q+1];
+            var temp = new Point4d[q + 1];
             for (var l = 0; l <= q; l++)
             {
                 temp[l] = new Point4d();
@@ -1000,7 +1000,7 @@ namespace Paramdigma.Core.Geometry
             for (var l = 0; l <= q; l++)
                 sW += nV[l] * temp[l];
 
-            return ( Point3d ) sW;
+            return ( Point3d ) sW / sW.Weight;
         }
     }
 }

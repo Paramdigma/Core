@@ -32,7 +32,7 @@ namespace Paramdigma.Core.Geometry
         public NurbsCurve(List<Point3d> controlPoints, int degree)
         {
             this.ControlPoints = controlPoints;
-            this.Knots = NurbsCalculator.CreateUnitKnotVector(controlPoints.Count, degree).ToList();
+            this.Knots = NurbsCalculator.CreateUniformKnotVector(controlPoints.Count, degree).ToList();
             this.Degree = degree;
         }
 

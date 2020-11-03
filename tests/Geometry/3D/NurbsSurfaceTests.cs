@@ -21,56 +21,17 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             this.testOutputHelper = testOutputHelper;
         }
 
-
-        private static Matrix<Point4d> FlatGrid(int size)
-        {
-            var m = new Matrix<Point4d>(size);
-            for (var i = 0; i < size; i++)
-            {
-                for (var j = 0; j < size; j++)
-                    m[i, j] = new Point4d(i, j, 0, 1);
-            }
-
-            return m;
-        }
-
-
-        private static NurbsSurface Surface => new NurbsSurface(FlatGrid(4), 3, 3);
-
-
-        private RG.NurbsSurface RhSurface()
-        {
-            var surf = RG.NurbsSurface.Create(3, false, 3, 3, 4, 4);
-            for (var i = 0; i < Surface.ControlPoints.N; i++)
-            {
-                for (var j = 0; j < Surface.ControlPoints.M; j++)
-                {
-                    var pt = Surface.ControlPoints[i, j];
-                    surf.Points.SetPoint(i, j, pt.X, pt.Y, pt.Z, pt.Weight);
-                }
-            }
-
-            surf.KnotsU.CreateUniformKnots(1);
-            surf.KnotsV.CreateUniformKnots(1);
-            
-            surf.SetDomain(0, new RG.Interval(0, 1));
-            surf.SetDomain(1, new RG.Interval(0, 1));
-            
-            return surf;
-        }
-
-
+        
         [Theory]
         [ClassData(typeof(NurbsSurfaceUnitParamData))]
         public void CanGet_PointAt(double u, double v)
         {
-            // TODO: Fix inaccurate test.
-            var pt = Surface.PointAt(u, v);
-            var rhSurf = this.RhSurface();
+            var surf = NurbsSurface.CreateFlatSurface(Interval.Unit, Interval.Unit, 4, 4);
+            var pt = surf.PointAt(u, v);
+            var rhSurf = surf.ToRhino();
             var ptRh = rhSurf.PointAt(u, v);
             var distance = pt.DistanceTo(ptRh.ToCore());
-            this.testOutputHelper.WriteLine(distance.ToString());
-            Assert.NotNull(pt);
+            Assert.True(distance < Settings.Tolerance);
         }
 
 
