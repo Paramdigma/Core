@@ -37,7 +37,17 @@ namespace Paramdigma.Core.Tests.Geometry._3D
 
         [Theory]
         [ClassData(typeof(NurbsSurfaceUnitParamData))]
-        public void CanGet_TangentAt(double u, double v) { }
+        public void CanGet_TangentAt(double u, double v)
+        {
+            var surf = NurbsSurface.CreateFlatSurface(Interval.Unit, Interval.Unit, 4, 4);
+            var uT = surf.DerivativesAt(u, v, 1)[0,1];
+            var vT = surf.DerivativesAt(u, v, 1)[1,0];
+            var cross = uT.Cross(vT).Unit();
+            var rhSurf = surf.ToRhino();
+            var rhVector = rhSurf.NormalAt(u, v);
+            rhVector.Unitize();
+            Assert.True((rhVector.ToCore() - cross).Length <= Settings.Tolerance);
+        }
 
 
         [Theory]
@@ -54,7 +64,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
     {
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] {0.0, 1.0};
+            yield return new object[] {0.0, 0.99};
             yield return new object[] {0.1, .9};
             yield return new object[] {0.2, .8};
             yield return new object[] {0.3, .7};
@@ -64,7 +74,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             yield return new object[] {0.7, .3};
             yield return new object[] {0.8, .2};
             yield return new object[] {0.9, .1};
-            yield return new object[] {1.0, .0};
+            yield return new object[] {0.99, .0};
         }
 
 

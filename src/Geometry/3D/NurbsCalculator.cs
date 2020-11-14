@@ -801,6 +801,68 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        public static Point4d[,] SurfaceDerivsAlg1(
+            int n,
+            int p,
+            IList<double> knotVectorU,
+            int m,
+            int q,
+            IList<double> knotVectorV,
+            Matrix<Point4d> controlPoints,
+            double u,
+            double v,
+            int derivCount)
+        {
+            var skl = new Point4d[derivCount + 1, derivCount + 1];
+            var du = Math.Min(derivCount, p);
+            for (var k = p + 1; k <= derivCount; k++)
+            {
+                for (var l = 0; l <= derivCount - k; l++)
+                    skl[k, l] = new Point4d();
+            }
+
+            var dv = Math.Min(derivCount, q);
+            for (var l = q + 1; l <= derivCount; l++)
+            {
+                for (var k = 0; k <= derivCount - 1; k++)
+                    skl[k, l] = new Point4d();
+            }
+
+            var uSpan = FindSpan(n, p, u, knotVectorU);
+            var nU = DerivativeBasisFunctions(uSpan, u, p, du, knotVectorU);
+            var vSpan = FindSpan(m, q, v, knotVectorV);
+            var nV = DerivativeBasisFunctions(vSpan, v, q, dv, knotVectorV);
+
+            for (var k = 0; k <= du; k++)
+            {
+                var temp = new Point4d[q+1];
+                for (int index = 0; index < temp.Length; index++)
+                {
+                    temp[index] = new Point4d();
+                }
+                for (var s = 0; s <= q; s++)
+                {
+                    temp[s] = new Point4d();
+                    for (var r = 0; r <= p; r++)
+                        temp[s] += nU[k, r] * controlPoints[uSpan - p + r, vSpan - q + s];
+
+                    var dd = Math.Min(derivCount - k, dv);
+
+                    for (var l = 0; l <= dd; l++)
+                    {
+                        skl[k, l] = new Point4d();
+
+                        // TODO: Check ss, this was changed from 's' for naming conflicts but it might have been on purpose.
+                        for (var ss = 0; ss <= q; ss++)
+                            skl[k, l] += nV[l, ss] * temp[ss];
+                    }
+                }
+            }
+
+            return skl;
+        }
+
+
         public static Point3d[][][][] SurfaceDerivCpts(
             int n,
             int p,
@@ -1020,9 +1082,9 @@ namespace Paramdigma.Core.Geometry
             var aDers = ck1.Select(der => ( Vector3d ) der.Position).ToList();
             var wDers = ck1.Select(der => der.Weight).ToList();
             var ck = RatCurveDerivs(aDers, wDers, d);
-            
+
             return ck;
-            
+
             // if (p == 1)
             //     ck[2] = new Vector3d();
             //
@@ -1071,7 +1133,79 @@ namespace Paramdigma.Core.Geometry
             for (var l = 0; l <= q; l++)
                 sW += nV[l] * temp[l];
 
-            return ( Point3d ) sW / sW.Weight;
+            return ( Point3d ) sW;
+        }
+
+
+        public static Matrix<Vector3d> RatSurfaceDerivs(
+            Matrix<Vector3d> aDers,
+            Matrix<double> wDers,
+            int d)
+        {
+            var skl = new Matrix<Vector3d>(wDers.M, wDers.N);
+            for (int m = 0; m < wDers.M; m++)
+            {
+                for (int n = 0; n < wDers.N; n++)
+                {
+                    skl[m,n] = new Vector3d();
+                }
+            }
+            int a = wDers.M - 1;
+            int b = wDers.N - 1;
+
+            for (int k = 0; k <= a; k++)
+            {
+                for (int l = 0; l <= b; l++)
+                {
+                    var v = aDers[k, l];
+                    for (int j = 0; j <= l; j++)
+                    {
+                        v -= BinomialCoefficient(l, j) * wDers[0, j] * skl[k, l - j];
+                    }
+                }
+            }
+
+            return skl;
+        }
+
+
+        public static Matrix<Vector3d> NurbsSurfaceDerivs(
+            int n,
+            int p,
+            IList<double> knotVectorU,
+            int m,
+            int q,
+            IList<double> knotVectorV,
+            Matrix<Point4d> controlPoints,
+            double u,
+            double v,
+            int d)
+        {
+            var skl1 = SurfaceDerivsAlg1(
+                n,
+                p,
+                knotVectorU,
+                m,
+                q,
+                knotVectorV,
+                controlPoints,
+                u,
+                v,
+                d);
+            
+            var aDers = new Matrix<Vector3d>(skl1.GetLength(0) + 1,skl1.GetLength(1) + 1);
+            var wDers = new Matrix<double>(skl1.GetLength(0) + 1,skl1.GetLength(1) + 1);
+            
+            for (int i = 0; i < controlPoints.M - 1; i++)
+            {
+                for (int j = 0; j < controlPoints.N - 1; j++)
+                {
+                    wDers[i, j] = controlPoints[i, j ].Weight;
+                    aDers[i, j] = controlPoints[i, j].Position;
+                }
+            }
+
+            return RatSurfaceDerivs(aDers, wDers, d);
         }
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Paramdigma.Core.Collections;
@@ -64,6 +65,8 @@ namespace Paramdigma.Core.Geometry
             int xCount,
             int yCount)
         {
+            var rnd = new Random();
+            var wDomain = new Interval(1, 5);
             var m = new Matrix<Point4d>(xCount, yCount);
             for (var i = 0; i < xCount; i++)
             {
@@ -72,7 +75,7 @@ namespace Paramdigma.Core.Geometry
                         xDimension.RemapFromUnit(( double ) i / xCount),
                         yDimension.RemapFromUnit(( double ) j / yCount),
                         0,
-                        1);
+                        2);
             }
 
             var degreeU = xCount <= 3 ? xCount - 1 : 3;
@@ -115,5 +118,19 @@ namespace Paramdigma.Core.Geometry
 
         /// <inheritdoc />
         public Point3d ClosestPointTo(Point3d point) => throw new System.NotImplementedException();
+
+
+        public Matrix<Vector3d> DerivativesAt(double u, double v, int count) =>
+            NurbsCalculator.NurbsSurfaceDerivs(
+                this.ControlPoints.M,
+                this.DegreeU,
+                this.KnotsU,
+                this.ControlPoints.M,
+                this.DegreeV,
+                this.KnotsV,
+                this.ControlPoints,
+                u,
+                v,
+                count);
     }
 }
