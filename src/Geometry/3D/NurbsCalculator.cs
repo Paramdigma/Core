@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using Paramdigma.Core.Collections;
 
 namespace Paramdigma.Core.Geometry
@@ -610,6 +611,31 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        public static Point4d[] CurveDerivsAlg1(
+            int n,
+            int p,
+            IList<double> knotVector,
+            IList<Point4d> controlPoints,
+            double u,
+            int d)
+        {
+            var ck = new Point4d[d + 1];
+            var du = Math.Min(d, p);
+            for (var k = p + 1; k <= d; k++)
+                ck[k] = new Point4d();
+            var span = FindSpan(n, p, u, knotVector);
+            var nDerivatives = DerivativeBasisFunctions(span, u, p, du, knotVector);
+            for (var k = 0; k <= du; k++)
+            {
+                ck[k] = new Point4d();
+                for (var j = 0; j <= p; j++)
+                    ck[k] += nDerivatives[k, j] * controlPoints[span - p + j];
+            }
+
+            return ck;
+        }
+
+
         public static Point3d[,] CurveDerivCpts(
             int n,
             int p,
@@ -932,8 +958,34 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        public static double BinomialCoefficient(int n, int k)
+        {
+            if (n - k == 1 || k == 1)
+                return n;
+
+            var b = new double[n + 1, n - k + 1];
+            for (var i = 0; i < b.GetLength(0); i++)
+                for (var j = 0; j < b.GetLength(1); j++)
+                    if (i == j || j == 0)
+                        b[i, j] = 1;
+                    else if (j == 1 || i - j == 1)
+                        b[i, j] = i;
+                    else
+                        b[i, j] = b[i - 1, j - 1] + b[i - 1, j];
+
+            return b[n, n - k];
+        }
+
+
+        public static bool IsClamped(IList<double> u, int p)
+        {
+            return (u[0] == u[p]) && (u[u.Count - 1] == u[u.Count - 1 - p]);
+        }
+
+
         /// <summary>
         ///     Compute C(u) derivatives from Cw(u) derivatives.
+        ///     
         /// </summary>
         /// <param name="aDers">TODO Add definition</param>
         /// <param name="wDers">TODO: Add definition </param>
@@ -942,20 +994,39 @@ namespace Paramdigma.Core.Geometry
         public static Vector3d[] RatCurveDerivs(IList<Vector3d> aDers, IList<double> wDers, int d)
         {
             var ders = new Vector3d[d + 1];
-            double[,] bin = null; // TODO: Precompute 'binomial coefficients'
-            if (bin == null)
-                throw new Exception("Must compute binomial coefficients first");
 
             for (var k = 0; k <= d; k++)
             {
                 var v = aDers[k];
                 for (var i = 1; i <= k; i++)
-                    v -= bin[k, i] * wDers[i] * ders[k - i];
+                    v -= BinomialCoefficient(k, i) * wDers[i] * ders[k - i];
 
                 ders[k] = v / wDers[0];
             }
 
             return ders;
+        }
+
+
+        public static Vector3d[] NurbsCurveDerivs(
+            int n,
+            int p,
+            IList<double> knotVector,
+            IList<Point4d> controlPoints,
+            double u,
+            int d)
+        {
+            var ck1 = CurveDerivsAlg1(n, p, knotVector, controlPoints, u, d);
+            var aDers = ck1.Select(der => ( Vector3d ) der.Position).ToList();
+            var wDers = ck1.Select(der => der.Weight).ToList();
+            var ck = RatCurveDerivs(aDers, wDers, d);
+            
+            return ck;
+            
+            // if (p == 1)
+            //     ck[2] = new Vector3d();
+            //
+            // return new []{ ck[0], ck[1], ck[2]};
         }
 
 
