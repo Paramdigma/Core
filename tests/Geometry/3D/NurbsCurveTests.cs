@@ -5,7 +5,7 @@ using Paramdigma.Core.Tests.Conversions;
 using Xunit;
 using RG = Rhino.Geometry;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class NurbsCurveTests
     {

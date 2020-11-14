@@ -9,7 +9,7 @@ using Xunit;
 using Xunit.Abstractions;
 using RG = Rhino.Geometry;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class NurbsSurfaceTests
     {
@@ -89,6 +89,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             yield return new object[] {0.8, .2};
             yield return new object[] {0.9, .1};
             yield return new object[] {0.99, .0};
+            yield return new object[] {1, .0};
         }
 
 

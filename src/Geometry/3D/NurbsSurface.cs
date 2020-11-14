@@ -122,10 +122,10 @@ namespace Paramdigma.Core.Geometry
 
         public Matrix<Vector3d> DerivativesAt(double u, double v, int count) =>
             NurbsCalculator.NurbsSurfaceDerivs(
-                this.ControlPoints.M,
+                this.ControlPoints.M - 1,
                 this.DegreeU,
                 this.KnotsU,
-                this.ControlPoints.M,
+                this.ControlPoints.M - 1,
                 this.DegreeV,
                 this.KnotsV,
                 this.ControlPoints,

@@ -209,7 +209,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>The knot span index.</returns>
         public static int FindSpan(int n, int degree, double t, IList<double> knotVector)
         {
-            if (Math.Abs(t - knotVector[n + 1]) < Settings.Tolerance)
+            if (t >= knotVector[n+1])
                 return n;
 
             var low = degree;

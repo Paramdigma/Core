@@ -1,7 +1,7 @@
 using Paramdigma.Core.Geometry;
 using Xunit;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class CircleTests
     {
