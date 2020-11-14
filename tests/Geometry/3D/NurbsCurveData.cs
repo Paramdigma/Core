@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class NurbsCurveUnitParamData : IEnumerable<object[]>
     {

@@ -61,9 +61,9 @@ namespace Paramdigma.Core.Tests
             var p3 = new Point3d(0, 7, 0);
             var pts = new[] {p0, p1, p2, p3};
 
-            var u = NurbsCalculator.CreateUnitKnotVector(pts.Length, 1);
-            var u2 = NurbsCalculator.CreateUnitKnotVector(pts.Length, 2);
-            var u3 = NurbsCalculator.CreateUnitKnotVector(pts.Length, 3);
+            var u = NurbsCalculator.CreateUniformKnotVector(pts.Length, 1);
+            var u2 = NurbsCalculator.CreateUniformKnotVector(pts.Length, 2);
+            var u3 = NurbsCalculator.CreateUniformKnotVector(pts.Length, 3);
             var watch = new Stopwatch();
             watch.Start();
             const int n = 100;
@@ -100,9 +100,9 @@ namespace Paramdigma.Core.Tests
         [Fact]
         public void TestKnotVector()
         {
-            var u = NurbsCalculator.CreateUnitKnotVector(3, 1);
-            var u2 = NurbsCalculator.CreateUnitKnotVector(4, 2);
-            var u3 = NurbsCalculator.CreateUnitKnotVector(5, 3);
+            var u = NurbsCalculator.CreateUniformKnotVector(3, 1);
+            var u2 = NurbsCalculator.CreateUniformKnotVector(4, 2);
+            var u3 = NurbsCalculator.CreateUniformKnotVector(5, 3);
             Assert.NotNull(u);
             Assert.NotNull(u2);
             Assert.NotNull(u3);

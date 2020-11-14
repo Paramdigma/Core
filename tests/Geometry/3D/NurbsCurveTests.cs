@@ -5,17 +5,16 @@ using Paramdigma.Core.Tests.Conversions;
 using Xunit;
 using RG = Rhino.Geometry;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class NurbsCurveTests
     {
-        private readonly List<Point3d> controlPoints = new List<Point3d>
+        private readonly List<Point4d> controlPoints = new List<Point4d>
         {
-            new Point3d(0, 0, 0),
-            new Point3d(1, 3, 0),
-            new Point3d(1.4, 5, 0),
-            new Point3d(0, 7, 0),
-            new Point3d(0, 9, 0)
+            new Point4d(0, 0, 0,4),
+            new Point4d(1, 3, 0,3.5),
+            new Point4d(1.4, 5, 0,2),
+            new Point4d(0, 7, 0,1),
         };
 
         private NurbsCurve Curve => new NurbsCurve(this.controlPoints, 3);
@@ -25,8 +24,12 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             get
             {
                 var rhcrv = RG.Curve.CreateControlPointCurve(
-                    this.controlPoints.Select(pt => pt.ToRhino()),
-                    3);
+                    this.controlPoints.Select(pt => pt.Position.ToRhino()),
+                    3).ToNurbsCurve();
+                for (var i = 0; i < this.controlPoints.Count; i++)
+                {
+                    rhcrv.Points.SetWeight(i, this.controlPoints[i].Weight);
+                }
                 rhcrv.Domain = new RG.Interval(0, 1);
                 return rhcrv.ToNurbsCurve();
             }
@@ -38,7 +41,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         [InlineData(0.1)]
         [InlineData(0.2)]
         [InlineData(1.0)]
-        public void CanGet_PointAt(double t)
+        private void CanGet_PointAt(double t)
         {
             var point = this.Curve.PointAt(t);
             var rhPoint = this.RhCurve.PointAt(t);

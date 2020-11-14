@@ -11,7 +11,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         /// The control points of the nurbs curve.
         /// </summary>
-        public List<Point3d> ControlPoints;
+        public List<Point4d> ControlPoints;
 
         /// <summary>
         /// The degree of the curve.
@@ -29,10 +29,10 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <param name="controlPoints">The control points to create the curve with.</param>
         /// <param name="degree">The desired degree of the curve. Degree cannot be > (ControlPoints - 1)</param>
-        public NurbsCurve(List<Point3d> controlPoints, int degree)
+        public NurbsCurve(List<Point4d> controlPoints, int degree)
         {
             this.ControlPoints = controlPoints;
-            this.Knots = NurbsCalculator.CreateUnitKnotVector(controlPoints.Count, degree).ToList();
+            this.Knots = NurbsCalculator.CreateUniformKnotVector(controlPoints.Count, degree).ToList();
             this.Degree = degree;
         }
 
@@ -70,7 +70,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="count">Number of derivatives to compute.</param>
         /// <returns>Array containing the </returns>
         private IList<Vector3d> DerivativesAt(double t, int count) =>
-            NurbsCalculator.CurveDerivsAlg1(
+            NurbsCalculator.NurbsCurveDerivs(
                 this.N,
                 this.Degree,
                 this.Knots,

@@ -41,13 +41,13 @@ namespace Paramdigma.Core.Collections
         ///     Gets columns.
         /// </summary>
         /// <returns>Number of columns on the Matrix.</returns>
-        public int N => this.data.GetUpperBound(0) + 1;
+        public int N => this.data.GetLength(0);
 
         /// <summary>
         ///     Gets rows.
         /// </summary>
         /// <returns>Number of rows on the Matrix.</returns>
-        public int M => this.data.GetUpperBound(1) + 1;
+        public int M => this.data.GetLength(1);
 
         /// <summary>
         ///     Gets a specific item in the matrix.
@@ -86,7 +86,11 @@ namespace Paramdigma.Core.Collections
             return col;
         }
 
-
+        /// <summary>
+        ///     Gets the amount of items in this matrix.
+        /// </summary>
+        public int Count => this.data.Length;
+        
         // ----- ORDERING METHODS -----
 
 
