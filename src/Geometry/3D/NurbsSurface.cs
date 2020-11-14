@@ -75,7 +75,7 @@ namespace Paramdigma.Core.Geometry
                         xDimension.RemapFromUnit(( double ) i / xCount),
                         yDimension.RemapFromUnit(( double ) j / yCount),
                         0,
-                        2);
+                        1);
             }
 
             var degreeU = xCount <= 3 ? xCount - 1 : 3;

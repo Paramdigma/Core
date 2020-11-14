@@ -40,9 +40,31 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         public void CanGet_TangentAt(double u, double v)
         {
             var surf = NurbsSurface.CreateFlatSurface(Interval.Unit, Interval.Unit, 4, 4);
+            var uT = surf.DerivativesAt(u, v, 1)[0,1].Unit();
+            var vT = surf.DerivativesAt(u, v, 1)[1,0].Unit();
+            var rhSurf = surf.ToRhino();
+            
+            var uCrv = rhSurf.IsoCurve(1, v);
+            uCrv.Domain = new RG.Interval(0,1);
+            var vCrv = rhSurf.IsoCurve(0, u);
+            vCrv.Domain = new RG.Interval(0,1);
+
+            var uVector = uCrv.TangentAt(u);
+            var vVector = vCrv.TangentAt(v);
+            
+            Assert.True((uVector.ToCore() - uT).Length <= Settings.Tolerance);
+            Assert.True((vVector.ToCore() - vT).Length <= Settings.Tolerance);
+        }
+
+
+        [Theory]
+        [ClassData(typeof(NurbsSurfaceUnitParamData))]
+        public void CanGet_NormalAt(double u, double v)
+        {
+            var surf = NurbsSurface.CreateFlatSurface(Interval.Unit, Interval.Unit, 4, 4);
             var uT = surf.DerivativesAt(u, v, 1)[0,1];
             var vT = surf.DerivativesAt(u, v, 1)[1,0];
-            var cross = uT.Cross(vT).Unit();
+            var cross = vT.Cross(uT).Unit();
             var rhSurf = surf.ToRhino();
             var rhVector = rhSurf.NormalAt(u, v);
             rhVector.Unitize();
@@ -50,14 +72,6 @@ namespace Paramdigma.Core.Tests.Geometry._3D
         }
 
 
-        [Theory]
-        [ClassData(typeof(NurbsSurfaceUnitParamData))]
-        public void CanGet_NormalAt(double u, double v) { }
-
-
-        [Theory]
-        [ClassData(typeof(NurbsSurfaceUnitParamData))]
-        public void CanGet_BiNormalAt(double u, double v) { }
     }
 
     public class NurbsSurfaceUnitParamData : IEnumerable<object[]>

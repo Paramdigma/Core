@@ -836,7 +836,7 @@ namespace Paramdigma.Core.Geometry
             for (var k = 0; k <= du; k++)
             {
                 var temp = new Point4d[q+1];
-                for (int index = 0; index < temp.Length; index++)
+                for (var index = 0; index < temp.Length; index++)
                 {
                     temp[index] = new Point4d();
                 }
@@ -1026,7 +1026,7 @@ namespace Paramdigma.Core.Geometry
                 return n;
 
             var b = new double[n + 1, n - k + 1];
-            for (var i = 0; i < b.GetLength(0); i++)
+            for (var i = 1; i < b.GetLength(0); i++)
                 for (var j = 0; j < b.GetLength(1); j++)
                     if (i == j || j == 0)
                         b[i, j] = 1;
@@ -1143,25 +1143,32 @@ namespace Paramdigma.Core.Geometry
             int d)
         {
             var skl = new Matrix<Vector3d>(wDers.M, wDers.N);
-            for (int m = 0; m < wDers.M; m++)
-            {
-                for (int n = 0; n < wDers.N; n++)
-                {
+            for (var m = 0; m < wDers.M; m++)
+                for (var n = 0; n < wDers.N; n++)
                     skl[m,n] = new Vector3d();
-                }
-            }
-            int a = wDers.M - 1;
-            int b = wDers.N - 1;
 
-            for (int k = 0; k <= a; k++)
+            var a = wDers.M - 1;
+            var b = wDers.N - 1;
+
+            for (var k = 0; k <= a; k++)
             {
-                for (int l = 0; l <= b; l++)
+                for (var l = 0; l <= b; l++)
                 {
                     var v = aDers[k, l];
-                    for (int j = 0; j <= l; j++)
-                    {
+                    for (var j = 0; j <= l; j++)
                         v -= BinomialCoefficient(l, j) * wDers[0, j] * skl[k, l - j];
+                    
+                    for (int i = 0; i <= k; i++)
+                    {
+                        v -= BinomialCoefficient(k, i) * wDers[i, 0] * skl[k - i, l];
+                        var v2 = new Vector3d();
+                        for (int j = 0; j <= l; j++)
+                            v2 += BinomialCoefficient(l, j) * wDers[i, j] * skl[k - i, l - j];
+
+                        v -= BinomialCoefficient(k, i) * v2;
                     }
+
+                    skl[k, l] = v / wDers[0,0];
                 }
             }
 
@@ -1196,9 +1203,9 @@ namespace Paramdigma.Core.Geometry
             var aDers = new Matrix<Vector3d>(skl1.GetLength(0) + 1,skl1.GetLength(1) + 1);
             var wDers = new Matrix<double>(skl1.GetLength(0) + 1,skl1.GetLength(1) + 1);
             
-            for (int i = 0; i < controlPoints.M - 1; i++)
+            for (var i = 0; i < controlPoints.M - 1; i++)
             {
-                for (int j = 0; j < controlPoints.N - 1; j++)
+                for (var j = 0; j < controlPoints.N - 1; j++)
                 {
                     wDers[i, j] = controlPoints[i, j ].Weight;
                     aDers[i, j] = controlPoints[i, j].Position;
