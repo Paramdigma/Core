@@ -10,7 +10,7 @@ namespace Paramdigma.Core.SpatialSearch
     public class PointCloud : IList<PointCloudMember>
     {
         /// <summary>
-        /// Constructs a new point-cloud from a list of point cloud members..
+        ///     Constructs a new point-cloud from a list of point cloud members..
         /// </summary>
         /// <param name="points">List of point-cloud members.</param>
         public PointCloud(List<PointCloudMember> points) => this.Points = points;

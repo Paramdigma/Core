@@ -153,7 +153,7 @@ namespace Paramdigma.Core.Geometry
             {
                 if (this.vertices[i].Y > ymin)
                     continue;
-                
+
                 if (Math.Abs(this.vertices[i].Y - ymin) < Settings.Tolerance
                  && this.vertices[i].X < xmin)
                     continue;

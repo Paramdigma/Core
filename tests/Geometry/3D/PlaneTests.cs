@@ -37,7 +37,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptB = new Point3d(0, 1, 0);
             var ptC = new Point3d(0, 0, 0);
             var planeC = new Plane(ptC, ptA, ptB);
-            
+
             Assert.NotNull(plane);
             Assert.NotNull(planeB);
             Assert.NotNull(planeC);

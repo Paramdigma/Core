@@ -10,7 +10,7 @@ namespace Paramdigma.Core.Geometry
     public class Sphere : ISurface
     {
         /// <summary>
-        /// Initializes a new instance of <see cref="Sphere"/> given it's base plane and radius.
+        ///     Initializes a new instance of <see cref="Sphere" /> given it's base plane and radius.
         /// </summary>
         /// <param name="plane"></param>
         /// <param name="radius"></param>
@@ -27,7 +27,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        /// Initializes a new instance of <see cref="Sphere"/> around the World origin with unit radius.
+        ///     Initializes a new instance of <see cref="Sphere" /> around the World origin with unit radius.
         /// </summary>
         public Sphere() : this(Plane.WorldXY, 1) { }
 

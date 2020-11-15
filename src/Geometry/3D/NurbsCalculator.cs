@@ -35,7 +35,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Compute a point on a power basis curve.
-        /// </summa ry>
+        /// </summary>
         /// <param name="points">Curve points.</param>
         /// <param name="degree">Curve degree.</param>
         /// <param name="t">Parameter.</param>
@@ -587,8 +587,8 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///    Computes the derivatives of a rational b-spline curve at the specified parameter.
-        ///    Algorithm A3.2 of 'The Nurbs Book'
+        ///     Computes the derivatives of a rational b-spline curve at the specified parameter.
+        ///     Algorithm A3.2 of 'The Nurbs Book'
         /// </summary>
         /// <param name="n">Control point count + 1</param>
         /// <param name="p">Degree</param>
@@ -623,8 +623,8 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///    Computes the derivatives of a non-rational b-spline curve at the specified parameter.
-        ///    Algorithm A3.2 of 'The Nurbs Book' modified to accept <see cref="Point4d"/> instances..
+        ///     Computes the derivatives of a non-rational b-spline curve at the specified parameter.
+        ///     Algorithm A3.2 of 'The Nurbs Book' modified to accept <see cref="Point4d" /> instances..
         /// </summary>
         /// <param name="n">Control point count + 1</param>
         /// <param name="p">Degree</param>
@@ -699,8 +699,8 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///    Computes the derivatives of a rational b-spline curve at the specified parameter.
-        ///    Algorithm A3.4 of 'The Nurbs Book'
+        ///     Computes the derivatives of a rational b-spline curve at the specified parameter.
+        ///     Algorithm A3.4 of 'The Nurbs Book'
         /// </summary>
         /// <param name="n">Control point count + 1</param>
         /// <param name="p">Degree</param>
@@ -860,7 +860,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Computes the derivatives of at S(u,v) k times with respect to u and l times with respect to v.
-        ///     Algorithm A3.6 of 'The Nurbs Book' modified to accept <see cref="Point4d"/> instances.
+        ///     Algorithm A3.6 of 'The Nurbs Book' modified to accept <see cref="Point4d" /> instances.
         /// </summary>
         /// <param name="n">Control point count - 1 in the U direction.</param>
         /// <param name="p">Degree in the U direction.</param>
@@ -909,9 +909,7 @@ namespace Paramdigma.Core.Geometry
             {
                 var temp = new Point4d[q + 1];
                 for (var index = 0; index < temp.Length; index++)
-                {
                     temp[index] = new Point4d();
-                }
 
                 for (var s = 0; s <= q; s++)
                 {
@@ -1133,13 +1131,17 @@ namespace Paramdigma.Core.Geometry
 
             var b = new double[n + 1, n - k + 1];
             for (var i = 1; i < b.GetLength(0); i++)
+            {
                 for (var j = 0; j < b.GetLength(1); j++)
+                {
                     if (i == j || j == 0)
                         b[i, j] = 1;
                     else if (j == 1 || i - j == 1)
                         b[i, j] = i;
                     else
                         b[i, j] = b[i - 1, j - 1] + b[i - 1, j];
+                }
+            }
 
             return b[n, n - k];
         }
@@ -1151,10 +1153,8 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u">Knot vector.</param>
         /// <param name="p">Degree.</param>
         /// <returns>True if knot vector is clamped.</returns>
-        public static bool IsClamped(IList<double> u, int p)
-        {
-            return (u[0] == u[p]) && (u[u.Count - 1] == u[u.Count - 1 - p]);
-        }
+        public static bool IsClamped(IList<double> u, int p) =>
+            u[0] == u[p] && u[u.Count - 1] == u[u.Count - 1 - p];
 
 
         /// <summary>
@@ -1213,7 +1213,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="controlPoints">A 2-dimensional matrix/grid of control points.</param>
         /// <param name="u">Parameter to compute the point at in the U direction.</param>
         /// <param name="v">Parameter to compute the point at in the V direction.</param>
-        /// <returns>A <see cref="Point3d"/> instance with the result.</returns>
+        /// <returns>A <see cref="Point3d" /> instance with the result.</returns>
         public static Point3d SurfacePoint(
             int n,
             int p,
@@ -1260,8 +1260,10 @@ namespace Paramdigma.Core.Geometry
         {
             var skl = new Matrix<Vector3d>(wDers.M, wDers.N);
             for (var m = 0; m < wDers.M; m++)
+            {
                 for (var n = 0; n < wDers.N; n++)
                     skl[m, n] = new Vector3d();
+            }
 
             var a = wDers.M - 1;
             var b = wDers.N - 1;
@@ -1274,11 +1276,11 @@ namespace Paramdigma.Core.Geometry
                     for (var j = 0; j <= l; j++)
                         v -= BinomialCoefficient(l, j) * wDers[0, j] * skl[k, l - j];
 
-                    for (int i = 0; i <= k; i++)
+                    for (var i = 0; i <= k; i++)
                     {
                         v -= BinomialCoefficient(k, i) * wDers[i, 0] * skl[k - i, l];
                         var v2 = new Vector3d();
-                        for (int j = 0; j <= l; j++)
+                        for (var j = 0; j <= l; j++)
                             v2 += BinomialCoefficient(l, j) * wDers[i, j] * skl[k - i, l - j];
 
                         v -= BinomialCoefficient(k, i) * v2;

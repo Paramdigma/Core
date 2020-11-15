@@ -14,11 +14,10 @@ namespace Paramdigma.Core.Tests.Geometry
             var line = new Line2d(ptA, ptB);
             var lineB = new Line2d(ptA, v);
             var lineC = new Line2d(ptA, v, 3);
-            
+
             Assert.NotNull(line);
             Assert.NotNull(lineB);
             Assert.NotNull(lineC);
-            
         }
     }
 }

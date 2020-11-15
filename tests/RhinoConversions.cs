@@ -22,16 +22,12 @@ namespace Paramdigma.Core.Tests.Conversions
             new RG.Vector3d(vector.X, vector.Y, vector.Z);
 
 
-        public static RG.NurbsCurve ToRhino(this NurbsCurve curve)
-        {
+        public static RG.NurbsCurve ToRhino(this NurbsCurve curve) =>
             throw new NotImplementedException();
-        }
 
 
-        public static NurbsCurve ToCore(this RG.NurbsCurve curve)
-        {
+        public static NurbsCurve ToCore(this RG.NurbsCurve curve) =>
             throw new NotImplementedException();
-        }
 
 
         public static RG.NurbsSurface ToRhino(this NurbsSurface surface)
@@ -69,9 +65,7 @@ namespace Paramdigma.Core.Tests.Conversions
         }
 
 
-        public static NurbsSurface ToCore(this RG.NurbsSurface surface)
-        {
+        public static NurbsSurface ToCore(this RG.NurbsSurface surface) =>
             throw new NotImplementedException();
-        }
     }
 }

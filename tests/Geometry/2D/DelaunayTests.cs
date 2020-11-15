@@ -26,11 +26,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var delaunay = Delaunay.Compute(
                                         new List<DelaunayPoint>
                                         {
-                                            point0,
-                                            point1,
-                                            point2,
-                                            point3,
-                                            point4
+                                            point0, point1, point2, point3, point4
                                         },
                                         border
                                     )

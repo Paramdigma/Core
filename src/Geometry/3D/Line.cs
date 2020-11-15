@@ -118,7 +118,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        /// Explicitly converts a line to it's vector representation.
+        ///     Explicitly converts a line to it's vector representation.
         /// </summary>
         /// <param name="line">Line to convert.</param>
         /// <returns>Vector defining the line direction and length.</returns>

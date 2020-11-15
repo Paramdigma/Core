@@ -18,7 +18,10 @@ namespace Paramdigma.Core
         /// <param name="plane">The 3d plane to intersect.</param>
         /// <param name="intersectionPoint">The resulting intersection point, if it exists.</param>
         /// <returns>Intersection result.</returns>
-        public static LinePlaneIntersectionStatus LinePlane(Line line, Plane plane, out Point3d intersectionPoint)
+        public static LinePlaneIntersectionStatus LinePlane(
+            Line line,
+            Plane plane,
+            out Point3d intersectionPoint)
         {
             var u = line.EndPoint - line.StartPoint;
             var w = line.StartPoint - plane.Origin;
@@ -135,7 +138,10 @@ namespace Paramdigma.Core
         /// <param name="lineB">Second line to intersect.</param>
         /// <param name="result">Struct containing the intersection result.</param>
         /// <returns>Returns an enum containing the intersection status.</returns>
-        public static LineLineIntersectionStatus LineLine(Line lineA, Line lineB, out LineLineIntersectionResult result)
+        public static LineLineIntersectionStatus LineLine(
+            Line lineA,
+            Line lineB,
+            out LineLineIntersectionResult result)
         {
             var u = lineA.EndPoint - lineA.StartPoint;
             var v = lineB.EndPoint - lineB.StartPoint;
