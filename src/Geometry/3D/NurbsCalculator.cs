@@ -209,7 +209,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>The knot span index.</returns>
         public static int FindSpan(int n, int degree, double t, IList<double> knotVector)
         {
-            if (t >= knotVector[n+1])
+            if (t >= knotVector[n + 1])
                 return n;
 
             var low = degree;
@@ -586,6 +586,17 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///    Computes the derivatives of a rational b-spline curve at the specified parameter.
+        ///    Algorithm A3.2 of 'The Nurbs Book'
+        /// </summary>
+        /// <param name="n">Control point count + 1</param>
+        /// <param name="p">Degree</param>
+        /// <param name="knotVector">The curve's knot vector.</param>
+        /// <param name="controlPoints">The curve's control points</param>
+        /// <param name="u">Parameter to compute derivatives at.</param>
+        /// <param name="d">Number of derivatives to compute.</param>
+        /// <returns></returns>
         public static Vector3d[] CurveDerivsAlg1(
             int n,
             int p,
@@ -611,6 +622,17 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///    Computes the derivatives of a non-rational b-spline curve at the specified parameter.
+        ///    Algorithm A3.2 of 'The Nurbs Book' modified to accept <see cref="Point4d"/> instances..
+        /// </summary>
+        /// <param name="n">Control point count + 1</param>
+        /// <param name="p">Degree</param>
+        /// <param name="knotVector">The curve's knot vector.</param>
+        /// <param name="controlPoints">The curve's control points</param>
+        /// <param name="u">Parameter to compute derivatives at.</param>
+        /// <param name="d">Number of derivatives to compute.</param>
+        /// <returns></returns>
         public static Point4d[] CurveDerivsAlg1(
             int n,
             int p,
@@ -636,6 +658,18 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Computes the control points of all derivative curves up to and including the dth derivative.
+        ///     Algorithm A3.3 of 'The Nurbs Book'
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="p"></param>
+        /// <param name="knotVector"></param>
+        /// <param name="controlPoints"></param>
+        /// <param name="d"></param>
+        /// <param name="r1"></param>
+        /// <param name="r2"></param>
+        /// <returns></returns>
         public static Point3d[,] CurveDerivCpts(
             int n,
             int p,
@@ -664,6 +698,17 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///    Computes the derivatives of a rational b-spline curve at the specified parameter.
+        ///    Algorithm A3.4 of 'The Nurbs Book'
+        /// </summary>
+        /// <param name="n">Control point count + 1</param>
+        /// <param name="p">Degree</param>
+        /// <param name="knotVector">The curve's knot vector.</param>
+        /// <param name="controlPoints">The curve's control points</param>
+        /// <param name="u">Parameter to compute derivatives at.</param>
+        /// <param name="d">Number of derivatives to compute.</param>
+        /// <returns>The point on a B- spline curve and all derivatives up to and including the dth derivative at a fixed u value.</returns>
         public static Vector3d[] CurveDerivsAlg2(
             int n,
             int p,
@@ -695,9 +740,6 @@ namespace Paramdigma.Core.Geometry
 
             return ck;
         }
-
-
-        // B-Spline Surfaces
 
 
         /// <summary>
@@ -743,6 +785,21 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Computes the derivatives of at S(u,v) k times with respect to u and l times with respect to v.
+        ///     Algorithm A3.6 of 'The Nurbs Book'
+        /// </summary>
+        /// <param name="n">Control point count - 1 in the U direction.</param>
+        /// <param name="p">Degree in the U direction.</param>
+        /// <param name="knotVectorU">Knot vector in the U direction.</param>
+        /// <param name="m">Control point count - 1 in the V direction.</param>
+        /// <param name="q">Degree in the V direction.</param>
+        /// <param name="knotVectorV">Knot vector in the V direction.</param>
+        /// <param name="controlPoints">Control point grid of the surface.</param>
+        /// <param name="u">U parameter to get derivatives at.</param>
+        /// <param name="v">V parameter to get derivatives at.</param>
+        /// <param name="derivCount">Number of derivatives to compute in each direction.</param>
+        /// <returns>A multi dimensional array where [k,l] represents the derivative of S(u,v) with respect to u 'k' times, and v 'l' times.</returns>
         public static Point3d[,] SurfaceDerivsAlg1(
             int n,
             int p,
@@ -801,6 +858,21 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Computes the derivatives of at S(u,v) k times with respect to u and l times with respect to v.
+        ///     Algorithm A3.6 of 'The Nurbs Book' modified to accept <see cref="Point4d"/> instances.
+        /// </summary>
+        /// <param name="n">Control point count - 1 in the U direction.</param>
+        /// <param name="p">Degree in the U direction.</param>
+        /// <param name="knotVectorU">Knot vector in the U direction.</param>
+        /// <param name="m">Control point count - 1 in the V direction.</param>
+        /// <param name="q">Degree in the V direction.</param>
+        /// <param name="knotVectorV">Knot vector in the V direction.</param>
+        /// <param name="controlPoints">Control point grid of the surface.</param>
+        /// <param name="u">U parameter to get derivatives at.</param>
+        /// <param name="v">V parameter to get derivatives at.</param>
+        /// <param name="derivCount">Number of derivatives to compute in each direction.</param>
+        /// <returns>A multi dimensional array where [k,l] represents the derivative of S(u,v) with respect to u 'k' times, and v 'l' times.</returns>
         public static Point4d[,] SurfaceDerivsAlg1(
             int n,
             int p,
@@ -835,11 +907,12 @@ namespace Paramdigma.Core.Geometry
 
             for (var k = 0; k <= du; k++)
             {
-                var temp = new Point4d[q+1];
+                var temp = new Point4d[q + 1];
                 for (var index = 0; index < temp.Length; index++)
                 {
                     temp[index] = new Point4d();
                 }
+
                 for (var s = 0; s <= q; s++)
                 {
                     temp[s] = new Point4d();
@@ -863,6 +936,22 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Algorithm A3.7 of 'The Nurbs Book'
+        /// </summary>
+        /// <param name="n">Control point count - 1 in the U direction.</param>
+        /// <param name="p">Degree in the U direction.</param>
+        /// <param name="knotVectorU">Knot vector in the U direction.</param>
+        /// <param name="m">Control point count - 1 in the V direction.</param>
+        /// <param name="q">Degree in the V direction.</param>
+        /// <param name="knotVectorV">Knot vector in the V direction.</param>
+        /// <param name="controlPoints">Control point grid of the surface.</param>
+        /// <param name="d">Number of derivatives to compute.</param>
+        /// <param name="r1"></param>
+        /// <param name="r2"></param>
+        /// <param name="s1"></param>
+        /// <param name="s2"></param>
+        /// <returns>Computed derivatives at S(u,v).</returns>
         public static Point3d[][][][] SurfaceDerivCpts(
             int n,
             int p,
@@ -926,6 +1015,20 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Algorithm A3.8 of 'The Nurbs Book'
+        /// </summary>
+        /// <param name="n">Control point count - 1 in the U direction.</param>
+        /// <param name="p">Degree in the U direction.</param>
+        /// <param name="knotVectorU">Knot vector in the U direction.</param>
+        /// <param name="m">Control point count - 1 in the V direction.</param>
+        /// <param name="q">Degree in the V direction.</param>
+        /// <param name="knotVectorV">Knot vector in the V direction.</param>
+        /// <param name="controlPoints">Control point grid of the surface.</param>
+        /// <param name="u">U parameter to get derivatives at.</param>
+        /// <param name="v">V parameter to get derivatives at.</param>
+        /// <param name="d">Number of derivatives to compute in each direction.</param>
+        /// <returns>A multi dimensional array where [k,l] represents the derivative of S(u,v) with respect to u 'k' times, and v 'l' times.</returns>
         public static Point3d[,] SurfaceDerivsAlg2(
             int n,
             int p,
@@ -992,11 +1095,8 @@ namespace Paramdigma.Core.Geometry
         }
 
 
-        // Nubs methods
-
-
         /// <summary>
-        /// Computes a point on a nurbs curve
+        ///     Computes a point on a nurbs curve
         /// </summary>
         /// <param name="n">Number of control points - 1</param>
         /// <param name="p">Degree. Cannot be bigger or equals the number of control points, nor smaller than 1.</param>
@@ -1020,6 +1120,12 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Computes a binomial coefficient of a NURBS curve.
+        /// </summary>
+        /// <param name="n"></param>
+        /// <param name="k"></param>
+        /// <returns>Computed coefficient.</returns>
         public static double BinomialCoefficient(int n, int k)
         {
             if (n - k == 1 || k == 1)
@@ -1039,6 +1145,12 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Determines if a knot vector is clamped.
+        /// </summary>
+        /// <param name="u">Knot vector.</param>
+        /// <param name="p">Degree.</param>
+        /// <returns>True if knot vector is clamped.</returns>
         public static bool IsClamped(IList<double> u, int p)
         {
             return (u[0] == u[p]) && (u[u.Count - 1] == u[u.Count - 1 - p]);
@@ -1047,12 +1159,11 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Compute C(u) derivatives from Cw(u) derivatives.
-        ///     
         /// </summary>
-        /// <param name="aDers">TODO Add definition</param>
-        /// <param name="wDers">TODO: Add definition </param>
-        /// <param name="d">TODO: add definition</param>
-        /// <returns></returns>
+        /// <param name="aDers">Position derivatives.</param>
+        /// <param name="wDers">Weight derivatives.</param>
+        /// <param name="d">Derivative count.</param>
+        /// <returns>Computed derivatives.</returns>
         public static Vector3d[] RatCurveDerivs(IList<Vector3d> aDers, IList<double> wDers, int d)
         {
             var ders = new Vector3d[d + 1];
@@ -1081,9 +1192,7 @@ namespace Paramdigma.Core.Geometry
             var ck1 = CurveDerivsAlg1(n, p, knotVector, controlPoints, u, d);
             var aDers = ck1.Select(der => ( Vector3d ) der.Position).ToList();
             var wDers = ck1.Select(der => der.Weight).ToList();
-            var ck = RatCurveDerivs(aDers, wDers, d);
-
-            return ck;
+            return RatCurveDerivs(aDers, wDers, d);
 
             // if (p == 1)
             //     ck[2] = new Vector3d();
@@ -1137,6 +1246,13 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Computes the derivatives of a non-rational b-spline curve from the decomposed derivatives of a rational surface.
+        /// </summary>
+        /// <param name="aDers">Position derivatives</param>
+        /// <param name="wDers">Weight derivatives</param>
+        /// <param name="d">Derivative count.</param>
+        /// <returns>Computed derivatives at S(u,v)</returns>
         public static Matrix<Vector3d> RatSurfaceDerivs(
             Matrix<Vector3d> aDers,
             Matrix<double> wDers,
@@ -1145,7 +1261,7 @@ namespace Paramdigma.Core.Geometry
             var skl = new Matrix<Vector3d>(wDers.M, wDers.N);
             for (var m = 0; m < wDers.M; m++)
                 for (var n = 0; n < wDers.N; n++)
-                    skl[m,n] = new Vector3d();
+                    skl[m, n] = new Vector3d();
 
             var a = wDers.M - 1;
             var b = wDers.N - 1;
@@ -1157,7 +1273,7 @@ namespace Paramdigma.Core.Geometry
                     var v = aDers[k, l];
                     for (var j = 0; j <= l; j++)
                         v -= BinomialCoefficient(l, j) * wDers[0, j] * skl[k, l - j];
-                    
+
                     for (int i = 0; i <= k; i++)
                     {
                         v -= BinomialCoefficient(k, i) * wDers[i, 0] * skl[k - i, l];
@@ -1168,7 +1284,7 @@ namespace Paramdigma.Core.Geometry
                         v -= BinomialCoefficient(k, i) * v2;
                     }
 
-                    skl[k, l] = v / wDers[0,0];
+                    skl[k, l] = v / wDers[0, 0];
                 }
             }
 
@@ -1176,6 +1292,20 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        ///     Compute C(u) derivatives from Cw(u) derivatives.
+        /// </summary>
+        /// <param name="n">The number of control points in the U direction - 1</param>
+        /// <param name="p">The degree of the surface in the U direction.</param>
+        /// <param name="knotVectorU">The knot vector for the U direction.</param>
+        /// <param name="m">The number of control points in the V direction - 1</param>
+        /// <param name="q">The degree of the surface in the V direction.</param>
+        /// <param name="knotVectorV">The knot vector for the V direction.</param>
+        /// <param name="controlPoints">A 2-dimensional matrix/grid of control points.</param>
+        /// <param name="u">U parameter.</param>
+        /// <param name="v">V parameter.</param>
+        /// <param name="d">Derivative count.</param>
+        /// <returns>Computed derivatives.</returns>
         public static Matrix<Vector3d> NurbsSurfaceDerivs(
             int n,
             int p,
@@ -1199,15 +1329,15 @@ namespace Paramdigma.Core.Geometry
                 u,
                 v,
                 d);
-            
-            var aDers = new Matrix<Vector3d>(skl1.GetLength(0) + 1,skl1.GetLength(1) + 1);
-            var wDers = new Matrix<double>(skl1.GetLength(0) + 1,skl1.GetLength(1) + 1);
-            
+
+            var aDers = new Matrix<Vector3d>(skl1.GetLength(0) + 1, skl1.GetLength(1) + 1);
+            var wDers = new Matrix<double>(skl1.GetLength(0) + 1, skl1.GetLength(1) + 1);
+
             for (var i = 0; i < controlPoints.M - 1; i++)
             {
                 for (var j = 0; j < controlPoints.N - 1; j++)
                 {
-                    wDers[i, j] = controlPoints[i, j ].Weight;
+                    wDers[i, j] = controlPoints[i, j].Weight;
                     aDers[i, j] = controlPoints[i, j].Position;
                 }
             }
