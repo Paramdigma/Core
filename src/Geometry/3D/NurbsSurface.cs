@@ -58,7 +58,14 @@ namespace Paramdigma.Core.Geometry
                          .ToList();
         }
 
-
+        /// <summary>
+        /// Creates a square flat surface on the XY Plane.
+        /// </summary>
+        /// <param name="xDimension">Dimension interval on the X direction.</param>
+        /// <param name="yDimension">Dimension interval on the Y direction.</param>
+        /// <param name="xCount">Number of points on the X direction.</param>
+        /// <param name="yCount">Number of points on the Y direction.</param>
+        /// <returns>Flat nurbs surface.</returns>
         public static NurbsSurface CreateFlatSurface(
             Interval xDimension,
             Interval yDimension,
@@ -119,7 +126,13 @@ namespace Paramdigma.Core.Geometry
         /// <inheritdoc />
         public Point3d ClosestPointTo(Point3d point) => throw new System.NotImplementedException();
 
-
+        /// <summary>
+        /// Computes the derivatives at at S(u,v).
+        /// </summary>
+        /// <param name="u">U parameter to compute at.</param>
+        /// <param name="v">V parameter to compute at.</param>
+        /// <param name="count">Number of derivatives to compute.</param>
+        /// <returns>Computed derivatives.</returns>
         public Matrix<Vector3d> DerivativesAt(double u, double v, int count) =>
             NurbsCalculator.NurbsSurfaceDerivs(
                 this.ControlPoints.M - 1,

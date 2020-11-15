@@ -9,7 +9,7 @@ namespace Paramdigma.Core.Geometry
     ///     Contains all methods related to 'The Nurbs Book 2nd Edition' implementation of NURBS curves and
     ///     surfaces.
     /// </summary>
-    public static class NurbsCalculator
+    internal static class NurbsCalculator
     {
         /// <summary>
         ///     Constructs a Unit knot vector given a point count and degree.
@@ -35,7 +35,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Compute a point on a power basis curve.
-        /// </summary>
+        /// </summa ry>
         /// <param name="points">Curve points.</param>
         /// <param name="degree">Curve degree.</param>
         /// <param name="t">Parameter.</param>
