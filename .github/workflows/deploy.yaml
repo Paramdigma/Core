@@ -28,7 +28,7 @@ jobs:
         run: dotnet build --configuration Release --no-restore
         
       - name: 🧪 Test
-        run: dotnet test --no-restore --verbosity normal
+        run: dotnet test --no-restore
         
       - name: 🗜 Compress build files # This would actually build your project, using zip for an example artifact
         run: zip --junk-paths ./Paramdigma.Core.zip ./src/bin/Release/netstandard2.0/*
@@ -57,7 +57,9 @@ jobs:
       - name: 📦 Create the package
         run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
       - name: 🚀 Publish the package to GPR
-        run: dotnet nuget push src/bin/Release/*.nupkg
+        run: dotnet nuget push src/bin/Release/*.nupkg -k ${PUSH_TOKEN}
+        env:
+          PUSH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   deploy_docs:
     runs-on: ubuntu-latest
