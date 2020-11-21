@@ -19,7 +19,7 @@ jobs:
           dotnet-version: 3.1.101
           source-url: https://nuget.pkg.github.com/paramdigma/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          NUGET_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
         
       - name: ⚙️ Install dependencies
         run: dotnet restore
