@@ -14,7 +14,7 @@
 
     <PropertyGroup>
         <PackageId>Paramdigma.Core</PackageId>
-        <Version>0.1.0</Version>
+        <Version>0.1.1</Version>
         <Authors>Alan Rynne</Authors>
         <Company>Paramdigma</Company>
         <PackageDescription>Computational Geometry library for .Net</PackageDescription>
