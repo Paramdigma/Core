@@ -5,7 +5,6 @@
 [![License](https://img.shields.io/github/license/Paramdigma/Core.svg)](https://github.com/Paramdigma/Core/blob/master/LICENSE)
 
 ![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/paramdigma/core?sort=semver)
-![GitHub commits since latest release (by SemVer)](https://img.shields.io/github/commits-since/paramdigma/core/latest/master?sort=semver)
 ![Main language](https://img.shields.io/github/languages/top/Paramdigma/Core.svg)
 ![Code Size](https://img.shields.io/github/languages/code-size/Paramdigma/Core.svg)
 
@@ -37,7 +36,7 @@ If you are looking for just a geometry library to plug into a project we also pr
 
 ## Documentation
 
-You can find the Docfx built documentation for the latest relase on the 'master' branch at:
+You can find the Docfx built documentation for the latest release on the 'master' branch at:
 
 [https://paramdigma.com/Core/](https://paramdigma.com/Core/)
 
