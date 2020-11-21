@@ -4,22 +4,23 @@ using Paramdigma.Core.Geometry.Interfaces;
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>
-    /// Represents a planar circle curve.
+    ///     Represents a planar circle curve.
     /// </summary>
     public class Circle : ICurve
     {
         /// <summary>
-        /// The base plane for the circle.
+        ///     The base plane for the circle.
         /// </summary>
         public Plane Plane;
-        
+
         /// <summary>
-        /// The radius of the circle.
+        ///     The radius of the circle.
         /// </summary>
         public double Radius;
 
+
         /// <summary>
-        /// Initializes a new instance of <see cref="Circle"/> by it's plane and radius.
+        ///     Initializes a new instance of <see cref="Circle" /> by it's plane and radius.
         /// </summary>
         /// <param name="plane">The plane to draw the circle at.</param>
         /// <param name="radius">The desired radius of the circle.</param>

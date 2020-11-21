@@ -56,6 +56,11 @@ namespace Paramdigma.Core.Collections
         /// <param name="column">Column.</param>
         public ref T this[int row, int column] => ref this.data[row, column];
 
+        /// <summary>
+        ///     Gets the amount of items in this matrix.
+        /// </summary>
+        public int Count => this.data.Length;
+
 
         /// <summary>
         ///     Get the row of a matrix at the specified index.
@@ -86,11 +91,7 @@ namespace Paramdigma.Core.Collections
             return col;
         }
 
-        /// <summary>
-        ///     Gets the amount of items in this matrix.
-        /// </summary>
-        public int Count => this.data.Length;
-        
+
         // ----- ORDERING METHODS -----
 
 

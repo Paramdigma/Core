@@ -38,7 +38,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Initializes a new instance of <see cref="NurbsSurface"/> by it's control points and degrees.
+        ///     Initializes a new instance of <see cref="NurbsSurface" /> by it's control points and degrees.
         /// </summary>
         /// <param name="controlPoints">Grid of control points for the surface.</param>
         /// <param name="degreeU">Degree of the surface in the U direction.</param>
@@ -56,31 +56,6 @@ namespace Paramdigma.Core.Geometry
             this.KnotsV = NurbsCalculator
                          .CreateUniformKnotVector(this.ControlPoints.M, this.DegreeV)
                          .ToList();
-        }
-
-
-        public static NurbsSurface CreateFlatSurface(
-            Interval xDimension,
-            Interval yDimension,
-            int xCount,
-            int yCount)
-        {
-            var rnd = new Random();
-            var wDomain = new Interval(1, 5);
-            var m = new Matrix<Point4d>(xCount, yCount);
-            for (var i = 0; i < xCount; i++)
-            {
-                for (var j = 0; j < yCount; j++)
-                    m[i, j] = new Point4d(
-                        xDimension.RemapFromUnit(( double ) i / xCount),
-                        yDimension.RemapFromUnit(( double ) j / yCount),
-                        0,
-                        1);
-            }
-
-            var degreeU = xCount <= 3 ? xCount - 1 : 3;
-            var degreeV = yCount <= 3 ? yCount - 1 : 3;
-            return new NurbsSurface(m, degreeU, degreeV);
         }
 
 
@@ -105,21 +80,63 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <inheritdoc />
-        public Vector3d NormalAt(double u, double v) => throw new System.NotImplementedException();
+        public Vector3d NormalAt(double u, double v) => throw new NotImplementedException();
 
 
         /// <inheritdoc />
-        public Plane FrameAt(double u, double v) => throw new System.NotImplementedException();
+        public Plane FrameAt(double u, double v) => throw new NotImplementedException();
 
 
         /// <inheritdoc />
-        public double DistanceTo(Point3d point) => throw new System.NotImplementedException();
+        public double DistanceTo(Point3d point) => throw new NotImplementedException();
 
 
         /// <inheritdoc />
-        public Point3d ClosestPointTo(Point3d point) => throw new System.NotImplementedException();
+        public Point3d ClosestPointTo(Point3d point) => throw new NotImplementedException();
 
 
+        /// <summary>
+        ///     Creates a square flat surface on the XY Plane.
+        /// </summary>
+        /// <param name="xDimension">Dimension interval on the X direction.</param>
+        /// <param name="yDimension">Dimension interval on the Y direction.</param>
+        /// <param name="xCount">Number of points on the X direction.</param>
+        /// <param name="yCount">Number of points on the Y direction.</param>
+        /// <returns>Flat nurbs surface.</returns>
+        public static NurbsSurface CreateFlatSurface(
+            Interval xDimension,
+            Interval yDimension,
+            int xCount,
+            int yCount)
+        {
+            var rnd = new Random();
+            var wDomain = new Interval(1, 5);
+            var m = new Matrix<Point4d>(xCount, yCount);
+            for (var i = 0; i < xCount; i++)
+            {
+                for (var j = 0; j < yCount; j++)
+                {
+                    m[i, j] = new Point4d(
+                        xDimension.RemapFromUnit(( double ) i / xCount),
+                        yDimension.RemapFromUnit(( double ) j / yCount),
+                        0,
+                        1);
+                }
+            }
+
+            var degreeU = xCount <= 3 ? xCount - 1 : 3;
+            var degreeV = yCount <= 3 ? yCount - 1 : 3;
+            return new NurbsSurface(m, degreeU, degreeV);
+        }
+
+
+        /// <summary>
+        ///     Computes the derivatives at at S(u,v).
+        /// </summary>
+        /// <param name="u">U parameter to compute at.</param>
+        /// <param name="v">V parameter to compute at.</param>
+        /// <param name="count">Number of derivatives to compute.</param>
+        /// <returns>Computed derivatives.</returns>
         public Matrix<Vector3d> DerivativesAt(double u, double v, int count) =>
             NurbsCalculator.NurbsSurfaceDerivs(
                 this.ControlPoints.M - 1,

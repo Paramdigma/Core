@@ -171,12 +171,12 @@ namespace Paramdigma.Core.Optimization
         public class IterationCompletedEventArgs : EventArgs
         {
             /// <summary>
-            /// Iteration number.
+            ///     Iteration number.
             /// </summary>
             public int Iteration { get; set; }
-            
+
             /// <summary>
-            /// Clusters for current iteration.
+            ///     Clusters for current iteration.
             /// </summary>
             public List<KMeansCluster> Clusters { get; set; }
         }

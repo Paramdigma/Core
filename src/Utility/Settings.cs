@@ -59,7 +59,8 @@ namespace Paramdigma.Core
             using (var stream =
                 assembly.GetManifestResourceStream("Paramdigma.Core.Data.Settings.json"))
             {
-                using (var reader = new StreamReader(stream ?? throw new InvalidOperationException("Could not get settings.")))
+                using (var reader = new StreamReader(
+                    stream ?? throw new InvalidOperationException("Could not get settings.")))
                 {
                     var result = reader.ReadToEnd();
                     var json = JsonConvert.DeserializeObject<EmbeddedSettings>(result);
@@ -69,7 +70,7 @@ namespace Paramdigma.Core
             }
         }
     }
-    
+
     /// <summary>
     ///     This struct holds the settings from the embedded json file. It is only used to reset.
     /// </summary>

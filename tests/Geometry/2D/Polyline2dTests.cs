@@ -81,7 +81,8 @@ namespace Paramdigma.Core.Tests.Geometry
         [ClassData(typeof(Polyline2dUnitSquareAndSegments))]
         public void DefaultDomain_IsParametrizedByArcLength(
             Polyline2d polyline,
-            double expectedLength) => Assert.True(Math.Abs(polyline.Domain.End - expectedLength) < Settings.Tolerance);
+            double expectedLength) => Assert.True(
+            Math.Abs(polyline.Domain.End - expectedLength) < Settings.Tolerance);
 
 
         [Theory]
@@ -90,7 +91,9 @@ namespace Paramdigma.Core.Tests.Geometry
         {
             polyline.Reparametrize();
 
-            Assert.True(Math.Abs(polyline.Domain.End - polyline.Segments[^1].Domain.End) < Settings.Tolerance);
+            Assert.True(
+                Math.Abs(polyline.Domain.End - polyline.Segments[^1].Domain.End)
+              < Settings.Tolerance);
             Assert.True(Math.Abs(polyline.Domain.End - 1) < Settings.Tolerance);
         }
 

@@ -34,16 +34,7 @@ namespace Paramdigma.Core.Geometry
         ///     Gets or sets the polyline vertices.
         /// </summary>
         /// <value>List of vertices.</value>
-        public List<Point2d> Vertices
-        {
-            get => this.vertices;
-
-            set
-            {
-                this.vertices = value;
-                this.segmentsNeedUpdate = true;
-            }
-        }
+        public List<Point2d> Vertices => this.vertices;
 
         /// <summary>
         ///     Gets the polyline segments.
@@ -153,7 +144,7 @@ namespace Paramdigma.Core.Geometry
             {
                 if (this.vertices[i].Y > ymin)
                     continue;
-                
+
                 if (Math.Abs(this.vertices[i].Y - ymin) < Settings.Tolerance
                  && this.vertices[i].X < xmin)
                     continue;

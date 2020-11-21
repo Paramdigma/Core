@@ -11,10 +11,10 @@ namespace Paramdigma.Core.Tests.Geometry
     {
         private readonly List<Point4d> controlPoints = new List<Point4d>
         {
-            new Point4d(0, 0, 0,4),
-            new Point4d(1, 3, 0,3.5),
-            new Point4d(1.4, 5, 0,2),
-            new Point4d(0, 7, 0,1),
+            new Point4d(0, 0, 0, 4),
+            new Point4d(1, 3, 0, 3.5),
+            new Point4d(1.4, 5, 0, 2),
+            new Point4d(0, 7, 0, 1)
         };
 
         private NurbsCurve Curve => new NurbsCurve(this.controlPoints, 3);
@@ -24,12 +24,11 @@ namespace Paramdigma.Core.Tests.Geometry
             get
             {
                 var rhcrv = RG.Curve.CreateControlPointCurve(
-                    this.controlPoints.Select(pt => pt.Position.ToRhino()),
-                    3).ToNurbsCurve();
+                                   this.controlPoints.Select(pt => pt.Position.ToRhino()),
+                                   3)
+                              .ToNurbsCurve();
                 for (var i = 0; i < this.controlPoints.Count; i++)
-                {
                     rhcrv.Points.SetWeight(i, this.controlPoints[i].Weight);
-                }
                 rhcrv.Domain = new RG.Interval(0, 1);
                 return rhcrv.ToNurbsCurve();
             }

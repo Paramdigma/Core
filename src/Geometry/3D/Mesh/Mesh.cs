@@ -484,10 +484,10 @@ namespace Paramdigma.Core.HalfEdgeMesh
                         boundaryHalfEdge.Vertex = nextHalfEdge.Vertex;
                         boundaryHalfEdge.Edge = halfEdge.Edge;
                         boundaryHalfEdge.OnBoundary = true;
-                        
+
                         boundaryHalfEdge.Face = f;
                         f.HalfEdge = boundaryHalfEdge;
-                        
+
                         boundaryHalfEdge.Twin = halfEdge;
                         halfEdge.Twin = boundaryHalfEdge;
 
@@ -506,7 +506,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
                 if (h.OnBoundary)
                     continue;
-                
+
                 var corner = new MeshCorner {HalfEdge = h};
                 h.Corner = corner;
                 this.Corners.Add(corner);

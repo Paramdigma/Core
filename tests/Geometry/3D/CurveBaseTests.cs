@@ -3,7 +3,7 @@ namespace Paramdigma.Core.Tests.Geometry
     public abstract class CurveBaseTests<T>
     {
         public T TestCurve;
-        
+
         public abstract void CanGet_Length();
 
         public abstract void CanGet_PointAt();

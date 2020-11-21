@@ -79,7 +79,9 @@ namespace Paramdigma.Core.Tests.Geometry
             {
                 var poly = this.GetTestPolyline(i);
                 var length = poly.Length;
-                Assert.True(Math.Abs(length - i) < Settings.Tolerance, $"Length {length} is not {i}");
+                Assert.True(
+                    Math.Abs(length - i) < Settings.Tolerance,
+                    $"Length {length} is not {i}");
             }
         }
 

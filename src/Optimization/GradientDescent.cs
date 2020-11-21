@@ -71,6 +71,7 @@ namespace Paramdigma.Core.Optimization
             } while (gLength > this.Options.Limit && iter < this.Options.MaxIterations
                                                   && this.Result.Error
                                                    > this.Options.ErrorThreshold);
+
             Console.ResetColor();
         }
 

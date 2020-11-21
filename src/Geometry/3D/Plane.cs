@@ -169,7 +169,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="w">Coordinate for the Z axis.</param>
         /// <returns>Computed point.</returns>
         public Point3d PointAt(double u, double v, double w) =>
-            this.Origin + ((u * this.XAxis) + (v * this.YAxis) + (w * this.ZAxis));
+            this.Origin + (u * this.XAxis + v * this.YAxis + w * this.ZAxis);
 
 
         /// <summary>
@@ -194,7 +194,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="point">Point to remap.</param>
         /// <returns>Point with relative coordinates to the plane.</returns>
         public Point3d RemapToWorldXYSpace(Point3d point) =>
-            this.Origin + (point.X * this.XAxis) + (point.Y * this.YAxis) + (point.Z * this.ZAxis);
+            this.Origin + point.X * this.XAxis + point.Y * this.YAxis + point.Z * this.ZAxis;
 
 
         /// <summary>

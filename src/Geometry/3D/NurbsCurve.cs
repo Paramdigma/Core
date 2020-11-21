@@ -9,30 +9,31 @@ namespace Paramdigma.Core.Geometry
     public class NurbsCurve : BaseCurve
     {
         /// <summary>
-        /// The control points of the nurbs curve.
+        ///     The control points of the nurbs curve.
         /// </summary>
         public List<Point4d> ControlPoints;
 
         /// <summary>
-        /// The degree of the curve.
+        ///     The degree of the curve.
         /// </summary>
         public int Degree;
 
         /// <summary>
-        /// The nurbs curve knot vector.
+        ///     The nurbs curve knot vector.
         /// </summary>
         public List<double> Knots;
 
 
         /// <summary>
-        /// Initializes a new instance of <see cref="NurbsCurve"/> by it's control points and degree.
+        ///     Initializes a new instance of <see cref="NurbsCurve" /> by it's control points and degree.
         /// </summary>
         /// <param name="controlPoints">The control points to create the curve with.</param>
         /// <param name="degree">The desired degree of the curve. Degree cannot be > (ControlPoints - 1)</param>
         public NurbsCurve(List<Point4d> controlPoints, int degree)
         {
             this.ControlPoints = controlPoints;
-            this.Knots = NurbsCalculator.CreateUniformKnotVector(controlPoints.Count, degree).ToList();
+            this.Knots = NurbsCalculator.CreateUniformKnotVector(controlPoints.Count, degree)
+                                        .ToList();
             this.Degree = degree;
         }
 
