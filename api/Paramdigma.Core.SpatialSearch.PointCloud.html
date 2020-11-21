@@ -93,16 +93,16 @@
                             <a href="Paramdigma.Core.Intersect3D.html" title="Intersect3D" class="">Intersect3D</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.IRLineLine.html" title="Intersect3D.IRLineLine" class="">Intersect3D.IRLineLine</a>
+                            <a href="Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html" title="Intersect3D.LineLineIntersectionResult" class="">Intersect3D.LineLineIntersectionResult</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISLineLine.html" title="Intersect3D.ISLineLine" class="">Intersect3D.ISLineLine</a>
+                            <a href="Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html" title="Intersect3D.LineLineIntersectionStatus" class="">Intersect3D.LineLineIntersectionStatus</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISLinePlane.html" title="Intersect3D.ISLinePlane" class="">Intersect3D.ISLinePlane</a>
+                            <a href="Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html" title="Intersect3D.LinePlaneIntersectionStatus" class="">Intersect3D.LinePlaneIntersectionStatus</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html" title="Intersect3D.ISRayFacePerimeter" class="">Intersect3D.ISRayFacePerimeter</a>
+                            <a href="Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html" title="Intersect3D.RayFacePerimeterIntersectionStatus" class="">Intersect3D.RayFacePerimeterIntersectionStatus</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Settings.html" title="Settings" class="">Settings</a>
@@ -198,7 +198,7 @@
                             <a href="Paramdigma.Core.Geometry.MeshGeometry.html" title="MeshGeometry" class="">MeshGeometry</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Geometry.NurbsCalculator.html" title="NurbsCalculator" class="">NurbsCalculator</a>
+                            <a href="Paramdigma.Core.Geometry.NurbsCurve.html" title="NurbsCurve" class="">NurbsCurve</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Geometry.NurbsSurface.html" title="NurbsSurface" class="">NurbsSurface</a>
@@ -294,31 +294,31 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Paramdigma.Core.IO.CSVReader.html" title="CSVReader" class="">CSVReader</a>
+                            <a href="Paramdigma.Core.IO.CsvReader.html" title="CsvReader" class="">CsvReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.CSVWritter.html" title="CSVWritter" class="">CSVWritter</a>
+                            <a href="Paramdigma.Core.IO.CsvWritter.html" title="CsvWritter" class="">CsvWritter</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.IO.OBJMeshData.html" title="OBJMeshData" class="">OBJMeshData</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OBJReader.html" title="OBJReader" class="">OBJReader</a>
+                            <a href="Paramdigma.Core.IO.ObjReader.html" title="ObjReader" class="">ObjReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OBJWritter.html" title="OBJWritter" class="">OBJWritter</a>
+                            <a href="Paramdigma.Core.IO.ObjWritter.html" title="ObjWritter" class="">ObjWritter</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFMeshData.html" title="OFFMeshData" class="">OFFMeshData</a>
+                            <a href="Paramdigma.Core.IO.OffMeshData.html" title="OffMeshData" class="">OffMeshData</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFReader.html" title="OFFReader" class="">OFFReader</a>
+                            <a href="Paramdigma.Core.IO.OffReader.html" title="OffReader" class="">OffReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFResult.html" title="OFFResult" class="">OFFResult</a>
+                            <a href="Paramdigma.Core.IO.OffResult.html" title="OffResult" class="">OffResult</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFWritter.html" title="OFFWritter" class="">OFFWritter</a>
+                            <a href="Paramdigma.Core.IO.OffWriter.html" title="OffWriter" class="">OffWriter</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -411,14 +411,50 @@ TODO: This is only a basic data structure for now.</p>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class PointCloud : IList&lt;PointCloudMember&gt;</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud__ctor_List_Paramdigma_Core_SpatialSearch_PointCloudMember__.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.%23ctor(List%7BParamdigma.Core.SpatialSearch.PointCloudMember%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L16">View Source</a>
+  </span>
+  <a id="Paramdigma_Core_SpatialSearch_PointCloud__ctor_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.#ctor*"></a>
+  <h4 id="Paramdigma_Core_SpatialSearch_PointCloud__ctor_List_Paramdigma_Core_SpatialSearch_PointCloudMember__" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.#ctor(List{Paramdigma.Core.SpatialSearch.PointCloudMember})">PointCloud(List&lt;PointCloudMember&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new point-cloud from a list of point cloud members..</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PointCloud(List&lt;PointCloudMember&gt; points)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">List</span>&lt;<a class="xref" href="Paramdigma.Core.SpatialSearch.PointCloudMember.html">PointCloudMember</a>&gt;</td>
+        <td><span class="parametername">points</span></td>
+        <td><p>List of point-cloud members.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Count.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Count.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Count%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L36">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L51">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Count_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Count*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Count" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Count">Count</h4>
@@ -445,10 +481,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_IsReadOnly.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_IsReadOnly.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.IsReadOnly%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L39">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L54">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_IsReadOnly_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.IsReadOnly*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_IsReadOnly" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.IsReadOnly">IsReadOnly</h4>
@@ -475,10 +511,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Item_System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Item(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L51">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L70">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Item_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Item*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Item_System_Int32_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Item(System.Int32)">Item[Int32]</h4>
@@ -524,10 +560,10 @@ TODO: This is only a basic data structure for now.</p>
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Add_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Add(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Add_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Add(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L21">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L30">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Add_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Add*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Add_Paramdigma_Core_SpatialSearch_PointCloudMember_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Add(Paramdigma.Core.SpatialSearch.PointCloudMember)">Add(PointCloudMember)</h4>
@@ -556,10 +592,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Clear.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Clear.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Clear%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L24">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L34">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Clear_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Clear*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Clear" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Clear">Clear()</h4>
@@ -571,10 +607,10 @@ TODO: This is only a basic data structure for now.</p>
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Contains_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Contains(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Contains_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Contains(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L27">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L38">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Contains_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Contains*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Contains_Paramdigma_Core_SpatialSearch_PointCloudMember_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Contains(Paramdigma.Core.SpatialSearch.PointCloudMember)">Contains(PointCloudMember)</h4>
@@ -618,10 +654,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_CopyTo_Paramdigma_Core_SpatialSearch_PointCloudMember___System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.CopyTo(Paramdigma.Core.SpatialSearch.PointCloudMember%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_CopyTo_Paramdigma_Core_SpatialSearch_PointCloudMember___System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.CopyTo(Paramdigma.Core.SpatialSearch.PointCloudMember%5B%5D%2CSystem.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L30">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L42">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_CopyTo_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.CopyTo*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_CopyTo_Paramdigma_Core_SpatialSearch_PointCloudMember___System_Int32_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.CopyTo(Paramdigma.Core.SpatialSearch.PointCloudMember[],System.Int32)">CopyTo(PointCloudMember[], Int32)</h4>
@@ -655,10 +691,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_GetEnumerator.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_GetEnumerator.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.GetEnumerator%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L17">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L23">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_GetEnumerator_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.GetEnumerator*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_GetEnumerator" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.GetEnumerator">GetEnumerator()</h4>
@@ -685,10 +721,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_IndexOf_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.IndexOf(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_IndexOf_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.IndexOf(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L42">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L58">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_IndexOf_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.IndexOf*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_IndexOf_Paramdigma_Core_SpatialSearch_PointCloudMember_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.IndexOf(Paramdigma.Core.SpatialSearch.PointCloudMember)">IndexOf(PointCloudMember)</h4>
@@ -732,10 +768,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Insert_System_Int32_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Insert(System.Int32%2CParamdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Insert_System_Int32_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Insert(System.Int32%2CParamdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L45">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L62">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Insert_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Insert*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Insert_System_Int32_Paramdigma_Core_SpatialSearch_PointCloudMember_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Insert(System.Int32,Paramdigma.Core.SpatialSearch.PointCloudMember)">Insert(Int32, PointCloudMember)</h4>
@@ -769,10 +805,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Remove_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Remove(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_Remove_Paramdigma_Core_SpatialSearch_PointCloudMember_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.Remove(Paramdigma.Core.SpatialSearch.PointCloudMember)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L33">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L47">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_Remove_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Remove*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_Remove_Paramdigma_Core_SpatialSearch_PointCloudMember_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.Remove(Paramdigma.Core.SpatialSearch.PointCloudMember)">Remove(PointCloudMember)</h4>
@@ -816,10 +852,10 @@ TODO: This is only a basic data structure for now.</p>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_RemoveAt_System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.RemoveAt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud_RemoveAt_System_Int32_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud.RemoveAt(System.Int32)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L48">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L66">View Source</a>
   </span>
   <a id="Paramdigma_Core_SpatialSearch_PointCloud_RemoveAt_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.RemoveAt*"></a>
   <h4 id="Paramdigma_Core_SpatialSearch_PointCloud_RemoveAt_System_Int32_" data-uid="Paramdigma.Core.SpatialSearch.PointCloud.RemoveAt(System.Int32)">RemoveAt(Int32)</h4>
@@ -854,10 +890,10 @@ TODO: This is only a basic data structure for now.</p>
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_SpatialSearch_PointCloud.md&amp;value=---%0Auid%3A%20Paramdigma.Core.SpatialSearch.PointCloud%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/SpatialStructures/PointCloud.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/SpatialStructures/PointCloud.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

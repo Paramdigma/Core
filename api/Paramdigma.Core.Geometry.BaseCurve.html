@@ -93,16 +93,16 @@
                             <a href="Paramdigma.Core.Intersect3D.html" title="Intersect3D" class="">Intersect3D</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.IRLineLine.html" title="Intersect3D.IRLineLine" class="">Intersect3D.IRLineLine</a>
+                            <a href="Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html" title="Intersect3D.LineLineIntersectionResult" class="">Intersect3D.LineLineIntersectionResult</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISLineLine.html" title="Intersect3D.ISLineLine" class="">Intersect3D.ISLineLine</a>
+                            <a href="Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html" title="Intersect3D.LineLineIntersectionStatus" class="">Intersect3D.LineLineIntersectionStatus</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISLinePlane.html" title="Intersect3D.ISLinePlane" class="">Intersect3D.ISLinePlane</a>
+                            <a href="Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html" title="Intersect3D.LinePlaneIntersectionStatus" class="">Intersect3D.LinePlaneIntersectionStatus</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html" title="Intersect3D.ISRayFacePerimeter" class="">Intersect3D.ISRayFacePerimeter</a>
+                            <a href="Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html" title="Intersect3D.RayFacePerimeterIntersectionStatus" class="">Intersect3D.RayFacePerimeterIntersectionStatus</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Settings.html" title="Settings" class="">Settings</a>
@@ -198,7 +198,7 @@
                             <a href="Paramdigma.Core.Geometry.MeshGeometry.html" title="MeshGeometry" class="">MeshGeometry</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Geometry.NurbsCalculator.html" title="NurbsCalculator" class="">NurbsCalculator</a>
+                            <a href="Paramdigma.Core.Geometry.NurbsCurve.html" title="NurbsCurve" class="">NurbsCurve</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Geometry.NurbsSurface.html" title="NurbsSurface" class="">NurbsSurface</a>
@@ -294,31 +294,31 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Paramdigma.Core.IO.CSVReader.html" title="CSVReader" class="">CSVReader</a>
+                            <a href="Paramdigma.Core.IO.CsvReader.html" title="CsvReader" class="">CsvReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.CSVWritter.html" title="CSVWritter" class="">CSVWritter</a>
+                            <a href="Paramdigma.Core.IO.CsvWritter.html" title="CsvWritter" class="">CsvWritter</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.IO.OBJMeshData.html" title="OBJMeshData" class="">OBJMeshData</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OBJReader.html" title="OBJReader" class="">OBJReader</a>
+                            <a href="Paramdigma.Core.IO.ObjReader.html" title="ObjReader" class="">ObjReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OBJWritter.html" title="OBJWritter" class="">OBJWritter</a>
+                            <a href="Paramdigma.Core.IO.ObjWritter.html" title="ObjWritter" class="">ObjWritter</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFMeshData.html" title="OFFMeshData" class="">OFFMeshData</a>
+                            <a href="Paramdigma.Core.IO.OffMeshData.html" title="OffMeshData" class="">OffMeshData</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFReader.html" title="OFFReader" class="">OFFReader</a>
+                            <a href="Paramdigma.Core.IO.OffReader.html" title="OffReader" class="">OffReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFResult.html" title="OFFResult" class="">OFFResult</a>
+                            <a href="Paramdigma.Core.IO.OffResult.html" title="OffResult" class="">OffResult</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFWritter.html" title="OFFWritter" class="">OFFWritter</a>
+                            <a href="Paramdigma.Core.IO.OffWriter.html" title="OffWriter" class="">OffWriter</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -396,7 +396,8 @@
   
   <h1 id="Paramdigma_Core_Geometry_BaseCurve" data-uid="Paramdigma.Core.Geometry.BaseCurve" class="text-break">Class BaseCurve
   </h1>
-  <div class="markdown level0 summary"><p>Represents a generic curve. This class is abstract and all curve classes should inherit from it.</p>
+  <div class="markdown level0 summary"><p>Represents a generic curve. This class is abstract and all curve classes should inherit from
+it.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -404,6 +405,7 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">BaseCurve</span></div>
       <div class="level2"><a class="xref" href="Paramdigma.Core.Geometry.Line.html">Line</a></div>
+      <div class="level2"><a class="xref" href="Paramdigma.Core.Geometry.NurbsCurve.html">NurbsCurve</a></div>
       <div class="level2"><a class="xref" href="Paramdigma.Core.Geometry.Polyline.html">Polyline</a></div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Paramdigma.Core.Geometry.html">Paramdigma.Core.Geometry</a></h6>
@@ -416,10 +418,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve__ctor.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve__ctor.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L15">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L16">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve__ctor_" data-uid="Paramdigma.Core.Geometry.BaseCurve.#ctor*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve__ctor" data-uid="Paramdigma.Core.Geometry.BaseCurve.#ctor">BaseCurve()</h4>
@@ -434,10 +436,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_Domain.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.Domain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_Domain.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.Domain%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L21">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L23">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_Domain_" data-uid="Paramdigma.Core.Geometry.BaseCurve.Domain*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_Domain" data-uid="Paramdigma.Core.Geometry.BaseCurve.Domain">Domain</h4>
@@ -465,10 +467,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_IsValid.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_IsValid.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.IsValid%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L31">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L29">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_IsValid_" data-uid="Paramdigma.Core.Geometry.BaseCurve.IsValid*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_IsValid" data-uid="Paramdigma.Core.Geometry.BaseCurve.IsValid">IsValid</h4>
@@ -497,10 +499,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_Length.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_Length.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.Length%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L33">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L31">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_Length_" data-uid="Paramdigma.Core.Geometry.BaseCurve.Length*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_Length" data-uid="Paramdigma.Core.Geometry.BaseCurve.Length">Length</h4>
@@ -529,10 +531,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_BinormalAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.BinormalAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_BinormalAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.BinormalAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L61">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L63">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_BinormalAt_" data-uid="Paramdigma.Core.Geometry.BaseCurve.BinormalAt*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_BinormalAt_System_Double_" data-uid="Paramdigma.Core.Geometry.BaseCurve.BinormalAt(System.Double)">BinormalAt(Double)</h4>
@@ -579,10 +581,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_CheckValidity.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.CheckValidity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_CheckValidity.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.CheckValidity%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L74">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L78">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_CheckValidity_" data-uid="Paramdigma.Core.Geometry.BaseCurve.CheckValidity*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_CheckValidity" data-uid="Paramdigma.Core.Geometry.BaseCurve.CheckValidity">CheckValidity()</h4>
@@ -611,10 +613,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_ComputeLength.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.ComputeLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_ComputeLength.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.ComputeLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L80">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L85">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_ComputeLength_" data-uid="Paramdigma.Core.Geometry.BaseCurve.ComputeLength*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_ComputeLength" data-uid="Paramdigma.Core.Geometry.BaseCurve.ComputeLength">ComputeLength()</h4>
@@ -643,10 +645,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_FrameAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.FrameAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_FrameAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.FrameAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L68">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L71">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_FrameAt_" data-uid="Paramdigma.Core.Geometry.BaseCurve.FrameAt*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_FrameAt_System_Double_" data-uid="Paramdigma.Core.Geometry.BaseCurve.FrameAt(System.Double)">FrameAt(Double)</h4>
@@ -693,10 +695,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_NormalAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.NormalAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_NormalAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.NormalAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L54">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L55">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_NormalAt_" data-uid="Paramdigma.Core.Geometry.BaseCurve.NormalAt*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_NormalAt_System_Double_" data-uid="Paramdigma.Core.Geometry.BaseCurve.NormalAt(System.Double)">NormalAt(Double)</h4>
@@ -743,10 +745,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_PointAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.PointAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_PointAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.PointAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L40">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L39">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_PointAt_" data-uid="Paramdigma.Core.Geometry.BaseCurve.PointAt*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_PointAt_System_Double_" data-uid="Paramdigma.Core.Geometry.BaseCurve.PointAt(System.Double)">PointAt(Double)</h4>
@@ -793,10 +795,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_TangentAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.TangentAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve_TangentAt_System_Double_.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve.TangentAt(System.Double)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L47">View Source</a>
+    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L47">View Source</a>
   </span>
   <a id="Paramdigma_Core_Geometry_BaseCurve_TangentAt_" data-uid="Paramdigma.Core.Geometry.BaseCurve.TangentAt*"></a>
   <h4 id="Paramdigma_Core_Geometry_BaseCurve_TangentAt_System_Double_" data-uid="Paramdigma.Core.Geometry.BaseCurve.TangentAt(System.Double)">TangentAt(Double)</h4>
@@ -849,10 +851,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/new/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/Paramdigma/Core/new/906a3757d78c9c5cfced65df08ec307b9d796982/apiSpec/new?filename=Paramdigma_Core_Geometry_BaseCurve.md&amp;value=---%0Auid%3A%20Paramdigma.Core.Geometry.BaseCurve%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/Paramdigma/Core/blob/5cfceb6784cf35e7ca7d94145a4b92bd53f032e9/src/Geometry/Base/BaseCurve.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/Paramdigma/Core/blob/906a3757d78c9c5cfced65df08ec307b9d796982/src/Geometry/Base/BaseCurve.cs/#L11" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

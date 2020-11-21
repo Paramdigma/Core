@@ -93,16 +93,16 @@
                             <a href="Paramdigma.Core.Intersect3D.html" title="Intersect3D" class="">Intersect3D</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.IRLineLine.html" title="Intersect3D.IRLineLine" class="">Intersect3D.IRLineLine</a>
+                            <a href="Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html" title="Intersect3D.LineLineIntersectionResult" class="">Intersect3D.LineLineIntersectionResult</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISLineLine.html" title="Intersect3D.ISLineLine" class="">Intersect3D.ISLineLine</a>
+                            <a href="Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html" title="Intersect3D.LineLineIntersectionStatus" class="">Intersect3D.LineLineIntersectionStatus</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISLinePlane.html" title="Intersect3D.ISLinePlane" class="">Intersect3D.ISLinePlane</a>
+                            <a href="Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html" title="Intersect3D.LinePlaneIntersectionStatus" class="">Intersect3D.LinePlaneIntersectionStatus</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html" title="Intersect3D.ISRayFacePerimeter" class="">Intersect3D.ISRayFacePerimeter</a>
+                            <a href="Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html" title="Intersect3D.RayFacePerimeterIntersectionStatus" class="">Intersect3D.RayFacePerimeterIntersectionStatus</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Settings.html" title="Settings" class="">Settings</a>
@@ -198,7 +198,7 @@
                             <a href="Paramdigma.Core.Geometry.MeshGeometry.html" title="MeshGeometry" class="">MeshGeometry</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.Geometry.NurbsCalculator.html" title="NurbsCalculator" class="">NurbsCalculator</a>
+                            <a href="Paramdigma.Core.Geometry.NurbsCurve.html" title="NurbsCurve" class="">NurbsCurve</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.Geometry.NurbsSurface.html" title="NurbsSurface" class="">NurbsSurface</a>
@@ -294,31 +294,31 @@
                         
                         <ul class="nav level2">
                           <li class="">
-                            <a href="Paramdigma.Core.IO.CSVReader.html" title="CSVReader" class="">CSVReader</a>
+                            <a href="Paramdigma.Core.IO.CsvReader.html" title="CsvReader" class="">CsvReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.CSVWritter.html" title="CSVWritter" class="">CSVWritter</a>
+                            <a href="Paramdigma.Core.IO.CsvWritter.html" title="CsvWritter" class="">CsvWritter</a>
                           </li>
                           <li class="">
                             <a href="Paramdigma.Core.IO.OBJMeshData.html" title="OBJMeshData" class="">OBJMeshData</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OBJReader.html" title="OBJReader" class="">OBJReader</a>
+                            <a href="Paramdigma.Core.IO.ObjReader.html" title="ObjReader" class="">ObjReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OBJWritter.html" title="OBJWritter" class="">OBJWritter</a>
+                            <a href="Paramdigma.Core.IO.ObjWritter.html" title="ObjWritter" class="">ObjWritter</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFMeshData.html" title="OFFMeshData" class="">OFFMeshData</a>
+                            <a href="Paramdigma.Core.IO.OffMeshData.html" title="OffMeshData" class="">OffMeshData</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFReader.html" title="OFFReader" class="">OFFReader</a>
+                            <a href="Paramdigma.Core.IO.OffReader.html" title="OffReader" class="">OffReader</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFResult.html" title="OFFResult" class="">OFFResult</a>
+                            <a href="Paramdigma.Core.IO.OffResult.html" title="OffResult" class="">OffResult</a>
                           </li>
                           <li class="">
-                            <a href="Paramdigma.Core.IO.OFFWritter.html" title="OFFWritter" class="">OFFWritter</a>
+                            <a href="Paramdigma.Core.IO.OffWriter.html" title="OffWriter" class="">OffWriter</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -401,7 +401,8 @@
     <h3 id="classes">Classes
   </h3>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.BaseCurve.html">BaseCurve</a></h4>
-      <section><p>Represents a generic curve. This class is abstract and all curve classes should inherit from it.</p>
+      <section><p>Represents a generic curve. This class is abstract and all curve classes should inherit from
+it.</p>
 </section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.BasePoint.html">BasePoint</a></h4>
       <section><p>Abstract class representing a generic vector entity. All vector related entities must inherit from it.</p>
@@ -413,19 +414,23 @@
       <section><p>Represents a 3D box.</p>
 </section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.Circle.html">Circle</a></h4>
-      <section></section>
+      <section><p>Represents a planar circle curve.</p>
+</section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.Cylinder.html">Cylinder</a></h4>
       <section><p>Represents a cylindrical surface.</p>
 </section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.Delaunay.html">Delaunay</a></h4>
-      <section><p>Class holding all the delaunay and vornoi classes in 2 dimensions.</p>
+      <section><p>Class holding all the delaunay and Voronoi classes in 2 dimensions.</p>
 </section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.DelaunayEdge.html">DelaunayEdge</a></h4>
-      <section></section>
+      <section><p>Represents a connection between two points in a Delaunay triangulation.</p>
+</section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.DelaunayPoint.html">DelaunayPoint</a></h4>
-      <section></section>
+      <section><p>Represents a point in a delaunay triangulation with adjacency information.</p>
+</section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.DelaunayTriangle.html">DelaunayTriangle</a></h4>
-      <section></section>
+      <section><p>Represents a triangle in a delaunay triangulation operation.</p>
+</section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.InvalidCurveException.html">InvalidCurveException</a></h4>
       <section><p>Exception for invalid curve.</p>
 </section>
@@ -438,9 +443,8 @@
       <h4><a class="xref" href="Paramdigma.Core.Geometry.MeshGeometry.html">MeshGeometry</a></h4>
       <section><p>Represents the geometry of a HE_Mesh such as positions at vertices.</p>
 </section>
-      <h4><a class="xref" href="Paramdigma.Core.Geometry.NurbsCalculator.html">NurbsCalculator</a></h4>
-      <section><p>Contains all methods related to 'The Nurbs Book 2nd Edition' implementation of NURBS curves and surfaces.</p>
-</section>
+      <h4><a class="xref" href="Paramdigma.Core.Geometry.NurbsCurve.html">NurbsCurve</a></h4>
+      <section></section>
       <h4><a class="xref" href="Paramdigma.Core.Geometry.NurbsSurface.html">NurbsSurface</a></h4>
       <section><p>Represents a NURBS surface. Contains properties and methods for operating with NURBS surfaces.</p>
 </section>

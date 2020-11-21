@@ -267,6 +267,23 @@ references:
   fullName.vb: Paramdigma.Core.Collections.Matrix(Of T).Column
   nameWithType: Matrix<T>.Column
   nameWithType.vb: Matrix(Of T).Column
+- uid: Paramdigma.Core.Collections.Matrix`1.Count
+  name: Count
+  href: api/Paramdigma.Core.Collections.Matrix-1.html#Paramdigma_Core_Collections_Matrix_1_Count
+  commentId: P:Paramdigma.Core.Collections.Matrix`1.Count
+  fullName: Paramdigma.Core.Collections.Matrix<T>.Count
+  fullName.vb: Paramdigma.Core.Collections.Matrix(Of T).Count
+  nameWithType: Matrix<T>.Count
+  nameWithType.vb: Matrix(Of T).Count
+- uid: Paramdigma.Core.Collections.Matrix`1.Count*
+  name: Count
+  href: api/Paramdigma.Core.Collections.Matrix-1.html#Paramdigma_Core_Collections_Matrix_1_Count_
+  commentId: Overload:Paramdigma.Core.Collections.Matrix`1.Count
+  isSpec: "True"
+  fullName: Paramdigma.Core.Collections.Matrix<T>.Count
+  fullName.vb: Paramdigma.Core.Collections.Matrix(Of T).Count
+  nameWithType: Matrix<T>.Count
+  nameWithType.vb: Matrix(Of T).Count
 - uid: Paramdigma.Core.Collections.Matrix`1.FlipMatrix
   name: FlipMatrix()
   href: api/Paramdigma.Core.Collections.Matrix-1.html#Paramdigma_Core_Collections_Matrix_1_FlipMatrix
@@ -1597,15 +1614,15 @@ references:
   commentId: T:Paramdigma.Core.Geometry.Delaunay
   fullName: Paramdigma.Core.Geometry.Delaunay
   nameWithType: Delaunay
-- uid: Paramdigma.Core.Geometry.Delaunay.Compute(List{Paramdigma.Core.Geometry.DelaunayPoint},List{Paramdigma.Core.Geometry.DelaunayTriangle})
-  name: Compute(List<DelaunayPoint>, List<DelaunayTriangle>)
-  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Compute_List_Paramdigma_Core_Geometry_DelaunayPoint__List_Paramdigma_Core_Geometry_DelaunayTriangle__
-  commentId: M:Paramdigma.Core.Geometry.Delaunay.Compute(List{Paramdigma.Core.Geometry.DelaunayPoint},List{Paramdigma.Core.Geometry.DelaunayTriangle})
-  name.vb: Compute(List(Of DelaunayPoint), List(Of DelaunayTriangle))
-  fullName: Paramdigma.Core.Geometry.Delaunay.Compute(List<Paramdigma.Core.Geometry.DelaunayPoint>, List<Paramdigma.Core.Geometry.DelaunayTriangle>)
-  fullName.vb: Paramdigma.Core.Geometry.Delaunay.Compute(List(Of Paramdigma.Core.Geometry.DelaunayPoint), List(Of Paramdigma.Core.Geometry.DelaunayTriangle))
-  nameWithType: Delaunay.Compute(List<DelaunayPoint>, List<DelaunayTriangle>)
-  nameWithType.vb: Delaunay.Compute(List(Of DelaunayPoint), List(Of DelaunayTriangle))
+- uid: Paramdigma.Core.Geometry.Delaunay.Compute(IEnumerable{Paramdigma.Core.Geometry.DelaunayPoint},IEnumerable{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name: Compute(IEnumerable<DelaunayPoint>, IEnumerable<DelaunayTriangle>)
+  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Compute_IEnumerable_Paramdigma_Core_Geometry_DelaunayPoint__IEnumerable_Paramdigma_Core_Geometry_DelaunayTriangle__
+  commentId: M:Paramdigma.Core.Geometry.Delaunay.Compute(IEnumerable{Paramdigma.Core.Geometry.DelaunayPoint},IEnumerable{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name.vb: Compute(IEnumerable(Of DelaunayPoint), IEnumerable(Of DelaunayTriangle))
+  fullName: Paramdigma.Core.Geometry.Delaunay.Compute(IEnumerable<Paramdigma.Core.Geometry.DelaunayPoint>, IEnumerable<Paramdigma.Core.Geometry.DelaunayTriangle>)
+  fullName.vb: Paramdigma.Core.Geometry.Delaunay.Compute(IEnumerable(Of Paramdigma.Core.Geometry.DelaunayPoint), IEnumerable(Of Paramdigma.Core.Geometry.DelaunayTriangle))
+  nameWithType: Delaunay.Compute(IEnumerable<DelaunayPoint>, IEnumerable<DelaunayTriangle>)
+  nameWithType.vb: Delaunay.Compute(IEnumerable(Of DelaunayPoint), IEnumerable(Of DelaunayTriangle))
 - uid: Paramdigma.Core.Geometry.Delaunay.Compute*
   name: Compute
   href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Compute_
@@ -1613,15 +1630,15 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.Delaunay.Compute
   nameWithType: Delaunay.Compute
-- uid: Paramdigma.Core.Geometry.Delaunay.Voronoi(List{Paramdigma.Core.Geometry.DelaunayTriangle})
-  name: Voronoi(List<DelaunayTriangle>)
-  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Voronoi_List_Paramdigma_Core_Geometry_DelaunayTriangle__
-  commentId: M:Paramdigma.Core.Geometry.Delaunay.Voronoi(List{Paramdigma.Core.Geometry.DelaunayTriangle})
-  name.vb: Voronoi(List(Of DelaunayTriangle))
-  fullName: Paramdigma.Core.Geometry.Delaunay.Voronoi(List<Paramdigma.Core.Geometry.DelaunayTriangle>)
-  fullName.vb: Paramdigma.Core.Geometry.Delaunay.Voronoi(List(Of Paramdigma.Core.Geometry.DelaunayTriangle))
-  nameWithType: Delaunay.Voronoi(List<DelaunayTriangle>)
-  nameWithType.vb: Delaunay.Voronoi(List(Of DelaunayTriangle))
+- uid: Paramdigma.Core.Geometry.Delaunay.Voronoi(IEnumerable{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name: Voronoi(IEnumerable<DelaunayTriangle>)
+  href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Voronoi_IEnumerable_Paramdigma_Core_Geometry_DelaunayTriangle__
+  commentId: M:Paramdigma.Core.Geometry.Delaunay.Voronoi(IEnumerable{Paramdigma.Core.Geometry.DelaunayTriangle})
+  name.vb: Voronoi(IEnumerable(Of DelaunayTriangle))
+  fullName: Paramdigma.Core.Geometry.Delaunay.Voronoi(IEnumerable<Paramdigma.Core.Geometry.DelaunayTriangle>)
+  fullName.vb: Paramdigma.Core.Geometry.Delaunay.Voronoi(IEnumerable(Of Paramdigma.Core.Geometry.DelaunayTriangle))
+  nameWithType: Delaunay.Voronoi(IEnumerable<DelaunayTriangle>)
+  nameWithType.vb: Delaunay.Voronoi(IEnumerable(Of DelaunayTriangle))
 - uid: Paramdigma.Core.Geometry.Delaunay.Voronoi*
   name: Voronoi
   href: api/Paramdigma.Core.Geometry.Delaunay.html#Paramdigma_Core_Geometry_Delaunay_Voronoi_
@@ -1692,6 +1709,12 @@ references:
   commentId: T:Paramdigma.Core.Geometry.DelaunayPoint
   fullName: Paramdigma.Core.Geometry.DelaunayPoint
   nameWithType: DelaunayPoint
+- uid: Paramdigma.Core.Geometry.DelaunayPoint.#ctor(Paramdigma.Core.Geometry.Point2d)
+  name: DelaunayPoint(Point2d)
+  href: api/Paramdigma.Core.Geometry.DelaunayPoint.html#Paramdigma_Core_Geometry_DelaunayPoint__ctor_Paramdigma_Core_Geometry_Point2d_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayPoint.#ctor(Paramdigma.Core.Geometry.Point2d)
+  fullName: Paramdigma.Core.Geometry.DelaunayPoint.DelaunayPoint(Paramdigma.Core.Geometry.Point2d)
+  nameWithType: DelaunayPoint.DelaunayPoint(Point2d)
 - uid: Paramdigma.Core.Geometry.DelaunayPoint.#ctor(System.Double,System.Double)
   name: DelaunayPoint(Double, Double)
   href: api/Paramdigma.Core.Geometry.DelaunayPoint.html#Paramdigma_Core_Geometry_DelaunayPoint__ctor_System_Double_System_Double_
@@ -1736,25 +1759,12 @@ references:
   commentId: F:Paramdigma.Core.Geometry.DelaunayTriangle.Circumcenter
   fullName: Paramdigma.Core.Geometry.DelaunayTriangle.Circumcenter
   nameWithType: DelaunayTriangle.Circumcenter
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
-  name: IsCounterClockwise(DelaunayPoint, DelaunayPoint, DelaunayPoint)
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsCounterClockwise_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_Paramdigma_Core_Geometry_DelaunayPoint_
-  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise(Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint,Paramdigma.Core.Geometry.DelaunayPoint)
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise(Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint, Paramdigma.Core.Geometry.DelaunayPoint)
-  nameWithType: DelaunayTriangle.IsCounterClockwise(DelaunayPoint, DelaunayPoint, DelaunayPoint)
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise*
-  name: IsCounterClockwise
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsCounterClockwise_
-  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsCounterClockwise
-  nameWithType: DelaunayTriangle.IsCounterClockwise
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.DelaunayPoint)
-  name: IsPointInsideCircumcircle(DelaunayPoint)
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsPointInsideCircumcircle_Paramdigma_Core_Geometry_DelaunayPoint_
-  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.DelaunayPoint)
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.DelaunayPoint)
-  nameWithType: DelaunayTriangle.IsPointInsideCircumcircle(DelaunayPoint)
+- uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.Point2d)
+  name: IsPointInsideCircumcircle(Point2d)
+  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsPointInsideCircumcircle_Paramdigma_Core_Geometry_Point2d_
+  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.Point2d)
+  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle(Paramdigma.Core.Geometry.Point2d)
+  nameWithType: DelaunayTriangle.IsPointInsideCircumcircle(Point2d)
 - uid: Paramdigma.Core.Geometry.DelaunayTriangle.IsPointInsideCircumcircle*
   name: IsPointInsideCircumcircle
   href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_IsPointInsideCircumcircle_
@@ -1768,19 +1778,6 @@ references:
   commentId: F:Paramdigma.Core.Geometry.DelaunayTriangle.RadiusSquared
   fullName: Paramdigma.Core.Geometry.DelaunayTriangle.RadiusSquared
   nameWithType: DelaunayTriangle.RadiusSquared
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth(Paramdigma.Core.Geometry.DelaunayTriangle)
-  name: SharesEdgeWidth(DelaunayTriangle)
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_SharesEdgeWidth_Paramdigma_Core_Geometry_DelaunayTriangle_
-  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth(Paramdigma.Core.Geometry.DelaunayTriangle)
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth(Paramdigma.Core.Geometry.DelaunayTriangle)
-  nameWithType: DelaunayTriangle.SharesEdgeWidth(DelaunayTriangle)
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth*
-  name: SharesEdgeWidth
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_SharesEdgeWidth_
-  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.SharesEdgeWidth
-  nameWithType: DelaunayTriangle.SharesEdgeWidth
 - uid: Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges
   name: TrianglesWithSharedEdges()
   href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_TrianglesWithSharedEdges
@@ -1794,19 +1791,6 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.DelaunayTriangle.TrianglesWithSharedEdges
   nameWithType: DelaunayTriangle.TrianglesWithSharedEdges
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
-  name: UpdateCircumcircle()
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_UpdateCircumcircle
-  commentId: M:Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle()
-  nameWithType: DelaunayTriangle.UpdateCircumcircle()
-- uid: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle*
-  name: UpdateCircumcircle
-  href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_UpdateCircumcircle_
-  commentId: Overload:Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.DelaunayTriangle.UpdateCircumcircle
-  nameWithType: DelaunayTriangle.UpdateCircumcircle
 - uid: Paramdigma.Core.Geometry.DelaunayTriangle.Vertices
   name: Vertices
   href: api/Paramdigma.Core.Geometry.DelaunayTriangle.html#Paramdigma_Core_Geometry_DelaunayTriangle_Vertices
@@ -2657,395 +2641,358 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Geometry.MeshGeometry.VertexNormalSphereInscribed
   nameWithType: MeshGeometry.VertexNormalSphereInscribed
-- uid: Paramdigma.Core.Geometry.NurbsCalculator
-  name: NurbsCalculator
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html
-  commentId: T:Paramdigma.Core.Geometry.NurbsCalculator
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator
-  nameWithType: NurbsCalculator
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns(System.Int32,System.Double,System.Int32,IList{System.Double})
-  name: AllBasisFuns(Int32, Double, Int32, IList<Double>)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_AllBasisFuns_System_Int32_System_Double_System_Int32_IList_System_Double__
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns(System.Int32,System.Double,System.Int32,IList{System.Double})
-  name.vb: AllBasisFuns(Int32, Double, Int32, IList(Of Double))
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns(System.Int32, System.Double, System.Int32, IList<System.Double>)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns(System.Int32, System.Double, System.Int32, IList(Of System.Double))
-  nameWithType: NurbsCalculator.AllBasisFuns(Int32, Double, Int32, IList<Double>)
-  nameWithType.vb: NurbsCalculator.AllBasisFuns(Int32, Double, Int32, IList(Of Double))
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns*
-  name: AllBasisFuns
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_AllBasisFuns_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns
+- uid: Paramdigma.Core.Geometry.NurbsCurve
+  name: NurbsCurve
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html
+  commentId: T:Paramdigma.Core.Geometry.NurbsCurve
+  fullName: Paramdigma.Core.Geometry.NurbsCurve
+  nameWithType: NurbsCurve
+- uid: Paramdigma.Core.Geometry.NurbsCurve.#ctor(List{Paramdigma.Core.Geometry.Point4d},System.Int32)
+  name: NurbsCurve(List<Point4d>, Int32)
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve__ctor_List_Paramdigma_Core_Geometry_Point4d__System_Int32_
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.#ctor(List{Paramdigma.Core.Geometry.Point4d},System.Int32)
+  name.vb: NurbsCurve(List(Of Point4d), Int32)
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.NurbsCurve(List<Paramdigma.Core.Geometry.Point4d>, System.Int32)
+  fullName.vb: Paramdigma.Core.Geometry.NurbsCurve.NurbsCurve(List(Of Paramdigma.Core.Geometry.Point4d), System.Int32)
+  nameWithType: NurbsCurve.NurbsCurve(List<Point4d>, Int32)
+  nameWithType.vb: NurbsCurve.NurbsCurve(List(Of Point4d), Int32)
+- uid: Paramdigma.Core.Geometry.NurbsCurve.#ctor*
+  name: NurbsCurve
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.#ctor
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.AllBasisFuns
-  nameWithType: NurbsCalculator.AllBasisFuns
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.AllBernstein(System.Int32,System.Double)
-  name: AllBernstein(Int32, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_AllBernstein_System_Int32_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.AllBernstein(System.Int32,System.Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.AllBernstein(System.Int32, System.Double)
-  nameWithType: NurbsCalculator.AllBernstein(Int32, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.AllBernstein*
-  name: AllBernstein
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_AllBernstein_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.AllBernstein
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.NurbsCurve
+  nameWithType: NurbsCurve.NurbsCurve
+- uid: Paramdigma.Core.Geometry.NurbsCurve.BinormalAt(System.Double)
+  name: BinormalAt(Double)
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_BinormalAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.BinormalAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.BinormalAt(System.Double)
+  nameWithType: NurbsCurve.BinormalAt(Double)
+- uid: Paramdigma.Core.Geometry.NurbsCurve.BinormalAt*
+  name: BinormalAt
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_BinormalAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.BinormalAt
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.AllBernstein
-  nameWithType: NurbsCalculator.AllBernstein
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns(System.Int32,System.Double,System.Int32,IList{System.Double})
-  name: BasisFuns(Int32, Double, Int32, IList<Double>)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_BasisFuns_System_Int32_System_Double_System_Int32_IList_System_Double__
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns(System.Int32,System.Double,System.Int32,IList{System.Double})
-  name.vb: BasisFuns(Int32, Double, Int32, IList(Of Double))
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns(System.Int32, System.Double, System.Int32, IList<System.Double>)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns(System.Int32, System.Double, System.Int32, IList(Of System.Double))
-  nameWithType: NurbsCalculator.BasisFuns(Int32, Double, Int32, IList<Double>)
-  nameWithType.vb: NurbsCalculator.BasisFuns(Int32, Double, Int32, IList(Of Double))
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns*
-  name: BasisFuns
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_BasisFuns_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.BinormalAt
+  nameWithType: NurbsCurve.BinormalAt
+- uid: Paramdigma.Core.Geometry.NurbsCurve.CheckValidity
+  name: CheckValidity()
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_CheckValidity
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.CheckValidity
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.CheckValidity()
+  nameWithType: NurbsCurve.CheckValidity()
+- uid: Paramdigma.Core.Geometry.NurbsCurve.CheckValidity*
+  name: CheckValidity
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_CheckValidity_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.CheckValidity
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.BasisFuns
-  nameWithType: NurbsCalculator.BasisFuns
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.Bernstein(System.Int32,System.Int32,System.Double)
-  name: Bernstein(Int32, Int32, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_Bernstein_System_Int32_System_Int32_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.Bernstein(System.Int32,System.Int32,System.Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.Bernstein(System.Int32, System.Int32, System.Double)
-  nameWithType: NurbsCalculator.Bernstein(Int32, Int32, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.Bernstein*
-  name: Bernstein
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_Bernstein_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.Bernstein
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.CheckValidity
+  nameWithType: NurbsCurve.CheckValidity
+- uid: Paramdigma.Core.Geometry.NurbsCurve.ComputeLength
+  name: ComputeLength()
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_ComputeLength
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.ComputeLength
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.ComputeLength()
+  nameWithType: NurbsCurve.ComputeLength()
+- uid: Paramdigma.Core.Geometry.NurbsCurve.ComputeLength*
+  name: ComputeLength
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_ComputeLength_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.ComputeLength
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.Bernstein
-  nameWithType: NurbsCalculator.Bernstein
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CreateUnitKnotVector(System.Int32,System.Int32)
-  name: CreateUnitKnotVector(Int32, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CreateUnitKnotVector_System_Int32_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.CreateUnitKnotVector(System.Int32,System.Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CreateUnitKnotVector(System.Int32, System.Int32)
-  nameWithType: NurbsCalculator.CreateUnitKnotVector(Int32, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CreateUnitKnotVector*
-  name: CreateUnitKnotVector
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CreateUnitKnotVector_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.CreateUnitKnotVector
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.ComputeLength
+  nameWithType: NurbsCurve.ComputeLength
+- uid: Paramdigma.Core.Geometry.NurbsCurve.ControlPoints
+  name: ControlPoints
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_ControlPoints
+  commentId: F:Paramdigma.Core.Geometry.NurbsCurve.ControlPoints
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.ControlPoints
+  nameWithType: NurbsCurve.ControlPoints
+- uid: Paramdigma.Core.Geometry.NurbsCurve.Degree
+  name: Degree
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_Degree
+  commentId: F:Paramdigma.Core.Geometry.NurbsCurve.Degree
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.Degree
+  nameWithType: NurbsCurve.Degree
+- uid: Paramdigma.Core.Geometry.NurbsCurve.EndPoint
+  name: EndPoint
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_EndPoint
+  commentId: P:Paramdigma.Core.Geometry.NurbsCurve.EndPoint
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.EndPoint
+  nameWithType: NurbsCurve.EndPoint
+- uid: Paramdigma.Core.Geometry.NurbsCurve.EndPoint*
+  name: EndPoint
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_EndPoint_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.EndPoint
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CreateUnitKnotVector
-  nameWithType: NurbsCalculator.CreateUnitKnotVector
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Int32)
-  name: CurveDerivCpts(Int32, Int32, IList<Double>, IList<Point3d>, Int32, Int32, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurveDerivCpts_System_Int32_System_Int32_IList_System_Double__IList_Paramdigma_Core_Geometry_Point3d__System_Int32_System_Int32_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Int32)
-  name.vb: CurveDerivCpts(Int32, Int32, IList(Of Double), IList(Of Point3d), Int32, Int32, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts(System.Int32, System.Int32, IList<System.Double>, IList<Paramdigma.Core.Geometry.Point3d>, System.Int32, System.Int32, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts(System.Int32, System.Int32, IList(Of System.Double), IList(Of Paramdigma.Core.Geometry.Point3d), System.Int32, System.Int32, System.Int32)
-  nameWithType: NurbsCalculator.CurveDerivCpts(Int32, Int32, IList<Double>, IList<Point3d>, Int32, Int32, Int32)
-  nameWithType.vb: NurbsCalculator.CurveDerivCpts(Int32, Int32, IList(Of Double), IList(Of Point3d), Int32, Int32, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts*
-  name: CurveDerivCpts
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurveDerivCpts_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.EndPoint
+  nameWithType: NurbsCurve.EndPoint
+- uid: Paramdigma.Core.Geometry.NurbsCurve.EndTangent
+  name: EndTangent
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_EndTangent
+  commentId: P:Paramdigma.Core.Geometry.NurbsCurve.EndTangent
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.EndTangent
+  nameWithType: NurbsCurve.EndTangent
+- uid: Paramdigma.Core.Geometry.NurbsCurve.EndTangent*
+  name: EndTangent
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_EndTangent_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.EndTangent
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivCpts
-  nameWithType: NurbsCalculator.CurveDerivCpts
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Double,System.Int32)
-  name: CurveDerivsAlg1(Int32, Int32, IList<Double>, IList<Point3d>, Double, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurveDerivsAlg1_System_Int32_System_Int32_IList_System_Double__IList_Paramdigma_Core_Geometry_Point3d__System_Double_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Double,System.Int32)
-  name.vb: CurveDerivsAlg1(Int32, Int32, IList(Of Double), IList(Of Point3d), Double, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1(System.Int32, System.Int32, IList<System.Double>, IList<Paramdigma.Core.Geometry.Point3d>, System.Double, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1(System.Int32, System.Int32, IList(Of System.Double), IList(Of Paramdigma.Core.Geometry.Point3d), System.Double, System.Int32)
-  nameWithType: NurbsCalculator.CurveDerivsAlg1(Int32, Int32, IList<Double>, IList<Point3d>, Double, Int32)
-  nameWithType.vb: NurbsCalculator.CurveDerivsAlg1(Int32, Int32, IList(Of Double), IList(Of Point3d), Double, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1*
-  name: CurveDerivsAlg1
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurveDerivsAlg1_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.EndTangent
+  nameWithType: NurbsCurve.EndTangent
+- uid: Paramdigma.Core.Geometry.NurbsCurve.FrameAt(System.Double)
+  name: FrameAt(Double)
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_FrameAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.FrameAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.FrameAt(System.Double)
+  nameWithType: NurbsCurve.FrameAt(Double)
+- uid: Paramdigma.Core.Geometry.NurbsCurve.FrameAt*
+  name: FrameAt
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_FrameAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.FrameAt
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg1
-  nameWithType: NurbsCalculator.CurveDerivsAlg1
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Double,System.Int32)
-  name: CurveDerivsAlg2(Int32, Int32, IList<Double>, IList<Point3d>, Double, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurveDerivsAlg2_System_Int32_System_Int32_IList_System_Double__IList_Paramdigma_Core_Geometry_Point3d__System_Double_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Double,System.Int32)
-  name.vb: CurveDerivsAlg2(Int32, Int32, IList(Of Double), IList(Of Point3d), Double, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2(System.Int32, System.Int32, IList<System.Double>, IList<Paramdigma.Core.Geometry.Point3d>, System.Double, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2(System.Int32, System.Int32, IList(Of System.Double), IList(Of Paramdigma.Core.Geometry.Point3d), System.Double, System.Int32)
-  nameWithType: NurbsCalculator.CurveDerivsAlg2(Int32, Int32, IList<Double>, IList<Point3d>, Double, Int32)
-  nameWithType.vb: NurbsCalculator.CurveDerivsAlg2(Int32, Int32, IList(Of Double), IList(Of Point3d), Double, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2*
-  name: CurveDerivsAlg2
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurveDerivsAlg2_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.FrameAt
+  nameWithType: NurbsCurve.FrameAt
+- uid: Paramdigma.Core.Geometry.NurbsCurve.Knots
+  name: Knots
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_Knots
+  commentId: F:Paramdigma.Core.Geometry.NurbsCurve.Knots
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.Knots
+  nameWithType: NurbsCurve.Knots
+- uid: Paramdigma.Core.Geometry.NurbsCurve.NormalAt(System.Double)
+  name: NormalAt(Double)
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_NormalAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.NormalAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.NormalAt(System.Double)
+  nameWithType: NurbsCurve.NormalAt(Double)
+- uid: Paramdigma.Core.Geometry.NurbsCurve.NormalAt*
+  name: NormalAt
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_NormalAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.NormalAt
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurveDerivsAlg2
-  nameWithType: NurbsCalculator.CurveDerivsAlg2
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Double)
-  name: CurvePoint(Int32, Int32, IList<Double>, IList<Point3d>, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurvePoint_System_Int32_System_Int32_IList_System_Double__IList_Paramdigma_Core_Geometry_Point3d__System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point3d},System.Double)
-  name.vb: CurvePoint(Int32, Int32, IList(Of Double), IList(Of Point3d), Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32, System.Int32, IList<System.Double>, IList<Paramdigma.Core.Geometry.Point3d>, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32, System.Int32, IList(Of System.Double), IList(Of Paramdigma.Core.Geometry.Point3d), System.Double)
-  nameWithType: NurbsCalculator.CurvePoint(Int32, Int32, IList<Double>, IList<Point3d>, Double)
-  nameWithType.vb: NurbsCalculator.CurvePoint(Int32, Int32, IList(Of Double), IList(Of Point3d), Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point4d},System.Double)
-  name: CurvePoint(Int32, Int32, IList<Double>, IList<Point4d>, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurvePoint_System_Int32_System_Int32_IList_System_Double__IList_Paramdigma_Core_Geometry_Point4d__System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32,System.Int32,IList{System.Double},IList{Paramdigma.Core.Geometry.Point4d},System.Double)
-  name.vb: CurvePoint(Int32, Int32, IList(Of Double), IList(Of Point4d), Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32, System.Int32, IList<System.Double>, IList<Paramdigma.Core.Geometry.Point4d>, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint(System.Int32, System.Int32, IList(Of System.Double), IList(Of Paramdigma.Core.Geometry.Point4d), System.Double)
-  nameWithType: NurbsCalculator.CurvePoint(Int32, Int32, IList<Double>, IList<Point4d>, Double)
-  nameWithType.vb: NurbsCalculator.CurvePoint(Int32, Int32, IList(Of Double), IList(Of Point4d), Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint*
-  name: CurvePoint
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_CurvePoint_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.NormalAt
+  nameWithType: NurbsCurve.NormalAt
+- uid: Paramdigma.Core.Geometry.NurbsCurve.PointAt(System.Double)
+  name: PointAt(Double)
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_PointAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.PointAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.PointAt(System.Double)
+  nameWithType: NurbsCurve.PointAt(Double)
+- uid: Paramdigma.Core.Geometry.NurbsCurve.PointAt*
+  name: PointAt
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_PointAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.PointAt
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.CurvePoint
-  nameWithType: NurbsCalculator.CurvePoint
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1(Paramdigma.Core.Geometry.Point3d[],System.Int32,System.Double)
-  name: DeCasteljau1(Point3d[], Int32, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DeCasteljau1_Paramdigma_Core_Geometry_Point3d___System_Int32_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1(Paramdigma.Core.Geometry.Point3d[],System.Int32,System.Double)
-  name.vb: DeCasteljau1(Point3d(), Int32, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1(Paramdigma.Core.Geometry.Point3d[], System.Int32, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1(Paramdigma.Core.Geometry.Point3d(), System.Int32, System.Double)
-  nameWithType: NurbsCalculator.DeCasteljau1(Point3d[], Int32, Double)
-  nameWithType.vb: NurbsCalculator.DeCasteljau1(Point3d(), Int32, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1*
-  name: DeCasteljau1
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DeCasteljau1_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.PointAt
+  nameWithType: NurbsCurve.PointAt
+- uid: Paramdigma.Core.Geometry.NurbsCurve.StartPoint
+  name: StartPoint
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_StartPoint
+  commentId: P:Paramdigma.Core.Geometry.NurbsCurve.StartPoint
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.StartPoint
+  nameWithType: NurbsCurve.StartPoint
+- uid: Paramdigma.Core.Geometry.NurbsCurve.StartPoint*
+  name: StartPoint
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_StartPoint_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.StartPoint
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau1
-  nameWithType: NurbsCalculator.DeCasteljau1
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2(Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Double,System.Double)
-  name: DeCasteljau2(Matrix<Point3d>, Int32, Int32, Double, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DeCasteljau2_Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point3d__System_Int32_System_Int32_System_Double_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2(Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Double,System.Double)
-  name.vb: DeCasteljau2(Matrix(Of Point3d), Int32, Int32, Double, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2(Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point3d>, System.Int32, System.Int32, System.Double, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2(Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point3d), System.Int32, System.Int32, System.Double, System.Double)
-  nameWithType: NurbsCalculator.DeCasteljau2(Matrix<Point3d>, Int32, Int32, Double, Double)
-  nameWithType.vb: NurbsCalculator.DeCasteljau2(Matrix(Of Point3d), Int32, Int32, Double, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2*
-  name: DeCasteljau2
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DeCasteljau2_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.StartPoint
+  nameWithType: NurbsCurve.StartPoint
+- uid: Paramdigma.Core.Geometry.NurbsCurve.StartTangent
+  name: StartTangent
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_StartTangent
+  commentId: P:Paramdigma.Core.Geometry.NurbsCurve.StartTangent
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.StartTangent
+  nameWithType: NurbsCurve.StartTangent
+- uid: Paramdigma.Core.Geometry.NurbsCurve.StartTangent*
+  name: StartTangent
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_StartTangent_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.StartTangent
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DeCasteljau2
-  nameWithType: NurbsCalculator.DeCasteljau2
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns(System.Int32,System.Double,System.Int32,System.Int32,IList{System.Double})
-  name: DersBasisFuns(Int32, Double, Int32, Int32, IList<Double>)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DersBasisFuns_System_Int32_System_Double_System_Int32_System_Int32_IList_System_Double__
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns(System.Int32,System.Double,System.Int32,System.Int32,IList{System.Double})
-  name.vb: DersBasisFuns(Int32, Double, Int32, Int32, IList(Of Double))
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns(System.Int32, System.Double, System.Int32, System.Int32, IList<System.Double>)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns(System.Int32, System.Double, System.Int32, System.Int32, IList(Of System.Double))
-  nameWithType: NurbsCalculator.DersBasisFuns(Int32, Double, Int32, Int32, IList<Double>)
-  nameWithType.vb: NurbsCalculator.DersBasisFuns(Int32, Double, Int32, Int32, IList(Of Double))
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns*
-  name: DersBasisFuns
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DersBasisFuns_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.StartTangent
+  nameWithType: NurbsCurve.StartTangent
+- uid: Paramdigma.Core.Geometry.NurbsCurve.TangentAt(System.Double)
+  name: TangentAt(Double)
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_TangentAt_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsCurve.TangentAt(System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.TangentAt(System.Double)
+  nameWithType: NurbsCurve.TangentAt(Double)
+- uid: Paramdigma.Core.Geometry.NurbsCurve.TangentAt*
+  name: TangentAt
+  href: api/Paramdigma.Core.Geometry.NurbsCurve.html#Paramdigma_Core_Geometry_NurbsCurve_TangentAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsCurve.TangentAt
   isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DersBasisFuns
-  nameWithType: NurbsCalculator.DersBasisFuns
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Double,System.Int32)
-  name: DersOneBasisFun(Int32, Int32, IList<Double>, Int32, Double, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DersOneBasisFun_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Double_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Double,System.Int32)
-  name.vb: DersOneBasisFun(Int32, Int32, IList(Of Double), Int32, Double, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Double, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Double, System.Int32)
-  nameWithType: NurbsCalculator.DersOneBasisFun(Int32, Int32, IList<Double>, Int32, Double, Int32)
-  nameWithType.vb: NurbsCalculator.DersOneBasisFun(Int32, Int32, IList(Of Double), Int32, Double, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun*
-  name: DersOneBasisFun
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_DersOneBasisFun_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.DersOneBasisFun
-  nameWithType: NurbsCalculator.DersOneBasisFun
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.FindSpan(System.Int32,System.Int32,System.Double,IList{System.Double})
-  name: FindSpan(Int32, Int32, Double, IList<Double>)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_FindSpan_System_Int32_System_Int32_System_Double_IList_System_Double__
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.FindSpan(System.Int32,System.Int32,System.Double,IList{System.Double})
-  name.vb: FindSpan(Int32, Int32, Double, IList(Of Double))
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.FindSpan(System.Int32, System.Int32, System.Double, IList<System.Double>)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.FindSpan(System.Int32, System.Int32, System.Double, IList(Of System.Double))
-  nameWithType: NurbsCalculator.FindSpan(Int32, Int32, Double, IList<Double>)
-  nameWithType.vb: NurbsCalculator.FindSpan(Int32, Int32, Double, IList(Of Double))
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.FindSpan*
-  name: FindSpan
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_FindSpan_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.FindSpan
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.FindSpan
-  nameWithType: NurbsCalculator.FindSpan
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.Horner1(Paramdigma.Core.Geometry.Point3d[],System.Int32,System.Double)
-  name: Horner1(Point3d[], Int32, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_Horner1_Paramdigma_Core_Geometry_Point3d___System_Int32_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.Horner1(Paramdigma.Core.Geometry.Point3d[],System.Int32,System.Double)
-  name.vb: Horner1(Point3d(), Int32, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.Horner1(Paramdigma.Core.Geometry.Point3d[], System.Int32, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.Horner1(Paramdigma.Core.Geometry.Point3d(), System.Int32, System.Double)
-  nameWithType: NurbsCalculator.Horner1(Point3d[], Int32, Double)
-  nameWithType.vb: NurbsCalculator.Horner1(Point3d(), Int32, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.Horner1*
-  name: Horner1
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_Horner1_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.Horner1
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.Horner1
-  nameWithType: NurbsCalculator.Horner1
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.Horner2(Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Double,System.Double)
-  name: Horner2(Matrix<Point3d>, Int32, Int32, Double, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_Horner2_Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point3d__System_Int32_System_Int32_System_Double_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.Horner2(Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Double,System.Double)
-  name.vb: Horner2(Matrix(Of Point3d), Int32, Int32, Double, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.Horner2(Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point3d>, System.Int32, System.Int32, System.Double, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.Horner2(Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point3d), System.Int32, System.Int32, System.Double, System.Double)
-  nameWithType: NurbsCalculator.Horner2(Matrix<Point3d>, Int32, Int32, Double, Double)
-  nameWithType.vb: NurbsCalculator.Horner2(Matrix(Of Point3d), Int32, Int32, Double, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.Horner2*
-  name: Horner2
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_Horner2_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.Horner2
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.Horner2
-  nameWithType: NurbsCalculator.Horner2
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Double)
-  name: OneBasisFun(Int32, Int32, IList<Double>, Int32, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_OneBasisFun_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Double)
-  name.vb: OneBasisFun(Int32, Int32, IList(Of Double), Int32, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Double)
-  nameWithType: NurbsCalculator.OneBasisFun(Int32, Int32, IList<Double>, Int32, Double)
-  nameWithType.vb: NurbsCalculator.OneBasisFun(Int32, Int32, IList(Of Double), Int32, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun*
-  name: OneBasisFun
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_OneBasisFun_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.OneBasisFun
-  nameWithType: NurbsCalculator.OneBasisFun
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve(List{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Double)
-  name: PointOnBezierCurve(List<Point3d>, Int32, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_PointOnBezierCurve_List_Paramdigma_Core_Geometry_Point3d__System_Int32_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve(List{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Double)
-  name.vb: PointOnBezierCurve(List(Of Point3d), Int32, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve(List<Paramdigma.Core.Geometry.Point3d>, System.Int32, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve(List(Of Paramdigma.Core.Geometry.Point3d), System.Int32, System.Double)
-  nameWithType: NurbsCalculator.PointOnBezierCurve(List<Point3d>, Int32, Double)
-  nameWithType.vb: NurbsCalculator.PointOnBezierCurve(List(Of Point3d), Int32, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve*
-  name: PointOnBezierCurve
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_PointOnBezierCurve_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.PointOnBezierCurve
-  nameWithType: NurbsCalculator.PointOnBezierCurve
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs(IList{Paramdigma.Core.Geometry.Vector3d},IList{System.Double},System.Int32)
-  name: RatCurveDerivs(IList<Vector3d>, IList<Double>, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_RatCurveDerivs_IList_Paramdigma_Core_Geometry_Vector3d__IList_System_Double__System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs(IList{Paramdigma.Core.Geometry.Vector3d},IList{System.Double},System.Int32)
-  name.vb: RatCurveDerivs(IList(Of Vector3d), IList(Of Double), Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs(IList<Paramdigma.Core.Geometry.Vector3d>, IList<System.Double>, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs(IList(Of Paramdigma.Core.Geometry.Vector3d), IList(Of System.Double), System.Int32)
-  nameWithType: NurbsCalculator.RatCurveDerivs(IList<Vector3d>, IList<Double>, Int32)
-  nameWithType.vb: NurbsCalculator.RatCurveDerivs(IList(Of Vector3d), IList(Of Double), Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs*
-  name: RatCurveDerivs
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_RatCurveDerivs_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.RatCurveDerivs
-  nameWithType: NurbsCalculator.RatCurveDerivs
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  name: SurfaceDerivCpts(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Int32, Int32, Int32, Int32, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfaceDerivCpts_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Int32_IList_System_Double__Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point3d__System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
-  name.vb: SurfaceDerivCpts(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Int32, Int32, Int32, Int32, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Int32, IList<System.Double>, Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point3d>, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Int32, IList(Of System.Double), Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point3d), System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
-  nameWithType: NurbsCalculator.SurfaceDerivCpts(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Int32, Int32, Int32, Int32, Int32)
-  nameWithType.vb: NurbsCalculator.SurfaceDerivCpts(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Int32, Int32, Int32, Int32, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts*
-  name: SurfaceDerivCpts
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfaceDerivCpts_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivCpts
-  nameWithType: NurbsCalculator.SurfaceDerivCpts
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Double,System.Double,System.Int32)
-  name: SurfaceDerivsAlg1(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Double, Double, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfaceDerivsAlg1_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Int32_IList_System_Double__Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point3d__System_Double_System_Double_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Double,System.Double,System.Int32)
-  name.vb: SurfaceDerivsAlg1(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Double, Double, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Int32, IList<System.Double>, Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point3d>, System.Double, System.Double, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Int32, IList(Of System.Double), Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point3d), System.Double, System.Double, System.Int32)
-  nameWithType: NurbsCalculator.SurfaceDerivsAlg1(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Double, Double, Int32)
-  nameWithType.vb: NurbsCalculator.SurfaceDerivsAlg1(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Double, Double, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1*
-  name: SurfaceDerivsAlg1
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfaceDerivsAlg1_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg1
-  nameWithType: NurbsCalculator.SurfaceDerivsAlg1
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Double,System.Double,System.Int32)
-  name: SurfaceDerivsAlg2(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Double, Double, Int32)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfaceDerivsAlg2_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Int32_IList_System_Double__Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point3d__System_Double_System_Double_System_Int32_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Double,System.Double,System.Int32)
-  name.vb: SurfaceDerivsAlg2(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Double, Double, Int32)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Int32, IList<System.Double>, Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point3d>, System.Double, System.Double, System.Int32)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Int32, IList(Of System.Double), Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point3d), System.Double, System.Double, System.Int32)
-  nameWithType: NurbsCalculator.SurfaceDerivsAlg2(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Double, Double, Int32)
-  nameWithType.vb: NurbsCalculator.SurfaceDerivsAlg2(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Double, Double, Int32)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2*
-  name: SurfaceDerivsAlg2
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfaceDerivsAlg2_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfaceDerivsAlg2
-  nameWithType: NurbsCalculator.SurfaceDerivsAlg2
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Double,System.Double)
-  name: SurfacePoint(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Double, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfacePoint_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Int32_IList_System_Double__Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point3d__System_Double_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point3d},System.Double,System.Double)
-  name.vb: SurfacePoint(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Double, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Int32, IList<System.Double>, Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point3d>, System.Double, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Int32, IList(Of System.Double), Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point3d), System.Double, System.Double)
-  nameWithType: NurbsCalculator.SurfacePoint(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point3d>, Double, Double)
-  nameWithType.vb: NurbsCalculator.SurfacePoint(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point3d), Double, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point4d},System.Double,System.Double)
-  name: SurfacePoint(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point4d>, Double, Double)
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfacePoint_System_Int32_System_Int32_IList_System_Double__System_Int32_System_Int32_IList_System_Double__Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point4d__System_Double_System_Double_
-  commentId: M:Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32,System.Int32,IList{System.Double},System.Int32,System.Int32,IList{System.Double},Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point4d},System.Double,System.Double)
-  name.vb: SurfacePoint(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point4d), Double, Double)
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32, System.Int32, IList<System.Double>, System.Int32, System.Int32, IList<System.Double>, Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point4d>, System.Double, System.Double)
-  fullName.vb: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint(System.Int32, System.Int32, IList(Of System.Double), System.Int32, System.Int32, IList(Of System.Double), Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point4d), System.Double, System.Double)
-  nameWithType: NurbsCalculator.SurfacePoint(Int32, Int32, IList<Double>, Int32, Int32, IList<Double>, Matrix<Point4d>, Double, Double)
-  nameWithType.vb: NurbsCalculator.SurfacePoint(Int32, Int32, IList(Of Double), Int32, Int32, IList(Of Double), Matrix(Of Point4d), Double, Double)
-- uid: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint*
-  name: SurfacePoint
-  href: api/Paramdigma.Core.Geometry.NurbsCalculator.html#Paramdigma_Core_Geometry_NurbsCalculator_SurfacePoint_
-  commentId: Overload:Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint
-  isSpec: "True"
-  fullName: Paramdigma.Core.Geometry.NurbsCalculator.SurfacePoint
-  nameWithType: NurbsCalculator.SurfacePoint
+  fullName: Paramdigma.Core.Geometry.NurbsCurve.TangentAt
+  nameWithType: NurbsCurve.TangentAt
 - uid: Paramdigma.Core.Geometry.NurbsSurface
   name: NurbsSurface
   href: api/Paramdigma.Core.Geometry.NurbsSurface.html
   commentId: T:Paramdigma.Core.Geometry.NurbsSurface
   fullName: Paramdigma.Core.Geometry.NurbsSurface
   nameWithType: NurbsSurface
+- uid: Paramdigma.Core.Geometry.NurbsSurface.#ctor(Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point4d},System.Int32,System.Int32)
+  name: NurbsSurface(Matrix<Point4d>, Int32, Int32)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface__ctor_Paramdigma_Core_Collections_Matrix_Paramdigma_Core_Geometry_Point4d__System_Int32_System_Int32_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.#ctor(Paramdigma.Core.Collections.Matrix{Paramdigma.Core.Geometry.Point4d},System.Int32,System.Int32)
+  name.vb: NurbsSurface(Matrix(Of Point4d), Int32, Int32)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.NurbsSurface(Paramdigma.Core.Collections.Matrix<Paramdigma.Core.Geometry.Point4d>, System.Int32, System.Int32)
+  fullName.vb: Paramdigma.Core.Geometry.NurbsSurface.NurbsSurface(Paramdigma.Core.Collections.Matrix(Of Paramdigma.Core.Geometry.Point4d), System.Int32, System.Int32)
+  nameWithType: NurbsSurface.NurbsSurface(Matrix<Point4d>, Int32, Int32)
+  nameWithType.vb: NurbsSurface.NurbsSurface(Matrix(Of Point4d), Int32, Int32)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.#ctor*
+  name: NurbsSurface
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface__ctor_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.NurbsSurface
+  nameWithType: NurbsSurface.NurbsSurface
+- uid: Paramdigma.Core.Geometry.NurbsSurface.ClosestPointTo(Paramdigma.Core.Geometry.Point3d)
+  name: ClosestPointTo(Point3d)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_ClosestPointTo_Paramdigma_Core_Geometry_Point3d_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.ClosestPointTo(Paramdigma.Core.Geometry.Point3d)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.ClosestPointTo(Paramdigma.Core.Geometry.Point3d)
+  nameWithType: NurbsSurface.ClosestPointTo(Point3d)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.ClosestPointTo*
+  name: ClosestPointTo
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_ClosestPointTo_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.ClosestPointTo
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.ClosestPointTo
+  nameWithType: NurbsSurface.ClosestPointTo
+- uid: Paramdigma.Core.Geometry.NurbsSurface.ControlPoints
+  name: ControlPoints
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_ControlPoints
+  commentId: F:Paramdigma.Core.Geometry.NurbsSurface.ControlPoints
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.ControlPoints
+  nameWithType: NurbsSurface.ControlPoints
+- uid: Paramdigma.Core.Geometry.NurbsSurface.CreateFlatSurface(Paramdigma.Core.Collections.Interval,Paramdigma.Core.Collections.Interval,System.Int32,System.Int32)
+  name: CreateFlatSurface(Interval, Interval, Int32, Int32)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_CreateFlatSurface_Paramdigma_Core_Collections_Interval_Paramdigma_Core_Collections_Interval_System_Int32_System_Int32_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.CreateFlatSurface(Paramdigma.Core.Collections.Interval,Paramdigma.Core.Collections.Interval,System.Int32,System.Int32)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.CreateFlatSurface(Paramdigma.Core.Collections.Interval, Paramdigma.Core.Collections.Interval, System.Int32, System.Int32)
+  nameWithType: NurbsSurface.CreateFlatSurface(Interval, Interval, Int32, Int32)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.CreateFlatSurface*
+  name: CreateFlatSurface
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_CreateFlatSurface_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.CreateFlatSurface
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.CreateFlatSurface
+  nameWithType: NurbsSurface.CreateFlatSurface
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DegreeU
+  name: DegreeU
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DegreeU
+  commentId: F:Paramdigma.Core.Geometry.NurbsSurface.DegreeU
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DegreeU
+  nameWithType: NurbsSurface.DegreeU
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DegreeV
+  name: DegreeV
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DegreeV
+  commentId: F:Paramdigma.Core.Geometry.NurbsSurface.DegreeV
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DegreeV
+  nameWithType: NurbsSurface.DegreeV
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DerivativesAt(System.Double,System.Double,System.Int32)
+  name: DerivativesAt(Double, Double, Int32)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DerivativesAt_System_Double_System_Double_System_Int32_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.DerivativesAt(System.Double,System.Double,System.Int32)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DerivativesAt(System.Double, System.Double, System.Int32)
+  nameWithType: NurbsSurface.DerivativesAt(Double, Double, Int32)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DerivativesAt*
+  name: DerivativesAt
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DerivativesAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.DerivativesAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DerivativesAt
+  nameWithType: NurbsSurface.DerivativesAt
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DistanceTo(Paramdigma.Core.Geometry.Point3d)
+  name: DistanceTo(Point3d)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DistanceTo_Paramdigma_Core_Geometry_Point3d_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.DistanceTo(Paramdigma.Core.Geometry.Point3d)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DistanceTo(Paramdigma.Core.Geometry.Point3d)
+  nameWithType: NurbsSurface.DistanceTo(Point3d)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DistanceTo*
+  name: DistanceTo
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DistanceTo_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.DistanceTo
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DistanceTo
+  nameWithType: NurbsSurface.DistanceTo
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DomainU
+  name: DomainU
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DomainU
+  commentId: P:Paramdigma.Core.Geometry.NurbsSurface.DomainU
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DomainU
+  nameWithType: NurbsSurface.DomainU
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DomainU*
+  name: DomainU
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DomainU_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.DomainU
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DomainU
+  nameWithType: NurbsSurface.DomainU
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DomainV
+  name: DomainV
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DomainV
+  commentId: P:Paramdigma.Core.Geometry.NurbsSurface.DomainV
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DomainV
+  nameWithType: NurbsSurface.DomainV
+- uid: Paramdigma.Core.Geometry.NurbsSurface.DomainV*
+  name: DomainV
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_DomainV_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.DomainV
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.DomainV
+  nameWithType: NurbsSurface.DomainV
+- uid: Paramdigma.Core.Geometry.NurbsSurface.FrameAt(System.Double,System.Double)
+  name: FrameAt(Double, Double)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_FrameAt_System_Double_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.FrameAt(System.Double,System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.FrameAt(System.Double, System.Double)
+  nameWithType: NurbsSurface.FrameAt(Double, Double)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.FrameAt*
+  name: FrameAt
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_FrameAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.FrameAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.FrameAt
+  nameWithType: NurbsSurface.FrameAt
+- uid: Paramdigma.Core.Geometry.NurbsSurface.KnotsU
+  name: KnotsU
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_KnotsU
+  commentId: F:Paramdigma.Core.Geometry.NurbsSurface.KnotsU
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.KnotsU
+  nameWithType: NurbsSurface.KnotsU
+- uid: Paramdigma.Core.Geometry.NurbsSurface.KnotsV
+  name: KnotsV
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_KnotsV
+  commentId: F:Paramdigma.Core.Geometry.NurbsSurface.KnotsV
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.KnotsV
+  nameWithType: NurbsSurface.KnotsV
+- uid: Paramdigma.Core.Geometry.NurbsSurface.NormalAt(System.Double,System.Double)
+  name: NormalAt(Double, Double)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_NormalAt_System_Double_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.NormalAt(System.Double,System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.NormalAt(System.Double, System.Double)
+  nameWithType: NurbsSurface.NormalAt(Double, Double)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.NormalAt*
+  name: NormalAt
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_NormalAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.NormalAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.NormalAt
+  nameWithType: NurbsSurface.NormalAt
+- uid: Paramdigma.Core.Geometry.NurbsSurface.PointAt(System.Double,System.Double)
+  name: PointAt(Double, Double)
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_PointAt_System_Double_System_Double_
+  commentId: M:Paramdigma.Core.Geometry.NurbsSurface.PointAt(System.Double,System.Double)
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.PointAt(System.Double, System.Double)
+  nameWithType: NurbsSurface.PointAt(Double, Double)
+- uid: Paramdigma.Core.Geometry.NurbsSurface.PointAt*
+  name: PointAt
+  href: api/Paramdigma.Core.Geometry.NurbsSurface.html#Paramdigma_Core_Geometry_NurbsSurface_PointAt_
+  commentId: Overload:Paramdigma.Core.Geometry.NurbsSurface.PointAt
+  isSpec: "True"
+  fullName: Paramdigma.Core.Geometry.NurbsSurface.PointAt
+  nameWithType: NurbsSurface.PointAt
 - uid: Paramdigma.Core.Geometry.Plane
   name: Plane
   href: api/Paramdigma.Core.Geometry.Plane.html
@@ -7176,158 +7123,15 @@ references:
   commentId: T:Paramdigma.Core.Intersect3D
   fullName: Paramdigma.Core.Intersect3D
   nameWithType: Intersect3D
-- uid: Paramdigma.Core.Intersect3D.IRLineLine
-  name: Intersect3D.IRLineLine
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html
-  commentId: T:Paramdigma.Core.Intersect3D.IRLineLine
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine
-  nameWithType: Intersect3D.IRLineLine
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.Distance
-  name: Distance
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_Distance
-  commentId: P:Paramdigma.Core.Intersect3D.IRLineLine.Distance
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.Distance
-  nameWithType: Intersect3D.IRLineLine.Distance
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.Distance*
-  name: Distance
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_Distance_
-  commentId: Overload:Paramdigma.Core.Intersect3D.IRLineLine.Distance
-  isSpec: "True"
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.Distance
-  nameWithType: Intersect3D.IRLineLine.Distance
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.PointA
-  name: PointA
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_PointA
-  commentId: P:Paramdigma.Core.Intersect3D.IRLineLine.PointA
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.PointA
-  nameWithType: Intersect3D.IRLineLine.PointA
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.PointA*
-  name: PointA
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_PointA_
-  commentId: Overload:Paramdigma.Core.Intersect3D.IRLineLine.PointA
-  isSpec: "True"
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.PointA
-  nameWithType: Intersect3D.IRLineLine.PointA
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.PointB
-  name: PointB
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_PointB
-  commentId: P:Paramdigma.Core.Intersect3D.IRLineLine.PointB
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.PointB
-  nameWithType: Intersect3D.IRLineLine.PointB
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.PointB*
-  name: PointB
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_PointB_
-  commentId: Overload:Paramdigma.Core.Intersect3D.IRLineLine.PointB
-  isSpec: "True"
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.PointB
-  nameWithType: Intersect3D.IRLineLine.PointB
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.TA
-  name: TA
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_TA
-  commentId: P:Paramdigma.Core.Intersect3D.IRLineLine.TA
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.TA
-  nameWithType: Intersect3D.IRLineLine.TA
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.TA*
-  name: TA
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_TA_
-  commentId: Overload:Paramdigma.Core.Intersect3D.IRLineLine.TA
-  isSpec: "True"
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.TA
-  nameWithType: Intersect3D.IRLineLine.TA
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.TB
-  name: TB
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_TB
-  commentId: P:Paramdigma.Core.Intersect3D.IRLineLine.TB
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.TB
-  nameWithType: Intersect3D.IRLineLine.TB
-- uid: Paramdigma.Core.Intersect3D.IRLineLine.TB*
-  name: TB
-  href: api/Paramdigma.Core.Intersect3D.IRLineLine.html#Paramdigma_Core_Intersect3D_IRLineLine_TB_
-  commentId: Overload:Paramdigma.Core.Intersect3D.IRLineLine.TB
-  isSpec: "True"
-  fullName: Paramdigma.Core.Intersect3D.IRLineLine.TB
-  nameWithType: Intersect3D.IRLineLine.TB
-- uid: Paramdigma.Core.Intersect3D.ISLineLine
-  name: Intersect3D.ISLineLine
-  href: api/Paramdigma.Core.Intersect3D.ISLineLine.html
-  commentId: T:Paramdigma.Core.Intersect3D.ISLineLine
-  fullName: Paramdigma.Core.Intersect3D.ISLineLine
-  nameWithType: Intersect3D.ISLineLine
-- uid: Paramdigma.Core.Intersect3D.ISLineLine.Error
-  name: Error
-  href: api/Paramdigma.Core.Intersect3D.ISLineLine.html#Paramdigma_Core_Intersect3D_ISLineLine_Error
-  commentId: F:Paramdigma.Core.Intersect3D.ISLineLine.Error
-  fullName: Paramdigma.Core.Intersect3D.ISLineLine.Error
-  nameWithType: Intersect3D.ISLineLine.Error
-- uid: Paramdigma.Core.Intersect3D.ISLineLine.NoIntersection
-  name: NoIntersection
-  href: api/Paramdigma.Core.Intersect3D.ISLineLine.html#Paramdigma_Core_Intersect3D_ISLineLine_NoIntersection
-  commentId: F:Paramdigma.Core.Intersect3D.ISLineLine.NoIntersection
-  fullName: Paramdigma.Core.Intersect3D.ISLineLine.NoIntersection
-  nameWithType: Intersect3D.ISLineLine.NoIntersection
-- uid: Paramdigma.Core.Intersect3D.ISLineLine.Point
-  name: Point
-  href: api/Paramdigma.Core.Intersect3D.ISLineLine.html#Paramdigma_Core_Intersect3D_ISLineLine_Point
-  commentId: F:Paramdigma.Core.Intersect3D.ISLineLine.Point
-  fullName: Paramdigma.Core.Intersect3D.ISLineLine.Point
-  nameWithType: Intersect3D.ISLineLine.Point
-- uid: Paramdigma.Core.Intersect3D.ISLinePlane
-  name: Intersect3D.ISLinePlane
-  href: api/Paramdigma.Core.Intersect3D.ISLinePlane.html
-  commentId: T:Paramdigma.Core.Intersect3D.ISLinePlane
-  fullName: Paramdigma.Core.Intersect3D.ISLinePlane
-  nameWithType: Intersect3D.ISLinePlane
-- uid: Paramdigma.Core.Intersect3D.ISLinePlane.NoIntersection
-  name: NoIntersection
-  href: api/Paramdigma.Core.Intersect3D.ISLinePlane.html#Paramdigma_Core_Intersect3D_ISLinePlane_NoIntersection
-  commentId: F:Paramdigma.Core.Intersect3D.ISLinePlane.NoIntersection
-  fullName: Paramdigma.Core.Intersect3D.ISLinePlane.NoIntersection
-  nameWithType: Intersect3D.ISLinePlane.NoIntersection
-- uid: Paramdigma.Core.Intersect3D.ISLinePlane.OnPlane
-  name: OnPlane
-  href: api/Paramdigma.Core.Intersect3D.ISLinePlane.html#Paramdigma_Core_Intersect3D_ISLinePlane_OnPlane
-  commentId: F:Paramdigma.Core.Intersect3D.ISLinePlane.OnPlane
-  fullName: Paramdigma.Core.Intersect3D.ISLinePlane.OnPlane
-  nameWithType: Intersect3D.ISLinePlane.OnPlane
-- uid: Paramdigma.Core.Intersect3D.ISLinePlane.Point
-  name: Point
-  href: api/Paramdigma.Core.Intersect3D.ISLinePlane.html#Paramdigma_Core_Intersect3D_ISLinePlane_Point
-  commentId: F:Paramdigma.Core.Intersect3D.ISLinePlane.Point
-  fullName: Paramdigma.Core.Intersect3D.ISLinePlane.Point
-  nameWithType: Intersect3D.ISLinePlane.Point
-- uid: Paramdigma.Core.Intersect3D.ISRayFacePerimeter
-  name: Intersect3D.ISRayFacePerimeter
-  href: api/Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html
-  commentId: T:Paramdigma.Core.Intersect3D.ISRayFacePerimeter
-  fullName: Paramdigma.Core.Intersect3D.ISRayFacePerimeter
-  nameWithType: Intersect3D.ISRayFacePerimeter
-- uid: Paramdigma.Core.Intersect3D.ISRayFacePerimeter.Error
-  name: Error
-  href: api/Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html#Paramdigma_Core_Intersect3D_ISRayFacePerimeter_Error
-  commentId: F:Paramdigma.Core.Intersect3D.ISRayFacePerimeter.Error
-  fullName: Paramdigma.Core.Intersect3D.ISRayFacePerimeter.Error
-  nameWithType: Intersect3D.ISRayFacePerimeter.Error
-- uid: Paramdigma.Core.Intersect3D.ISRayFacePerimeter.NoIntersection
-  name: NoIntersection
-  href: api/Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html#Paramdigma_Core_Intersect3D_ISRayFacePerimeter_NoIntersection
-  commentId: F:Paramdigma.Core.Intersect3D.ISRayFacePerimeter.NoIntersection
-  fullName: Paramdigma.Core.Intersect3D.ISRayFacePerimeter.NoIntersection
-  nameWithType: Intersect3D.ISRayFacePerimeter.NoIntersection
-- uid: Paramdigma.Core.Intersect3D.ISRayFacePerimeter.Point
-  name: Point
-  href: api/Paramdigma.Core.Intersect3D.ISRayFacePerimeter.html#Paramdigma_Core_Intersect3D_ISRayFacePerimeter_Point
-  commentId: F:Paramdigma.Core.Intersect3D.ISRayFacePerimeter.Point
-  fullName: Paramdigma.Core.Intersect3D.ISRayFacePerimeter.Point
-  nameWithType: Intersect3D.ISRayFacePerimeter.Point
-- uid: Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line,Paramdigma.Core.Geometry.Line,Paramdigma.Core.Intersect3D.IRLineLine@)
-  name: LineLine(Line, Line, out Intersect3D.IRLineLine)
-  href: api/Paramdigma.Core.Intersect3D.html#Paramdigma_Core_Intersect3D_LineLine_Paramdigma_Core_Geometry_Line_Paramdigma_Core_Geometry_Line_Paramdigma_Core_Intersect3D_IRLineLine__
-  commentId: M:Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line,Paramdigma.Core.Geometry.Line,Paramdigma.Core.Intersect3D.IRLineLine@)
-  name.vb: LineLine(Line, Line, ByRef Intersect3D.IRLineLine)
-  fullName: Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line, Paramdigma.Core.Geometry.Line, out Paramdigma.Core.Intersect3D.IRLineLine)
-  fullName.vb: Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line, Paramdigma.Core.Geometry.Line, ByRef Paramdigma.Core.Intersect3D.IRLineLine)
-  nameWithType: Intersect3D.LineLine(Line, Line, out Intersect3D.IRLineLine)
-  nameWithType.vb: Intersect3D.LineLine(Line, Line, ByRef Intersect3D.IRLineLine)
+- uid: Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line,Paramdigma.Core.Geometry.Line,Paramdigma.Core.Intersect3D.LineLineIntersectionResult@)
+  name: LineLine(Line, Line, out Intersect3D.LineLineIntersectionResult)
+  href: api/Paramdigma.Core.Intersect3D.html#Paramdigma_Core_Intersect3D_LineLine_Paramdigma_Core_Geometry_Line_Paramdigma_Core_Geometry_Line_Paramdigma_Core_Intersect3D_LineLineIntersectionResult__
+  commentId: M:Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line,Paramdigma.Core.Geometry.Line,Paramdigma.Core.Intersect3D.LineLineIntersectionResult@)
+  name.vb: LineLine(Line, Line, ByRef Intersect3D.LineLineIntersectionResult)
+  fullName: Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line, Paramdigma.Core.Geometry.Line, out Paramdigma.Core.Intersect3D.LineLineIntersectionResult)
+  fullName.vb: Paramdigma.Core.Intersect3D.LineLine(Paramdigma.Core.Geometry.Line, Paramdigma.Core.Geometry.Line, ByRef Paramdigma.Core.Intersect3D.LineLineIntersectionResult)
+  nameWithType: Intersect3D.LineLine(Line, Line, out Intersect3D.LineLineIntersectionResult)
+  nameWithType.vb: Intersect3D.LineLine(Line, Line, ByRef Intersect3D.LineLineIntersectionResult)
 - uid: Paramdigma.Core.Intersect3D.LineLine*
   name: LineLine
   href: api/Paramdigma.Core.Intersect3D.html#Paramdigma_Core_Intersect3D_LineLine_
@@ -7335,6 +7139,101 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Intersect3D.LineLine
   nameWithType: Intersect3D.LineLine
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult
+  name: Intersect3D.LineLineIntersectionResult
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html
+  commentId: T:Paramdigma.Core.Intersect3D.LineLineIntersectionResult
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult
+  nameWithType: Intersect3D.LineLineIntersectionResult
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.Distance
+  name: Distance
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_Distance
+  commentId: P:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.Distance
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.Distance
+  nameWithType: Intersect3D.LineLineIntersectionResult.Distance
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.Distance*
+  name: Distance
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_Distance_
+  commentId: Overload:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.Distance
+  isSpec: "True"
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.Distance
+  nameWithType: Intersect3D.LineLineIntersectionResult.Distance
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamA
+  name: ParamA
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_ParamA
+  commentId: P:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamA
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamA
+  nameWithType: Intersect3D.LineLineIntersectionResult.ParamA
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamA*
+  name: ParamA
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_ParamA_
+  commentId: Overload:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamA
+  isSpec: "True"
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamA
+  nameWithType: Intersect3D.LineLineIntersectionResult.ParamA
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamB
+  name: ParamB
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_ParamB
+  commentId: P:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamB
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamB
+  nameWithType: Intersect3D.LineLineIntersectionResult.ParamB
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamB*
+  name: ParamB
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_ParamB_
+  commentId: Overload:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamB
+  isSpec: "True"
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.ParamB
+  nameWithType: Intersect3D.LineLineIntersectionResult.ParamB
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointA
+  name: PointA
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_PointA
+  commentId: P:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointA
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointA
+  nameWithType: Intersect3D.LineLineIntersectionResult.PointA
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointA*
+  name: PointA
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_PointA_
+  commentId: Overload:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointA
+  isSpec: "True"
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointA
+  nameWithType: Intersect3D.LineLineIntersectionResult.PointA
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointB
+  name: PointB
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_PointB
+  commentId: P:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointB
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointB
+  nameWithType: Intersect3D.LineLineIntersectionResult.PointB
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointB*
+  name: PointB
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionResult.html#Paramdigma_Core_Intersect3D_LineLineIntersectionResult_PointB_
+  commentId: Overload:Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointB
+  isSpec: "True"
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionResult.PointB
+  nameWithType: Intersect3D.LineLineIntersectionResult.PointB
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus
+  name: Intersect3D.LineLineIntersectionStatus
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html
+  commentId: T:Paramdigma.Core.Intersect3D.LineLineIntersectionStatus
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus
+  nameWithType: Intersect3D.LineLineIntersectionStatus
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.Error
+  name: Error
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html#Paramdigma_Core_Intersect3D_LineLineIntersectionStatus_Error
+  commentId: F:Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.Error
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.Error
+  nameWithType: Intersect3D.LineLineIntersectionStatus.Error
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.NoIntersection
+  name: NoIntersection
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html#Paramdigma_Core_Intersect3D_LineLineIntersectionStatus_NoIntersection
+  commentId: F:Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.NoIntersection
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.NoIntersection
+  nameWithType: Intersect3D.LineLineIntersectionStatus.NoIntersection
+- uid: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.Point
+  name: Point
+  href: api/Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.html#Paramdigma_Core_Intersect3D_LineLineIntersectionStatus_Point
+  commentId: F:Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.Point
+  fullName: Paramdigma.Core.Intersect3D.LineLineIntersectionStatus.Point
+  nameWithType: Intersect3D.LineLineIntersectionStatus.Point
 - uid: Paramdigma.Core.Intersect3D.LinePlane(Paramdigma.Core.Geometry.Line,Paramdigma.Core.Geometry.Plane,Paramdigma.Core.Geometry.Point3d@)
   name: LinePlane(Line, Plane, out Point3d)
   href: api/Paramdigma.Core.Intersect3D.html#Paramdigma_Core_Intersect3D_LinePlane_Paramdigma_Core_Geometry_Line_Paramdigma_Core_Geometry_Plane_Paramdigma_Core_Geometry_Point3d__
@@ -7351,6 +7250,30 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Intersect3D.LinePlane
   nameWithType: Intersect3D.LinePlane
+- uid: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus
+  name: Intersect3D.LinePlaneIntersectionStatus
+  href: api/Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html
+  commentId: T:Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus
+  fullName: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus
+  nameWithType: Intersect3D.LinePlaneIntersectionStatus
+- uid: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.NoIntersection
+  name: NoIntersection
+  href: api/Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html#Paramdigma_Core_Intersect3D_LinePlaneIntersectionStatus_NoIntersection
+  commentId: F:Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.NoIntersection
+  fullName: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.NoIntersection
+  nameWithType: Intersect3D.LinePlaneIntersectionStatus.NoIntersection
+- uid: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.OnPlane
+  name: OnPlane
+  href: api/Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html#Paramdigma_Core_Intersect3D_LinePlaneIntersectionStatus_OnPlane
+  commentId: F:Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.OnPlane
+  fullName: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.OnPlane
+  nameWithType: Intersect3D.LinePlaneIntersectionStatus.OnPlane
+- uid: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.Point
+  name: Point
+  href: api/Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.html#Paramdigma_Core_Intersect3D_LinePlaneIntersectionStatus_Point
+  commentId: F:Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.Point
+  fullName: Paramdigma.Core.Intersect3D.LinePlaneIntersectionStatus.Point
+  nameWithType: Intersect3D.LinePlaneIntersectionStatus.Point
 - uid: Paramdigma.Core.Intersect3D.RayFacePerimeter(Paramdigma.Core.Geometry.Ray,Paramdigma.Core.HalfEdgeMesh.MeshFace,Paramdigma.Core.Geometry.Point3d@,Paramdigma.Core.HalfEdgeMesh.MeshHalfEdge@)
   name: RayFacePerimeter(Ray, MeshFace, out Point3d, out MeshHalfEdge)
   href: api/Paramdigma.Core.Intersect3D.html#Paramdigma_Core_Intersect3D_RayFacePerimeter_Paramdigma_Core_Geometry_Ray_Paramdigma_Core_HalfEdgeMesh_MeshFace_Paramdigma_Core_Geometry_Point3d__Paramdigma_Core_HalfEdgeMesh_MeshHalfEdge__
@@ -7367,30 +7290,70 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Intersect3D.RayFacePerimeter
   nameWithType: Intersect3D.RayFacePerimeter
+- uid: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus
+  name: Intersect3D.RayFacePerimeterIntersectionStatus
+  href: api/Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html
+  commentId: T:Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus
+  fullName: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus
+  nameWithType: Intersect3D.RayFacePerimeterIntersectionStatus
+- uid: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.Error
+  name: Error
+  href: api/Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html#Paramdigma_Core_Intersect3D_RayFacePerimeterIntersectionStatus_Error
+  commentId: F:Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.Error
+  fullName: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.Error
+  nameWithType: Intersect3D.RayFacePerimeterIntersectionStatus.Error
+- uid: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.NoIntersection
+  name: NoIntersection
+  href: api/Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html#Paramdigma_Core_Intersect3D_RayFacePerimeterIntersectionStatus_NoIntersection
+  commentId: F:Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.NoIntersection
+  fullName: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.NoIntersection
+  nameWithType: Intersect3D.RayFacePerimeterIntersectionStatus.NoIntersection
+- uid: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.Point
+  name: Point
+  href: api/Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.html#Paramdigma_Core_Intersect3D_RayFacePerimeterIntersectionStatus_Point
+  commentId: F:Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.Point
+  fullName: Paramdigma.Core.Intersect3D.RayFacePerimeterIntersectionStatus.Point
+  nameWithType: Intersect3D.RayFacePerimeterIntersectionStatus.Point
 - uid: Paramdigma.Core.IO
   name: Paramdigma.Core.IO
   href: api/Paramdigma.Core.IO.html
   commentId: N:Paramdigma.Core.IO
   fullName: Paramdigma.Core.IO
   nameWithType: Paramdigma.Core.IO
-- uid: Paramdigma.Core.IO.CSVReader
-  name: CSVReader
-  href: api/Paramdigma.Core.IO.CSVReader.html
-  commentId: T:Paramdigma.Core.IO.CSVReader
-  fullName: Paramdigma.Core.IO.CSVReader
-  nameWithType: CSVReader
-- uid: Paramdigma.Core.IO.CSVWritter
-  name: CSVWritter
-  href: api/Paramdigma.Core.IO.CSVWritter.html
-  commentId: T:Paramdigma.Core.IO.CSVWritter
-  fullName: Paramdigma.Core.IO.CSVWritter
-  nameWithType: CSVWritter
+- uid: Paramdigma.Core.IO.CsvReader
+  name: CsvReader
+  href: api/Paramdigma.Core.IO.CsvReader.html
+  commentId: T:Paramdigma.Core.IO.CsvReader
+  fullName: Paramdigma.Core.IO.CsvReader
+  nameWithType: CsvReader
+- uid: Paramdigma.Core.IO.CsvWritter
+  name: CsvWritter
+  href: api/Paramdigma.Core.IO.CsvWritter.html
+  commentId: T:Paramdigma.Core.IO.CsvWritter
+  fullName: Paramdigma.Core.IO.CsvWritter
+  nameWithType: CsvWritter
 - uid: Paramdigma.Core.IO.OBJMeshData
   name: OBJMeshData
   href: api/Paramdigma.Core.IO.OBJMeshData.html
   commentId: T:Paramdigma.Core.IO.OBJMeshData
   fullName: Paramdigma.Core.IO.OBJMeshData
   nameWithType: OBJMeshData
+- uid: Paramdigma.Core.IO.OBJMeshData.#ctor(List{Paramdigma.Core.Geometry.Point3d},List{List{System.Int32}},List{List{System.Int32}},List{List{System.Double}},List{List{System.Int32}},List{Paramdigma.Core.Geometry.Vector3d})
+  name: OBJMeshData(List<Point3d>, List<List<Int32>>, List<List<Int32>>, List<List<Double>>, List<List<Int32>>, List<Vector3d>)
+  href: api/Paramdigma.Core.IO.OBJMeshData.html#Paramdigma_Core_IO_OBJMeshData__ctor_List_Paramdigma_Core_Geometry_Point3d__List_List_System_Int32___List_List_System_Int32___List_List_System_Double___List_List_System_Int32___List_Paramdigma_Core_Geometry_Vector3d__
+  commentId: M:Paramdigma.Core.IO.OBJMeshData.#ctor(List{Paramdigma.Core.Geometry.Point3d},List{List{System.Int32}},List{List{System.Int32}},List{List{System.Double}},List{List{System.Int32}},List{Paramdigma.Core.Geometry.Vector3d})
+  name.vb: OBJMeshData(List(Of Point3d), List(Of List(Of Int32)), List(Of List(Of Int32)), List(Of List(Of Double)), List(Of List(Of Int32)), List(Of Vector3d))
+  fullName: Paramdigma.Core.IO.OBJMeshData.OBJMeshData(List<Paramdigma.Core.Geometry.Point3d>, List<List<System.Int32>>, List<List<System.Int32>>, List<List<System.Double>>, List<List<System.Int32>>, List<Paramdigma.Core.Geometry.Vector3d>)
+  fullName.vb: Paramdigma.Core.IO.OBJMeshData.OBJMeshData(List(Of Paramdigma.Core.Geometry.Point3d), List(Of List(Of System.Int32)), List(Of List(Of System.Int32)), List(Of List(Of System.Double)), List(Of List(Of System.Int32)), List(Of Paramdigma.Core.Geometry.Vector3d))
+  nameWithType: OBJMeshData.OBJMeshData(List<Point3d>, List<List<Int32>>, List<List<Int32>>, List<List<Double>>, List<List<Int32>>, List<Vector3d>)
+  nameWithType.vb: OBJMeshData.OBJMeshData(List(Of Point3d), List(Of List(Of Int32)), List(Of List(Of Int32)), List(Of List(Of Double)), List(Of List(Of Int32)), List(Of Vector3d))
+- uid: Paramdigma.Core.IO.OBJMeshData.#ctor*
+  name: OBJMeshData
+  href: api/Paramdigma.Core.IO.OBJMeshData.html#Paramdigma_Core_IO_OBJMeshData__ctor_
+  commentId: Overload:Paramdigma.Core.IO.OBJMeshData.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.IO.OBJMeshData.OBJMeshData
+  nameWithType: OBJMeshData.OBJMeshData
 - uid: Paramdigma.Core.IO.OBJMeshData.Edges
   name: Edges
   href: api/Paramdigma.Core.IO.OBJMeshData.html#Paramdigma_Core_IO_OBJMeshData_Edges
@@ -7469,139 +7432,139 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.IO.OBJMeshData.Vertices
   nameWithType: OBJMeshData.Vertices
-- uid: Paramdigma.Core.IO.OBJReader
-  name: OBJReader
-  href: api/Paramdigma.Core.IO.OBJReader.html
-  commentId: T:Paramdigma.Core.IO.OBJReader
-  fullName: Paramdigma.Core.IO.OBJReader
-  nameWithType: OBJReader
-- uid: Paramdigma.Core.IO.OBJWritter
-  name: OBJWritter
-  href: api/Paramdigma.Core.IO.OBJWritter.html
-  commentId: T:Paramdigma.Core.IO.OBJWritter
-  fullName: Paramdigma.Core.IO.OBJWritter
-  nameWithType: OBJWritter
-- uid: Paramdigma.Core.IO.OFFMeshData
-  name: OFFMeshData
-  href: api/Paramdigma.Core.IO.OFFMeshData.html
-  commentId: T:Paramdigma.Core.IO.OFFMeshData
-  fullName: Paramdigma.Core.IO.OFFMeshData
-  nameWithType: OFFMeshData
-- uid: Paramdigma.Core.IO.OFFMeshData.Faces
+- uid: Paramdigma.Core.IO.ObjReader
+  name: ObjReader
+  href: api/Paramdigma.Core.IO.ObjReader.html
+  commentId: T:Paramdigma.Core.IO.ObjReader
+  fullName: Paramdigma.Core.IO.ObjReader
+  nameWithType: ObjReader
+- uid: Paramdigma.Core.IO.ObjWritter
+  name: ObjWritter
+  href: api/Paramdigma.Core.IO.ObjWritter.html
+  commentId: T:Paramdigma.Core.IO.ObjWritter
+  fullName: Paramdigma.Core.IO.ObjWritter
+  nameWithType: ObjWritter
+- uid: Paramdigma.Core.IO.OffMeshData
+  name: OffMeshData
+  href: api/Paramdigma.Core.IO.OffMeshData.html
+  commentId: T:Paramdigma.Core.IO.OffMeshData
+  fullName: Paramdigma.Core.IO.OffMeshData
+  nameWithType: OffMeshData
+- uid: Paramdigma.Core.IO.OffMeshData.Faces
   name: Faces
-  href: api/Paramdigma.Core.IO.OFFMeshData.html#Paramdigma_Core_IO_OFFMeshData_Faces
-  commentId: P:Paramdigma.Core.IO.OFFMeshData.Faces
-  fullName: Paramdigma.Core.IO.OFFMeshData.Faces
-  nameWithType: OFFMeshData.Faces
-- uid: Paramdigma.Core.IO.OFFMeshData.Faces*
+  href: api/Paramdigma.Core.IO.OffMeshData.html#Paramdigma_Core_IO_OffMeshData_Faces
+  commentId: P:Paramdigma.Core.IO.OffMeshData.Faces
+  fullName: Paramdigma.Core.IO.OffMeshData.Faces
+  nameWithType: OffMeshData.Faces
+- uid: Paramdigma.Core.IO.OffMeshData.Faces*
   name: Faces
-  href: api/Paramdigma.Core.IO.OFFMeshData.html#Paramdigma_Core_IO_OFFMeshData_Faces_
-  commentId: Overload:Paramdigma.Core.IO.OFFMeshData.Faces
+  href: api/Paramdigma.Core.IO.OffMeshData.html#Paramdigma_Core_IO_OffMeshData_Faces_
+  commentId: Overload:Paramdigma.Core.IO.OffMeshData.Faces
   isSpec: "True"
-  fullName: Paramdigma.Core.IO.OFFMeshData.Faces
-  nameWithType: OFFMeshData.Faces
-- uid: Paramdigma.Core.IO.OFFMeshData.Vertices
+  fullName: Paramdigma.Core.IO.OffMeshData.Faces
+  nameWithType: OffMeshData.Faces
+- uid: Paramdigma.Core.IO.OffMeshData.Vertices
   name: Vertices
-  href: api/Paramdigma.Core.IO.OFFMeshData.html#Paramdigma_Core_IO_OFFMeshData_Vertices
-  commentId: P:Paramdigma.Core.IO.OFFMeshData.Vertices
-  fullName: Paramdigma.Core.IO.OFFMeshData.Vertices
-  nameWithType: OFFMeshData.Vertices
-- uid: Paramdigma.Core.IO.OFFMeshData.Vertices*
+  href: api/Paramdigma.Core.IO.OffMeshData.html#Paramdigma_Core_IO_OffMeshData_Vertices
+  commentId: P:Paramdigma.Core.IO.OffMeshData.Vertices
+  fullName: Paramdigma.Core.IO.OffMeshData.Vertices
+  nameWithType: OffMeshData.Vertices
+- uid: Paramdigma.Core.IO.OffMeshData.Vertices*
   name: Vertices
-  href: api/Paramdigma.Core.IO.OFFMeshData.html#Paramdigma_Core_IO_OFFMeshData_Vertices_
-  commentId: Overload:Paramdigma.Core.IO.OFFMeshData.Vertices
+  href: api/Paramdigma.Core.IO.OffMeshData.html#Paramdigma_Core_IO_OffMeshData_Vertices_
+  commentId: Overload:Paramdigma.Core.IO.OffMeshData.Vertices
   isSpec: "True"
-  fullName: Paramdigma.Core.IO.OFFMeshData.Vertices
-  nameWithType: OFFMeshData.Vertices
-- uid: Paramdigma.Core.IO.OFFReader
-  name: OFFReader
-  href: api/Paramdigma.Core.IO.OFFReader.html
-  commentId: T:Paramdigma.Core.IO.OFFReader
-  fullName: Paramdigma.Core.IO.OFFReader
-  nameWithType: OFFReader
-- uid: Paramdigma.Core.IO.OFFReader.ReadMeshFromFile(System.String,Paramdigma.Core.IO.OFFMeshData@)
-  name: ReadMeshFromFile(String, out OFFMeshData)
-  href: api/Paramdigma.Core.IO.OFFReader.html#Paramdigma_Core_IO_OFFReader_ReadMeshFromFile_System_String_Paramdigma_Core_IO_OFFMeshData__
-  commentId: M:Paramdigma.Core.IO.OFFReader.ReadMeshFromFile(System.String,Paramdigma.Core.IO.OFFMeshData@)
-  name.vb: ReadMeshFromFile(String, ByRef OFFMeshData)
-  fullName: Paramdigma.Core.IO.OFFReader.ReadMeshFromFile(System.String, out Paramdigma.Core.IO.OFFMeshData)
-  fullName.vb: Paramdigma.Core.IO.OFFReader.ReadMeshFromFile(System.String, ByRef Paramdigma.Core.IO.OFFMeshData)
-  nameWithType: OFFReader.ReadMeshFromFile(String, out OFFMeshData)
-  nameWithType.vb: OFFReader.ReadMeshFromFile(String, ByRef OFFMeshData)
-- uid: Paramdigma.Core.IO.OFFReader.ReadMeshFromFile*
+  fullName: Paramdigma.Core.IO.OffMeshData.Vertices
+  nameWithType: OffMeshData.Vertices
+- uid: Paramdigma.Core.IO.OffReader
+  name: OffReader
+  href: api/Paramdigma.Core.IO.OffReader.html
+  commentId: T:Paramdigma.Core.IO.OffReader
+  fullName: Paramdigma.Core.IO.OffReader
+  nameWithType: OffReader
+- uid: Paramdigma.Core.IO.OffReader.ReadMeshFromFile(System.String,Paramdigma.Core.IO.OffMeshData@)
+  name: ReadMeshFromFile(String, out OffMeshData)
+  href: api/Paramdigma.Core.IO.OffReader.html#Paramdigma_Core_IO_OffReader_ReadMeshFromFile_System_String_Paramdigma_Core_IO_OffMeshData__
+  commentId: M:Paramdigma.Core.IO.OffReader.ReadMeshFromFile(System.String,Paramdigma.Core.IO.OffMeshData@)
+  name.vb: ReadMeshFromFile(String, ByRef OffMeshData)
+  fullName: Paramdigma.Core.IO.OffReader.ReadMeshFromFile(System.String, out Paramdigma.Core.IO.OffMeshData)
+  fullName.vb: Paramdigma.Core.IO.OffReader.ReadMeshFromFile(System.String, ByRef Paramdigma.Core.IO.OffMeshData)
+  nameWithType: OffReader.ReadMeshFromFile(String, out OffMeshData)
+  nameWithType.vb: OffReader.ReadMeshFromFile(String, ByRef OffMeshData)
+- uid: Paramdigma.Core.IO.OffReader.ReadMeshFromFile*
   name: ReadMeshFromFile
-  href: api/Paramdigma.Core.IO.OFFReader.html#Paramdigma_Core_IO_OFFReader_ReadMeshFromFile_
-  commentId: Overload:Paramdigma.Core.IO.OFFReader.ReadMeshFromFile
+  href: api/Paramdigma.Core.IO.OffReader.html#Paramdigma_Core_IO_OffReader_ReadMeshFromFile_
+  commentId: Overload:Paramdigma.Core.IO.OffReader.ReadMeshFromFile
   isSpec: "True"
-  fullName: Paramdigma.Core.IO.OFFReader.ReadMeshFromFile
-  nameWithType: OFFReader.ReadMeshFromFile
-- uid: Paramdigma.Core.IO.OFFResult
-  name: OFFResult
-  href: api/Paramdigma.Core.IO.OFFResult.html
-  commentId: T:Paramdigma.Core.IO.OFFResult
-  fullName: Paramdigma.Core.IO.OFFResult
-  nameWithType: OFFResult
-- uid: Paramdigma.Core.IO.OFFResult.FileNotFound
+  fullName: Paramdigma.Core.IO.OffReader.ReadMeshFromFile
+  nameWithType: OffReader.ReadMeshFromFile
+- uid: Paramdigma.Core.IO.OffResult
+  name: OffResult
+  href: api/Paramdigma.Core.IO.OffResult.html
+  commentId: T:Paramdigma.Core.IO.OffResult
+  fullName: Paramdigma.Core.IO.OffResult
+  nameWithType: OffResult
+- uid: Paramdigma.Core.IO.OffResult.FileNotFound
   name: FileNotFound
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_FileNotFound
-  commentId: F:Paramdigma.Core.IO.OFFResult.FileNotFound
-  fullName: Paramdigma.Core.IO.OFFResult.FileNotFound
-  nameWithType: OFFResult.FileNotFound
-- uid: Paramdigma.Core.IO.OFFResult.IncorrectFace
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_FileNotFound
+  commentId: F:Paramdigma.Core.IO.OffResult.FileNotFound
+  fullName: Paramdigma.Core.IO.OffResult.FileNotFound
+  nameWithType: OffResult.FileNotFound
+- uid: Paramdigma.Core.IO.OffResult.IncorrectFace
   name: IncorrectFace
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_IncorrectFace
-  commentId: F:Paramdigma.Core.IO.OFFResult.IncorrectFace
-  fullName: Paramdigma.Core.IO.OFFResult.IncorrectFace
-  nameWithType: OFFResult.IncorrectFace
-- uid: Paramdigma.Core.IO.OFFResult.IncorrectFormat
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_IncorrectFace
+  commentId: F:Paramdigma.Core.IO.OffResult.IncorrectFace
+  fullName: Paramdigma.Core.IO.OffResult.IncorrectFace
+  nameWithType: OffResult.IncorrectFace
+- uid: Paramdigma.Core.IO.OffResult.IncorrectFormat
   name: IncorrectFormat
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_IncorrectFormat
-  commentId: F:Paramdigma.Core.IO.OFFResult.IncorrectFormat
-  fullName: Paramdigma.Core.IO.OFFResult.IncorrectFormat
-  nameWithType: OFFResult.IncorrectFormat
-- uid: Paramdigma.Core.IO.OFFResult.IncorrectVertex
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_IncorrectFormat
+  commentId: F:Paramdigma.Core.IO.OffResult.IncorrectFormat
+  fullName: Paramdigma.Core.IO.OffResult.IncorrectFormat
+  nameWithType: OffResult.IncorrectFormat
+- uid: Paramdigma.Core.IO.OffResult.IncorrectVertex
   name: IncorrectVertex
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_IncorrectVertex
-  commentId: F:Paramdigma.Core.IO.OFFResult.IncorrectVertex
-  fullName: Paramdigma.Core.IO.OFFResult.IncorrectVertex
-  nameWithType: OFFResult.IncorrectVertex
-- uid: Paramdigma.Core.IO.OFFResult.NonMatchingFacesSize
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_IncorrectVertex
+  commentId: F:Paramdigma.Core.IO.OffResult.IncorrectVertex
+  fullName: Paramdigma.Core.IO.OffResult.IncorrectVertex
+  nameWithType: OffResult.IncorrectVertex
+- uid: Paramdigma.Core.IO.OffResult.NonMatchingFacesSize
   name: NonMatchingFacesSize
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_NonMatchingFacesSize
-  commentId: F:Paramdigma.Core.IO.OFFResult.NonMatchingFacesSize
-  fullName: Paramdigma.Core.IO.OFFResult.NonMatchingFacesSize
-  nameWithType: OFFResult.NonMatchingFacesSize
-- uid: Paramdigma.Core.IO.OFFResult.NonMatchingVerticesSize
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_NonMatchingFacesSize
+  commentId: F:Paramdigma.Core.IO.OffResult.NonMatchingFacesSize
+  fullName: Paramdigma.Core.IO.OffResult.NonMatchingFacesSize
+  nameWithType: OffResult.NonMatchingFacesSize
+- uid: Paramdigma.Core.IO.OffResult.NonMatchingVerticesSize
   name: NonMatchingVerticesSize
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_NonMatchingVerticesSize
-  commentId: F:Paramdigma.Core.IO.OFFResult.NonMatchingVerticesSize
-  fullName: Paramdigma.Core.IO.OFFResult.NonMatchingVerticesSize
-  nameWithType: OFFResult.NonMatchingVerticesSize
-- uid: Paramdigma.Core.IO.OFFResult.OK
-  name: OK
-  href: api/Paramdigma.Core.IO.OFFResult.html#Paramdigma_Core_IO_OFFResult_OK
-  commentId: F:Paramdigma.Core.IO.OFFResult.OK
-  fullName: Paramdigma.Core.IO.OFFResult.OK
-  nameWithType: OFFResult.OK
-- uid: Paramdigma.Core.IO.OFFWritter
-  name: OFFWritter
-  href: api/Paramdigma.Core.IO.OFFWritter.html
-  commentId: T:Paramdigma.Core.IO.OFFWritter
-  fullName: Paramdigma.Core.IO.OFFWritter
-  nameWithType: OFFWritter
-- uid: Paramdigma.Core.IO.OFFWritter.WriteMeshToFile(Paramdigma.Core.HalfEdgeMesh.Mesh,System.String)
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_NonMatchingVerticesSize
+  commentId: F:Paramdigma.Core.IO.OffResult.NonMatchingVerticesSize
+  fullName: Paramdigma.Core.IO.OffResult.NonMatchingVerticesSize
+  nameWithType: OffResult.NonMatchingVerticesSize
+- uid: Paramdigma.Core.IO.OffResult.Ok
+  name: Ok
+  href: api/Paramdigma.Core.IO.OffResult.html#Paramdigma_Core_IO_OffResult_Ok
+  commentId: F:Paramdigma.Core.IO.OffResult.Ok
+  fullName: Paramdigma.Core.IO.OffResult.Ok
+  nameWithType: OffResult.Ok
+- uid: Paramdigma.Core.IO.OffWriter
+  name: OffWriter
+  href: api/Paramdigma.Core.IO.OffWriter.html
+  commentId: T:Paramdigma.Core.IO.OffWriter
+  fullName: Paramdigma.Core.IO.OffWriter
+  nameWithType: OffWriter
+- uid: Paramdigma.Core.IO.OffWriter.WriteMeshToFile(Paramdigma.Core.HalfEdgeMesh.Mesh,System.String)
   name: WriteMeshToFile(Mesh, String)
-  href: api/Paramdigma.Core.IO.OFFWritter.html#Paramdigma_Core_IO_OFFWritter_WriteMeshToFile_Paramdigma_Core_HalfEdgeMesh_Mesh_System_String_
-  commentId: M:Paramdigma.Core.IO.OFFWritter.WriteMeshToFile(Paramdigma.Core.HalfEdgeMesh.Mesh,System.String)
-  fullName: Paramdigma.Core.IO.OFFWritter.WriteMeshToFile(Paramdigma.Core.HalfEdgeMesh.Mesh, System.String)
-  nameWithType: OFFWritter.WriteMeshToFile(Mesh, String)
-- uid: Paramdigma.Core.IO.OFFWritter.WriteMeshToFile*
+  href: api/Paramdigma.Core.IO.OffWriter.html#Paramdigma_Core_IO_OffWriter_WriteMeshToFile_Paramdigma_Core_HalfEdgeMesh_Mesh_System_String_
+  commentId: M:Paramdigma.Core.IO.OffWriter.WriteMeshToFile(Paramdigma.Core.HalfEdgeMesh.Mesh,System.String)
+  fullName: Paramdigma.Core.IO.OffWriter.WriteMeshToFile(Paramdigma.Core.HalfEdgeMesh.Mesh, System.String)
+  nameWithType: OffWriter.WriteMeshToFile(Mesh, String)
+- uid: Paramdigma.Core.IO.OffWriter.WriteMeshToFile*
   name: WriteMeshToFile
-  href: api/Paramdigma.Core.IO.OFFWritter.html#Paramdigma_Core_IO_OFFWritter_WriteMeshToFile_
-  commentId: Overload:Paramdigma.Core.IO.OFFWritter.WriteMeshToFile
+  href: api/Paramdigma.Core.IO.OffWriter.html#Paramdigma_Core_IO_OffWriter_WriteMeshToFile_
+  commentId: Overload:Paramdigma.Core.IO.OffWriter.WriteMeshToFile
   isSpec: "True"
-  fullName: Paramdigma.Core.IO.OFFWritter.WriteMeshToFile
-  nameWithType: OFFWritter.WriteMeshToFile
+  fullName: Paramdigma.Core.IO.OffWriter.WriteMeshToFile
+  nameWithType: OffWriter.WriteMeshToFile
 - uid: Paramdigma.Core.LinearAlgebra
   name: Paramdigma.Core.LinearAlgebra
   href: api/Paramdigma.Core.LinearAlgebra.html
@@ -8386,19 +8349,19 @@ references:
   isSpec: "True"
   fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Clusters
   nameWithType: KMeansClustering.IterationCompletedEventArgs.Clusters
-- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
-  name: iteration
-  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_iteration
-  commentId: P:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
-  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
-  nameWithType: KMeansClustering.IterationCompletedEventArgs.iteration
-- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration*
-  name: iteration
-  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_iteration_
-  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Iteration
+  name: Iteration
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_Iteration
+  commentId: P:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Iteration
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Iteration
+  nameWithType: KMeansClustering.IterationCompletedEventArgs.Iteration
+- uid: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Iteration*
+  name: Iteration
+  href: api/Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.html#Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_Iteration_
+  commentId: Overload:Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Iteration
   isSpec: "True"
-  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.iteration
-  nameWithType: KMeansClustering.IterationCompletedEventArgs.iteration
+  fullName: Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs.Iteration
+  nameWithType: KMeansClustering.IterationCompletedEventArgs.Iteration
 - uid: Paramdigma.Core.Optimization.KMeansClustering.OnIterationCompleted(Paramdigma.Core.Optimization.KMeansClustering.IterationCompletedEventArgs)
   name: OnIterationCompleted(KMeansClustering.IterationCompletedEventArgs)
   href: api/Paramdigma.Core.Optimization.KMeansClustering.html#Paramdigma_Core_Optimization_KMeansClustering_OnIterationCompleted_Paramdigma_Core_Optimization_KMeansClustering_IterationCompletedEventArgs_
@@ -8520,6 +8483,22 @@ references:
   commentId: T:Paramdigma.Core.SpatialSearch.PointCloud
   fullName: Paramdigma.Core.SpatialSearch.PointCloud
   nameWithType: PointCloud
+- uid: Paramdigma.Core.SpatialSearch.PointCloud.#ctor(List{Paramdigma.Core.SpatialSearch.PointCloudMember})
+  name: PointCloud(List<PointCloudMember>)
+  href: api/Paramdigma.Core.SpatialSearch.PointCloud.html#Paramdigma_Core_SpatialSearch_PointCloud__ctor_List_Paramdigma_Core_SpatialSearch_PointCloudMember__
+  commentId: M:Paramdigma.Core.SpatialSearch.PointCloud.#ctor(List{Paramdigma.Core.SpatialSearch.PointCloudMember})
+  name.vb: PointCloud(List(Of PointCloudMember))
+  fullName: Paramdigma.Core.SpatialSearch.PointCloud.PointCloud(List<Paramdigma.Core.SpatialSearch.PointCloudMember>)
+  fullName.vb: Paramdigma.Core.SpatialSearch.PointCloud.PointCloud(List(Of Paramdigma.Core.SpatialSearch.PointCloudMember))
+  nameWithType: PointCloud.PointCloud(List<PointCloudMember>)
+  nameWithType.vb: PointCloud.PointCloud(List(Of PointCloudMember))
+- uid: Paramdigma.Core.SpatialSearch.PointCloud.#ctor*
+  name: PointCloud
+  href: api/Paramdigma.Core.SpatialSearch.PointCloud.html#Paramdigma_Core_SpatialSearch_PointCloud__ctor_
+  commentId: Overload:Paramdigma.Core.SpatialSearch.PointCloud.#ctor
+  isSpec: "True"
+  fullName: Paramdigma.Core.SpatialSearch.PointCloud.PointCloud
+  nameWithType: PointCloud.PointCloud
 - uid: Paramdigma.Core.SpatialSearch.PointCloud.Add(Paramdigma.Core.SpatialSearch.PointCloudMember)
   name: Add(PointCloudMember)
   href: api/Paramdigma.Core.SpatialSearch.PointCloud.html#Paramdigma_Core_SpatialSearch_PointCloud_Add_Paramdigma_Core_SpatialSearch_PointCloudMember_
