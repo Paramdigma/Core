@@ -19,7 +19,7 @@ jobs:
           dotnet-version: 3.1.101
           source-url: https://nuget.pkg.github.com/paramdigma/index.json
         env:
-          NUGET_AUTH_TOKEN: ${{secrets.GPR_TOKEN}}
+          NUGET_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
         
       - name: ⚙️ Install dependencies
         run: dotnet restore
@@ -57,7 +57,9 @@ jobs:
       - name: 📦 Create the package
         run: dotnet pack --configuration Release src/Paramdigma.Core.csproj
       - name: 🚀 Publish the package to GPR
-        run: dotnet nuget push src/bin/Release/*.nupkg
+        run: dotnet nuget push src/bin/Release/*.nupkg -k ${PUSH_TOKEN}
+        env:
+          PUSH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
   deploy_docs:
     runs-on: ubuntu-latest
