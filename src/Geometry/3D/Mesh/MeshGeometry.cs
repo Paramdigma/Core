@@ -13,7 +13,9 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <returns>The half-edge vector.</returns>
         /// <param name="halfEdge">Half edge.</param>
-        public static Vector3d Vector(MeshHalfEdge halfEdge) => halfEdge.Vertex - halfEdge.Next.Vertex;
+        public static Vector3d Vector(MeshHalfEdge halfEdge) =>
+            halfEdge.Vertex - halfEdge.Next.Vertex;
+
 
         /// <summary>
         ///     Calculates the length of the specified edge.
@@ -21,6 +23,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns>The length.</returns>
         /// <param name="edge">Edge.</param>
         public static double Length(MeshEdge edge) => Vector(edge.HalfEdge).Length;
+
 
         /// <summary>
         ///     Calculates the midpoint of the specifiec edge.
@@ -35,6 +38,7 @@ namespace Paramdigma.Core.Geometry
             return (a + b) / 2;
         }
 
+
         /// <summary>
         ///     Calculates the mean edge length of the mesh.
         /// </summary>
@@ -47,6 +51,7 @@ namespace Paramdigma.Core.Geometry
                 sum += Length(e);
             return sum / mesh.Edges.Count;
         }
+
 
         /// <summary>
         ///     Computes the area of the specified face.
@@ -63,6 +68,7 @@ namespace Paramdigma.Core.Geometry
             return 0.5 * u.Cross(v).Length;
         }
 
+
         /// <summary>
         ///     Computes the total area of the mesh.
         /// </summary>
@@ -75,6 +81,7 @@ namespace Paramdigma.Core.Geometry
                 sum += Area(f);
             return sum;
         }
+
 
         /// <summary>
         ///     Compute the normal vector of the specified face.
@@ -90,6 +97,7 @@ namespace Paramdigma.Core.Geometry
             var v = -Vector(face.HalfEdge.Prev);
             return u.Cross(v).Unit();
         }
+
 
         /// <summary>
         ///     Compute the centroid of the specified face.
@@ -108,6 +116,7 @@ namespace Paramdigma.Core.Geometry
 
             return (a + b + c) / 3;
         }
+
 
         /// <summary>
         ///     Compute the circumcenter the specified face.
@@ -132,10 +141,11 @@ namespace Paramdigma.Core.Geometry
             var u = w.Cross(ab) * ac.LengthSquared;
             var v = ac.Cross(w) * ab.LengthSquared;
 
-            var x = (Point3d)(u + v) / (2 * w.LengthSquared);
+            var x = ( Point3d ) (u + v) / (2 * w.LengthSquared);
 
             return x + a;
         }
+
 
         /// <summary>
         ///     Compute the orthonormal bases of the specified face.
@@ -151,6 +161,7 @@ namespace Paramdigma.Core.Geometry
             return new[] {e1, e2};
         }
 
+
         /// <summary>
         ///     Compute the angle (in radians) at the specified corner.
         /// </summary>
@@ -163,6 +174,7 @@ namespace Paramdigma.Core.Geometry
 
             return Math.Acos(Math.Max(-1, Math.Min(1.0, u.Dot(v))));
         }
+
 
         /// <summary>
         ///     Computes the cotangent of the angle opposite to a halfedge.
@@ -179,6 +191,7 @@ namespace Paramdigma.Core.Geometry
 
             return u.Dot(v) / u.Cross(v).Length;
         }
+
 
         /// <summary>
         ///     Computes the signed angle (in radians) between the faces adjacent to the specified half-edge.
@@ -200,6 +213,7 @@ namespace Paramdigma.Core.Geometry
             return Math.Atan2(sinTheta, cosTheta);
         }
 
+
         /// <summary>
         ///     Computes the barycentric dual area around a given mesh vertex.
         /// </summary>
@@ -212,6 +226,7 @@ namespace Paramdigma.Core.Geometry
                 area += Area(f);
             return area;
         }
+
 
         /// <summary>
         ///     Computes the circumcentric dual area around a given mesh vertex.
@@ -228,11 +243,12 @@ namespace Paramdigma.Core.Geometry
                 var cotAlpha = Cotan(hE.Prev);
                 var cotBeta = Cotan(hE);
 
-                area += ((u2 * cotAlpha) + (v2 * cotBeta)) / 8;
+                area += (u2 * cotAlpha + v2 * cotBeta) / 8;
             }
 
             return area;
         }
+
 
         /// <summary>
         ///     Computes the equally weighted normal arround the specified vertex.
@@ -247,6 +263,7 @@ namespace Paramdigma.Core.Geometry
 
             return n.Unit();
         }
+
 
         /// <summary>
         ///     Computes the area weighted normal arround the specified vertex.
@@ -267,6 +284,7 @@ namespace Paramdigma.Core.Geometry
             return n.Unit();
         }
 
+
         /// <summary>
         ///     Computes the angle weighted normal arround the specified vertex.
         /// </summary>
@@ -286,6 +304,7 @@ namespace Paramdigma.Core.Geometry
             return n.Unit();
         }
 
+
         /// <summary>
         ///     Computes the gauss curvature weighted normal arround the specified vertex.
         /// </summary>
@@ -296,12 +315,13 @@ namespace Paramdigma.Core.Geometry
             var n = new Vector3d();
             foreach (var hE in vertex.AdjacentHalfEdges())
             {
-                var weight = (0.5 * DihedralAngle(hE)) / Length(hE.Edge);
+                var weight = 0.5 * DihedralAngle(hE) / Length(hE.Edge);
                 n -= Vector(hE) * weight;
             }
 
             return n.Unit();
         }
+
 
         /// <summary>
         ///     Computes the mean curvature weighted normal arround the specified vertex.
@@ -313,12 +333,13 @@ namespace Paramdigma.Core.Geometry
             var n = new Vector3d();
             foreach (var hE in vertex.AdjacentHalfEdges())
             {
-                var weight = (0.5 * Cotan(hE)) + Cotan(hE.Twin);
+                var weight = 0.5 * Cotan(hE) + Cotan(hE.Twin);
                 n -= Vector(hE) * weight;
             }
 
             return n.Unit();
         }
+
 
         /// <summary>
         ///     Computes the sphere inscribed normal arround the specified vertex.
@@ -339,6 +360,7 @@ namespace Paramdigma.Core.Geometry
             return n.Unit();
         }
 
+
         /// <summary>
         ///     Computes the angle defect at the given vertex.
         /// </summary>
@@ -351,15 +373,18 @@ namespace Paramdigma.Core.Geometry
                 angleSum += Angle(c);
 
             // if (vertex.OnBoundary()) angleSum = Math.PI - angleSum;
-            return vertex.OnBoundary() ? Math.PI - angleSum : (2 * Math.PI) - angleSum;
+            return vertex.OnBoundary() ? Math.PI - angleSum : 2 * Math.PI - angleSum;
         }
+
 
         /// <summary>
         ///     Compute the Gaussian curvature at the given vertex.
         /// </summary>
         /// <param name="vertex">Vertex to compute Gaussian curvature.</param>
         /// <returns>Number representing the gaussian curvature at that vertex.</returns>
-        public static double ScalarGaussCurvature(MeshVertex vertex) => AngleDefect(vertex) / CircumcentricDualarea(vertex);
+        public static double ScalarGaussCurvature(MeshVertex vertex) =>
+            AngleDefect(vertex) / CircumcentricDualarea(vertex);
+
 
         /// <summary>
         ///     Compute the Mean curvature at the given vertex.
@@ -374,6 +399,7 @@ namespace Paramdigma.Core.Geometry
             return sum;
         }
 
+
         /// <summary>
         ///     Compute the total angle defect of the mesh.
         /// </summary>
@@ -387,6 +413,7 @@ namespace Paramdigma.Core.Geometry
             return totalDefect;
         }
 
+
         /// <summary>
         ///     Compute the principal curvature scalar values at a given vertes.
         /// </summary>
@@ -398,7 +425,7 @@ namespace Paramdigma.Core.Geometry
             var h = ScalarMeanCurvature(vertex) / a;
             var k = AngleDefect(vertex) / a;
 
-            var discriminant = (h * h) - k;
+            var discriminant = h * h - k;
             if (discriminant > 0)
                 discriminant = Math.Sqrt(discriminant);
             else

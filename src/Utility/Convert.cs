@@ -20,10 +20,10 @@ namespace Paramdigma.Core
         {
             Vector3d v0 = b - a, v1 = c - a, v2 = p - a;
 
-            var den = (v0.X * v1.Y) - (v1.X * v0.Y);
+            var den = v0.X * v1.Y - v1.X * v0.Y;
 
-            var v = ((v2.X * v1.Y) - (v1.X * v2.Y)) / den;
-            var w = ((v0.X * v2.Y) - (v2.X * v0.Y)) / den;
+            var v = (v2.X * v1.Y - v1.X * v2.Y) / den;
+            var w = (v0.X * v2.Y - v2.X * v0.Y) / den;
             var u = 1.0 - v - w;
 
             double[] result = {u, v, w};

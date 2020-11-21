@@ -4,16 +4,17 @@
 
     <PropertyGroup>
         <Description>Computational Geometry library for .NET</Description>
-        <TargetFramework>netstandard2.0</TargetFramework>
+        <TargetFramework>netstandard2.1</TargetFramework>
         <Title>Paramdigma Core</Title>
         <PackageProjectUrl>https://paramdigma.com/Core/</PackageProjectUrl>
         <PackageLicenseUrl>https://github.com/Paramdigma/Core/blob/master/LICENSE</PackageLicenseUrl>
         <RepositoryType>git</RepositoryType>
+        <LangVersion>8</LangVersion>
     </PropertyGroup>
 
     <PropertyGroup>
         <PackageId>Paramdigma.Core</PackageId>
-        <Version>0.0.9</Version>
+        <Version>0.1.0</Version>
         <Authors>Alan Rynne</Authors>
         <Company>Paramdigma</Company>
         <PackageDescription>Computational Geometry library for .Net</PackageDescription>
@@ -24,10 +25,6 @@
     <ItemGroup>
         <PackageReference Include="Microsoft.Extensions.FileProviders.Embedded" Version="3.1.1" />
         <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
-        <PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
-            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-            <PrivateAssets>all</PrivateAssets>
-        </PackageReference>
     </ItemGroup>
 
 

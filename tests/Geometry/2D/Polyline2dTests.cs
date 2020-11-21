@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
@@ -15,11 +16,25 @@ namespace Paramdigma.Core.Tests.Geometry
 
         private readonly Point2d pt4 = new Point2d(0, 1);
 
+
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] {new Polyline2d(new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4}, false), 3};
-            yield return new object[] {new Polyline2d(new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4}, true), 4};
+            yield return new object[]
+            {
+                new Polyline2d(
+                    new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4},
+                    false),
+                3
+            };
+            yield return new object[]
+            {
+                new Polyline2d(
+                    new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4},
+                    true),
+                4
+            };
         }
+
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
@@ -34,10 +49,17 @@ namespace Paramdigma.Core.Tests.Geometry
 
         private readonly Point2d pt4 = new Point2d(0, 1);
 
+
         public IEnumerator<object[]> GetEnumerator()
         {
-            yield return new object[] {new Polyline2d(new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4}, false)};
+            yield return new object[]
+            {
+                new Polyline2d(
+                    new List<Point2d> {this.pt1, this.pt2, this.pt3, this.pt4},
+                    false)
+            };
         }
+
 
         IEnumerator IEnumerable.GetEnumerator() => this.GetEnumerator();
     }
@@ -46,15 +68,22 @@ namespace Paramdigma.Core.Tests.Geometry
     {
         [Theory]
         [ClassData(typeof(Polyline2dUnitSquareAndSegments))]
-        public void Constructor_ClosedOption_AddsVertexAndSegment(Polyline2d polyline, int expectedSegments)
+        public void Constructor_ClosedOption_AddsVertexAndSegment(
+            Polyline2d polyline,
+            int expectedSegments)
         {
             Assert.True(polyline.Vertices.Count == expectedSegments + 1);
             Assert.True(polyline.Segments.Count == expectedSegments);
         }
 
+
         [Theory]
         [ClassData(typeof(Polyline2dUnitSquareAndSegments))]
-        public void DefaultDomain_IsParametrizedByArcLength(Polyline2d polyline, double expectedLength) => Assert.True(polyline.Domain.End == expectedLength);
+        public void DefaultDomain_IsParametrizedByArcLength(
+            Polyline2d polyline,
+            double expectedLength) => Assert.True(
+            Math.Abs(polyline.Domain.End - expectedLength) < Settings.Tolerance);
+
 
         [Theory]
         [ClassData(typeof(Polyline2dDataSet))]
@@ -62,9 +91,12 @@ namespace Paramdigma.Core.Tests.Geometry
         {
             polyline.Reparametrize();
 
-            Assert.True(polyline.Domain.End == polyline.Segments[^1].Domain.End);
-            Assert.True(polyline.Domain.End == 1);
+            Assert.True(
+                Math.Abs(polyline.Domain.End - polyline.Segments[^1].Domain.End)
+              < Settings.Tolerance);
+            Assert.True(Math.Abs(polyline.Domain.End - 1) < Settings.Tolerance);
         }
+
 
         [Theory]
         [ClassData(typeof(Polyline2dDataSet))]
@@ -75,13 +107,14 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.False(cond);
         }
 
+
         [Theory]
         [ClassData(typeof(Polyline2dDataSet))]
         public void CanCompute_Area(Polyline2d polyline)
         {
             polyline.IsClosed = true;
             var area = polyline.Area();
-            Assert.True(area == 1.0);
+            Assert.True(Math.Abs(area - 1.0) < Settings.Tolerance);
             polyline.IsClosed = false;
             area = polyline.Area();
             Assert.True(area == 0.0);

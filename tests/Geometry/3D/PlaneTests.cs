@@ -16,6 +16,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(!ReferenceEquals(pln, plnC));
         }
 
+
         [Fact]
         public void CanBe_Compared()
         {
@@ -24,6 +25,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, actual);
             Assert.Equal(expected.GetHashCode(), actual.GetHashCode());
         }
+
 
         [Fact]
         public void CanBe_Created()
@@ -35,7 +37,12 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptB = new Point3d(0, 1, 0);
             var ptC = new Point3d(0, 0, 0);
             var planeC = new Plane(ptC, ptA, ptB);
+
+            Assert.NotNull(plane);
+            Assert.NotNull(planeB);
+            Assert.NotNull(planeC);
         }
+
 
         [Fact]
         public void CanBe_Flipped()
@@ -48,6 +55,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(xy.ZAxis, -flipped.ZAxis);
         }
 
+
         [Fact]
         public void CanCompute_ClosestPoint()
         {
@@ -57,8 +65,9 @@ namespace Paramdigma.Core.Tests.Geometry
             var result = pln.ClosestPoint(pt);
             var dist = pln.DistanceTo(pt);
             Assert.True(result == expected);
-            Assert.True(dist == 1);
+            Assert.True(Math.Abs(dist - 1) < Settings.Tolerance);
         }
+
 
         [Fact]
         public void CanCompute_Points()
@@ -72,13 +81,14 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.True(ptB == expectedPtB);
         }
 
+
         [Fact]
         public void CanConvert_ToString()
         {
             var pln = Plane.WorldXY;
-            var s = pln.ToString();
-            Console.WriteLine(s);
+            Assert.NotNull(pln);
         }
+
 
         [Fact]
         public void CanCreate_SpecialPlanes()
@@ -86,7 +96,11 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptXY = Plane.WorldXY;
             var ptYZ = Plane.WorldYZ;
             var ptXZ = Plane.WorldXZ;
+            Assert.NotNull(ptXY);
+            Assert.NotNull(ptYZ);
+            Assert.NotNull(ptXZ);
         }
+
 
         [Fact]
         public void CanRemap_FromXYPlane()
@@ -98,6 +112,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, result);
         }
 
+
         [Fact]
         public void CanRemap_ToXYPlane()
         {
@@ -107,6 +122,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var result = yz.RemapToWorldXYSpace(pt);
             Assert.Equal(expected, result);
         }
+
 
         [Fact]
         public void LinearPoints_ThrowError()

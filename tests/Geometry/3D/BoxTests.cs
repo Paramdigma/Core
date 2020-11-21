@@ -2,7 +2,7 @@ using Paramdigma.Core.Collections;
 using Paramdigma.Core.Geometry;
 using Xunit;
 
-namespace Paramdigma.Core.Tests.Geometry._3D
+namespace Paramdigma.Core.Tests.Geometry
 {
     public class BoxTests
     {
@@ -21,6 +21,7 @@ namespace Paramdigma.Core.Tests.Geometry._3D
             Assert.Equal(new Point3d(1, 1, 1), box.Max);
             Assert.Equal(new Point3d(.5, .5, .5), box.Center);
         }
+
 
         [Fact]
         public void CanCreate_FromPlaneAndDimensions()

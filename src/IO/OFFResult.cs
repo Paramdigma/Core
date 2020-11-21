@@ -5,10 +5,14 @@ namespace Paramdigma.Core.IO
     /// <summary>
     ///     Enum containing the result of the OFF conversion.
     /// </summary>
-    public enum OFFResult
+    public enum OffResult
     {
-        OK, IncorrectFormat, IncorrectVertex,
-        IncorrectFace, NonMatchingVerticesSize, NonMatchingFacesSize,
+        Ok,
+        IncorrectFormat,
+        IncorrectVertex,
+        IncorrectFace,
+        NonMatchingVerticesSize,
+        NonMatchingFacesSize,
         FileNotFound
     }
 }

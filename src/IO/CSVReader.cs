@@ -5,5 +5,5 @@ namespace Paramdigma.Core.IO
     /// <summary>
     ///     CSV File reader.
     /// </summary>
-    public static class CSVReader { }
+    public static class CsvReader { }
 }

@@ -29,6 +29,7 @@ namespace Paramdigma.Core.Optimization
         /// </summary>
         public GradientDescentResult Result;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="GradientDescent" /> class with given options.
         /// </summary>
@@ -38,6 +39,7 @@ namespace Paramdigma.Core.Optimization
             this.Result = default;
             this.Options = options;
         }
+
 
         /// <summary>
         ///     Run gradient descent algorithm.
@@ -66,11 +68,13 @@ namespace Paramdigma.Core.Optimization
                 this.Result.Error = function(this.Result.Values);
                 this.Result.GradientLength = gLength;
                 iter++; // Increase iteration count
-            } while (gLength > this.Options.Limit && iter < this.Options.MaxIterations && this.Result.Error > this.Options.ErrorThreshold);
+            } while (gLength > this.Options.Limit && iter < this.Options.MaxIterations
+                                                  && this.Result.Error
+                                                   > this.Options.ErrorThreshold);
 
-            var customError = this.Result.Error > 1E5 ? $"{this.Result.Error:0.###e-000}" : $"{this.Result.Error:0.00000}";
             Console.ResetColor();
         }
+
 
         /// <summary>
         ///     Computes the gradient vector of a given function at some specified input values.
@@ -87,7 +91,11 @@ namespace Paramdigma.Core.Optimization
 
             for (var i = 0; i < inputValues.Count; i++)
             {
-                var dV = this.ComputePartialDerivative(i, func, inputValues, this.Options.DerivativeStep);
+                var dV = this.ComputePartialDerivative(
+                    i,
+                    func,
+                    inputValues,
+                    this.Options.DerivativeStep);
                 gradient.Add(dV * this.Options.LearningRate);
                 derivativeSquareSum += dV * dV;
             }
@@ -101,6 +109,7 @@ namespace Paramdigma.Core.Optimization
 
             return gradient;
         }
+
 
         /// <summary>
         ///     Computes the partial derivative at a given input value of a given function.
@@ -126,7 +135,7 @@ namespace Paramdigma.Core.Optimization
             inputValues[inputIndex] += step; // Reset value to original
 
             // Compute partial derivative using 2-point method
-            partialDerivative = ((error1 - error2) / 2) * step;
+            partialDerivative = (error1 - error2) / 2 * step;
 
             return partialDerivative;
         }

@@ -16,14 +16,17 @@ namespace Paramdigma.Core.Curves
         /// <param name="levels">List of level values to be computed.</param>
         /// <param name="mesh">The mesh to compute the level-sets in.</param>
         /// <param name="levelSets">Resulting level sets.</param>
-        public static void ComputeLevels(string valueKey, List<double> levels, Mesh mesh, out List<List<Line>> levelSets)
+        public static void ComputeLevels(
+            string valueKey,
+            List<double> levels,
+            Mesh mesh,
+            out List<List<Line>> levelSets)
         {
             var resultLines = new List<List<Line>>();
 
             for (var i = 0; i < levels.Count; i++)
                 resultLines.Add(new List<Line>());
 
-            var iter = 0;
             foreach (var face in mesh.Faces)
             {
                 var count = 0;
@@ -34,12 +37,11 @@ namespace Paramdigma.Core.Curves
 
                     count++;
                 }
-
-                iter++;
             }
 
             levelSets = resultLines;
         }
+
 
         /// <summary>
         ///     Compute the level on a specified face.
@@ -52,16 +54,23 @@ namespace Paramdigma.Core.Curves
         public static bool GetFaceLevel(string valueKey, double level, MeshFace face, out Line line)
         {
             var adj = face.AdjacentVertices();
-            var vertexValues = new List<double> {adj[0].UserValues[valueKey], adj[1].UserValues[valueKey], adj[2].UserValues[valueKey]};
+            var vertexValues = new List<double>
+            {
+                adj[0].UserValues[valueKey],
+                adj[1].UserValues[valueKey],
+                adj[2].UserValues[valueKey]
+            };
 
             var above = new List<int>();
             var below = new List<int>();
 
             for (var i = 0; i < vertexValues.Count; i++)
+            {
                 if (vertexValues[i] < level)
                     below.Add(i);
                 else
                     above.Add(i);
+            }
 
             if (above.Count == 3 || below.Count == 3)
             {
@@ -74,19 +83,22 @@ namespace Paramdigma.Core.Curves
             var intersectionPoints = new List<Point3d>();
 
             foreach (var i in above)
-            foreach (var j in below)
             {
-                var diff = vertexValues[i] - vertexValues[j];
-                var desiredDiff = level - vertexValues[j];
-                var unitizedDistance = desiredDiff / diff;
-                var edgeV = adj[i] - adj[j];
-                var levelPoint = adj[j] + (edgeV * unitizedDistance);
-                intersectionPoints.Add(levelPoint);
+                foreach (var j in below)
+                {
+                    var diff = vertexValues[i] - vertexValues[j];
+                    var desiredDiff = level - vertexValues[j];
+                    var unitizedDistance = desiredDiff / diff;
+                    var edgeV = adj[i] - adj[j];
+                    var levelPoint = adj[j] + edgeV * unitizedDistance;
+                    intersectionPoints.Add(levelPoint);
+                }
             }
 
             line = new Line(intersectionPoints[0], intersectionPoints[1]);
             return true;
         }
+
 
         /// <summary>
         ///     Compute the gradient on a given mesh given some per-vertex values.
@@ -102,6 +114,7 @@ namespace Paramdigma.Core.Curves
 
             return gradientField;
         }
+
 
         /// <summary>
         ///     Compute the gradient on a given mesh face given some per-vertex values.
@@ -121,7 +134,7 @@ namespace Paramdigma.Core.Curves
             var gk = adjacentVertices[2].UserValues[valueKey];
 
             var faceNormal = face.Normal / (2 * face.Area);
-            var rotatedGradient = ((gi * (k - j)) + (gj * (i - k)) + (gk * (j - i))) / (2 * face.Area);
+            var rotatedGradient = (gi * (k - j) + gj * (i - k) + gk * (j - i)) / (2 * face.Area);
             var gradient = rotatedGradient.Cross(faceNormal);
 
             return gradient;

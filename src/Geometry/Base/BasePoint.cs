@@ -13,6 +13,7 @@ namespace Paramdigma.Core.Geometry
         private double y;
         private double z;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePoint" /> class.
         /// </summary>
@@ -21,6 +22,7 @@ namespace Paramdigma.Core.Geometry
             : this(0, 0, 0) =>
             this.IsUnset = true;
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePoint" /> class.
         /// </summary>
@@ -28,6 +30,7 @@ namespace Paramdigma.Core.Geometry
         /// <returns></returns>
         protected BasePoint(BasePoint point)
             : this(point.X, point.Y, point.Z) { }
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="BasePoint" /> class by cartesian coordinates.
@@ -42,6 +45,7 @@ namespace Paramdigma.Core.Geometry
             this.z = zCoord;
             this.IsUnset = false;
         }
+
 
         /// <summary>
         ///     Gets or sets x Coordinate.
@@ -92,11 +96,8 @@ namespace Paramdigma.Core.Geometry
         ///     Gets or sets a value indicating whether the current point is unset.
         /// </summary>
         /// <value>True if Unset.</value>
-        public bool IsUnset
-        {
-            get;
-            set;
-        }
+        public bool IsUnset { get; set; }
+
 
         /// <summary>
         ///     Add a point to this point.
@@ -110,6 +111,7 @@ namespace Paramdigma.Core.Geometry
             this.IsUnset = false;
         }
 
+
         /// <summary>
         ///     Substract a point from this one.
         /// </summary>
@@ -122,6 +124,7 @@ namespace Paramdigma.Core.Geometry
             this.IsUnset = false;
         }
 
+
         /// <summary>
         ///     Multiply this point by a number.
         /// </summary>
@@ -132,6 +135,7 @@ namespace Paramdigma.Core.Geometry
             this.y *= scalar;
             this.z *= scalar;
         }
+
 
         /// <summary>
         ///     Divide this point by a number.
@@ -144,6 +148,7 @@ namespace Paramdigma.Core.Geometry
             this.z /= scalar;
         }
 
+
         /// <summary>
         ///     Negates this point.
         /// </summary>
@@ -154,17 +159,20 @@ namespace Paramdigma.Core.Geometry
             this.z = this.z != 0 ? -this.z : 0;
         }
 
+
         /// <summary>
         ///     Returns the string representation of this point.
         /// </summary>
         /// <returns></returns>
         public override string ToString() => "{ " + this.x + ", " + this.y + ", " + this.z + " }";
 
+
         /// <summary>
         ///     Converts a point to an array of numbers.
         /// </summary>
         /// <returns>Array with cartesian coordinates of point.</returns>
         public double[] ToArray() => new[] {this.x, this.y, this.z};
+
 
         /// <summary>
         ///     Performs a deep clone of the point.
@@ -177,11 +185,12 @@ namespace Paramdigma.Core.Geometry
             if (!(obj is BasePoint))
                 return false;
 
-            var pt = (BasePoint)obj;
+            var pt = ( BasePoint ) obj;
             return Math.Abs(this.X - pt.X) <= Settings.Tolerance
                 && Math.Abs(this.Y - pt.Y) <= Settings.Tolerance
                 && Math.Abs(this.Z - pt.Z) <= Settings.Tolerance;
         }
+
 
         /// <inheritdoc />
         public override int GetHashCode()
@@ -189,12 +198,12 @@ namespace Paramdigma.Core.Geometry
             unchecked
             {
                 // Choose large primes to avoid hashing collisions
-                const int hashingBase = (int)2166136261;
+                const int hashingBase = ( int ) 2166136261;
                 const int hashingMultiplier = 16777619;
                 var tol = Settings.Tolerance * 2;
-                var tX = (int)(this.X * (1 / tol)) * tol;
-                var tY = (int)(this.Y * (1 / tol)) * tol;
-                var tZ = (int)(this.Z * (1 / tol)) * tol;
+                var tX = ( int ) (this.X * (1 / tol)) * tol;
+                var tY = ( int ) (this.Y * (1 / tol)) * tol;
+                var tZ = ( int ) (this.Z * (1 / tol)) * tol;
 
                 var hash = hashingBase;
                 hash = (hash * hashingMultiplier) ^ tX.GetHashCode();

@@ -22,6 +22,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.W = w;
         }
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="MeshPoint" /> class.
         /// </summary>
@@ -36,46 +37,33 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.W = bary[2];
         }
 
+
         /// <summary>
         ///     Gets or sets the index of the face this point lies in.
         /// </summary>
-        public int FaceIndex
-        {
-            get;
-            set;
-        }
+        public int FaceIndex { get; set; }
 
         /// <summary>
         ///     Gets or sets the U coordinate at the face.
         /// </summary>
-        public double U
-        {
-            get;
-            set;
-        }
+        public double U { get; set; }
 
         /// <summary>
         ///     Gets or sets the V coordinate at the face.
         /// </summary>
-        public double V
-        {
-            get;
-            set;
-        }
+        public double V { get; set; }
 
         /// <summary>
         ///     Gets or sets the W coordinate at the face.
         /// </summary>
-        public double W
-        {
-            get;
-            set;
-        }
+        public double W { get; set; }
+
 
         /// <summary>
         ///     Converts a mesh point into a string.
         /// </summary>
         /// <returns>String representation of the mesh point.</returns>
-        public override string ToString() => "MeshPoint{ " + this.FaceIndex + "; " + this.U + ", " + this.V + ", " + this.W + " }";
+        public override string ToString() =>
+            "MeshPoint{ " + this.FaceIndex + "; " + this.U + ", " + this.V + ", " + this.W + " }";
     }
 }

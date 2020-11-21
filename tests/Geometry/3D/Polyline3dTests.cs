@@ -17,6 +17,7 @@ namespace Paramdigma.Core.Tests.Geometry
             return new Polyline(knots);
         }
 
+
         [Fact]
         public void CanAccess_UpdatedSegmentList()
         {
@@ -25,6 +26,7 @@ namespace Paramdigma.Core.Tests.Geometry
             poly.AddKnot(poly[0]);
             Assert.Equal(4, poly.Segments.Count);
         }
+
 
         [Fact]
         public void CanAdd_Knot()
@@ -36,6 +38,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(segCount + 1, poly.Segments.Count);
             Assert.Equal(knotCount + 1, poly.Knots.Count);
         }
+
 
         [Fact]
         public override void CanCheck_Validity()
@@ -50,6 +53,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.False(poly.IsValid);
         }
 
+
         [Fact]
         public void CanEnumerate_Knots()
         {
@@ -57,6 +61,7 @@ namespace Paramdigma.Core.Tests.Geometry
             foreach (var knot in poly)
                 Assert.NotNull(knot);
         }
+
 
         [Fact]
         public override void CanGet_BiNormal()
@@ -66,6 +71,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.NotNull(poly.BinormalAt(1));
         }
 
+
         [Fact]
         public override void CanGet_Length()
         {
@@ -73,9 +79,12 @@ namespace Paramdigma.Core.Tests.Geometry
             {
                 var poly = this.GetTestPolyline(i);
                 var length = poly.Length;
-                Assert.True(length == i, $"Length {length} is not {i}");
+                Assert.True(
+                    Math.Abs(length - i) < Settings.Tolerance,
+                    $"Length {length} is not {i}");
             }
         }
+
 
         [Fact]
         public override void CanGet_Normal()
@@ -85,6 +94,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.NotNull(poly.NormalAt(1));
         }
 
+
         [Fact]
         public override void CanGet_PerpFrame()
         {
@@ -92,6 +102,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var poly = this.GetTestPolyline(3);
             Assert.NotNull(poly.FrameAt(1));
         }
+
 
         [Fact]
         public override void CanGet_PointAt()
@@ -102,6 +113,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(expected, pt);
         }
 
+
         [Fact]
         public override void CanGet_Tangent()
         {
@@ -109,6 +121,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var poly = this.GetTestPolyline(3);
             Assert.NotNull(poly.TangentAt(1));
         }
+
 
         [Fact]
         public void CanInsert_Knot()
@@ -121,6 +134,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(knotCount + 1, poly.Knots.Count);
             Assert.Equal(poly[0], poly[2]);
         }
+
 
         [Fact]
         public void CanRemove_Knot()
@@ -136,6 +150,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.NotEqual(unexpected, poly[0]);
         }
 
+
         [Fact]
         public void CanRemove_Knot_ThrowsException()
         {
@@ -144,6 +159,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Throws<IndexOutOfRangeException>(() => poly.RemoveKnotAt(17));
             Assert.Throws<UnsetGeometryException>(() => poly2.RemoveKnotAt(0));
         }
+
 
         [Fact]
         public void CanRemove_KnotAtIndex()
@@ -156,6 +172,7 @@ namespace Paramdigma.Core.Tests.Geometry
             Assert.Equal(segCount - 1, poly.Segments.Count);
             Assert.Equal(knotCount - 1, poly.Knots.Count);
         }
+
 
         [Fact]
         public void CanToggle_IsClosed()

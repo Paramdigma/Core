@@ -26,6 +26,7 @@ namespace Paramdigma.Core.Tests.Curves
             }
         }
 
+
         [Fact]
         public void CanCompute_GradientInFace_ReturnsValidVector()
         {
@@ -34,12 +35,17 @@ namespace Paramdigma.Core.Tests.Curves
             Assert.Equal(new Vector3d(0, -1, -1).Unit(), c[0].Unit());
         }
 
+
         [Fact]
         public void CanCompute_LevelInFace_ReturnsValidLine()
         {
-            LevelSets.ComputeLevels("scalar-1", new List<double> {0.5}, this.Triangle, out var levelSets);
+            LevelSets.ComputeLevels(
+                "scalar-1",
+                new List<double> {0.5},
+                this.Triangle,
+                out var levelSets);
             Assert.NotEmpty(levelSets);
-            var v = (Vector3d)levelSets[0][0];
+            var v = ( Vector3d ) levelSets[0][0];
             Assert.Equal(new Vector3d(1, 0, 0), v.Unit());
         }
     }

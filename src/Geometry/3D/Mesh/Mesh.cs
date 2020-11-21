@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
 
 namespace Paramdigma.Core.HalfEdgeMesh
@@ -21,6 +22,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.Boundaries = new List<MeshFace>();
         }
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Mesh" /> class from verticees and faces.
         /// </summary>
@@ -34,8 +36,11 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.CreateVertices(vertices);
 
             // - Iterate through faces, creating face, edge, and halfedge objects (and connecting where possible)
-            this.CreateFaces(faceIndexes);
+            var result = this.CreateFaces(faceIndexes);
+            if (!result)
+                throw new Exception("Couldn't create faces for this mesh");
         }
+
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="Mesh" /> class from verticees and faces.
@@ -51,6 +56,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.CreateFaces(faceIndexes);
         }
 
+
         /// <summary>
         ///     Initializes a new instance of the <see cref="Mesh" /> class from an existing one.
         /// </summary>
@@ -65,64 +71,42 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.Boundaries = new List<MeshFace>(halfEdgeMesh.Boundaries);
         }
 
+
         /// <summary>
         ///     Gets or sets the vertices of the mesh.
         /// </summary>
-        public List<MeshVertex> Vertices
-        {
-            get;
-            set;
-        }
+        public List<MeshVertex> Vertices { get; set; }
 
         /// <summary>
         ///     Gets or sets the edges of the mesh.
         /// </summary>
-        public List<MeshEdge> Edges
-        {
-            get;
-            set;
-        }
+        public List<MeshEdge> Edges { get; set; }
 
         /// <summary>
         ///     Gets or sets the faces of the mesh.
         /// </summary>
-        public List<MeshFace> Faces
-        {
-            get;
-            set;
-        }
+        public List<MeshFace> Faces { get; set; }
 
         /// <summary>
         ///     Gets or sets the corners of the mesh.
         /// </summary>
-        public List<MeshCorner> Corners
-        {
-            get;
-            set;
-        }
+        public List<MeshCorner> Corners { get; set; }
 
         /// <summary>
         ///     Gets or sets the half-edges of the mesh.
         /// </summary>
-        public List<MeshHalfEdge> HalfEdges
-        {
-            get;
-            set;
-        }
+        public List<MeshHalfEdge> HalfEdges { get; set; }
 
         /// <summary>
         ///     Gets or sets the boundaries of the mesh.
         /// </summary>
-        public List<MeshFace> Boundaries
-        {
-            get;
-            set;
-        }
+        public List<MeshFace> Boundaries { get; set; }
 
         /// <summary>
         ///     Gets the euler characteristic of the mesh.
         /// </summary>
-        public int EulerCharacteristic => (this.Vertices.Count - this.Edges.Count) + this.Faces.Count;
+        public int EulerCharacteristic => this.Vertices.Count - this.Edges.Count + this.Faces.Count;
+
 
         /// <summary>
         ///     Check if the mesh has isolated vertices.
@@ -131,11 +115,14 @@ namespace Paramdigma.Core.HalfEdgeMesh
         public bool HasIsolatedVertices()
         {
             foreach (var v in this.Vertices)
+            {
                 if (v.IsIsolated())
                     return true;
+            }
 
             return false;
         }
+
 
         /// <summary>
         ///     Check if the mesh contains isolated faces.
@@ -148,8 +135,10 @@ namespace Paramdigma.Core.HalfEdgeMesh
                 var boundaryEdges = 0;
                 var adjacent = f.AdjacentHalfEdges();
                 foreach (var e in adjacent)
+                {
                     if (e.OnBoundary)
                         boundaryEdges++;
+                }
 
                 if (boundaryEdges == adjacent.Count)
                     return true;
@@ -158,6 +147,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return false;
         }
 
+
         /// <summary>
         ///     Check if the mesh contains non-manifold edges.
         /// </summary>
@@ -165,11 +155,14 @@ namespace Paramdigma.Core.HalfEdgeMesh
         public bool HasNonManifoldEdges()
         {
             foreach (var edge in this.Edges)
+            {
                 if (edge.AdjacentFaces().Count > 2)
                     return true;
+            }
 
             return false;
         }
+
 
         /// <summary>
         ///     Assign an index number to each mesh member.
@@ -219,6 +212,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             }
         }
 
+
         /// <summary>
         ///     Assign an index to each vertex of the mesh.
         /// </summary>
@@ -231,6 +225,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
                 index[v] = i++;
             return index;
         }
+
 
         /// <summary>
         ///     Assign an index to each face of the mesh.
@@ -245,6 +240,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return index;
         }
 
+
         /// <summary>
         ///     Assign an index to each edge of the mesh.
         /// </summary>
@@ -257,6 +253,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
                 index[v] = i++;
             return index;
         }
+
 
         /// <summary>
         ///     Assign an index to each Half-Edge of the mesh.
@@ -271,6 +268,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return index;
         }
 
+
         /// <summary>
         ///     Assign an index to each corner of the mesh.
         /// </summary>
@@ -284,11 +282,13 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return index;
         }
 
+
         /// <summary>
         ///     Check if a mesh is triangular.
         /// </summary>
         /// <returns>Returns true if all faces are triangular.</returns>
         public bool IsTriangularMesh() => this.IsMesh() == IsMeshResult.Triangular;
+
 
         /// <summary>
         ///     Check if a mesh is quad.
@@ -296,11 +296,13 @@ namespace Paramdigma.Core.HalfEdgeMesh
         /// <returns>Returns true if all faces are quads.</returns>
         public bool IsQuadMesh() => this.IsMesh() == IsMeshResult.Quad;
 
+
         /// <summary>
         ///     Check if a mesh is n-gonal.
         /// </summary>
         /// <returns>Returns true if the mesh contains ANY ngons.</returns>
         public bool IsNgonMesh() => this.IsMesh() == IsMeshResult.Ngon;
+
 
         /// <summary>
         ///     Returns an enum corresponding to the mesh face topology  (triangular, quad or ngon).
@@ -314,8 +316,9 @@ namespace Paramdigma.Core.HalfEdgeMesh
                 return IsMeshResult.Quad;
             if (count.Ngons != 0)
                 return IsMeshResult.Ngon;
-            return IsMeshResult.ERROR;
+            return IsMeshResult.Error;
         }
+
 
         /// <summary>
         ///     Get human readable description of this mesh.
@@ -325,8 +328,10 @@ namespace Paramdigma.Core.HalfEdgeMesh
         {
             const string head = "--- Mesh Info ---\n";
 
-            var vef = "V: " + this.Vertices.Count + "; F: " + this.Faces.Count + "; E:" + this.Edges.Count + "\n";
-            var hec = "Half-edges: " + this.HalfEdges.Count + "; Corners: " + this.Corners.Count + "\n";
+            var vef = "V: " + this.Vertices.Count + "; F: " + this.Faces.Count + "; E:"
+                    + this.Edges.Count + "\n";
+            var hec = "Half-edges: " + this.HalfEdges.Count + "; Corners: " + this.Corners.Count
+                    + "\n";
             var bounds = "Boundaries: " + this.Boundaries.Count + "\n";
             var euler = "Euler characteristic: " + this.EulerCharacteristic + "\n";
             var isoVert = "Isolated vertices: " + this.HasIsolatedVertices() + "\n";
@@ -340,8 +345,10 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
             const string tail = "-----       -----\n\n";
 
-            return head + vef + hec + bounds + euler + isoVert + isoFace + manifold + triangles + quads + ngons + tail;
+            return head + vef + hec + bounds + euler + isoVert + isoFace + manifold + triangles
+                 + quads + ngons + tail;
         }
+
 
         /// <summary>
         ///     Gets string representation of the mesh.
@@ -349,9 +356,12 @@ namespace Paramdigma.Core.HalfEdgeMesh
         /// <returns>Mesh string.</returns>
         public override string ToString()
         {
-            var vefh = "V: " + this.Vertices.Count + "; F: " + this.Faces.Count + "; E:" + this.Edges.Count + "; hE: " + this.HalfEdges.Count;
+            var vefh = "V: " + this.Vertices.Count + "; F: " + this.Faces.Count + "; E:"
+                     + this.Edges.Count
+                     + "; hE: " + this.HalfEdges.Count;
             return "HE_Mesh{" + vefh + "}";
         }
+
 
         private void CreateVertices(List<Point3d> points)
         {
@@ -366,8 +376,9 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.Vertices = verts;
         }
 
+
         // Takes a List containing another List per face with the vertex indexes belonging to that face
-        private bool CreateFaces(List<List<int>> faceIndexes)
+        private bool CreateFaces(IEnumerable<List<int>> faceIndexes)
         {
             var edgeCount = new Dictionary<string, int>();
             var existingHalfEdges = new Dictionary<string, MeshHalfEdge>();
@@ -399,7 +410,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
 
                     // Set previous and next
                     h.Next = tempHEdges[(i + 1) % indexes.Count];
-                    h.Prev = tempHEdges[((i + indexes.Count) - 1) % indexes.Count];
+                    h.Prev = tempHEdges[(i + indexes.Count - 1) % indexes.Count];
 
                     h.OnBoundary = false;
                     hasTwinHalfEdge.Add(h, false);
@@ -459,46 +470,46 @@ namespace Paramdigma.Core.HalfEdgeMesh
                     this.Boundaries.Add(f);
 
                     var boundaryCycle = new List<MeshHalfEdge>();
-                    var hE = h;
+                    var halfEdge = h;
                     do
                     {
-                        var bH = new MeshHalfEdge();
-                        this.HalfEdges.Add(bH);
-                        boundaryCycle.Add(bH);
+                        var boundaryHalfEdge = new MeshHalfEdge();
+                        this.HalfEdges.Add(boundaryHalfEdge);
+                        boundaryCycle.Add(boundaryHalfEdge);
 
-                        var nextHE = hE.Next;
-                        while (hasTwinHalfEdge[nextHE])
-                            nextHE = nextHE.Twin.Next;
+                        var nextHalfEdge = halfEdge.Next;
+                        while (hasTwinHalfEdge[nextHalfEdge])
+                            nextHalfEdge = nextHalfEdge.Twin.Next;
 
-                        bH.Vertex = nextHE.Vertex;
-                        bH.Edge = hE.Edge;
-                        bH.OnBoundary = true;
+                        boundaryHalfEdge.Vertex = nextHalfEdge.Vertex;
+                        boundaryHalfEdge.Edge = halfEdge.Edge;
+                        boundaryHalfEdge.OnBoundary = true;
 
-                        bH.Face = f;
-                        f.HalfEdge = bH;
+                        boundaryHalfEdge.Face = f;
+                        f.HalfEdge = boundaryHalfEdge;
 
-                        bH.Twin = hE;
-                        hE.Twin = bH;
+                        boundaryHalfEdge.Twin = halfEdge;
+                        halfEdge.Twin = boundaryHalfEdge;
 
-                        hE = nextHE;
-                    } while (hE != h);
+                        halfEdge = nextHalfEdge;
+                    } while (halfEdge != h);
 
                     var n = boundaryCycle.Count;
                     for (var j = 0; j < n; j++)
                     {
-                        boundaryCycle[j].Next = boundaryCycle[((j + n) - 1) % n];
+                        boundaryCycle[j].Next = boundaryCycle[(j + n - 1) % n];
                         boundaryCycle[j].Prev = boundaryCycle[(j + 1) % n];
                         hasTwinHalfEdge[boundaryCycle[j]] = true;
                         hasTwinHalfEdge[boundaryCycle[j].Twin] = true;
                     }
                 }
 
-                if (!h.OnBoundary)
-                {
-                    var corner = new MeshCorner {HalfEdge = h};
-                    h.Corner = corner;
-                    this.Corners.Add(corner);
-                }
+                if (h.OnBoundary)
+                    continue;
+
+                var corner = new MeshCorner {HalfEdge = h};
+                h.Corner = corner;
+                this.Corners.Add(corner);
             }
 
             // Check mesh for common errors
@@ -511,11 +522,13 @@ namespace Paramdigma.Core.HalfEdgeMesh
             return true;
         }
 
+
         private FaceData CountFaceEdges()
         {
             FaceData data = default;
 
             foreach (var face in this.Faces)
+            {
                 switch (face.AdjacentCorners().Count)
                 {
                     case 3:
@@ -528,17 +541,18 @@ namespace Paramdigma.Core.HalfEdgeMesh
                         data.Ngons++;
                         break;
                 }
+            }
 
             return data;
         }
+
 
         /// <summary>
         ///     Type of mesh (Triangular, Quad, Ngon or Error).
         /// </summary>
         private enum IsMeshResult
         {
-            Triangular, Quad, Ngon,
-            ERROR
+            Triangular, Quad, Ngon, Error
         }
 
         private struct FaceData

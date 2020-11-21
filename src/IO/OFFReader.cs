@@ -7,28 +7,28 @@ using Paramdigma.Core.Geometry;
 namespace Paramdigma.Core.IO
 {
     /// <summary>OFF Reader class.</summary>
-    public static class OFFReader
+    public static class OffReader
     {
-        public static OFFResult ReadMeshFromFile(string filePath, out OFFMeshData data)
+        public static OffResult ReadMeshFromFile(string filePath, out OffMeshData data)
         {
             var lines = File.ReadAllLines(filePath);
-            data = default;
+            data = new OffMeshData();
 
             // Check if first line states OFF format
             if (lines[0] != "OFF")
-                return OFFResult.IncorrectFormat;
+                return OffResult.IncorrectFormat;
 
             // Get second line and extract number of vertices and faces
             var initialData = lines[1].Split(' ');
             if (!int.TryParse(initialData[0], out var nVertex))
-                return OFFResult.IncorrectFormat;
+                return OffResult.IncorrectFormat;
 
             if (!int.TryParse(initialData[1], out var nFaces))
-                return OFFResult.IncorrectFormat;
+                return OffResult.IncorrectFormat;
 
             // Check if length of lines correct
             if (nVertex + nFaces + 2 != lines.Length)
-                return OFFResult.IncorrectFormat;
+                return OffResult.IncorrectFormat;
 
             // Iterate through all the lines containing the mesh data
             const int start = 2;
@@ -36,6 +36,7 @@ namespace Paramdigma.Core.IO
             var faces = new List<List<int>>();
 
             for (var i = start; i < lines.Length; i++)
+            {
                 if (i < nVertex + start)
                 {
                     // Extract vertices
@@ -45,7 +46,7 @@ namespace Paramdigma.Core.IO
                     foreach (var ptStr in lines[i].Split(' '))
                     {
                         if (!double.TryParse(ptStr, out var ptCoord))
-                            return OFFResult.IncorrectVertex;
+                            return OffResult.IncorrectVertex;
                         coords.Add(ptCoord);
                     }
 
@@ -60,25 +61,26 @@ namespace Paramdigma.Core.IO
                     var faceStrings = lines[i].Split(' ');
 
                     // Get first int that represents vertex count of face
-                    if (!int.TryParse(faceStrings[0], out var vertexCount))
-                        return OFFResult.IncorrectFace;
+                    if (!int.TryParse(faceStrings[0], out var _))
+                        return OffResult.IncorrectFace;
 
                     for (var f = 1; f < faceStrings.Length; f++)
                     {
                         if (!int.TryParse(faceStrings[f], out var vertIndex))
-                            return OFFResult.IncorrectFace;
+                            return OffResult.IncorrectFace;
 
                         vertexIndexes.Add(vertIndex);
                     }
 
                     faces.Add(vertexIndexes);
                 }
+            }
 
             // Set data output
             data.Vertices = vertices;
             data.Faces = faces;
 
-            return OFFResult.OK;
+            return OffResult.Ok;
         }
     }
 }
