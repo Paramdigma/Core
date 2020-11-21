@@ -127,6 +127,7 @@ namespace Paramdigma.Core.Tests.Geometry
             var ptA = new Point3d(a, b, c);
             var ptResult = new Point3d(a * m, b * m, c * m);
             Assert.True(ptA * m == ptResult);
+            Assert.True(m * ptA == ptResult);
         }
 
 
@@ -164,6 +165,18 @@ namespace Paramdigma.Core.Tests.Geometry
             var arr = v.ToArray();
             Assert.True(arr.Length == 3);
             Assert.True(Math.Abs(arr[0] - 1) < Settings.Tolerance && arr[1] == 0 && arr[2] == 0);
+        }
+
+
+        [Fact]
+        public void Can_BeCloned()
+        {
+            const double a = 3.3;
+            const double b = 2.2;
+            const double c = 4.11;
+            var ptA = new Point3d(a, b, c);
+            var ptClone = ptA.Clone();
+            Assert.False(ReferenceEquals(ptA,ptClone));
         }
     }
 }

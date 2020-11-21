@@ -9,6 +9,7 @@ namespace Paramdigma.Core.Geometry
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="BoundingBox2d" /> class  from 2 points.
+        ///     Coordinates will automatically be corrected if the corners are not consistent with naming (i.e. bottomLeftCorner is actually topLeft..)
         /// </summary>
         /// <param name="bottomLeftCorner">Bottom left corner.</param>
         /// <param name="topRightCorner">Top right corner.</param>

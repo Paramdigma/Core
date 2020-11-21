@@ -29,6 +29,10 @@ namespace Paramdigma.Core.HalfEdgeMesh
             this.EdgeVertex = new Dictionary<int, List<int>>();
             this.EdgeFace = new Dictionary<int, List<int>>();
             this.EdgeEdge = new Dictionary<int, List<int>>();
+            
+            this.ComputeEdgeAdjacency();
+            this.ComputeFaceAdjacency();
+            this.ComputeVertexAdjacency();
         }
 
 

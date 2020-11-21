@@ -744,6 +744,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Computes a point on a nurbs surface.
+        ///     Algorithm A3.5 of 'The Nurbs Book'
         /// </summary>
         /// <param name="n"></param>
         /// <param name="p"></param>
@@ -1095,6 +1096,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Computes a point on a nurbs curve
+        ///     Algorithm A4.1 of 'The Nurbs Book'
         /// </summary>
         /// <param name="n">Number of control points - 1</param>
         /// <param name="p">Degree. Cannot be bigger or equals the number of control points, nor smaller than 1.</param>
@@ -1159,6 +1161,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Compute C(u) derivatives from Cw(u) derivatives.
+        ///     Algorithm A4.2 of 'The Nurbs Book'
         /// </summary>
         /// <param name="aDers">Position derivatives.</param>
         /// <param name="wDers">Weight derivatives.</param>
@@ -1193,16 +1196,12 @@ namespace Paramdigma.Core.Geometry
             var aDers = ck1.Select(der => ( Vector3d ) der.Position).ToList();
             var wDers = ck1.Select(der => der.Weight).ToList();
             return RatCurveDerivs(aDers, wDers, d);
-
-            // if (p == 1)
-            //     ck[2] = new Vector3d();
-            //
-            // return new []{ ck[0], ck[1], ck[2]};
         }
 
 
         /// <summary>
         ///     Compute a point on a nurbs surface.
+        ///     Algorithm A4.3 of 'The Nurbs Book'
         /// </summary>
         /// <param name="n">The number of control points in the U direction - 1</param>
         /// <param name="p">The degree of the surface in the U direction.</param>
@@ -1248,6 +1247,7 @@ namespace Paramdigma.Core.Geometry
 
         /// <summary>
         ///     Computes the derivatives of a non-rational b-spline curve from the decomposed derivatives of a rational surface.
+        ///     Algorithm A4.4 of 'The Nurbs Book'
         /// </summary>
         /// <param name="aDers">Position derivatives</param>
         /// <param name="wDers">Weight derivatives</param>
