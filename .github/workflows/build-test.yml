@@ -24,8 +24,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
     - name: 🧪 Test
       run: dotnet test --no-restore /p:CollectCoverage=true /p:CoverletOutputFormat=opencover /p:CoverletOutput=../coverage/opencover.xml
-    - name: Push coverage to Codecov.io
+    - name: 📚 Push to Codecov.io
       uses: codecov/codecov-action@v1
       with:
-        file: coverage/opencover.xml # optional
-        verbose: true # optional (default = false)
+        file: coverage/opencover.xml
