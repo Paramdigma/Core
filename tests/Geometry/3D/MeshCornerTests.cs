@@ -35,8 +35,7 @@ namespace Paramdigma.Core.Tests.Geometry
                     Assert.NotNull(corner.Face);
                     Assert.NotNull(corner.Next);
                     Assert.NotNull(corner.Prev);
-                    Assert.NotNull(corner.Index);
-                    
+                    Assert.NotEqual(corner.Index, -1);
                 });
         }
     }

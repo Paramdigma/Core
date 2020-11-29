@@ -4,20 +4,12 @@ using Paramdigma.Core.Collections;
 using Paramdigma.Core.Geometry;
 using Paramdigma.Core.Tests.Conversions;
 using Xunit;
-using Xunit.Abstractions;
 using RG = Rhino.Geometry;
 
 namespace Paramdigma.Core.Tests.Geometry
 {
     public class NurbsSurfaceTests
     {
-        private readonly ITestOutputHelper testOutputHelper;
-
-
-        public NurbsSurfaceTests(ITestOutputHelper testOutputHelper) =>
-            this.testOutputHelper = testOutputHelper;
-
-
         [Theory]
         [ClassData(typeof(NurbsSurfaceUnitParamData))]
         public void CanGet_PointAt(double u, double v)

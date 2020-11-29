@@ -109,8 +109,6 @@ namespace Paramdigma.Core.Geometry
             int xCount,
             int yCount)
         {
-            var rnd = new Random();
-            var wDomain = new Interval(1, 5);
             var m = new Matrix<Point4d>(xCount, yCount);
             for (var i = 0; i < xCount; i++)
             {

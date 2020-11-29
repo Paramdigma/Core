@@ -72,8 +72,7 @@ namespace Paramdigma.Core.Tests.Optimization
                     {
                         var pt = new Point3d(vector[0], vector[1], vector[2]);
                         var dist = pt.DistanceTo(closest);
-                        //testOutputHelper.WriteLine($"Distance: {dist}");
-                        //Assert.True(dist <= 2, $"Distance was bigger: {dist}");
+                        Assert.True(dist >= 0);
                     }
                 });
         }

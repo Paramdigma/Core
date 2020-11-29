@@ -273,18 +273,42 @@ namespace Paramdigma.Core.Geometry
         }
 
 
+        /// <summary>
+        /// Adds two vectors.
+        /// </summary>
+        /// <param name="vectorA">Vector A.</param>
+        /// <param name="vectorB">Vector B.</param>
+        /// <returns>Vector result of the addition.</returns>
         public static VectorNd operator +(VectorNd vectorA, VectorNd vectorB) =>
             Add(vectorA, vectorB);
 
 
+        /// <summary>
+        /// Subtracts one vector from another.
+        /// </summary>
+        /// <param name="vectorA">Vector A</param>
+        /// <param name="vectorB">Vector B</param>
+        /// <returns>Vector result of the subtraction.</returns>
         public static VectorNd operator -(VectorNd vectorA, VectorNd vectorB) =>
             Substract(vectorA, vectorB);
 
 
+        /// <summary>
+        /// Multiplies a vector by a scalar number.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <param name="scalar">Scalar.</param>
+        /// <returns>Vector result of the multiplication.</returns>
         public static VectorNd operator *(VectorNd vector, double scalar) =>
             Multiply(vector, scalar);
 
 
+        /// <summary>
+        /// Divides a vector by a scalar number.
+        /// </summary>
+        /// <param name="vector">Vector.</param>
+        /// <param name="scalar">Scalar.</param>
+        /// <returns>Vector result of the division.</returns>
         public static VectorNd operator /(VectorNd vector, double scalar) => Divide(vector, scalar);
 
 

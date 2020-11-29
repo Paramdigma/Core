@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using Paramdigma.Core.HalfEdgeMesh;
 
 namespace Paramdigma.Core.Geometry
@@ -26,7 +27,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Calculates the midpoint of the specifiec edge.
+        ///     Calculates the midpoint of the specified edge.
         /// </summary>
         /// <returns>The point.</returns>
         /// <param name="edge">Edge.</param>
@@ -177,10 +178,10 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Computes the cotangent of the angle opposite to a halfedge.
+        ///     Computes the cotangent of the angle opposite to a half-edge.
         /// </summary>
-        /// <returns>The cotan.</returns>
-        /// <param name="hE">H e.</param>
+        /// <returns>The cotangent value.</returns>
+        /// <param name="hE">The half-edge</param>
         public static double Cotan(MeshHalfEdge hE)
         {
             if (hE.OnBoundary)
@@ -231,27 +232,21 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     Computes the circumcentric dual area around a given mesh vertex.
         /// </summary>
-        /// <returns>The dualarea.</returns>
+        /// <returns>The dual area.</returns>
         /// <param name="vertex">Vertex.</param>
-        public static double CircumcentricDualarea(MeshVertex vertex)
+        public static double CircumcentricDualArea(MeshVertex vertex)
         {
-            var area = 0.0;
-            foreach (var hE in vertex.AdjacentHalfEdges())
-            {
-                var u2 = Vector(hE.Prev).LengthSquared;
-                var v2 = Vector(hE).LengthSquared;
-                var cotAlpha = Cotan(hE.Prev);
-                var cotBeta = Cotan(hE);
-
-                area += (u2 * cotAlpha + v2 * cotBeta) / 8;
-            }
-
-            return area;
+            return (from hE in vertex.AdjacentHalfEdges()
+                    let u2 = Vector(hE.Prev).LengthSquared
+                    let v2 = Vector(hE).LengthSquared
+                    let cotAlpha = Cotan(hE.Prev)
+                    let cotBeta = Cotan(hE)
+                    select (u2 * cotAlpha + v2 * cotBeta) / 8).Sum();
         }
 
 
         /// <summary>
-        ///     Computes the equally weighted normal arround the specified vertex.
+        ///     Computes the equally weighted normal around the specified vertex.
         /// </summary>
         /// <returns>The normal vector at that vertex.</returns>
         /// <param name="vertex">Vertex.</param>
@@ -266,7 +261,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Computes the area weighted normal arround the specified vertex.
+        ///     Computes the area weighted normal around the specified vertex.
         /// </summary>
         /// <returns>The normal vector at that vertex.</returns>
         /// <param name="vertex">Vertex.</param>
@@ -286,7 +281,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Computes the angle weighted normal arround the specified vertex.
+        ///     Computes the angle weighted normal around the specified vertex.
         /// </summary>
         /// <returns>The normal vector at that vertex.</returns>
         /// <param name="vertex">Vertex.</param>
@@ -306,7 +301,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Computes the gauss curvature weighted normal arround the specified vertex.
+        ///     Computes the gauss curvature weighted normal around the specified vertex.
         /// </summary>
         /// <returns>The normal vector at that vertex.</returns>
         /// <param name="vertex">Vertex.</param>
@@ -324,7 +319,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Computes the mean curvature weighted normal arround the specified vertex.
+        ///     Computes the mean curvature weighted normal around the specified vertex.
         /// </summary>
         /// <returns>The normal vector at that vertex.</returns>
         /// <param name="vertex">Vertex.</param>
@@ -342,7 +337,7 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Computes the sphere inscribed normal arround the specified vertex.
+        ///     Computes the sphere inscribed normal around the specified vertex.
         /// </summary>
         /// <returns>The normal vector at that vertex.</returns>
         /// <param name="vertex">Vertex.</param>
@@ -383,7 +378,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="vertex">Vertex to compute Gaussian curvature.</param>
         /// <returns>Number representing the gaussian curvature at that vertex.</returns>
         public static double ScalarGaussCurvature(MeshVertex vertex) =>
-            AngleDefect(vertex) / CircumcentricDualarea(vertex);
+            AngleDefect(vertex) / CircumcentricDualArea(vertex);
 
 
         /// <summary>
@@ -415,13 +410,13 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Compute the principal curvature scalar values at a given vertes.
+        ///     Compute the principal curvature scalar values at a given vertex.
         /// </summary>
         /// <param name="vertex">Vertex to compute the curvature.</param>
         /// <returns>Returns an array of 2 values {k1, k2}.</returns>
         public static double[] PrincipalCurvatures(MeshVertex vertex)
         {
-            var a = CircumcentricDualarea(vertex);
+            var a = CircumcentricDualArea(vertex);
             var h = ScalarMeanCurvature(vertex) / a;
             var k = AngleDefect(vertex) / a;
 
