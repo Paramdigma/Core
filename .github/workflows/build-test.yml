@@ -25,4 +25,7 @@ jobs:
     - name: 🧪 Test
       run: dotnet test --no-restore
     - name: Push coverage to Codecov.io
-      run: bash <(curl -s https://codecov.io/bash) -f "coverage/opencover.xml"
+      uses: codecov/codecov-action@v1
+      with:
+        file: coverage/opencover.xml # optional
+        verbose: true # optional (default = false)
