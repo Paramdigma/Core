@@ -18,7 +18,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Degree of the curve.</param>
         /// <exception cref="Exception">Throws an error if degree is bigger than controlPoints+1</exception>
         /// <returns></returns>
-        public static double[] CreateUniformKnotVector(int controlPointCount, int degree)
+        public static IEnumerable<double> CreateUniformKnotVector(int controlPointCount, int degree)
         {
             if (degree > controlPointCount)
                 throw new Exception("Degree cannot be bigger than 'ControlPoints - 1'");
@@ -40,7 +40,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Curve degree.</param>
         /// <param name="t">Parameter.</param>
         /// <returns>Computed point on curve.</returns>
-        public static Point3d Horner1(Point3d[] points, int degree, double t)
+        private static Point3d Horner1(Point3d[] points, int degree, double t)
         {
             var c = points[degree];
             for (var i = degree - 1; i >= 0; i--)
@@ -56,7 +56,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Degree of curve.</param>
         /// <param name="t">Parameter.</param>
         /// <returns></returns>
-        public static double Bernstein(int index, int degree, double t)
+        private static double Bernstein(int index, int degree, double t)
         {
             var temp = new List<double>();
             for (var j = 0; j <= degree; j++)
@@ -84,7 +84,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u">U parameter to compute.</param>
         /// <param name="v">V parameter to compute.</param>
         /// <returns>Computed point on the surface.</returns>
-        public static Point3d Horner2(
+        private static Point3d Horner2(
             Matrix<Point3d> controlPoints,
             int degreeU,
             int degreeV,
@@ -104,7 +104,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Curve degree.</param>
         /// <param name="t">Parameter.</param>
         /// <returns></returns>
-        public static double[] AllBernstein(int degree, double t)
+        private static double[] AllBernstein(int degree, double t)
         {
             var b = new double[degree + 1];
             b[0] = 1.0;
@@ -152,7 +152,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Curve degree.</param>
         /// <param name="t">Parameter of point to compute.</param>
         /// <returns>Computed point along the Bézier curve.</returns>
-        public static Point3d DeCasteljau1(Point3d[] controlPoints, int degree, double t)
+        private static Point3d DeCasteljau1(IReadOnlyList<Point3d> controlPoints, int degree, double t)
         {
             var q = new Point3d[degree + 1];
             for (var i = 0; i <= degree; i++)
@@ -177,7 +177,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u">U parameter to compute.</param>
         /// <param name="v">V parameter to compute.</param>
         /// <returns>The computed point.</returns>
-        public static Point3d DeCasteljau2(
+        private static Point3d DeCasteljau2(
             Matrix<Point3d> controlPoints,
             int degreeU,
             int degreeV,
@@ -207,7 +207,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="t">Parameter.</param>
         /// <param name="knotVector">Knot vector.</param>
         /// <returns>The knot span index.</returns>
-        public static int FindSpan(int n, int degree, double t, IList<double> knotVector)
+        private static int FindSpan(int n, int degree, double t, IList<double> knotVector)
         {
             if (t >= knotVector[n + 1])
                 return n;
@@ -237,7 +237,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Degree.</param>
         /// <param name="knotVector">The knot vector.</param>
         /// <returns>List with all non-zero basis functions up to the specified degree.</returns>
-        public static double[,] AllBasisFuns(
+        private static double[,] AllBasisFuns(
             int span,
             double param,
             int degree,
@@ -269,7 +269,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="degree">Degree.</param>
         /// <param name="knotVector">Knot vector.</param>
         /// <returns>List of the basis functions of the specific span.</returns>
-        public static double[] BasisFunctions(
+        private static double[] BasisFunctions(
             int span,
             double param,
             int degree,
@@ -311,7 +311,7 @@ namespace Paramdigma.Core.Geometry
         ///     Multidimensional array holding the basis functions and their derivatives for that
         ///     parameter.
         /// </returns>
-        public static Matrix<double> DerivativeBasisFunctions(
+        private static Matrix<double> DerivativeBasisFunctions(
             int span,
             double param,
             int degree,
@@ -406,7 +406,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="span">Knot span index.</param>
         /// <param name="param">Parameter to compute.</param>
         /// <returns></returns>
-        public static double OneBasisFun(
+        private static double OneBasisFun(
             int degree,
             int m,
             IList<double> knotVector,
@@ -468,7 +468,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u"></param>
         /// <param name="n"></param>
         /// <returns></returns>
-        public static double[] DersOneBasisFun(
+        private static double[] DersOneBasisFun(
             int p,
             int m,
             IList<double> knotVector,
@@ -801,7 +801,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">V parameter to get derivatives at.</param>
         /// <param name="derivCount">Number of derivatives to compute in each direction.</param>
         /// <returns>A multi dimensional array where [k,l] represents the derivative of S(u,v) with respect to u 'k' times, and v 'l' times.</returns>
-        public static Point3d[,] SurfaceDerivsAlg1(
+        private static Point3d[,] SurfaceDerivsAlg1(
             int n,
             int p,
             IList<double> knotVectorU,
@@ -951,7 +951,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="s1"></param>
         /// <param name="s2"></param>
         /// <returns>Computed derivatives at S(u,v).</returns>
-        public static Point3d[][][][] SurfaceDerivCpts(
+        private static Point3d[][][][] SurfaceDerivCpts(
             int n,
             int p,
             IList<double> knotVectorU,
@@ -1028,7 +1028,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="v">V parameter to get derivatives at.</param>
         /// <param name="d">Number of derivatives to compute in each direction.</param>
         /// <returns>A multi dimensional array where [k,l] represents the derivative of S(u,v) with respect to u 'k' times, and v 'l' times.</returns>
-        public static Point3d[,] SurfaceDerivsAlg2(
+        private static Point3d[,] SurfaceDerivsAlg2(
             int n,
             int p,
             IList<double> knotVectorU,
@@ -1126,7 +1126,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="n"></param>
         /// <param name="k"></param>
         /// <returns>Computed coefficient.</returns>
-        public static double BinomialCoefficient(int n, int k)
+        private static double BinomialCoefficient(int n, int k)
         {
             if (n - k == 1 || k == 1)
                 return n;
@@ -1155,7 +1155,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="u">Knot vector.</param>
         /// <param name="p">Degree.</param>
         /// <returns>True if knot vector is clamped.</returns>
-        public static bool IsClamped(IList<double> u, int p) =>
+        private static bool IsClamped(IList<double> u, int p) =>
             u[0] == u[p] && u[u.Count - 1] == u[u.Count - 1 - p];
 
 
@@ -1167,7 +1167,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="wDers">Weight derivatives.</param>
         /// <param name="d">Derivative count.</param>
         /// <returns>Computed derivatives.</returns>
-        public static Vector3d[] RatCurveDerivs(IList<Vector3d> aDers, IList<double> wDers, int d)
+        private static Vector3d[] RatCurveDerivs(IList<Vector3d> aDers, IList<double> wDers, int d)
         {
             var ders = new Vector3d[d + 1];
 
@@ -1253,7 +1253,7 @@ namespace Paramdigma.Core.Geometry
         /// <param name="wDers">Weight derivatives</param>
         /// <param name="d">Derivative count.</param>
         /// <returns>Computed derivatives at S(u,v)</returns>
-        public static Matrix<Vector3d> RatSurfaceDerivs(
+        private static Matrix<Vector3d> RatSurfaceDerivs(
             Matrix<Vector3d> aDers,
             Matrix<double> wDers,
             int d)
