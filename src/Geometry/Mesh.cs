@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.HalfEdgeMesh
+namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Represents a Half-Edge Mesh data structure.
@@ -12,7 +12,7 @@ namespace Paramdigma.Core.HalfEdgeMesh
         /// <summary>
         ///     Initializes a new instance of the <see cref="Mesh" /> class.
         /// </summary>
-        public Mesh()
+        private Mesh()
         {
             this.Vertices = new List<MeshVertex>();
             this.Edges = new List<MeshEdge>();

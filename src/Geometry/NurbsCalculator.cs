@@ -14,7 +14,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     Constructs a Unit knot vector given a point count and degree.
         /// </summary>
-        /// <param name="controlPointCount">Ammount of control points in the curve.</param>
+        /// <param name="controlPointCount">Amount of control points in the curve.</param>
         /// <param name="degree">Degree of the curve.</param>
         /// <exception cref="Exception">Throws an error if degree is bigger than controlPoints+1</exception>
         /// <returns></returns>

@@ -1,4 +1,4 @@
-namespace Paramdigma.Core.SpatialSearch
+namespace Paramdigma.Core.Spatial
 {
     /// <summary>
     ///     Class for computing Octree spatial searches.

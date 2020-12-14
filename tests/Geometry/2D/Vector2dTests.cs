@@ -103,7 +103,8 @@ namespace Paramdigma.Core.Tests.Geometry
         {
             var v = new Vector2d(1, 2);
             var v2 = new Vector2d(3.211, -2.22);
-            var dot = v.DotProduct(v2);
+            v.DotProduct(v2);
+            // TODO: Missing assertions.
         }
 
 
@@ -122,7 +123,8 @@ namespace Paramdigma.Core.Tests.Geometry
         {
             var v = new Vector2d(1, 2);
             var v2 = new Vector2d(3.211, -2.22);
-            var dot = v.PerpProduct(v2);
+            v.PerpProduct(v2);
+            // TODO: Missing Assertions
         }
 
 

@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Paramdigma.Core.SpatialSearch
+namespace Paramdigma.Core.Spatial
 {
     /// <summary>
     ///     Represents a collection of points with a color assigned to them.

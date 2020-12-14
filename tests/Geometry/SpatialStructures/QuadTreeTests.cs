@@ -1,5 +1,5 @@
 using Paramdigma.Core.Geometry;
-using Paramdigma.Core.SpatialSearch;
+using Paramdigma.Core.Spatial;
 using Xunit;
 
 namespace Paramdigma.Core.Tests.Geometry.SpatialStructures

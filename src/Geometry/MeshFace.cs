@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.HalfEdgeMesh
+namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Half-edge mesh face class.

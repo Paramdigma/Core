@@ -1,6 +1,6 @@
 using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.HalfEdgeMesh
+namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Represents a point on a mesh as it's face index and barycentric coordinatees.

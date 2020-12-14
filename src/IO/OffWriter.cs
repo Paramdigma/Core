@@ -1,5 +1,5 @@
 using System.IO;
-using Paramdigma.Core.HalfEdgeMesh;
+using Paramdigma.Core.Geometry;
 
 #pragma warning disable 1591
 

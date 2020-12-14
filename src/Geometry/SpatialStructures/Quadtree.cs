@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.SpatialSearch
+namespace Paramdigma.Core.Spatial
 {
     /// <summary>
     ///     Class to compute 2 dimensional spatial searches by quad subdivision.

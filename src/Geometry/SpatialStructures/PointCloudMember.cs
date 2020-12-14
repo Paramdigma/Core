@@ -1,7 +1,7 @@
 using System.Drawing;
 using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.SpatialSearch
+namespace Paramdigma.Core.Spatial
 {
     /// <summary>
     ///     Class representing a point contained in a point cloud.

@@ -2,7 +2,7 @@
 using System.Linq;
 using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.HalfEdgeMesh
+namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Represents a vertex of a mesh.

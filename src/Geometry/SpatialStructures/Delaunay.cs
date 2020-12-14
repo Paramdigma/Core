@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Paramdigma.Core.Spatial;
 
 namespace Paramdigma.Core.Geometry
 {
@@ -34,7 +35,7 @@ namespace Paramdigma.Core.Geometry
 
                 triangulation.AddRange(
                     polygon.Select(
-                        edge => new DelaunayTriangle(point, edge.StartPoint, edge.EndPoint)));
+                        edge => new DelaunayTriangle(point, (DelaunayPoint)edge.StartPoint, (DelaunayPoint)edge.EndPoint)));
             }
 
             return triangulation;

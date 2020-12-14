@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Paramdigma.Core.HalfEdgeMesh
+namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Topology exporer for meshes. Contains all methods to explore mesh connections between members.

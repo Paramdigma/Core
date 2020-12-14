@@ -1,8 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.Geometry
+namespace Paramdigma.Core.Spatial
 {
     /// <summary>
     ///     Represents a triangle in a delaunay triangulation operation.
@@ -22,7 +23,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     List of vertices of this triangle.
         /// </summary>
-        public List<DelaunayPoint> Vertices;
+        public readonly List<DelaunayPoint> Vertices;
 
 
         /// <summary>

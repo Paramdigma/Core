@@ -1,4 +1,4 @@
-﻿namespace Paramdigma.Core.HalfEdgeMesh
+﻿namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Represents a corner of a given mesh face.

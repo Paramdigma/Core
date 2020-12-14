@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Paramdigma.Core.HalfEdgeMesh
+namespace Paramdigma.Core.Geometry
 {
     /// <summary>
     ///     Edge class representing a full edge of a half-edge mesh.

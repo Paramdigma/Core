@@ -1,6 +1,7 @@
 using System.Collections.Generic;
+using Paramdigma.Core.Geometry;
 
-namespace Paramdigma.Core.Geometry
+namespace Paramdigma.Core.Spatial
 {
     /// <summary>
     ///     Represents a point in a delaunay triangulation with adjacency information.
@@ -10,7 +11,7 @@ namespace Paramdigma.Core.Geometry
         /// <summary>
         ///     List of adjacent triangles of this point.
         /// </summary>
-        public List<DelaunayTriangle> AdjacentTriangles;
+        public readonly List<DelaunayTriangle> AdjacentTriangles;
 
 
         /// <summary>
@@ -27,6 +28,7 @@ namespace Paramdigma.Core.Geometry
         ///     <see cref="Point2d" /> instance.
         /// </summary>
         /// <param name="point">Point to create <see cref="DelaunayPoint" /> from.</param>
-        public DelaunayPoint(Point2d point) : this(point.X, point.Y) { }
+        public DelaunayPoint(Point2d point) : base(point.X, point.Y) { }
+
     }
 }
