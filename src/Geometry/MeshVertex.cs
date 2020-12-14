@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Paramdigma.Core.Geometry;
 
 namespace Paramdigma.Core.Geometry
 {

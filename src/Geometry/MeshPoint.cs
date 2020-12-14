@@ -1,5 +1,3 @@
-using Paramdigma.Core.Geometry;
-
 namespace Paramdigma.Core.Geometry
 {
     /// <summary>

@@ -13,7 +13,7 @@ namespace Paramdigma.Core.Geometry
         private bool isClosed;
         private List<Line2d> segments;
         private bool segmentsNeedUpdate;
-        private List<Point2d> vertices;
+        private readonly List<Point2d> vertices;
 
 
         /// <summary>
@@ -26,7 +26,8 @@ namespace Paramdigma.Core.Geometry
             this.vertices = vertices;
             this.IsClosed =
                 closed; // Call the property (not the field), to have if add the first point at the end if necessary.
-            this.RebuildSegments();
+            
+            this.segmentsNeedUpdate = this.RebuildSegments();
         }
 
 
@@ -45,7 +46,7 @@ namespace Paramdigma.Core.Geometry
             get
             {
                 if (this.segmentsNeedUpdate)
-                    this.RebuildSegments();
+                    this.segmentsNeedUpdate = this.RebuildSegments();
                 return this.segments;
             }
         }
@@ -196,7 +197,7 @@ namespace Paramdigma.Core.Geometry
         }
 
 
-        private void RebuildSegments()
+        private bool RebuildSegments()
         {
             this.segments = new List<Line2d>();
             double currentParam = 0;
@@ -209,6 +210,7 @@ namespace Paramdigma.Core.Geometry
             }
 
             this.domain = new Interval(0, currentParam);
+            return false;
         }
 
 

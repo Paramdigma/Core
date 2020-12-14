@@ -85,14 +85,6 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <inheritdoc />
-        public override bool Equals(object obj) => base.Equals(obj);
-
-
-        /// <inheritdoc />
-        public override int GetHashCode() => base.GetHashCode();
-
-
-        /// <inheritdoc />
         public override string ToString() => "Point3d" + base.ToString();
 
 
