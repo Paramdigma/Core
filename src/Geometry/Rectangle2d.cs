@@ -5,15 +5,15 @@ namespace Paramdigma.Core.Geometry
     /// <summary>
     ///     Represents a 2D bounding box.
     /// </summary>
-    public class BoundingBox2d
+    public class Rectangle2d
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="BoundingBox2d" /> class  from 2 points.
+        ///     Initializes a new instance of the <see cref="Rectangle2d" /> class  from 2 points.
         ///     Coordinates will automatically be corrected if the corners are not consistent with naming (i.e. bottomLeftCorner is actually topLeft..)
         /// </summary>
         /// <param name="bottomLeftCorner">Bottom left corner.</param>
         /// <param name="topRightCorner">Top right corner.</param>
-        public BoundingBox2d(Point2d bottomLeftCorner, Point2d topRightCorner)
+        public Rectangle2d(Point2d bottomLeftCorner, Point2d topRightCorner)
         {
             this.XDomain = new Interval(bottomLeftCorner.X, topRightCorner.X);
             this.YDomain = new Interval(bottomLeftCorner.Y, topRightCorner.Y);
@@ -25,10 +25,10 @@ namespace Paramdigma.Core.Geometry
 
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="BoundingBox2d" /> class from a polyline.
+        ///     Initializes a new instance of the <see cref="Rectangle2d" /> class from a polyline.
         /// </summary>
         /// <param name="polyline">Polyline.</param>
-        public BoundingBox2d(Polyline2d polyline)
+        public Rectangle2d(Polyline2d polyline)
         {
             var xMin = polyline.Vertices[0].X;
             var yMin = polyline.Vertices[0].Y;
@@ -132,7 +132,7 @@ namespace Paramdigma.Core.Geometry
         /// </summary>
         /// <param name="box">Box to check intersection against.</param>
         /// <returns>True if intersection exists.</returns>
-        public bool IntersectsBox(BoundingBox2d box)
+        public bool IntersectsBox(Rectangle2d box)
         {
             var xCheck = this.XDomain.Contains(box.XDomain.Start)
                       || this.XDomain.Contains(box.XDomain.End);

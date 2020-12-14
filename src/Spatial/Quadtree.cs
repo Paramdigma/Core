@@ -11,7 +11,7 @@ namespace Paramdigma.Core.Spatial
         /// <summary>
         ///     Boundary of this QuadTree.
         /// </summary>
-        public readonly BoundingBox2d Boundary;
+        public readonly Rectangle2d Boundary;
 
         /// <summary>
         ///     Gets or sets the list of points of this QuadTree.
@@ -31,7 +31,7 @@ namespace Paramdigma.Core.Spatial
         /// </summary>
         /// <param name="boundary">Boundary of this QuadTree.</param>
         /// <param name="threshold">Smallest allowed dimension.</param>
-        public QuadTree(BoundingBox2d boundary, double threshold)
+        public QuadTree(Rectangle2d boundary, double threshold)
         {
             this.Boundary = boundary;
             this.Points = new List<Point2d>();
@@ -73,7 +73,7 @@ namespace Paramdigma.Core.Spatial
         /// </summary>
         /// <param name="range">Range to look for.</param>
         /// <returns>Points contained in the range.</returns>
-        public List<Point2d> QueryRange(BoundingBox2d range)
+        public List<Point2d> QueryRange(Rectangle2d range)
         {
             var pointsInRange = new List<Point2d>();
 
@@ -107,16 +107,16 @@ namespace Paramdigma.Core.Spatial
         private void Subdivide()
         {
             this.southWest = new QuadTree(
-                new BoundingBox2d(this.Boundary.BottomLeft, this.Boundary.Center),
+                new Rectangle2d(this.Boundary.BottomLeft, this.Boundary.Center),
                 this.threshold);
             this.northWest = new QuadTree(
-                new BoundingBox2d(this.Boundary.MidLeft, this.Boundary.MidTop),
+                new Rectangle2d(this.Boundary.MidLeft, this.Boundary.MidTop),
                 this.threshold);
             this.southEast = new QuadTree(
-                new BoundingBox2d(this.Boundary.MidBottom, this.Boundary.MidRight),
+                new Rectangle2d(this.Boundary.MidBottom, this.Boundary.MidRight),
                 this.threshold);
             this.northEast = new QuadTree(
-                new BoundingBox2d(this.Boundary.Center, this.Boundary.TopRight),
+                new Rectangle2d(this.Boundary.Center, this.Boundary.TopRight),
                 this.threshold);
         }
     }
