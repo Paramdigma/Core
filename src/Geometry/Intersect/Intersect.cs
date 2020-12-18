@@ -1,6 +1,5 @@
 using System;
 using Paramdigma.Core.Geometry;
-using Paramdigma.Core.HalfEdgeMesh;
 
 namespace Paramdigma.Core
 {

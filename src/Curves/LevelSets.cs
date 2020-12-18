@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
-using Paramdigma.Core.HalfEdgeMesh;
 
 namespace Paramdigma.Core.Curves
 {

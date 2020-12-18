@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using Paramdigma.Core.Geometry;
-using Paramdigma.Core.HalfEdgeMesh;
 using Xunit;
 
 namespace Paramdigma.Core.Tests.Geometry
@@ -35,8 +34,7 @@ namespace Paramdigma.Core.Tests.Geometry
                     Assert.NotNull(corner.Face);
                     Assert.NotNull(corner.Next);
                     Assert.NotNull(corner.Prev);
-                    Assert.NotNull(corner.Index);
-                    
+                    Assert.NotEqual(corner.Index, -1);
                 });
         }
     }

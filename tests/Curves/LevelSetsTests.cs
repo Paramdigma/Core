@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using Paramdigma.Core.Curves;
 using Paramdigma.Core.Geometry;
-using Paramdigma.Core.HalfEdgeMesh;
 using Xunit;
 
 namespace Paramdigma.Core.Tests.Curves

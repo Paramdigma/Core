@@ -1,5 +1,5 @@
 using Paramdigma.Core.Geometry;
-using Paramdigma.Core.SpatialSearch;
+using Paramdigma.Core.Spatial;
 using Xunit;
 
 namespace Paramdigma.Core.Tests.Geometry.SpatialStructures
@@ -9,7 +9,7 @@ namespace Paramdigma.Core.Tests.Geometry.SpatialStructures
         [Fact]
         public void CanCreate_QuadTree()
         {
-            var range = new BoundingBox2d(
+            var range = new Rectangle2d(
                 Point2d.Origin,
                 new Point2d(1, 1)
             );
@@ -21,7 +21,7 @@ namespace Paramdigma.Core.Tests.Geometry.SpatialStructures
             var check = tree.Insert(pt);
             Assert.True(check);
             var expected = tree.QueryRange(
-                new BoundingBox2d(low, high)
+                new Rectangle2d(low, high)
             );
             Assert.Equal(pt, expected[0]);
         }

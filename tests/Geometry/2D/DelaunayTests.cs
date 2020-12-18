@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Paramdigma.Core.Geometry;
+using Paramdigma.Core.Spatial;
 using Xunit;
 
 namespace Paramdigma.Core.Tests.Geometry
